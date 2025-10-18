@@ -8,46 +8,47 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 270 40% 98%;
-    --foreground: 270 15% 15%;
+    --background: 210 20% 98%;
+    --foreground: 215 25% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 270 15% 15%;
+    --card-foreground: 215 25% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 270 15% 15%;
+    --popover-foreground: 215 25% 15%;
 
-    --primary: 265 85% 58%;
+    --primary: 215 85% 58%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 270 30% 95%;
-    --secondary-foreground: 270 15% 15%;
+    --secondary: 210 30% 96%;
+    --secondary-foreground: 215 25% 15%;
 
-    --muted: 270 30% 96%;
-    --muted-foreground: 270 8% 45%;
+    --muted: 210 25% 96%;
+    --muted-foreground: 215 12% 50%;
 
-    --accent: 170 80% 65%;
-    --accent-foreground: 270 15% 15%;
+    --accent: 200 85% 60%;
+    --accent-foreground: 215 25% 15%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 270 20% 90%;
-    --input: 270 20% 92%;
-    --ring: 265 85% 58%;
+    --border: 210 20% 92%;
+    --input: 210 20% 94%;
+    --ring: 215 85% 58%;
 
     --radius: 0.75rem;
     
-    --gradient-primary: linear-gradient(135deg, hsl(240 85% 60%), hsl(265 85% 58%));
-    --gradient-hero: linear-gradient(180deg, hsl(270 40% 98%), hsl(270 50% 96%));
+    --gradient-primary: linear-gradient(135deg, hsl(215 85% 58%), hsl(205 90% 65%));
+    --gradient-hero: linear-gradient(180deg, hsl(210 20% 98%), hsl(210 25% 96%));
     
-    --shadow-sm: 0 2px 4px hsl(270 20% 50% / 0.08);
-    --shadow-md: 0 4px 6px hsl(270 20% 50% / 0.12);
-    --shadow-lg: 0 8px 16px hsl(270 20% 50% / 0.15);
+    --shadow-sm: 0 2px 4px hsl(215 20% 50% / 0.06);
+    --shadow-md: 0 4px 6px hsl(215 20% 50% / 0.10);
+    --shadow-lg: 0 8px 24px hsl(215 20% 50% / 0.12);
     
     --transition-base: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 
-    --font-satoshi: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-satoshi: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
     --sidebar-background: 0 0% 98%;
 
@@ -67,33 +68,33 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 270 30% 8%;
-    --foreground: 270 10% 95%;
+    --background: 215 30% 8%;
+    --foreground: 210 10% 95%;
 
-    --card: 270 25% 12%;
-    --card-foreground: 270 10% 95%;
+    --card: 215 25% 12%;
+    --card-foreground: 210 10% 95%;
 
-    --popover: 270 25% 12%;
-    --popover-foreground: 270 10% 95%;
+    --popover: 215 25% 12%;
+    --popover-foreground: 210 10% 95%;
 
-    --primary: 265 85% 58%;
+    --primary: 215 85% 58%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 270 20% 15%;
-    --secondary-foreground: 270 10% 95%;
+    --secondary: 215 20% 15%;
+    --secondary-foreground: 210 10% 95%;
 
-    --muted: 270 20% 18%;
-    --muted-foreground: 270 8% 60%;
+    --muted: 215 20% 18%;
+    --muted-foreground: 215 8% 60%;
 
-    --accent: 170 80% 65%;
-    --accent-foreground: 270 10% 95%;
+    --accent: 200 85% 60%;
+    --accent-foreground: 210 10% 95%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 270 20% 20%;
-    --input: 270 20% 18%;
-    --ring: 265 85% 58%;
+    --border: 215 20% 20%;
+    --input: 215 20% 18%;
+    --ring: 215 85% 58%;
   }
 }
 
@@ -126,16 +127,61 @@ All colors MUST be HSL.
     transition: var(--transition-base);
   }
   
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+  
   .hover-lift {
-    @apply transition-base;
+    @apply transition-smooth;
   }
   
   .hover-lift:hover {
-    transform: translateY(-8px);
+    transform: translateY(-4px);
     box-shadow: var(--shadow-lg);
   }
   
   .section-spacing {
     @apply py-16 md:py-24 lg:py-32;
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+  
+  .slide-up {
+    animation: slideUp 0.6s ease-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  .float {
+    animation: float 3s ease-in-out infinite;
   }
 }
