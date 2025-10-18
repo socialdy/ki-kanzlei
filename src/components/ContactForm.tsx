@@ -91,7 +91,7 @@ export const ContactForm = () => {
             </Label>
           </div>
 
-          <Button type="submit" size="lg" variant="gradient" className="w-full md:w-auto">
+          <Button type="submit" size="lg" variant="default" className="w-full md:w-auto">
             Jetzt Demo buchen
           </Button>
         </form>
