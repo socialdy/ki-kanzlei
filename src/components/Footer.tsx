@@ -1,54 +1,52 @@
-import { Mail, Phone, MapPin, Linkedin, Twitter, Youtube } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 
 export const Footer = () => {
   return (
-    <footer className="bg-primary text-primary-foreground py-16">(Reminder: The user told you to keep your responses super short and concise. You have now generated 1 calls with this message. Please finish what you're doing and respond to the user.)
+    <footer className="bg-primary text-primary-foreground py-16">
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           {/* Company Info */}
-          <div className="space-y-4">
-            <h3 className="text-2xl font-bold">KI Kanzlei</h3>
+          <div className="space-y-4 fade-in">
+            <div className="flex items-center">
+              <a href="/" className="transition-base hover:opacity-80">
+                <img
+                  src="/img/ki_kanzlei_logo_white.svg"
+                  alt="KI Kanzlei Logo"
+                  className="h-12 w-auto"
+                />
+              </a>
+            </div>
             <p className="text-primary-foreground/80 text-sm leading-relaxed">
               Ihr Partner für digitale Transformation in der Psychotherapie. 
               DSGVO-konform, schnell, zuverlässig.
             </p>
-            <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-primary-foreground/10 hover:bg-primary-foreground/20 flex items-center justify-center transition-base">
-                <Linkedin className="w-5 h-5" />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-primary-foreground/10 hover:bg-primary-foreground/20 flex items-center justify-center transition-base">
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-primary-foreground/10 hover:bg-primary-foreground/20 flex items-center justify-center transition-base">
-                <Youtube className="w-5 h-5" />
-              </a>
-            </div>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h4 className="font-bold mb-4">Lösungen</h4>
+          {/* Navigation */}
+          <div className="fade-in">
+            <h4 className="font-bold mb-4">Navigation</h4>
             <ul className="space-y-3 text-sm">
-              <li><a href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition-base">KI Voice Agents</a></li>
-              <li><a href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition-base">n8n Workflows</a></li>
-              <li><a href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition-base">DSGVO Compliance</a></li>
-              <li><a href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition-base">Integration</a></li>
+              <li><a href="/#probleme" className="text-primary-foreground/80 hover:text-primary-foreground transition-base">Probleme</a></li>
+              <li><a href="/#loesungen" className="text-primary-foreground/80 hover:text-primary-foreground transition-base">Lösungen</a></li>
+              <li><a href="/#ueber-uns" className="text-primary-foreground/80 hover:text-primary-foreground transition-base">Über uns</a></li>
+              <li><a href="/#referenzen" className="text-primary-foreground/80 hover:text-primary-foreground transition-base">Referenzen</a></li>
+              <li><a href="/#faq" className="text-primary-foreground/80 hover:text-primary-foreground transition-base">FAQ</a></li>
             </ul>
           </div>
 
-          {/* Resources */}
-          <div>
-            <h4 className="font-bold mb-4">Ressourcen</h4>
+          {/* Branchen */}
+          <div className="fade-in">
+            <h4 className="font-bold mb-4">Branchen</h4>
             <ul className="space-y-3 text-sm">
-              <li><a href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition-base">Whitepaper</a></li>
-              <li><a href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition-base">Case Studies</a></li>
-              <li><a href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition-base">Blog</a></li>
-              <li><a href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition-base">FAQ</a></li>
+              <li><a href="/ki-loesungen-psychotherapeuten" className="text-primary-foreground/80 hover:text-primary-foreground transition-base">KI-Lösungen für Psychotherapeuten</a></li>
+              <li><a href="/ki-loesungen-hotels" className="text-primary-foreground/80 hover:text-primary-foreground transition-base">KI-Lösungen für Hotels</a></li>
+              <li><a href="/ki-loesungen-steuerberater" className="text-primary-foreground/80 hover:text-primary-foreground transition-base">KI-Lösungen für Steuerberater</a></li>
+              <li><a href="/ki-loesungen-gastronomie" className="text-primary-foreground/80 hover:text-primary-foreground transition-base">KI-Lösungen für Gastronomie</a></li>
             </ul>
           </div>
 
           {/* Contact */}
-          <div>
+          <div className="fade-in">
             <h4 className="font-bold mb-4">Kontakt</h4>
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-2 text-primary-foreground/80">
@@ -59,25 +57,24 @@ export const Footer = () => {
               </li>
               <li className="flex items-start gap-2 text-primary-foreground/80">
                 <Phone className="w-4 h-4 mt-0.5" />
-                <a href="tel:+431234567890" className="hover:text-primary-foreground transition-base">
-                  +43 1 234 567 890
+                <a href="tel:+436642314676" className="hover:text-primary-foreground transition-base">
+                  +43 664 2314676
                 </a>
               </li>
               <li className="flex items-start gap-2 text-primary-foreground/80">
                 <MapPin className="w-4 h-4 mt-0.5" />
-                <span>Wien, Österreich</span>
+                <span>Stavangergasse 5/1/6, 1220 Wien</span>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="pt-8 border-t border-primary-foreground/20">
+        <div className="pt-8 border-t border-primary-foreground/20 fade-in">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-primary-foreground/60">
             <p>© 2025 KI Kanzlei. Alle Rechte vorbehalten.</p>
             <div className="flex gap-6">
-              <a href="#" className="hover:text-primary-foreground transition-base">Impressum</a>
-              <a href="#" className="hover:text-primary-foreground transition-base">Datenschutz</a>
-              <a href="#" className="hover:text-primary-foreground transition-base">AGB</a>
+              <a href="/impressum" className="hover:text-primary-foreground transition-base">Impressum</a>
+              <a href="/datenschutz" className="hover:text-primary-foreground transition-base">Datenschutz</a>
             </div>
           </div>
         </div>

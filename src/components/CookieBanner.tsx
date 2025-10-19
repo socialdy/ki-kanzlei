@@ -63,8 +63,8 @@ export const CookieBanner = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-4 left-4 right-4 md:bottom-4 md:right-4 md:left-auto z-50 flex justify-center md:block">
-      <div className="bg-white rounded-2xl md:rounded-2xl shadow-xl border border-border w-full md:w-96 lg:w-96 max-w-sm md:max-w-none">
+    <div className="fixed bottom-0 left-0 right-0 md:bottom-4 md:right-4 md:left-auto z-50">
+      <div className="bg-white rounded-t-2xl md:rounded-2xl shadow-xl border border-border w-full md:w-96 lg:w-96 max-w-sm md:max-w-none mx-auto md:mx-0">
         {!showSettings ? (
           // Main Banner
           <div className="p-4">
