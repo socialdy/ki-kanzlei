@@ -30,7 +30,9 @@ export const AboutUs = () => {
                   />
                 </div>
                 <a
-                  href="#"
+                  href="https://at.linkedin.com/in/arnold-freissling-95642b256"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="absolute bottom-3 right-10 w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-base hover:scale-110"
                   aria-label="LinkedIn"
                 >
@@ -52,7 +54,9 @@ export const AboutUs = () => {
                   <span className="text-6xl md:text-7xl font-bold text-primary">MW</span>
                 </div>
                 <a
-                  href="#"
+                  href="https://at.linkedin.com/in/markuswallner-social-media-marketing"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="absolute bottom-3 right-10 w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-base hover:scale-110"
                   aria-label="LinkedIn"
                 >
