@@ -87,7 +87,7 @@ export const UseCases = () => {
             return (
               <div
                 key={index}
-                className="group p-6 bg-card rounded-2xl border border-border hover-lift"
+                className="group p-6 bg-card rounded-2xl border border-border hover-lift cursor-pointer"
               >
                 <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-base">
                   <Icon className="w-6 h-6 text-primary" />

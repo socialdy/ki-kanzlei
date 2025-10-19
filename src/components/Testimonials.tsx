@@ -104,7 +104,7 @@ export const Testimonials = () => {
                 key={`first-${index}`}
                 className="flex-shrink-0 w-80 mx-4"
               >
-                <div className="bg-card rounded-2xl p-6 hover-lift border border-border h-full slide-up">
+                <div className="bg-card rounded-2xl p-6 hover-lift border border-border h-full slide-up cursor-pointer">
                   {/* Header with Avatar and Rating */}
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-3">
@@ -137,7 +137,7 @@ export const Testimonials = () => {
                 key={`second-${index}`}
                 className="flex-shrink-0 w-80 mx-4"
               >
-                <div className="bg-card rounded-2xl p-6 hover-lift border border-border h-full slide-up">
+                <div className="bg-card rounded-2xl p-6 hover-lift border border-border h-full slide-up cursor-pointer">
                   {/* Header with Avatar and Rating */}
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-3">

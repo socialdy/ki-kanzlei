@@ -6,11 +6,11 @@ export const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuItems = [
-    { label: "Probleme", href: "#probleme", hasDropdown: false },
-    { label: "Lösungen", href: "#loesungen", hasDropdown: false },
-    { label: "Über uns", href: "#ueber-uns", hasDropdown: false },
-    { label: "Referenzen", href: "#referenzen", hasDropdown: false },
-    { label: "FAQ", href: "#faq", hasDropdown: false },
+    { label: "Probleme", href: "/#probleme", hasDropdown: false },
+    { label: "Lösungen", href: "/#loesungen", hasDropdown: false },
+    { label: "Über uns", href: "/#ueber-uns", hasDropdown: false },
+    { label: "Referenzen", href: "/#referenzen", hasDropdown: false },
+    { label: "FAQ", href: "/#faq", hasDropdown: false },
   ];
 
   return (
@@ -20,7 +20,7 @@ export const Navigation = () => {
           <div className="flex items-center justify-between gap-4 md:gap-6 lg:gap-8">
             {/* Logo */}
                     <div className="flex items-center">
-                      <a href="#home">
+                      <a href="/">
                         <img
                           src="/img/ki_kanzlei_logo_black.svg"
                           alt="KI Kanzlei Logo"
@@ -46,7 +46,7 @@ export const Navigation = () => {
             {/* CTA Button (show from lg up) */}
             <div className="hidden lg:flex items-center">
               <Button size="lg" asChild>
-                <a href="#contact">
+                <a href="/#contact">
                   Analysegespräch vereinbaren
                 </a>
               </Button>
@@ -80,7 +80,7 @@ export const Navigation = () => {
                 ))}
                 <div className="pt-4 mt-2 border-t border-gray-200">
                   <Button size="lg" className="w-full" asChild>
-                    <a href="#contact">
+                    <a href="/#contact">
                       Analysegespräch vereinbaren
                     </a>
                   </Button>

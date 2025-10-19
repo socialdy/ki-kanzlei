@@ -54,7 +54,7 @@ export const FAQ = () => {
             <AccordionItem
               key={index}
               value={`item-${index}`}
-              className="bg-background rounded-xl border border-border px-6 data-[state=open]:shadow-md transition-base slide-up"
+              className="bg-background rounded-xl border border-border px-6 data-[state=open]:shadow-md transition-base slide-up cursor-pointer"
             >
               <AccordionTrigger className="text-left font-semibold hover:no-underline py-5 text-lg">
                 {faq.question}
