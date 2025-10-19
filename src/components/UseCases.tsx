@@ -1,61 +1,83 @@
-import { Phone, FileText, Bell, UserCheck, Receipt, MailCheck } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
+import { PhoneCall, FileSpreadsheet, MessageSquare, Stethoscope, Calculator, Share2 } from "lucide-react";
 
 const useCases = [
   {
-    icon: Phone,
-    title: "Automatische Anrufannahme & Scheduling",
-    description: "Voice Agent antwortet 24/7, qualifiziert Anfragen, bucht Termine direkt.",
-    tools: ["Voice Agent", "n8n"],
-    savings: "15h/Woche"
-  },
-  {
-    icon: FileText,
-    title: "Digitale Anamnesebogen",
-    description: "Patienten füllen Formulare digital aus, n8n speichert automatisch.",
-    tools: ["n8n", "CRM"],
-    savings: "5h/Woche"
-  },
-  {
-    icon: Bell,
-    title: "Automatisierte Terminbestätigungen",
-    description: "SMS/Email Reminders vor Termin, reduziert No-Shows.",
-    tools: ["Voice Agent", "n8n", "SMS API"],
-    savings: "3h/Woche"
-  },
-  {
-    icon: UserCheck,
-    title: "Patient Intake & Informationen",
-    description: "KI stellt medizinische Fragen, erfasst Historie, prüft Versicherung.",
-    tools: ["Voice Agent", "n8n"],
+    icon: PhoneCall,
+    title: "KI-Anrufannahme",
+    description: "Fonio.ai beantwortet Anrufe 24/7 auf Deutsch oder Englisch, qualifiziert Patienten und bucht Termine automatisch in Freudio über n8n.",
+    tools: [
+      { name: "Fonio.ai", logo: "/img/techstack/fonio.png" },
+      { name: "n8n", logo: "/img/techstack/n8n.webp" },
+      { name: "Freudio", logo: "/img/techstack/freudio.svg" }
+    ],
     savings: "8h/Woche"
   },
   {
-    icon: Receipt,
-    title: "Automatisierte Rechnungsstellung",
-    description: "Invoice-Generierung, Mahnungen, Payment Reminders.",
-    tools: ["n8n", "Accounting"],
-    savings: "6h/Woche"
+    icon: FileSpreadsheet,
+    title: "Automatische Dokumentenverarbeitung",
+    description: "Patienten senden PDFs per E-Mail wie Verschwiegenheitserklärung, Anamnesebogen, Einverständniserklärungen und mehr. Die Dateien werden automatisch verarbeitet und in Freudio importiert.",
+    tools: [
+      { name: "n8n", logo: "/img/techstack/n8n.webp" },
+      { name: "Freudio", logo: "/img/techstack/freudio.svg" }
+    ],
+    savings: "3h/Woche"
   },
   {
-    icon: MailCheck,
-    title: "Follow-up & Patient Engagement",
-    description: "Nachbetreuung, Feedback-Umfragen, Re-booking Reminders.",
-    tools: ["Voice Agent", "n8n", "Email"],
+    icon: MessageSquare,
+    title: "Automatische Patientenkommunikation",
+    description: "SMS-Erinnerungen, E-Mails mit Dokumenten zum Ausfüllen direkt an Patienten, automatische Terminbestätigungen und Synchronisation mit Freudio.",
+    tools: [
+      { name: "n8n", logo: "/img/techstack/n8n.webp" },
+      { name: "Twilio", logo: "/img/techstack/twilio.png" },
+      { name: "Freudio", logo: "/img/techstack/freudio.svg" }
+    ],
+    savings: "5h/Woche"
+  },
+  {
+    icon: Stethoscope,
+    title: "KI-Dokumentation",
+    description: "Integrierte KI-Dokumentation erstellt automatisch Therapieberichte und Zusammenfassungen direkt in der Praxisverwaltung.",
+    tools: [
+      { name: "n8n", logo: "/img/techstack/n8n.webp" },
+      { name: "Google Gemini", logo: "/img/techstack/gemini.png" },
+      { name: "Freudio", logo: "/img/techstack/freudio.svg" }
+    ],
     savings: "4h/Woche"
+  },
+  {
+    icon: Calculator,
+    title: "Automatisierte Buchhaltung",
+    description: "Integrierte Abrechnungsfunktion generiert automatisch Rechnungen und verwaltet alle buchhaltungsrelevanten Daten.",
+    tools: [
+      { name: "n8n", logo: "/img/techstack/n8n.webp" },
+      { name: "Google Gemini", logo: "/img/techstack/gemini.png" },
+      { name: "Freudio", logo: "/img/techstack/freudio.svg" }
+    ],
+    savings: "2h/Woche"
+  },
+  {
+    icon: Share2,
+    title: "Automatisches Marketing",
+    description: "KI-Agent generiert automatisch Posts zu bestimmten Themen und veröffentlicht sie zu optimalen Zeiten auf Social Media Kanälen.",
+    tools: [
+      { name: "Gemini", logo: "/img/techstack/gemini.png" },
+      { name: "Supabase", logo: "/img/techstack/supabase.jpg" },
+      { name: "n8n", logo: "/img/techstack/n8n.webp" }
+    ],
+    savings: "3h/Woche"
   }
 ];
 
 export const UseCases = () => {
   return (
-    <section className="section-spacing">
+    <section id="loesungen" className="section-spacing">
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-            Ihre Lösung: KI-gestützte Automatisierung
+            Ihre Lösung: Digitale Praxisoptimierung
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Sparen Sie bis zu 40 Stunden pro Woche mit unseren bewährten Workflows
+            Sparen Sie bis zu 25 Stunden pro Woche mit unseren bewährten digitalen Workflows
           </p>
         </div>
 
@@ -76,13 +98,17 @@ export const UseCases = () => {
                   {useCase.description}
                 </p>
                 
-                <div className="flex flex-wrap gap-2 mb-3">
-                  {useCase.tools.map((tool) => (
-                    <Badge key={tool} variant="secondary" className="text-xs">
-                      {tool}
-                    </Badge>
-                  ))}
-                </div>
+                        <div className="flex flex-wrap gap-3 mb-3">
+                          {useCase.tools.map((tool) => (
+                            <div key={tool.name} className="flex items-center gap-2 px-2 py-2 bg-white/50 rounded-lg border border-gray-200/50">
+                              <img
+                                src={tool.logo}
+                                alt={tool.name}
+                                className="h-8 w-8 object-contain [image-rendering:crisp-edges]"
+                              />
+                            </div>
+                          ))}
+                        </div>
                 
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/20 text-accent text-sm font-semibold">
                   ⏱ {useCase.savings}
@@ -90,6 +116,12 @@ export const UseCases = () => {
               </div>
             );
           })}
+        </div>
+
+        <div className="text-center mt-12">
+          <p className="text-lg text-muted-foreground">
+            Und noch vieles mehr – individuell auf Ihre Praxis zugeschnitten
+          </p>
         </div>
       </div>
     </section>

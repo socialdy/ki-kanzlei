@@ -103,6 +103,10 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+  
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-satoshi);
@@ -194,5 +198,40 @@ All colors MUST be HSL.
   
   .float {
     animation: float 3s ease-in-out infinite;
+  }
+  
+  .animate-scroll-right-to-left {
+    animation: scrollRightToLeft 30s linear infinite;
+  }
+  
+  /* Mobile slider optimization */
+  @media (max-width: 768px) {
+    .animate-scroll-right-to-left {
+      animation: scrollRightToLeft 20s linear infinite;
+    }
+  }
+  
+  @keyframes scrollRightToLeft {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  /* Cal.com Responsive Heights */
+  @media (max-width: 768px) {
+    iframe[title="Terminbuchung"] {
+      height: 800px !important;
+      min-height: 700px !important;
+    }
+  }
+  
+  @media (min-width: 769px) {
+    iframe[title="Terminbuchung"] {
+      height: 700px !important;
+      min-height: 600px !important;
+    }
   }
 }
