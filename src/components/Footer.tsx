@@ -8,13 +8,11 @@ export const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4 fade-in">
             <div className="flex items-center">
-              <a href="/" className="transition-base hover:opacity-80">
-                <img
-                  src="/img/ki_kanzlei_logo_white.svg"
-                  alt="KI Kanzlei Logo"
-                  className="h-12 w-auto"
-                />
-              </a>
+              <img
+                src="/img/ki_kanzlei_logo_white.svg"
+                alt="KI Kanzlei Logo"
+                className="h-12 w-auto"
+              />
             </div>
             <p className="text-primary-foreground/80 text-sm leading-relaxed">
               Ihr Partner für digitale Transformation in der Psychotherapie. 
