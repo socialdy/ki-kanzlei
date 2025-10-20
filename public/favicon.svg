@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="KI Kanzlei">
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#3B82F6"/>
       <stop offset="100%" stop-color="#2563EB"/>
     </linearGradient>
   </defs>
-  <rect x="0" y="0" width="256" height="256" rx="48" fill="url(#g)"/>
+  <rect x="0" y="0" width="32" height="32" rx="6" fill="url(#g)"/>
   <g fill="#FFFFFF">
-    <path d="M64 176V80h20v36h.5L118 80h24l-41 44 43 52h-25l-31-38h-.5v38H64z"/>
-    <rect x="164" y="80" width="20" height="96" rx="2"/>
+    <path d="M8 22V10h2.5v4.5h.1L15 10h3l-5.1 5.5 5.4 6.5h-3.1l-3.9-4.8h-.1V22H8z"/>
+    <rect x="20.5" y="10" width="2.5" height="12" rx="0.3"/>
   </g>
 </svg>
 
