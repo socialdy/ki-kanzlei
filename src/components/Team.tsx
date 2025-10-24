@@ -2,25 +2,19 @@ import { Linkedin } from "lucide-react";
 
 const team = [
   {
-    name: "Maximilian Schneider",
-    title: "CEO & KI-Spezialist",
-    bio: "10+ Jahre Erfahrung in Healthcare Tech. Experte für Voice AI und Prozessautomatisierung.",
-    avatar: "MS",
-    linkedin: "#"
+    name: "Arnold Freissling",
+    title: "Geschäftsführer & Vertrieb",
+    bio: "Hat die Idee zur KI-Kanzlei entwickelt, nachdem er die Probleme seiner Freundin Katja, einer selbstständigen Psychotherapeutin, live und hautnah miterlebt hat.",
+    avatar: "AF",
+    image: "/img/team/arnold_freissling.png",
+    linkedin: "https://at.linkedin.com/in/arnold-freissling-95642b256"
   },
   {
-    name: "Julia Hartmann",
-    title: "CTO & n8n Architektin",
-    bio: "Spezialistin für Workflow-Automatisierung und DSGVO-konforme Integration.",
-    avatar: "JH",
-    linkedin: "#"
-  },
-  {
-    name: "Dr. Michael Bauer",
-    title: "Medical Advisor",
-    bio: "Psychotherapeut mit 15 Jahren Praxiserfahrung. Berät bei Patient Journey Design.",
-    avatar: "MB",
-    linkedin: "#"
+    name: "Markus Wallner",
+    title: "Geschäftsführer & Automatisierungsexperte",
+    bio: "Spezialist für n8n und Prozessautomatisierung. Entwickelt die technischen Lösungen und implementiert sie System für System.",
+    image: "/img/team/markus_wallner.png",
+    linkedin: "https://at.linkedin.com/in/markuswallner-social-media-marketing"
   }
 ];
 
@@ -37,18 +31,28 @@ export const Team = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {team.map((member, index) => (
             <div
               key={index}
               className="group text-center"
             >
               <div className="relative mb-6 inline-block">
-                <div className="w-48 h-48 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center mx-auto border-4 border-card shadow-lg group-hover:shadow-xl transition-base">
-                  <span className="text-5xl font-bold text-primary">{member.avatar}</span>
+                <div className="w-48 h-48 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center mx-auto border-4 border-card shadow-lg group-hover:shadow-xl transition-base overflow-hidden">
+                  {member.image ? (
+                    <img 
+                      src={member.image} 
+                      alt={member.name}
+                      className="w-full h-full object-cover object-top rounded-full"
+                    />
+                  ) : (
+                    <span className="text-5xl font-bold text-primary">{member.avatar}</span>
+                  )}
                 </div>
                 <a
                   href={member.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="absolute bottom-2 right-8 w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-base hover:scale-110"
                   aria-label="LinkedIn"
                 >

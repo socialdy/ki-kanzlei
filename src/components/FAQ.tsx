@@ -12,15 +12,15 @@ const faqs = [
   },
   {
     question: "Ist die Lösung wirklich DSGVO-konform?",
-    answer: "Ja, absolut. Alle Daten werden in Österreich gehostet. Wir arbeiten mit zertifizierten Cloud-Providern, implementieren Ende-zu-Ende-Verschlüsselung und stellen sicher, dass alle Patientendaten nach höchsten Datenschutzstandards verarbeitet werden. Sie erhalten von uns ein vollständiges DSGVO-Compliance-Paket."
+    answer: "Ja, absolut. Alle Daten werden in Österreich gehostet. Wir arbeiten mit zertifizierten Cloud-Providern, implementieren Ende-zu-Ende-Verschlüsselung und stellen sicher, dass alle Klientendaten nach höchsten Datenschutzstandards verarbeitet werden. Sie erhalten von uns ein vollständiges DSGVO-Compliance-Paket."
   },
   {
     question: "Wie viel Zeit spare ich wirklich?",
-    answer: "Unsere Kunden sparen durchschnittlich 12-15 Stunden pro Woche. Das sind 50-60 Stunden im Monat, die Sie wieder für Ihre Patienten haben. KI-Anrufannahme spart 8h/Woche, automatische Terminplanung 4h/Woche, Dokumentenverarbeitung 2h/Woche, und Nachsorge-Aufgaben 1-2h/Woche."
+    answer: "Unsere Kunden sparen durchschnittlich 8-10 Stunden pro Woche. Das sind 32-40 Stunden im Monat, die Sie wieder voll und ganz für Ihre Klienten nutzen können. KI-Anrufannahme spart 8h/Woche, automatische Terminplanung 4h/Woche, Dokumentenverarbeitung 2h/Woche und Nachsorge-Aufgaben 1-2h/Woche."
   },
   {
-    question: "Was passiert mit meinen Patientendaten?",
-    answer: "Ihre Patientendaten bleiben Ihre Daten. Wir speichern und verarbeiten sie ausschließlich in Ihrem Auftrag gemäß Auftragsverarbeitungsvertrag (AVV). Die Daten werden verschlüsselt gespeichert, regelmäßig gesichert und Sie können jederzeit den Zugriff widerrufen oder Daten exportieren/löschen."
+    question: "Was passiert mit meinen Klientendaten?",
+    answer: "Ihre Klientendaten bleiben Ihre Daten. Wir speichern und verarbeiten sie ausschließlich in Ihrem Auftrag gemäß Auftragsverarbeitungsvertrag (AVV). Die Daten werden verschlüsselt gespeichert, regelmäßig gesichert und Sie können jederzeit den Zugriff widerrufen oder Daten exportieren/löschen."
   },
   {
     question: "Wie zuverlässig ist Fonio.ai?",
@@ -32,7 +32,7 @@ const faqs = [
   },
   {
     question: "Was ist, wenn etwas nicht funktioniert?",
-    answer: "Unser Support-Team ist für Sie da. Wir überwachen alle Systeme 24/7 und reagieren sofort bei Problemen. Zusätzlich erhalten Sie regelmäßige Updates und können jederzeit Anpassungen wünschen. Unser Ziel ist, dass Sie sich um Ihre Patienten kümmern können, nicht um die Technik."
+    answer: "Unser Support-Team ist für Sie da. Wir überwachen alle Systeme 24/7 und reagieren sofort bei Problemen. Zusätzlich erhalten Sie regelmäßige Updates und können jederzeit Anpassungen wünschen. Unser Ziel ist, dass Sie sich um Ihre Klienten kümmern können, nicht um die Technik."
   }
 ];
 

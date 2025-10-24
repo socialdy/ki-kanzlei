@@ -4,7 +4,7 @@ import { LogoSlider } from "@/components/LogoSlider";
 
 export const Hero = () => {
   return (
-    <section id="home" className="gradient-hero section-spacing overflow-hidden min-h-screen pt-40 md:pt-32">
+    <section id="home" className="gradient-hero section-spacing overflow-hidden min-h-screen">
       <div className="container mx-auto px-4 max-w-7xl w-full">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           {/* Badge */}
@@ -22,8 +22,8 @@ export const Hero = () => {
 
           {/* Subheading */}
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto slide-up">
-            Überlastet von Papierbergen und Routineaufgaben? Mit unserer digitalen Lösung 
-            optimieren Sie Ihre Praxisprozesse – effizient, sicher und DSGVO-konform.
+            Termin-Chaos, Dokumentenaufwand und Kommunikationsstress? Mit unserer KI-Lösung 
+            automatisieren Sie Ihre Praxisprozesse – effizient, sicher und DSGVO-konform.
           </p>
 
           {/* CTA */}
@@ -47,11 +47,11 @@ export const Hero = () => {
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8 pt-12 fade-in">
             <div>
-              <div className="text-4xl md:text-5xl font-bold text-primary">5h</div>
+              <div className="text-4xl md:text-5xl font-bold text-primary">8-10h</div>
               <div className="text-sm text-muted-foreground mt-2">gespart pro Woche</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold text-primary">20%</div>
+              <div className="text-4xl md:text-5xl font-bold text-primary">40%</div>
               <div className="text-sm text-muted-foreground mt-2">mehr Effizienz</div>
             </div>
             <div className="col-span-2 md:col-span-1">

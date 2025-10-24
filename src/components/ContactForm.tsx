@@ -1,5 +1,5 @@
 export const ContactForm = () => {
-  const calUrl = "https://cal.com/ki-kanzlei/kostenloses-analysegesprach?embed=true&embed_domain=ki-kanzlei.at&theme=light&colorPrimary=%233B82F6&colorBackground=%23ffffff&colorText=%23374151&hideBranding=true";
+  const calUrl = "https://cal.com/ki-kanzlei/kostenloses-analysegesprach?embed=true&embed_domain=ki-kanzlei.at&theme=light&colorPrimary=%233B82F6&colorBackground=%23f8fafc&colorText=%23374151&colorAccent=%233B82F6&colorAccentHover=%232563eb&hideBranding=true";
   
   return (
     <section id="contact" className="section-spacing bg-gradient-to-br from-primary/5 via-background to-accent/5">
@@ -9,7 +9,7 @@ export const ContactForm = () => {
             Bereit für Ihr kostenloses Analysegespräch?
           </h2>
           <p className="text-lg text-muted-foreground slide-up">
-            In 30 Minuten analysieren wir Ihre Praxisprozesse und zeigen Ihnen, wie Sie mit KI 12-15 Stunden pro Woche sparen können. Unverbindlich und kostenlos.
+            In 30 Minuten analysieren wir Ihre Praxisprozesse und zeigen Ihnen, wie Sie mit KI 8-10 Stunden pro Woche sparen können. Unverbindlich und kostenlos.
           </p>
         </div>
 

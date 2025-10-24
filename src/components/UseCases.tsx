@@ -4,7 +4,7 @@ const useCases = [
   {
     icon: PhoneCall,
     title: "KI-Anrufannahme",
-    description: "Fonio.ai beantwortet Anrufe 24/7 auf Deutsch oder Englisch, qualifiziert Patienten und bucht Termine automatisch in Freudio über n8n.",
+    description: "Fonio.ai beantwortet Anrufe 24/7 auf Deutsch oder Englisch, qualifiziert Klienten und bucht Termine automatisch in Freudio über n8n.",
     tools: [
       { name: "Fonio.ai", logo: "/img/techstack/fonio.png" },
       { name: "n8n", logo: "/img/techstack/n8n.webp" },
@@ -15,7 +15,7 @@ const useCases = [
   {
     icon: FileSpreadsheet,
     title: "Automatische Dokumentenverarbeitung",
-    description: "Patienten senden PDFs per E-Mail wie Verschwiegenheitserklärung, Anamnesebogen, Einverständniserklärungen und mehr. Die Dateien werden automatisch verarbeitet und in Freudio importiert.",
+    description: "Klienten senden PDFs per E-Mail wie Verschwiegenheitserklärung, Einverständniserklärungen und weitere Dokumente. Die Dateien werden automatisch verarbeitet und in Freudio importiert.",
     tools: [
       { name: "n8n", logo: "/img/techstack/n8n.webp" },
       { name: "Freudio", logo: "/img/techstack/freudio.svg" }
@@ -24,14 +24,14 @@ const useCases = [
   },
   {
     icon: MessageSquare,
-    title: "Automatische Patientenkommunikation",
-    description: "SMS-Erinnerungen, E-Mails mit Dokumenten zum Ausfüllen direkt an Patienten, automatische Terminbestätigungen und Synchronisation mit Freudio.",
+    title: "Automatische Klientenkommunikation",
+    description: "SMS-Erinnerungen, E-Mails mit Dokumenten zum Ausfüllen direkt an Klienten, automatische Terminbestätigungen und Synchronisation mit Freudio.",
     tools: [
       { name: "n8n", logo: "/img/techstack/n8n.webp" },
       { name: "Twilio", logo: "/img/techstack/twilio.png" },
       { name: "Freudio", logo: "/img/techstack/freudio.svg" }
     ],
-    savings: "5h/Woche"
+    savings: "8-10h/Woche"
   },
   {
     icon: Stethoscope,
@@ -47,7 +47,7 @@ const useCases = [
   {
     icon: Calculator,
     title: "Automatisierte Buchhaltung",
-    description: "Integrierte Abrechnungsfunktion generiert automatisch Rechnungen und verwaltet alle buchhaltungsrelevanten Daten.",
+    description: "Integrierte Abrechnungsfunktion generiert automatisch Rechnungen, ICD-11 Kodierung und Krankenkassen-Abrechnung direkt in Freudio. Verwaltet alle buchhaltungsrelevanten Daten.",
     tools: [
       { name: "n8n", logo: "/img/techstack/n8n.webp" },
       { name: "Google Gemini", logo: "/img/techstack/gemini.png" },
@@ -77,7 +77,7 @@ export const UseCases = () => {
             Ihre Lösung: Digitale Praxisoptimierung
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Sparen Sie bis zu 25 Stunden pro Woche mit unseren bewährten digitalen Workflows
+            Sparen Sie bis zu 8-10 Stunden pro Woche mit unseren bewährten digitalen Workflows
           </p>
         </div>
 

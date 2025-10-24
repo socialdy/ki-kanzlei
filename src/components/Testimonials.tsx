@@ -6,21 +6,21 @@ export const Testimonials = () => {
       name: "Dr. Sarah Huber",
       location: "Wien",
       rating: 5.0,
-      review: "Seit der Einführung der KI-Lösung ist alles anders. Meine Patienten bekommen automatisch SMS-Erinnerungen und ich habe endlich wieder Zeit für das Wesentliche. Die Terminausfälle sind von 40% auf unter 10% gesunken - das war für mich ein Game-Changer!",
+      review: "Seit der Einführung der KI-Lösung ist alles anders. Meine Klienten bekommen automatisch SMS-Erinnerungen und ich habe endlich wieder Zeit für das Wesentliche. Die Terminausfälle sind von 40% auf unter 10% gesunken - das war für mich ein Game-Changer!",
       image: "https://randomuser.me/api/portraits/women/25.jpg",
     },
     {
       name: "Dr. Michael Steiner",
       location: "Graz",
       rating: 5.0,
-      review: "Ich war am Anfang skeptisch, aber die Lösung ist wirklich DSGVO-konform. Meine Patienten sind begeistert von den SMS-Erinnerungen. Funktioniert einwandfrei.",
+      review: "Ich war am Anfang skeptisch, aber die Lösung ist wirklich DSGVO-konform. Meine Klienten sind begeistert von den SMS-Erinnerungen. Funktioniert einwandfrei.",
       image: "https://randomuser.me/api/portraits/men/32.jpg",
     },
     {
       name: "Dr. Petra Wagner",
       location: "Salzburg",
       rating: 5.0,
-      review: "Fantastisch! Ich kann mich endlich wieder voll auf meine Patienten konzentrieren. Die administrative Arbeit läuft komplett automatisch. Meine Kollegin hat mich gefragt, wo ich das her habe.",
+      review: "Fantastisch! Ich kann mich endlich wieder voll auf meine Klienten konzentrieren. Die administrative Arbeit läuft komplett automatisch. Meine Kollegin hat mich gefragt, wo ich das her habe.",
       image: "https://randomuser.me/api/portraits/women/68.jpg",
     },
     {
@@ -34,21 +34,21 @@ export const Testimonials = () => {
       name: "Dr. Christine Bauer",
       location: "Linz",
       rating: 5.0,
-      review: "Der Sprachassistent ist der Hammer! Patienten denken, sie sprechen mit einer echten Person. Erstberatungen laufen jetzt viel effizienter ab.",
+      review: "Der Sprachassistent ist der Hammer! Klienten denken, sie sprechen mit einer echten Person. Erstberatungen laufen jetzt viel effizienter ab.",
       image: "https://randomuser.me/api/portraits/women/12.jpg",
     },
     {
       name: "Dr. Thomas Fischer",
       location: "Klagenfurt",
       rating: 5.0,
-      review: "Wir sind 3 Therapeuten in der Praxis und die Terminplanung war immer ein Chaos. Jetzt läuft alles automatisch und die Patienten sind viel zufriedener. Kann ich nur weiterempfehlen!",
+      review: "Wir sind 3 Therapeuten in der Praxis und die Terminplanung war immer ein Chaos. Jetzt läuft alles automatisch und die Klienten sind viel zufriedener. Kann ich nur weiterempfehlen!",
       image: "https://randomuser.me/api/portraits/men/88.jpg",
     },
     {
       name: "Dr. Elisabeth Gruber",
       location: "Bregenz",
       rating: 5.0,
-      review: "Besonders beeindruckt hat mich, dass das System sogar unseren Vorarlberger Dialekt versteht. Meine älteren Patienten fühlen sich sehr gut aufgehoben und ich spare täglich 2-3 Stunden.",
+      review: "Besonders beeindruckt hat mich, dass das System sogar unseren Vorarlberger Dialekt versteht. Meine älteren Klienten fühlen sich sehr gut aufgehoben und ich spare täglich 2-3 Stunden.",
       image: "https://randomuser.me/api/portraits/women/35.jpg",
     },
     {
@@ -62,21 +62,21 @@ export const Testimonials = () => {
       name: "Dr. Sabine Koller",
       location: "Villach",
       rating: 5.0,
-      review: "Die Dokumentation war mein größter Zeitfresser. Jetzt macht das die KI automatisch und ich kann mich voll auf meine Patienten konzentrieren. Meine Lebensqualität hat sich deutlich verbessert.",
+      review: "Die Dokumentation war mein größter Zeitfresser. Jetzt macht das die KI automatisch und ich kann mich voll auf meine Klienten konzentrieren. Meine Lebensqualität hat sich deutlich verbessert.",
       image: "https://randomuser.me/api/portraits/women/87.jpg",
     },
     {
       name: "Dr. Robert Leitner",
       location: "Dornbirn",
       rating: 5.0,
-      review: "Die beste Entscheidung, die wir je getroffen haben! Nach nur 3 Monaten hatten wir die Kosten wieder drin. Mein ganzes Team und alle Patienten sind begeistert. Kann ich jedem empfehlen.",
+      review: "Die beste Entscheidung, die wir je getroffen haben! Nach nur 3 Monaten hatten wir die Kosten wieder drin. Mein ganzes Team und alle Klienten sind begeistert. Kann ich jedem empfehlen.",
       image: "https://randomuser.me/api/portraits/men/45.jpg",
     },
     {
       name: "Dr. Monika Fuchs",
       location: "Steyr",
       rating: 5.0,
-      review: "Was mich am meisten überrascht hat: Die KI erkennt wirklich emotionale Nuancen in den Gesprächen. Manchmal denke ich, sie ist einfühlsamer als manche Menschen. Die Patienten merken den Unterschied.",
+      review: "Was mich am meisten überrascht hat: Die KI erkennt wirklich emotionale Nuancen in den Gesprächen. Manchmal denke ich, sie ist einfühlsamer als manche Menschen. Die Klienten merken den Unterschied.",
       image: "https://randomuser.me/api/portraits/women/56.jpg",
     },
   ];
@@ -89,7 +89,7 @@ export const Testimonials = () => {
             Was unsere Kunden sagen
           </h2>
           <p className="text-lg text-muted-foreground slide-up">
-            Über 15 Praxen vertrauen bereits auf KI Kanzlei
+            Über 20 Praxen vertrauen bereits auf KI Kanzlei
           </p>
         </div>
 

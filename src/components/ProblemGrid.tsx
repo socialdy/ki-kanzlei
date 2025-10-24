@@ -17,7 +17,7 @@ const problems = [
   {
     icon: Phone,
     title: "Kommunikationsstress",
-    description: "Mitten in der Therapie klingelt das Telefon. Patient wartet draußen, Anrufer will Termin. 'Entschuldigung, ich muss kurz...'",
+    description: "Mitten in der Therapie klingelt das Telefon. Klient wartet draußen, Anrufer will Termin. 'Entschuldigung, ich muss kurz...'",
     size: "medium"
   },
   {
@@ -29,13 +29,13 @@ const problems = [
   {
     icon: FileText,
     title: "Dokumentenaufwand",
-    description: "Neuer Patient: Vertrag ausdrucken, Formulare ausfüllen, Daten eintragen. 'Können Sie das nicht digital machen?'",
+    description: "Neuer Klient: Vertrag ausdrucken, Formulare ausfüllen, Daten eintragen. 'Können Sie das nicht digital machen?'",
     size: "medium"
   },
   {
     icon: Brain,
     title: "Erinnerungen vergessen",
-    description: "Patient: 'Sie haben mir doch gesagt, Sie rufen morgen an!' Sie: 'Ach ja, stimmt...' Post-it verloren, Termin vergessen.",
+    description: "Klient: 'Sie haben mir doch gesagt, Sie rufen morgen an!' Sie: 'Ach ja, stimmt...' Post-it verloren, Termin vergessen.",
     size: "medium"
   }
 ];
@@ -49,7 +49,7 @@ export const ProblemGrid = () => {
             Diese Probleme kennen Sie nur zu gut
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto slide-up">
-            Jeden Tag dasselbe Theater. Zeit, die Sie lieber mit Ihren Patienten verbringen würden.
+            Jeden Tag dasselbe Theater. Zeit, die Sie lieber mit Ihren Klienten verbringen würden.
           </p>
         </div>
 
@@ -79,7 +79,7 @@ export const ProblemGrid = () => {
         
         <div className="text-center mt-16 slide-up">
           <p className="text-lg text-muted-foreground mb-6">
-            Sparen Sie <span className="text-primary font-bold">5-10 Stunden</span> pro Woche mit unseren Lösungen
+            Sparen Sie <span className="text-primary font-bold">8-10 Stunden</span> pro Woche mit unseren Lösungen
           </p>
           <Button size="lg" asChild>
             <a href="#contact">Termin vereinbaren</a>
