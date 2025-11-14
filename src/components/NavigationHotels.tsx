@@ -2,15 +2,15 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { useState } from "react";
 
-export const Navigation = () => {
+export const NavigationHotels = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuItems = [
-    { label: "Probleme", href: "/ki-loesungen-psychotherapeuten#probleme", hasDropdown: false },
-    { label: "Lösungen", href: "/ki-loesungen-psychotherapeuten#loesungen", hasDropdown: false },
-    { label: "Über uns", href: "/ki-loesungen-psychotherapeuten#ueber-uns", hasDropdown: false },
-    { label: "Referenzen", href: "/ki-loesungen-psychotherapeuten#referenzen", hasDropdown: false },
-    { label: "FAQ", href: "/ki-loesungen-psychotherapeuten#faq", hasDropdown: false },
+    { label: "Probleme", href: "/ki-loesungen-hotels#probleme", hasDropdown: false },
+    { label: "Lösungen", href: "/ki-loesungen-hotels#loesungen", hasDropdown: false },
+    { label: "Über uns", href: "/ki-loesungen-hotels#ueber-uns", hasDropdown: false },
+    { label: "Referenzen", href: "/ki-loesungen-hotels#referenzen", hasDropdown: false },
+    { label: "FAQ", href: "/ki-loesungen-hotels#faq", hasDropdown: false },
   ];
 
   return (
@@ -19,15 +19,15 @@ export const Navigation = () => {
         <div className="px-8 py-3">
           <div className="flex items-center justify-between gap-4 md:gap-6 lg:gap-8">
             {/* Logo */}
-                    <div className="flex items-center">
-                      <a href="/">
-                        <img
-                          src="/img/ki_kanzlei_logo_black.svg"
-                          alt="KI Kanzlei Logo"
-                          className="h-10 w-auto"
-                        />
-                      </a>
-                    </div>
+            <div className="flex items-center">
+              <a href="/">
+                <img
+                  src="/img/ki_kanzlei_logo_black.svg"
+                  alt="KI Kanzlei Logo"
+                  className="h-10 w-auto"
+                />
+              </a>
+            </div>
 
             {/* Desktop Menu (show from lg up) */}
             <div className="hidden lg:flex items-center gap-6">
@@ -46,8 +46,8 @@ export const Navigation = () => {
             {/* CTA Button (show from lg up) */}
             <div className="hidden lg:flex items-center">
               <Button size="lg" asChild>
-                <a href="/ki-loesungen-psychotherapeuten#contact">
-                  Analysegespräch vereinbaren
+                <a href="/ki-loesungen-hotels#contact">
+                  Kostenloses Analysegespräch
                 </a>
               </Button>
             </div>
@@ -80,8 +80,8 @@ export const Navigation = () => {
                 ))}
                 <div className="pt-4 mt-2 border-t border-gray-200">
                   <Button size="lg" className="w-full" asChild>
-                    <a href="/ki-loesungen-psychotherapeuten#contact">
-                      Analysegespräch vereinbaren
+                    <a href="/ki-loesungen-hotels#contact">
+                      Kostenloses Analysegespräch
                     </a>
                   </Button>
                 </div>
@@ -93,3 +93,4 @@ export const Navigation = () => {
     </div>
   );
 };
+

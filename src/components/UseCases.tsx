@@ -4,9 +4,10 @@ const useCases = [
   {
     icon: PhoneCall,
     title: "KI-Anrufannahme",
-    description: "Fonio.ai beantwortet Anrufe 24/7 auf Deutsch oder Englisch, qualifiziert Klienten und bucht Termine automatisch in Freudio über n8n.",
+    description: "Beantwortet Anrufe 24/7 auf Deutsch oder Englisch, qualifiziert Klienten und bucht Termine automatisch in Freudio über n8n.",
     tools: [
-      { name: "Fonio.ai", logo: "/img/techstack/fonio.png" },
+      { name: "LiveKit", logo: "/img/techstack/livekit.png" },
+      { name: "ElevenLabs", logo: "/img/techstack/eleven_labs.png" },
       { name: "n8n", logo: "/img/techstack/n8n.webp" },
       { name: "Freudio", logo: "/img/techstack/freudio.svg" }
     ],
@@ -39,7 +40,7 @@ const useCases = [
     description: "Integrierte KI-Dokumentation erstellt automatisch Therapieberichte und Zusammenfassungen direkt in der Praxisverwaltung.",
     tools: [
       { name: "n8n", logo: "/img/techstack/n8n.webp" },
-      { name: "Google Gemini", logo: "/img/techstack/gemini.png" },
+      { name: "Azure AI", logo: "/img/techstack/azureai.png" },
       { name: "Freudio", logo: "/img/techstack/freudio.svg" }
     ],
     savings: "4h/Woche"
@@ -50,7 +51,7 @@ const useCases = [
     description: "Integrierte Abrechnungsfunktion generiert automatisch Rechnungen, ICD-11 Kodierung und Krankenkassen-Abrechnung direkt in Freudio. Verwaltet alle buchhaltungsrelevanten Daten.",
     tools: [
       { name: "n8n", logo: "/img/techstack/n8n.webp" },
-      { name: "Google Gemini", logo: "/img/techstack/gemini.png" },
+      { name: "Azure AI", logo: "/img/techstack/azureai.png" },
       { name: "Freudio", logo: "/img/techstack/freudio.svg" }
     ],
     savings: "2h/Woche"
@@ -60,7 +61,7 @@ const useCases = [
     title: "Automatisches Marketing",
     description: "KI-Agent generiert automatisch Posts zu bestimmten Themen und veröffentlicht sie zu optimalen Zeiten auf Social Media Kanälen.",
     tools: [
-      { name: "Gemini", logo: "/img/techstack/gemini.png" },
+      { name: "Azure AI", logo: "/img/techstack/azureai.png" },
       { name: "Supabase", logo: "/img/techstack/supabase.jpg" },
       { name: "n8n", logo: "/img/techstack/n8n.webp" }
     ],
@@ -109,10 +110,6 @@ export const UseCases = () => {
                             </div>
                           ))}
                         </div>
-                
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/20 text-accent text-sm font-semibold">
-                  ⏱ {useCase.savings}
-                </div>
               </div>
             );
           })}

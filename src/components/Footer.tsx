@@ -1,6 +1,64 @@
 import { Mail, Phone, MapPin } from "lucide-react";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export const Footer = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const currentPath = location.pathname;
+
+  // Determine base path and navigation links based on current page
+  const getNavigationLinks = () => {
+    if (currentPath === "/") {
+      return {
+        probleme: "/#probleme",
+        loesungen: "/#loesungen",
+        ueberUns: "/#ueber-uns",
+        referenzen: "/#referenzen",
+        faq: "/#faq",
+      };
+    } else if (currentPath === "/ki-loesungen-psychotherapeuten") {
+      return {
+        probleme: "/ki-loesungen-psychotherapeuten#probleme",
+        loesungen: "/ki-loesungen-psychotherapeuten#loesungen",
+        ueberUns: "/ki-loesungen-psychotherapeuten#ueber-uns",
+        referenzen: "/ki-loesungen-psychotherapeuten#referenzen",
+        faq: "/ki-loesungen-psychotherapeuten#faq",
+      };
+    } else if (currentPath === "/ki-loesungen-hotels") {
+      return {
+        probleme: "/ki-loesungen-hotels#probleme",
+        loesungen: "/ki-loesungen-hotels#loesungen",
+        ueberUns: "/ki-loesungen-hotels#ueber-uns",
+        referenzen: "/ki-loesungen-hotels#referenzen",
+        faq: "/ki-loesungen-hotels#faq",
+      };
+    } else {
+      // Default to home (for blog pages, etc.)
+      return {
+        probleme: "/#probleme",
+        loesungen: "/#loesungen",
+        ueberUns: "/#ueber-uns",
+        referenzen: "/#referenzen",
+        faq: "/#faq",
+      };
+    }
+  };
+
+  const navLinks = getNavigationLinks();
+
+  const handleNavClick = (hash: string, e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (currentPath !== "/" && !currentPath.startsWith("/ki-loesungen-")) {
+      e.preventDefault();
+      navigate("/");
+      setTimeout(() => {
+        const section = document.getElementById(hash.replace("/#", "").replace("#", ""));
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }, 100);
+    }
+  };
+
   return (
     <footer className="bg-primary text-primary-foreground py-12 md:py-16">
       <div className="container mx-auto px-4 max-w-7xl">
@@ -8,14 +66,16 @@ export const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4 fade-in">
             <div className="flex items-center">
-              <img
-                src="/img/ki_kanzlei_logo_white.svg"
-                alt="KI Kanzlei Logo"
-                className="h-12 w-auto"
-              />
+              <a href="/">
+                <img
+                  src="/img/ki_kanzlei_logo_white.svg"
+                  alt="KI Kanzlei Logo"
+                  className="h-12 w-auto"
+                />
+              </a>
             </div>
             <p className="text-primary-foreground/80 text-sm leading-relaxed">
-              Ihr Partner für digitale Transformation in der Psychotherapie. 
+              Ihr Partner für digitale Transformation. 
               DSGVO-konform, schnell, zuverlässig.
             </p>
           </div>
@@ -24,11 +84,52 @@ export const Footer = () => {
           <div className="fade-in">
             <h4 className="font-bold mb-4">Navigation</h4>
             <ul className="space-y-3 text-sm">
-              <li><a href="/#probleme" className="text-primary-foreground/80 hover:text-primary-foreground transition-base">Probleme</a></li>
-              <li><a href="/#loesungen" className="text-primary-foreground/80 hover:text-primary-foreground transition-base">Lösungen</a></li>
-              <li><a href="/#ueber-uns" className="text-primary-foreground/80 hover:text-primary-foreground transition-base">Über uns</a></li>
-              <li><a href="/#referenzen" className="text-primary-foreground/80 hover:text-primary-foreground transition-base">Referenzen</a></li>
-              <li><a href="/#faq" className="text-primary-foreground/80 hover:text-primary-foreground transition-base">FAQ</a></li>
+              <li>
+                <a 
+                  href={navLinks.probleme} 
+                  onClick={(e) => handleNavClick(navLinks.probleme, e)}
+                  className="text-primary-foreground/80 hover:text-primary-foreground transition-base"
+                >
+                  Probleme
+                </a>
+              </li>
+              <li>
+                <a 
+                  href={navLinks.loesungen} 
+                  onClick={(e) => handleNavClick(navLinks.loesungen, e)}
+                  className="text-primary-foreground/80 hover:text-primary-foreground transition-base"
+                >
+                  Lösungen
+                </a>
+              </li>
+              <li><a href="/blog" className="text-primary-foreground/80 hover:text-primary-foreground transition-base">Blog</a></li>
+              <li>
+                <a 
+                  href={navLinks.ueberUns} 
+                  onClick={(e) => handleNavClick(navLinks.ueberUns, e)}
+                  className="text-primary-foreground/80 hover:text-primary-foreground transition-base"
+                >
+                  Über uns
+                </a>
+              </li>
+              <li>
+                <a 
+                  href={navLinks.referenzen} 
+                  onClick={(e) => handleNavClick(navLinks.referenzen, e)}
+                  className="text-primary-foreground/80 hover:text-primary-foreground transition-base"
+                >
+                  Referenzen
+                </a>
+              </li>
+              <li>
+                <a 
+                  href={navLinks.faq} 
+                  onClick={(e) => handleNavClick(navLinks.faq, e)}
+                  className="text-primary-foreground/80 hover:text-primary-foreground transition-base"
+                >
+                  FAQ
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -38,8 +139,6 @@ export const Footer = () => {
             <ul className="space-y-3 text-sm">
               <li><a href="/ki-loesungen-psychotherapeuten" className="text-primary-foreground/80 hover:text-primary-foreground transition-base">KI-Lösungen für Psychotherapeuten</a></li>
               <li><a href="/ki-loesungen-hotels" className="text-primary-foreground/80 hover:text-primary-foreground transition-base">KI-Lösungen für Hotels</a></li>
-              <li><a href="/ki-loesungen-steuerberater" className="text-primary-foreground/80 hover:text-primary-foreground transition-base">KI-Lösungen für Steuerberater</a></li>
-              <li><a href="/ki-loesungen-gastronomie" className="text-primary-foreground/80 hover:text-primary-foreground transition-base">KI-Lösungen für Gastronomie</a></li>
             </ul>
           </div>
 

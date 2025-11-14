@@ -1,8 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import { LogoSliderPsychotherapeuten } from "@/components/LogoSliderPsychotherapeuten";
 
-export const Hero = () => {
+export const HeroHome = () => {
   return (
     <section id="home" className="gradient-hero section-spacing overflow-hidden min-h-screen">
       <div className="container mx-auto px-4 max-w-7xl w-full">
@@ -10,49 +9,39 @@ export const Hero = () => {
           {/* Badge */}
           <div className="inline-block slide-up mt-8 md:mt-0">
             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/5 border border-primary/10 text-primary text-sm font-medium">
-              Ihr österreichischer KI-Partner für Psychotherapie
+              Ihr österreichischer KI-Partner
             </span>
           </div>
 
           {/* Headline */}
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight slide-up">
-            Wir digitalisieren Ihre Praxis in nur{" "}
-            <span className="text-primary">30 Tagen</span>
+            Wir automatisieren Ihr Unternehmen mit KI
           </h1>
 
           {/* Subheading */}
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto slide-up">
-            Termin-Chaos, Dokumentenaufwand und Kommunikationsstress? Mit unserer KI-Lösung 
-            automatisieren Sie Ihre Praxisprozesse – effizient, sicher und DSGVO-konform.
+            Von Voice‑Agenten bis Social‑Media‑Automatisierung: Wir bauen produktionsreife KI‑Lösungen, die Zeit sparen und Prozesse optimieren – DSGVO‑konform und messbar.
           </p>
 
           {/* CTA */}
           <div className="flex justify-center items-center slide-up">
             <Button size="lg" className="w-full sm:w-auto" asChild>
               <a href="#contact">
-                Kostenloses Beratungsgespräch
+                Kostenloses Analysegespräch
                 <ArrowRight className="w-4 h-4 ml-2" />
               </a>
             </Button>
           </div>
 
-          {/* Social Proof */}
-          <div className="pt-12 fade-in">
-            <p className="text-sm text-muted-foreground mb-6">Vertrauen von über 20 Praxen</p>
-            <div className="max-w-4xl mx-auto">
-              <LogoSliderPsychotherapeuten />
-            </div>
-          </div>
-
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8 pt-12 fade-in">
             <div>
-              <div className="text-4xl md:text-5xl font-bold text-primary">8-10h</div>
-              <div className="text-sm text-muted-foreground mt-2">gespart pro Woche</div>
+              <div className="text-4xl md:text-5xl font-bold text-primary">10-20h</div>
+              <div className="text-sm text-muted-foreground mt-2">Zeit gespart pro Woche</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold text-primary">40%</div>
-              <div className="text-sm text-muted-foreground mt-2">mehr Effizienz</div>
+              <div className="text-4xl md:text-5xl font-bold text-primary">+20</div>
+              <div className="text-sm text-muted-foreground mt-2">Projekte umgesetzt</div>
             </div>
             <div className="col-span-2 md:col-span-1">
               <div className="text-4xl md:text-5xl font-bold text-primary">100%</div>
@@ -64,3 +53,4 @@ export const Hero = () => {
     </section>
   );
 };
+
