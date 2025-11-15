@@ -311,18 +311,31 @@ export default async function handler(
       });
     }
 
-    // Aktualisiere bestehende Posts
+    // Aktualisiere bestehende Posts (nur wenn tatsächlich neuer)
     const updatedItems = existingItems.map(existing => {
       const newItem = items.find(
         item => item.fieldData.slug === existing.fieldData.slug
       );
-      return newItem || existing;
+      
+      if (newItem) {
+        // Prüfe ob das neue Item tatsächlich neuer ist
+        const existingDate = new Date(existing.lastUpdated);
+        const newDate = new Date(newItem.lastUpdated);
+        if (newDate > existingDate) {
+          return newItem; // Nur aktualisieren wenn neuer
+        }
+      }
+      
+      return existing; // Behalte bestehendes Item
     });
 
-    // Füge neue Posts hinzu
+    // Füge neue Posts hinzu (die noch nicht existieren)
+    const newItemsToAdd = newItems.filter(item => !existingSlugs.has(item.fieldData.slug));
+
+    // Kombiniere: bestehende (aktualisierte oder unveränderte) + neue
     const allItems = [
       ...updatedItems,
-      ...newItems.filter(item => !existingSlugs.has(item.fieldData.slug))
+      ...newItemsToAdd
     ];
 
     // 8. Erstelle JSON-Content
