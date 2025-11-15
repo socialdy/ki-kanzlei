@@ -276,6 +276,21 @@ export default async function handler(
               continue; // Bereits lokal, überspringe
             }
 
+            // Prüfe ob es eine externe URL ist (imgbb, cdn, etc.) - diese nicht herunterladen
+            const isExternalUrl = thumbnailUrl.startsWith('http://') || thumbnailUrl.startsWith('https://');
+            const isExternalHost = isExternalUrl && (
+              thumbnailUrl.includes('i.ibb.co') || // imgbb
+              thumbnailUrl.includes('ibb.co') || // imgbb alternative
+              thumbnailUrl.includes('cdn.') || // CDN URLs
+              thumbnailUrl.includes('images.') || // Image hosting
+              (!thumbnailUrl.includes('ki-kanzlei.at') && !thumbnailUrl.includes('localhost'))
+            );
+
+            if (isExternalHost) {
+              console.log(`Skipping external image download: ${thumbnailUrl}`);
+              continue; // Externe URL, behalte sie wie sie ist
+            }
+
             // Lade Bild herunter
             const imageResponse = await fetch(thumbnailUrl);
             if (!imageResponse.ok) {
