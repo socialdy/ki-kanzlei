@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "id": "69158a59b76aed6e07dde5f6",
+      "cmsLocaleId": "68d11e421e4829ec1356ebfe",
+      "lastPublished": null,
+      "lastUpdated": "2025-01-20T10:30:00.000Z",
+      "createdOn": "2025-01-20T10:30:00.000Z",
+      "isArchived": false,
+      "isDraft": false,
+      "fieldData": {
+        "create-date": "2025-01-20T10:30:00.000Z",
+        "read-estimation": 5,
+        "name": "KI Wissensdatenbank - RAG Modell erklärt",
+        "description": "Wie funktioniert eine KI Wissensdatenbank mit RAG?",
+        "content": "<h2>Was ist RAG?</h2>\n\n<p>RAG steht für Retrieval-Augmented Generation...</p>",
+        "author": "68d12dfef1817bcd39dcd054",
+        "category": "68d11f6745d19de0034ef001",
+        "slug": "ki-wissensdatenbank-rag-modell",
+        "thumbnail": {
+          "fileId": "69158a58b76aed6e07dde5e5",
+          "url": "https://cdn.prod.website-files.com/example/image.png",
+          "alt": "KI Wissensdatenbank"
+        }
+      }
+    }
+  ]
+}
