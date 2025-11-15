@@ -3,12 +3,12 @@ import { Brain, Linkedin, TrendingUp, Mail, Instagram, Users } from "lucide-reac
 const useCases = [
   {
     icon: Brain,
-    title: "KI Wissensdatenbank",
+    title: "KI Wissensdatenbank Agent",
     description: "Ihre Dokumente, FAQs und internes Wissen werden durchsuchbar. Der Agent findet sofort die richtige Antwort – ob für Kundenanfragen oder interne Fragen. Kein langes Suchen mehr in PDFs und E-Mails.",
   },
   {
     icon: Linkedin,
-    title: "LinkedIn Outreach",
+    title: "LinkedIn Outreach Agent",
     description: "Findet passende Kontakte, analysiert Profile und schreibt personalisierte Nachrichten. Von der ersten Kontaktaufnahme bis zum Follow-up – alles automatisch. Sie sparen Stunden bei der Akquise.",
   },
   {
@@ -18,7 +18,7 @@ const useCases = [
   },
   {
     icon: Mail,
-    title: "Email Outreach",
+    title: "Email Outreach Agent",
     description: "Personalisierte E-Mails auf Autopilot. Der Agent segmentiert Ihre Kontakte, schreibt passende Nachrichten und kümmert sich um Follow-ups. Mehr Conversions, weniger Aufwand.",
   },
   {

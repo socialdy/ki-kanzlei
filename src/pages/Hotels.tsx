@@ -3,7 +3,7 @@ import { NavigationHotels } from "@/components/NavigationHotels";
 import { HeroHotels } from "@/components/HeroHotels";
 import { ProblemGridHotels } from "@/components/ProblemGridHotels";
 import { UseCasesHotels } from "@/components/UseCasesHotels";
-import { AboutUs } from "@/components/AboutUs";
+import { AboutUsHotels } from "@/components/AboutUsHotels";
 import { TestimonialsHotels } from "@/components/TestimonialsHotels";
 import { ContactForm } from "@/components/ContactForm";
 import { FAQHotels } from "@/components/FAQHotels";
@@ -29,7 +29,7 @@ const Hotels = () => {
         <HeroHotels />
         <ProblemGridHotels />
         <UseCasesHotels />
-        <AboutUs />
+        <AboutUsHotels />
         <TestimonialsHotels />
         <ContactForm />
         <FAQHotels />

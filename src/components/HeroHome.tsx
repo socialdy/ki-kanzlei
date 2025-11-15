@@ -15,7 +15,7 @@ export const HeroHome = () => {
 
           {/* Headline */}
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight slide-up">
-            Wir automatisieren Ihr Unternehmen mit KI
+            Wir automatisieren Ihr Unternehmen mit <span className="text-primary">KI</span>
           </h1>
 
           {/* Subheading */}
