@@ -41,6 +41,97 @@ interface CMSBlogResponse {
   items: CMSBlogItem[];
 }
 
+/**
+ * Aktualisiert die Sitemap automatisch mit allen Blog-Posts
+ */
+async function updateSitemap(
+  octokit: Octokit,
+  owner: string,
+  repo: string,
+  branch: string,
+  blogItems: CMSBlogItem[]
+): Promise<void> {
+  const sitemapPath = 'public/sitemap.xml';
+  const baseUrl = 'https://ki-kanzlei.at';
+  const today = new Date().toISOString().split('T')[0];
+
+  // Statische Seiten (immer in der Sitemap)
+  const staticPages = [
+    { loc: '/', lastmod: today, changefreq: 'weekly', priority: '1.0' },
+    { loc: '/ki-loesungen-psychotherapeuten', lastmod: today, changefreq: 'weekly', priority: '0.9' },
+    { loc: '/ki-loesungen-hotels', lastmod: today, changefreq: 'weekly', priority: '0.8' },
+    { loc: '/blog', lastmod: today, changefreq: 'weekly', priority: '0.7' },
+    { loc: '/impressum', lastmod: '2024-12-19', changefreq: 'monthly', priority: '0.3' },
+    { loc: '/datenschutz', lastmod: '2024-12-19', changefreq: 'monthly', priority: '0.3' },
+  ];
+
+  // Erstelle Blog-Post URLs
+  const blogUrls = blogItems
+    .filter(item => !item.isArchived && !item.isDraft)
+    .map(item => {
+      const lastmod = new Date(item.fieldData['create-date']).toISOString().split('T')[0];
+      return {
+        loc: `/blog/${item.fieldData.slug}`,
+        lastmod: lastmod,
+        changefreq: 'monthly',
+        priority: '0.6',
+      };
+    });
+
+  // Kombiniere alle URLs
+  const allUrls = [...staticPages, ...blogUrls];
+
+  // Generiere XML
+  const xmlHeader = '<?xml version="1.0" encoding="UTF-8"?>\n';
+  const urlsetOpen = '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
+  const urlsetClose = '</urlset>';
+
+  const urlEntries = allUrls.map(url => {
+    return `  <url>\n    <loc>${baseUrl}${url.loc}</loc>\n    <lastmod>${url.lastmod}</lastmod>\n    <changefreq>${url.changefreq}</changefreq>\n    <priority>${url.priority}</priority>\n  </url>`;
+  }).join('\n');
+
+  const sitemapXml = xmlHeader + urlsetOpen + urlEntries + '\n' + urlsetClose;
+
+  // Lade aktuelle Sitemap SHA (falls vorhanden)
+  let sha: string | undefined;
+  try {
+    const { data: fileData } = await octokit.repos.getContent({
+      owner,
+      repo,
+      path: sitemapPath,
+      ref: branch,
+    });
+    if ('sha' in fileData) {
+      sha = fileData.sha;
+    }
+  } catch (error: any) {
+    if (error.status !== 404) {
+      throw error;
+    }
+  }
+
+  // Committe aktualisierte Sitemap
+  await octokit.repos.createOrUpdateFileContents({
+    owner,
+    repo,
+    path: sitemapPath,
+    message: `Update sitemap: ${blogUrls.length} blog posts`,
+    content: Buffer.from(sitemapXml).toString('base64'),
+    branch,
+    sha,
+    committer: {
+      name: 'n8n Blog Agent',
+      email: 'n8n@ki-kanzlei.at',
+    },
+    author: {
+      name: 'n8n Blog Agent',
+      email: 'n8n@ki-kanzlei.at',
+    },
+  });
+
+  console.log(`Sitemap updated with ${blogUrls.length} blog posts`);
+}
+
 export default async function handler(
   request: VercelRequest,
   response: VercelResponse
@@ -386,6 +477,14 @@ export default async function handler(
         email: 'n8n@ki-kanzlei.at',
       },
     });
+
+    // 9.1 Aktualisiere Sitemap automatisch
+    try {
+      await updateSitemap(octokit, githubOwner, githubRepo, githubBranch, allItems);
+    } catch (error: any) {
+      console.warn('Fehler beim Aktualisieren der Sitemap:', error.message);
+      // Fehler beim Sitemap-Update blockiert nicht den Erfolg
+    }
 
     // 10. Erfolgreiche Antwort
     return response.status(200).json({
