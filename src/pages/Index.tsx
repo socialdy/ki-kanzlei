@@ -20,7 +20,7 @@ const Index = () => {
       metaDescription.setAttribute('name', 'description');
       document.head.appendChild(metaDescription);
     }
-    metaDescription.setAttribute('content', 'Österreichs führende KI-Lösung für Psychotherapie-Praxen. Automatisierung mit Fonio.ai, n8n & Freudio. DSGVO-konform. Kostenloses Analysegespräch!');
+    metaDescription.setAttribute('content', 'Österreichs führende KI-Lösung für Psychotherapie-Praxen. Automatisierung mit KI-Anrufannahme, n8n & Freudio. DSGVO-konform. Kostenloses Analysegespräch!');
   }, []);
 
   return (

@@ -52,3 +52,5 @@ export function getBlogPostsSync(): typeof staticBlogPosts {
   return cachedBlogPosts || staticBlogPosts;
 }
 
+
+

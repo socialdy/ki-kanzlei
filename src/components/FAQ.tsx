@@ -23,8 +23,8 @@ const faqs = [
     answer: "Ihre Klientendaten bleiben Ihre Daten. Wir speichern und verarbeiten sie ausschließlich in Ihrem Auftrag gemäß Auftragsverarbeitungsvertrag (AVV). Die Daten werden verschlüsselt gespeichert, regelmäßig gesichert und Sie können jederzeit den Zugriff widerrufen oder Daten exportieren/löschen."
   },
   {
-    question: "Wie zuverlässig ist Fonio.ai?",
-    answer: "Fonio.ai ist unser österreichischer KI-Telefonassistent und erreicht eine Verständnisrate von >95%. Bei Unklarheiten kann der Agent an einen Menschen weiterleiten. Wir trainieren die KI kontinuierlich mit echten Praxis-Dialogen und Sie können jederzeit Anpassungen wünschen. Uptime liegt bei 99.9%."
+    question: "Wie zuverlässig ist die KI-Anrufannahme?",
+    answer: "Unser KI-Telefonassistent erreicht eine Verständnisrate von >95%. Bei Unklarheiten kann der Agent an einen Menschen weiterleiten. Wir trainieren die KI kontinuierlich mit echten Praxis-Dialogen und Sie können jederzeit Anpassungen wünschen. Uptime liegt bei 99.9%."
   },
   {
     question: "Brauche ich technische Kenntnisse?",

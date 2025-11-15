@@ -69,6 +69,13 @@ export default async function handler(
     // 2. Daten validieren
     const data: CMSBlogResponse | CMSBlogItem = request.body;
 
+    if (!data) {
+      return response.status(400).json({ 
+        error: 'No data provided',
+        message: 'Request body is empty or invalid'
+      });
+    }
+
     // Normalisiere zu Array-Format
     const items: CMSBlogItem[] = 'items' in data && Array.isArray(data.items)
       ? data.items 
@@ -78,6 +85,24 @@ export default async function handler(
       return response.status(400).json({ 
         error: 'No items provided' 
       });
+    }
+
+    // Validiere dass alle Items fieldData haben
+    for (const item of items) {
+      if (!item.fieldData) {
+        return response.status(400).json({
+          error: 'Invalid item structure',
+          message: `Item ${item.id || 'unknown'} is missing fieldData`,
+          receivedItem: JSON.stringify(item, null, 2)
+        });
+      }
+      if (!item.fieldData.slug || !item.fieldData.name) {
+        return response.status(400).json({
+          error: 'Invalid fieldData',
+          message: `Item ${item.id || 'unknown'} is missing required fields (slug, name)`,
+          receivedFieldData: JSON.stringify(item.fieldData, null, 2)
+        });
+      }
     }
 
     // 3. GitHub Client initialisieren
