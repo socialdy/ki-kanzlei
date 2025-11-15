@@ -25,12 +25,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ki-kanzlei.at/blog/ki-wissensdatenbank-rag-modell-unternehmen</loc>
-    <lastmod>2025-11-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://ki-kanzlei.at/impressum</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
@@ -41,5 +35,17 @@
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://ki-kanzlei.at/blog/ki-wissensdatenbank-rag-modell-unternehmen</loc>
+    <lastmod>2025-11-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ki-kanzlei.at/blog/ki-wissensdatenbank-rag-modell</loc>
+    <lastmod>2025-01-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>
