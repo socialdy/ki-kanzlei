@@ -42,4 +42,10 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://ki-kanzlei.at/blog/ki-workflow-optimierung-fur-kmu-in-osterreich-effizienz-steigern</loc>
+    <lastmod>2025-11-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>
