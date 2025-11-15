@@ -3,7 +3,7 @@ import { Brain, Linkedin, TrendingUp, Mail, Instagram, Users } from "lucide-reac
 const useCases = [
   {
     icon: Brain,
-    title: "KI Wissensdatenbank Agent",
+    title: "KI Wissensdatenbank",
     description: "Ihre Dokumente, FAQs und internes Wissen werden durchsuchbar. Der Agent findet sofort die richtige Antwort – ob für Kundenanfragen oder interne Fragen. Kein langes Suchen mehr in PDFs und E-Mails.",
   },
   {
@@ -13,7 +13,7 @@ const useCases = [
   },
   {
     icon: TrendingUp,
-    title: "SEO",
+    title: "SEO Agent",
     description: "Analysiert Ihre Website, findet passende Keywords und erstellt optimierte Inhalte. Ihr Ranking verbessert sich kontinuierlich, ohne dass Sie ständig selbst recherchieren müssen.",
   },
   {
@@ -23,7 +23,7 @@ const useCases = [
   },
   {
     icon: Instagram,
-    title: "Social Media Content",
+    title: "Social Media Content Agent",
     description: "Erstellt Posts, Stories und Captions für alle Ihre Kanäle. Immer zur richtigen Zeit, immer im richtigen Ton. Konsistente Präsenz ohne dass Sie jeden Tag selbst Content erstellen müssen.",
   },
   {
