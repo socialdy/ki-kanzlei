@@ -1,5 +1,25 @@
 import { Star } from "lucide-react";
 
+// Format name: "Dr. Sarah Huber" -> "Dr. Sarah H."
+const formatName = (name: string): string => {
+  const parts = name.split(' ');
+  if (parts.length === 0) return name;
+  
+  // Check if first part is a title (Dr., etc.)
+  const titlePattern = /^(Dr\.|Prof\.|Mag\.|Dipl\.|Ing\.)/i;
+  const hasTitle = titlePattern.test(parts[0]);
+  
+  if (hasTitle && parts.length >= 3) {
+    // Title + First Name + Last Name
+    return `${parts[0]} ${parts[1]} ${parts[2][0]}.`;
+  } else if (parts.length >= 2) {
+    // First Name + Last Name
+    return `${parts[0]} ${parts[parts.length - 1][0]}.`;
+  }
+  
+  return name;
+};
+
 export const TestimonialsHome = () => {
   const testimonials = [
     {
@@ -195,7 +215,7 @@ export const TestimonialsHome = () => {
                         className="w-12 h-12 rounded-full object-cover"
                       />
                       <div>
-                        <div className="font-semibold text-sm">{testimonial.name}</div>
+                        <div className="font-semibold text-sm">{formatName(testimonial.name)}</div>
                         <div className="text-xs text-muted-foreground">
                           {testimonial.hotel 
                             ? `${testimonial.position}, ${testimonial.hotel}, ${testimonial.location}`
@@ -233,7 +253,7 @@ export const TestimonialsHome = () => {
                         className="w-12 h-12 rounded-full object-cover"
                       />
                       <div>
-                        <div className="font-semibold text-sm">{testimonial.name}</div>
+                        <div className="font-semibold text-sm">{formatName(testimonial.name)}</div>
                         <div className="text-xs text-muted-foreground">
                           {testimonial.hotel 
                             ? `${testimonial.position}, ${testimonial.hotel}, ${testimonial.location}`

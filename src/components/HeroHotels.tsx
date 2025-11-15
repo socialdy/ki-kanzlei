@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import { LogoSliderHotels } from "@/components/LogoSliderHotels";
 
 export const HeroHotels = () => {
   return (
@@ -26,12 +25,6 @@ export const HeroHotels = () => {
                 <ArrowRight className="w-4 h-4 ml-2" />
               </a>
             </Button>
-          </div>
-          <div className="pt-12 fade-in">
-            <p className="text-sm text-muted-foreground mb-6">Zahlreiche Hotelbetriebe vertrauen uns bereits</p>
-            <div className="max-w-4xl mx-auto">
-              <LogoSliderHotels />
-            </div>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8 pt-12 fade-in">
             <div>
