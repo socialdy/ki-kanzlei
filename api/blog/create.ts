@@ -124,6 +124,55 @@ export default async function handler(
 
     const octokit = new Octokit({ auth: githubToken });
 
+    // 3.1 Teste Repository-Zugriff
+    try {
+      await octokit.repos.get({
+        owner: githubOwner,
+        repo: githubRepo,
+      });
+    } catch (error: any) {
+      console.error('GitHub Repository Zugriff fehlgeschlagen:', {
+        owner: githubOwner,
+        repo: githubRepo,
+        status: error.status,
+        message: error.message,
+      });
+      
+      if (error.status === 404) {
+        return response.status(500).json({
+          error: 'Repository not found',
+          message: `Repository ${githubOwner}/${githubRepo} wurde nicht gefunden. Prüfe GITHUB_OWNER und GITHUB_REPO.`,
+          details: {
+            owner: githubOwner,
+            repo: githubRepo,
+            branch: githubBranch,
+          }
+        });
+      }
+      
+      if (error.status === 401 || error.status === 403) {
+        return response.status(500).json({
+          error: 'GitHub token has no access',
+          message: `Der GitHub Token hat keinen Zugriff auf das Repository ${githubOwner}/${githubRepo}. Prüfe ob der Token die 'repo' Berechtigung hat.`,
+          details: {
+            owner: githubOwner,
+            repo: githubRepo,
+            hint: 'Der Token muss die Berechtigung "repo" (Full control of private repositories) haben.'
+          }
+        });
+      }
+      
+      return response.status(500).json({
+        error: 'GitHub access error',
+        message: error.message || 'Unbekannter Fehler beim Zugriff auf GitHub',
+        details: {
+          owner: githubOwner,
+          repo: githubRepo,
+          status: error.status,
+        }
+      });
+    }
+
     // 4. Verarbeite und lade Bilder hoch (falls vorhanden)
     const processThumbnails = async (items: CMSBlogItem[]): Promise<void> => {
       for (const item of items) {
