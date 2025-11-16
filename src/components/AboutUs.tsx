@@ -101,7 +101,7 @@ export const AboutUs = () => {
                     <span className="text-lg lg:text-xl font-bold">1</span>
                   </div>
                   <h3 className="font-bold text-lg lg:text-xl xl:text-2xl mb-3 text-white">Das Problem</h3>
-                  <p className="text-sm lg:text-base xl:text-lg opacity-80 text-white leading-relaxed">Katja, Arnolds Freundin, arbeitet als Psychotherapeutin in Kärnten. Jeden Morgen um 7 Uhr: "Frau Müller, können wir den Termin verschieben?" Dann: Formulare ausfüllen, Rechnungen schreiben, Klienten anrufen. 8-10 Stunden pro Woche nur für Papierkram. "Ich bin doch keine Sekretärin", seufzte sie abends auf dem Sofa.</p>
+                  <p className="text-sm lg:text-base xl:text-lg opacity-80 text-white leading-relaxed">Katja, Arnolds Freundin, arbeitet als Psychotherapeutin in Kärnten. Jeden morgen: "Können wir den Termin verschieben?" Dann: Formulare ausfüllen, Rechnungen schreiben, Klienten anrufen. 8-10 Stunden pro Monat nur für Papierkram. "Ich bin doch keine Sekretärin".</p>
                 </div>
                 <div className="timeline-center-point hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full items-center justify-center shadow-md transition-colors duration-300 ease-out
                                     bg-primary text-white">
@@ -120,7 +120,7 @@ export const AboutUs = () => {
                     <span className="text-lg lg:text-xl font-bold">2</span>
                   </div>
                   <h3 className="font-bold text-lg lg:text-xl xl:text-2xl mb-3 text-foreground">Die Lösung</h3>
-                  <p className="text-sm lg:text-base xl:text-lg opacity-80 text-foreground leading-relaxed">Arnold rief Markus an: "Du, Katja ist völlig fertig mit der Verwaltung. Kannst du da was machen?" Ständige Meetings, Video-Calls, Screensharing. Er implementierte alles Schritt für Schritt - und Katja konnte endlich wieder atmen.</p>
+                  <p className="text-sm lg:text-base xl:text-lg opacity-80 text-foreground leading-relaxed">Arnold rief Markus an: "Du, Katja ist völlig fertig mit der Verwaltung. Kannst du da was machen?" Ständige Meetings, Video-Calls, Screensharing. Er implementierte alles Schritt für Schritt - und Katja konnte endlich wieder in Ruhe arbeiten.</p>
                 </div>
                 <div className="timeline-center-point hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full items-center justify-center shadow-md transition-colors duration-300 ease-out
                                     bg-white text-foreground border border-border">
@@ -139,7 +139,7 @@ export const AboutUs = () => {
                     <span className="text-lg lg:text-xl font-bold">3</span>
                   </div>
                   <h3 className="font-bold text-lg lg:text-xl xl:text-2xl mb-3 text-foreground">Die Vision</h3>
-                  <p className="text-sm lg:text-base xl:text-lg opacity-80 text-foreground leading-relaxed">Katja strahlte: "Ich hab plötzlich 9 Stunden mehr Zeit für meine Klienten!" Arnold dachte: "Wenn das bei Katja funktioniert, brauchen das tausende andere auch." So entstand die KI Kanzlei - aus einem echten Problem, einer echten Lösung und der Erkenntnis: "Wir können das für alle machen."</p>
+                  <p className="text-sm lg:text-base xl:text-lg opacity-80 text-foreground leading-relaxed">"Ich hab plötzlich 9 Stunden mehr Zeit für meine Klienten!" Arnold dachte: "Wenn das bei Katja funktioniert, brauchen das tausende andere auch." So entstand die KI Kanzlei - aus einem echten Problem, einer echten Lösung und der Erkenntnis: "Wir können das für alle machen."</p>
                 </div>
                 <div className="timeline-center-point hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full items-center justify-center shadow-md transition-colors duration-300 ease-out
                                     bg-white text-foreground border border-border">

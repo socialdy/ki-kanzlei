@@ -24,7 +24,7 @@ const useCases = [
   {
     icon: MailCheck,
     title: "Angebote & Bestätigungen",
-    description: "Keine 20‑Minuten‑Schreibarbeit mehr. Erstellt automatisch individuelle Angebote für Tagungen, Hochzeiten, Gutscheine – per E‑Mail, sofort. Bestätigungen und Erinnerungen laufen automatisch mit.",
+    description: "Keine 20‑Minuten‑Schreibarbeit mehr. Wenn jemand über Telefon, WhatsApp oder Instagram einen Bedarf hat, generiert die Automatisierung automatisch eine fertige PDF mit dem Angebot und schickt sie dem Kunden je nach Kanal – sofort. Bestätigungen und Erinnerungen laufen automatisch mit.",
     tools: [
       { name: "n8n", logo: "/img/techstack/n8n.webp" },
       { name: "Twilio", logo: "/img/techstack/twilio.png" },
@@ -42,7 +42,7 @@ const useCases = [
   {
     icon: MessageSquare,
     title: "Multi‑Channel Inbound",
-    description: "Keine Kanal‑Jonglage mehr. Alle Anfragen aus Instagram, Facebook, WhatsApp, E‑Mail und Website in einem Posteingang. Ein Agent beantwortet alle Kanäle einheitlich – während der Gast vor Ihnen wartet.",
+    description: "Kein Kanal‑Chaos mehr. Alle Anfragen aus Instagram, Facebook, WhatsApp, E‑Mail und Website in einem Posteingang. Ein Agent beantwortet alle Kanäle einheitlich – während der Gast vor Ihnen wartet.",
     tools: [
       { name: "Superchat", logo: "/img/techstack/superchat.png" },
       { name: "n8n", logo: "/img/techstack/n8n.webp" },

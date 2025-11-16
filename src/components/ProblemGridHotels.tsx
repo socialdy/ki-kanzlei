@@ -16,8 +16,8 @@ const problems = [
   },
   {
     icon: PenSquare,
-    title: "Spezialangebote manuell erstellen",
-    description: "Tagung, Hochzeit, Gutschein? Sie setzen das Angebot von Grund auf auf, füllen PDFs und E-Mails – pro Anfrage wieder 20 Minuten Bildschirmzeit statt Gästebetreuung.",
+    title: "Angebote manuell erstellen",
+    description: "Jemand ruft an, schreibt auf WhatsApp oder Instagram – Sie müssen das Angebot manuell erstellen, PDFs generieren und je nach Kanal versenden. Pro Anfrage wieder 20 Minuten Bildschirmzeit.",
     size: "medium",
   },
   {
@@ -34,8 +34,8 @@ const problems = [
   },
   {
     icon: MessageSquare,
-    title: "Kanäle jonglieren statt Gäste betreuen",
-    description: "Instagram, WhatsApp, Booking.com, Website – jede Anfrage braucht Antwort, Preis, PDF. Sie jonglieren Chats und Buchungssystem, während der Gast vor Ihnen wartet.",
+    title: "Kanal-Chaos statt Gäste betreuen",
+    description: "Instagram, WhatsApp, Booking.com, Website – jede Anfrage braucht Antwort, Preis, PDF. Sie springen zwischen Chats und Buchungssystem hin und her, während der Gast vor Ihnen wartet.",
     size: "medium",
   },
 ];

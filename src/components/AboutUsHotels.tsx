@@ -101,7 +101,7 @@ export const AboutUsHotels = () => {
                     <span className="text-lg lg:text-xl font-bold">1</span>
                   </div>
                   <h3 className="font-bold text-lg lg:text-xl xl:text-2xl mb-3 text-white">Der Zufall</h3>
-                  <p className="text-sm lg:text-base xl:text-lg opacity-80 text-white leading-relaxed">Arnold wollte ursprünglich das Hotel Gerl buchen. Beim Telefonat kam er ins Gespräch mit Herrn Gerl und stellte fest: Sie hatten beide gerade das gleiche Problem. "Das klingt nach genau dem, was wir lösen", dachte Arnold.</p>
+                  <p className="text-sm lg:text-base xl:text-lg opacity-80 text-white leading-relaxed">Arnold wollte nur ein Zimmer in einem Hotel in Salzburg buchen. Doch beim Anruf wurde schnell klar: Das Hotel kämpfte mit genau den Problemen, die wir lösen. Verpasste Anrufe, manuelle Abläufe, keine Abendbesetzung. Arnold dachte: Das war kein Zufall – das war der Start für ein Automatisierungsprojekt.</p>
                 </div>
                 <div className="timeline-center-point hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full items-center justify-center shadow-md transition-colors duration-300 ease-out
                                     bg-primary text-white">
@@ -120,7 +120,7 @@ export const AboutUsHotels = () => {
                     <span className="text-lg lg:text-xl font-bold">2</span>
                   </div>
                   <h3 className="font-bold text-lg lg:text-xl xl:text-2xl mb-3 text-foreground">Das Gespräch</h3>
-                  <p className="text-sm lg:text-base xl:text-lg opacity-80 text-foreground leading-relaxed">Aus dem Buchungsgespräch wurde schnell ein Strategiegespräch. Herr Gerl erzählte von seinen Herausforderungen: Abends keine Rezeption, verpasste Anrufe, manuelle Buchungsprozesse. Teilweise musste Herr Gerl halt selber am Abend ans Rezeptionstelefon. Arnold erkannte sofort: "Das können wir automatisieren." Ein Termin wurde vereinbart und Arnold holte Markus dazu.</p>
+                  <p className="text-sm lg:text-base xl:text-lg opacity-80 text-foreground leading-relaxed">Aus dem Buchungsgespräch wurde schnell ein Strategiegespräch. Der Hotelbetreiber erzählte von seinen Herausforderungen: Abends keine Rezeption, verpasste Anrufe, manuelle Buchungsprozesse. Teilweise musste er selbst am Abend ans Rezeptionstelefon. Arnold erkannte sofort: "Das können wir automatisieren." Ein Termin wurde vereinbart und Arnold holte Markus dazu.</p>
                 </div>
                 <div className="timeline-center-point hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full items-center justify-center shadow-md transition-colors duration-300 ease-out
                                     bg-white text-foreground border border-border">
@@ -139,7 +139,7 @@ export const AboutUsHotels = () => {
                     <span className="text-lg lg:text-xl font-bold">3</span>
                   </div>
                   <h3 className="font-bold text-lg lg:text-xl xl:text-2xl mb-3 text-foreground">Die Lösung</h3>
-                  <p className="text-sm lg:text-base xl:text-lg opacity-80 text-foreground leading-relaxed">Im gemeinsamen Gespräch mit Herrn Gerl, Arnold und Markus entstand die Vision: Ein KI-Abendrezeptionist, der 24/7 Anrufe entgegennimmt, Buchungen vornimmt und Fragen beantwortet. Markus entwickelte die technische Lösung, Arnold kümmerte sich um die Strategie. So wurde das Hotel Gerl zum ersten Hotel-Kunden der KI Kanzlei und der Startschuss für unsere Hotel-Lösungen.</p>
+                  <p className="text-sm lg:text-base xl:text-lg opacity-80 text-foreground leading-relaxed">Im gemeinsamen Gespräch mit dem Hotelbetreiber, Arnold und Markus entstand die Vision: Ein KI-Abendrezeptionist, der 24/7 Anrufe entgegennimmt, Buchungen vornimmt und Fragen beantwortet. Markus entwickelte die technische Lösung, Arnold kümmerte sich um die Strategie. So wurde dieses Hotel zum ersten Hotel-Kunden der KI Kanzlei und der Startschuss für unsere Hotel-Lösungen.</p>
                 </div>
                 <div className="timeline-center-point hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full items-center justify-center shadow-md transition-colors duration-300 ease-out
                                     bg-white text-foreground border border-border">
