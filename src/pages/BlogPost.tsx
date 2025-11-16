@@ -72,7 +72,7 @@ const BlogPost = () => {
               Der gesuchte Artikel existiert nicht.
             </p>
             <Button size="lg" asChild>
-              <Link to="/blog">Zur Blog-Übersicht</Link>
+              <Link to="/blog">Zur Blogübersicht</Link>
             </Button>
           </div>
         </main>

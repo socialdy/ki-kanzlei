@@ -34,7 +34,7 @@ export const TestimonialsHotels = () => {
     {
       name: "Thomas Huber",
       position: "Geschäftsführer",
-      hotel: "Hotel Alpenaussicht",
+      hotel: "Hotel Bergblick",
       location: "Österreich",
       rating: 5.0,
       review: "Die Implementierung war überraschend unkompliziert. Innerhalb von 30 Tagen war alles am Laufen. Besonders gut finde ich, dass wir bei Fragen immer jemanden erreichen. Das Team steht wirklich hinter der Lösung.",

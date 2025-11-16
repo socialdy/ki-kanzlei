@@ -51,7 +51,7 @@ export const TestimonialsHome = () => {
     {
       name: "Thomas Huber",
       position: "Geschäftsführer",
-      hotel: "Hotel Alpenaussicht",
+      hotel: "Hotel Bergblick",
       location: "Österreich",
       type: "Hotel",
       rating: 5.0,

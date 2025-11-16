@@ -16,7 +16,7 @@ const problems = [
   },
   {
     icon: PenSquare,
-    title: "Spezialangebote manuell erfassen",
+    title: "Spezialangebote manuell erstellen",
     description: "Tagung, Hochzeit, Gutschein? Sie setzen das Angebot von Grund auf auf, füllen PDFs und E-Mails – pro Anfrage wieder 20 Minuten Bildschirmzeit statt Gästebetreuung.",
     size: "medium",
   },

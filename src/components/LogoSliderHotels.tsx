@@ -1,7 +1,7 @@
 export const LogoSliderHotels = () => {
   const logos = [
     { name: "Hotel Gerl", src: "/img/testimonials/hotels/logo-gerl.svg" },
-    { name: "Hotel Alpenaussicht", src: "/img/testimonials/hotels/hotel_alpen_aussicht.png" },
+    { name: "Hotel Bergblick", src: "/img/testimonials/hotels/hotel_alpen_aussicht.png" },
     { name: "Hotel Astoria", src: "/img/testimonials/hotels/hotel_astoria.png" },
     { name: "Hotel Florum", src: "/img/testimonials/hotels/hotel_florum.jpg" },
     { name: "Hotel Prägant", src: "/img/testimonials/hotels/hotel_prägant.jpg" },
