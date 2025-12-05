@@ -23,8 +23,8 @@ export const AboutUsHotels = () => {
             <div className="group text-center slide-up">
               <div className="relative mb-8 inline-block">
                 <div className="w-56 h-56 md:w-64 md:h-64 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center mx-auto border-4 border-card shadow-lg group-hover:shadow-xl transition-base overflow-hidden">
-                  <img 
-                    src="/img/team/arnold_freissling.png" 
+                  <img
+                    src="/img/team/arnold_freissling.png"
                     alt="Arnold Freissling"
                     className="w-full h-full object-cover object-top rounded-full"
                   />
@@ -51,10 +51,10 @@ export const AboutUsHotels = () => {
             <div className="group text-center slide-up">
               <div className="relative mb-8 inline-block">
                 <div className="w-56 h-56 md:w-64 md:h-64 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center mx-auto border-4 border-card shadow-lg group-hover:shadow-xl transition-base overflow-hidden">
-                  <img 
-                    src="/img/team/markus_wallner.png" 
+                  <img
+                    src="/img/team/markus_wallner.png"
                     alt="Markus Wallner"
-                    className="w-full h-full object-cover rounded-full"
+                    className="w-full h-full object-cover object-top rounded-full"
                   />
                 </div>
                 <a
@@ -83,13 +83,13 @@ export const AboutUsHotels = () => {
             <h2 className="text-balance text-3xl font-bold md:text-4xl lg:text-5xl text-foreground mb-4 slide-up">Die Geschichte</h2>
             <p className="mt-4 text-lg text-foreground opacity-70 slide-up">Wie die KI Kanzlei zu Hotels kam</p>
           </div>
-          
+
           <div className="mt-12 mx-auto max-w-6xl px-4 md:px-6">
             <div className="relative">
               {/* Central Line */}
               <div className="absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-0.5 bg-border"></div>
-              <div className="timeline-line-progress absolute left-1/2 transform -translate-x-1/2 top-0 w-0.5 bg-primary transition-all duration-300 ease-out" style={{height: '0%'}}></div>
-              
+              <div className="timeline-line-progress absolute left-1/2 transform -translate-x-1/2 top-0 w-0.5 bg-primary transition-all duration-300 ease-out" style={{ height: '0%' }}></div>
+
               {/* Step 1 */}
               <div id="1" className="timeline-card relative py-12 lg:py-20">
                 <div className="w-full py-6 px-8 lg:py-8 lg:px-16 rounded-xl shadow-xl border transition-all duration-300 ease-out

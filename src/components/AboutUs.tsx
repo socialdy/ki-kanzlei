@@ -54,7 +54,7 @@ export const AboutUs = () => {
                   <img 
                     src="/img/team/markus_wallner.png" 
                     alt="Markus Wallner"
-                    className="w-full h-full object-cover rounded-full"
+                    className="w-full h-full object-cover object-top rounded-full"
                   />
                 </div>
                 <a
