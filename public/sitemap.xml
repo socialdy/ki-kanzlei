@@ -2,25 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ki-kanzlei.at/</loc>
-    <lastmod>2025-12-02</lastmod>
+    <lastmod>2025-12-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://ki-kanzlei.at/ki-loesungen-psychotherapeuten</loc>
-    <lastmod>2025-12-02</lastmod>
+    <lastmod>2025-12-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://ki-kanzlei.at/ki-loesungen-hotels</loc>
-    <lastmod>2025-12-02</lastmod>
+    <lastmod>2025-12-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ki-kanzlei.at/blog</loc>
-    <lastmod>2025-12-02</lastmod>
+    <lastmod>2025-12-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -81,6 +81,42 @@
   <url>
     <loc>https://ki-kanzlei.at/blog/ki-gestutzte-logistik-supply-chain-optimierung-in-osterreich</loc>
     <lastmod>2025-12-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ki-kanzlei.at/blog/ki-im-energiemanagement-osterreichs-weg-zu-nachhaltiger-energieeffizienz</loc>
+    <lastmod>2025-12-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ki-kanzlei.at/blog/ki-nachhaltigkeit-in-osterreich-grune-transformation-mit-smarter-technologie</loc>
+    <lastmod>2025-12-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ki-kanzlei.at/blog/ki-in-der-geschaftsmodellinnovation-neue-markte-fur-osterreich</loc>
+    <lastmod>2025-12-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ki-kanzlei.at/blog/ki-in-der-bildung-personalisiertes-lernen-und-effizienz-fur-osterreich</loc>
+    <lastmod>2025-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ki-kanzlei.at/blog/ki-in-der-rechtsberatung-effizienz-und-innovation-fur-kanzleien</loc>
+    <lastmod>2025-12-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ki-kanzlei.at/blog/ki-in-der-cybersicherheit-osterreichs-kmu-schutzen-sich-vor-digitalen-bedrohungen</loc>
+    <lastmod>2025-12-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
