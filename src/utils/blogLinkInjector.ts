@@ -53,12 +53,12 @@ function isInsideLink(content: string, index: number): boolean {
   const beforeText = content.substring(0, index);
   const lastOpenTag = beforeText.lastIndexOf('<a');
   const lastCloseTag = beforeText.lastIndexOf('</a>');
-  
+
   // Wenn ein <a> Tag gefunden wurde und kein </a> danach kommt, ist es in einem Link
   if (lastOpenTag !== -1 && (lastCloseTag === -1 || lastCloseTag < lastOpenTag)) {
     return true;
   }
-  
+
   return false;
 }
 
@@ -82,40 +82,33 @@ export function injectInternalLinks(content: string): string {
 
     for (const keyword of mapping.keywords) {
       const keywordEscaped = keyword.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-      const regex = new RegExp(keywordEscaped, 'gi');
-      const match = processedContent.match(regex);
-      
-      if (match) {
-        // Finde den ersten Match, der nicht in einem Link ist
-        let foundIndex = -1;
-        let searchIndex = 0;
-        
-        while (true) {
-          const index = processedContent.toLowerCase().indexOf(keyword.toLowerCase(), searchIndex);
-          if (index === -1) break;
-          
-          if (!isInsideLink(processedContent, index)) {
-            foundIndex = index;
-            break;
-          }
-          
-          searchIndex = index + 1;
-        }
-        
-        if (foundIndex !== -1) {
-          // Ersetze nur das erste Vorkommen
-          processedContent = 
-            processedContent.substring(0, foundIndex) +
+      // Use word boundaries to avoid matching inside other words (e.g. "rag" in "Beitrags")
+      const regex = new RegExp(`\\b${keywordEscaped}\\b`, 'gi');
+
+      let match;
+      while ((match = regex.exec(processedContent)) !== null) {
+        const index = match.index;
+
+        if (!isInsideLink(processedContent, index)) {
+          // Ersetze nur das erste Vorkommen pro Keyword-Gruppe
+          processedContent =
+            processedContent.substring(0, index) +
             `<a href="${mapping.url}" class="text-primary hover:underline font-medium">${mapping.anchorText}</a>` +
-            processedContent.substring(foundIndex + keyword.length);
-          
+            processedContent.substring(index + match[0].length);
+
           usedLinks.add(mapping.url);
-          break; // Weiter zur nächsten Mapping-Gruppe
+          // Break out of the keyword loop to move to the next mapping group
+          break;
         }
+      }
+
+      // If we replaced something (checked by seeing if the keyword loop was broken? 
+      // No, we need a flag or check if usedLinks has it)
+      if (usedLinks.has(mapping.url)) {
+        break; // Break the keywords loop if a link was added for this mapping
       }
     }
   }
 
   return processedContent;
-}
 
