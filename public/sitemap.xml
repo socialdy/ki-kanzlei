@@ -168,4 +168,10 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://ki-kanzlei.at/blog/ki-in-der-regionalen-wirtschaftsforderung-osterreichs-weg-zu-smart-villages</loc>
+    <lastmod>2025-12-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>
