@@ -111,4 +111,5 @@ export function injectInternalLinks(content: string): string {
   }
 
   return processedContent;
+}
 
