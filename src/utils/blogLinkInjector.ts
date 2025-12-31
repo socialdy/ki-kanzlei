@@ -84,39 +84,37 @@ export function injectInternalLinks(content: string): string {
       const keywordEscaped = keyword.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
       // Use word boundaries to prevent matching keywords inside other words (e.g., "RAG" in "Beitrags")
       const regex = new RegExp(`\\b${keywordEscaped}\\b`, 'gi');
-      const match = processedContent.match(regex);
 
-      if (match) {
-        // Finde den ersten Match, der nicht in einem Link ist
-        let foundIndex = -1;
-        let searchIndex = 0;
+      // Use regex.exec() to find actual match positions (respects word boundaries)
+      let foundIndex = -1;
+      let matchLength = 0;
+      let execResult: RegExpExecArray | null;
 
-        while (true) {
-          const index = processedContent.toLowerCase().indexOf(keyword.toLowerCase(), searchIndex);
-          if (index === -1) break;
+      // Reset regex lastIndex
+      regex.lastIndex = 0;
 
-          if (!isInsideLink(processedContent, index)) {
-            foundIndex = index;
-            break;
-          }
+      while ((execResult = regex.exec(processedContent)) !== null) {
+        const index = execResult.index;
 
-          searchIndex = index + 1;
+        if (!isInsideLink(processedContent, index)) {
+          foundIndex = index;
+          matchLength = execResult[0].length;
+          break;
         }
+      }
 
-        if (foundIndex !== -1) {
-          // Ersetze nur das erste Vorkommen
-          processedContent =
-            processedContent.substring(0, foundIndex) +
-            `<a href="${mapping.url}" class="text-primary hover:underline font-medium">${mapping.anchorText}</a>` +
-            processedContent.substring(foundIndex + keyword.length);
+      if (foundIndex !== -1) {
+        // Ersetze nur das erste Vorkommen
+        processedContent =
+          processedContent.substring(0, foundIndex) +
+          `<a href="${mapping.url}" class="text-primary hover:underline font-medium">${mapping.anchorText}</a>` +
+          processedContent.substring(foundIndex + matchLength);
 
-          usedLinks.add(mapping.url);
-          break; // Weiter zur nächsten Mapping-Gruppe
-        }
+        usedLinks.add(mapping.url);
+        break; // Weiter zur nächsten Mapping-Gruppe
       }
     }
   }
 
   return processedContent;
 }
-
