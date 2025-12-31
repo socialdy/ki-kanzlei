@@ -40,7 +40,7 @@ export const blogPosts: BlogPost[] = [
 
 <p>In diesem Artikel zeigen wir Ihnen, wie eine KI Wissensdatenbank funktioniert, welche Vorteile sie bietet und wie Sie sie in Ihrem Unternehmen implementieren können. Wir gehen dabei auf praktische Anwendungsfälle ein und erklären, warum RAG-Modelle die Zukunft des Wissensmanagements sind.</p>
 
-<p><strong>Wichtige Erkenntnisse:</strong></p>
+<h3>Wichtige Erkenntnisse dieses Beitrags</h3>
 <ul>
 <li>RAG-Modelle kombinieren Informationssuche mit KI-generierten Antworten für präzise Ergebnisse</li>
 <li>KI Wissensdatenbanken sparen bis zu 10-15 Stunden pro Woche durch schnelleres Finden von Informationen</li>
@@ -142,7 +142,7 @@ export const blogPosts: BlogPost[] = [
 
 <p>Interessiert an einer KI Wissensdatenbank? Vereinbaren Sie ein kostenloses Analysegespräch mit uns. Wir zeigen Ihnen, wie eine KI Wissensdatenbank speziell für Ihr Unternehmen aussehen kann.</p>
 
-<h2>FAQ</h2>
+<h3>Häufig gestellte Fragen</h3>
 
 <p><strong>Wie lange dauert die Implementierung einer KI Wissensdatenbank?</strong></p>
 <p>In der Regel 30 Tage von der ersten Analyse bis zur produktiven Nutzung. Dies umfasst die Datenaufbereitung, die technische Implementierung und die Integration in Ihre bestehenden Systeme.</p>
