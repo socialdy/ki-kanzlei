@@ -64,57 +64,10 @@ function isInsideLink(content: string, index: number): boolean {
 
 /**
  * Ersetzt Keywords im Content durch Links (maximal 1x pro Keyword-Gruppe)
+ * DEAKTIVIERT: Returns content unchanged to prevent incorrect replacements
  */
 export function injectInternalLinks(content: string): string {
-  let processedContent = content;
-  const usedLinks = new Set<string>();
-
-  // Sortiere nach Länge (längere Keywords zuerst), um spezifischere Matches zu priorisieren
-  const sortedMappings = [...linkMappings].sort((a, b) => {
-    const aMaxLength = Math.max(...a.keywords.map(k => k.length));
-    const bMaxLength = Math.max(...b.keywords.map(k => k.length));
-    return bMaxLength - aMaxLength;
-  });
-
-  for (const mapping of sortedMappings) {
-    // Überspringe, wenn dieser Link bereits verwendet wurde
-    if (usedLinks.has(mapping.url)) continue;
-
-    for (const keyword of mapping.keywords) {
-      const keywordEscaped = keyword.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-      // Use word boundaries to prevent matching keywords inside other words (e.g., "RAG" in "Beitrags")
-      const regex = new RegExp(`\\b${keywordEscaped}\\b`, 'gi');
-
-      // Use regex.exec() to find actual match positions (respects word boundaries)
-      let foundIndex = -1;
-      let matchLength = 0;
-      let execResult: RegExpExecArray | null;
-
-      // Reset regex lastIndex
-      regex.lastIndex = 0;
-
-      while ((execResult = regex.exec(processedContent)) !== null) {
-        const index = execResult.index;
-
-        if (!isInsideLink(processedContent, index)) {
-          foundIndex = index;
-          matchLength = execResult[0].length;
-          break;
-        }
-      }
-
-      if (foundIndex !== -1) {
-        // Ersetze nur das erste Vorkommen
-        processedContent =
-          processedContent.substring(0, foundIndex) +
-          `<a href="${mapping.url}" class="text-primary hover:underline font-medium">${mapping.anchorText}</a>` +
-          processedContent.substring(foundIndex + matchLength);
-
-        usedLinks.add(mapping.url);
-        break; // Weiter zur nächsten Mapping-Gruppe
-      }
-    }
-  }
-
-  return processedContent;
+  // Automatische Link-Replacements deaktiviert, da sie Wortteile fälschlicherweise ersetzen
+  // Der n8n AI Agent erstellt bereits korrekte Links im Content
+  return content;
 }
