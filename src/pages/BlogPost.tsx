@@ -6,13 +6,12 @@ import { BlogPost } from "@/data/blogPosts";
 import { loadBlogPosts, getBlogPostsSync } from "@/data/blogPostsLoader";
 import { Calendar, Clock, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { injectInternalLinks } from "@/utils/blogLinkInjector";
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
   const [blogPosts, setBlogPosts] = useState<BlogPost[]>(getBlogPostsSync());
-  
+
   const post = blogPosts.find((p) => p.slug === slug);
 
   useEffect(() => {
@@ -21,14 +20,14 @@ const BlogPost = () => {
       // Merge statische Posts mit CMS-Posts, behalte statische Posts falls vorhanden
       const staticPosts = getBlogPostsSync();
       const mergedPosts = [...staticPosts];
-      
+
       // Füge CMS-Posts hinzu, die nicht bereits in statischen Posts sind
       loadedPosts.forEach((cmsPost) => {
         if (!mergedPosts.find((p) => p.slug === cmsPost.slug)) {
           mergedPosts.push(cmsPost);
         }
       });
-      
+
       setBlogPosts(mergedPosts);
     });
   }, []);
@@ -37,7 +36,7 @@ const BlogPost = () => {
     const currentPost = blogPosts.find((p) => p.slug === slug);
     if (currentPost) {
       document.title = `${currentPost.title} | KI Kanzlei Blog`;
-      
+
       let metaDescription = document.querySelector('meta[name="description"]');
       if (!metaDescription) {
         metaDescription = document.createElement('meta');
@@ -52,15 +51,15 @@ const BlogPost = () => {
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
-    return date.toLocaleDateString('de-DE', { 
-      year: 'numeric', 
-      month: 'long', 
-      day: 'numeric' 
+    return date.toLocaleDateString('de-DE', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
     });
   };
 
   const currentPost = blogPosts.find((p) => p.slug === slug);
-  
+
   if (!currentPost) {
     return (
       <div className="min-h-screen gradient-bg">
@@ -88,8 +87,8 @@ const BlogPost = () => {
         <div className="container mx-auto px-4 sm:px-6 max-w-4xl">
           {/* Back Button */}
           <div className="mb-8 slide-up">
-            <Link 
-              to="/blog" 
+            <Link
+              to="/blog"
               className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
             >
               <ArrowLeft className="w-4 h-4" />
@@ -137,14 +136,14 @@ const BlogPost = () => {
               <div className="w-20 h-1 bg-primary/20 rounded-full mb-8"></div>
 
               {/* Content */}
-              <div 
+              <div
                 className="blog-content"
                 style={{
                   fontSize: '1rem',
                   lineHeight: '1.75',
                 }}
-                dangerouslySetInnerHTML={{ 
-                  __html: injectInternalLinks(currentPost.content)
+                dangerouslySetInnerHTML={{
+                  __html: currentPost.content
                 }}
               />
             </div>
@@ -158,9 +157,9 @@ const BlogPost = () => {
             <p className="text-sm sm:text-base text-muted-foreground mb-6 max-w-2xl mx-auto">
               Lassen Sie uns gemeinsam herausfinden, wie KI Ihr Unternehmen voranbringen kann.
             </p>
-            <Button 
-              size="lg" 
-              className="w-full sm:w-auto" 
+            <Button
+              size="lg"
+              className="w-full sm:w-auto"
               onClick={() => {
                 navigate('/');
                 setTimeout(() => {
