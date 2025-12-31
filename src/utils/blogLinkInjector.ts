@@ -82,6 +82,7 @@ export function injectInternalLinks(content: string): string {
 
     for (const keyword of mapping.keywords) {
       const keywordEscaped = keyword.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      // Use word boundaries to prevent matching keywords inside other words (e.g., "RAG" in "Beitrags")
       const regex = new RegExp(`\\b${keywordEscaped}\\b`, 'gi');
       const match = processedContent.match(regex);
 
