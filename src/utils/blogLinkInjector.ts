@@ -82,30 +82,36 @@ export function injectInternalLinks(content: string): string {
 
     for (const keyword of mapping.keywords) {
       const keywordEscaped = keyword.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-      // Use word boundaries to avoid matching inside other words (e.g. "rag" in "Beitrags")
       const regex = new RegExp(`\\b${keywordEscaped}\\b`, 'gi');
+      const match = processedContent.match(regex);
 
-      let match;
-      while ((match = regex.exec(processedContent)) !== null) {
-        const index = match.index;
+      if (match) {
+        // Finde den ersten Match, der nicht in einem Link ist
+        let foundIndex = -1;
+        let searchIndex = 0;
 
-        if (!isInsideLink(processedContent, index)) {
-          // Ersetze nur das erste Vorkommen pro Keyword-Gruppe
+        while (true) {
+          const index = processedContent.toLowerCase().indexOf(keyword.toLowerCase(), searchIndex);
+          if (index === -1) break;
+
+          if (!isInsideLink(processedContent, index)) {
+            foundIndex = index;
+            break;
+          }
+
+          searchIndex = index + 1;
+        }
+
+        if (foundIndex !== -1) {
+          // Ersetze nur das erste Vorkommen
           processedContent =
-            processedContent.substring(0, index) +
+            processedContent.substring(0, foundIndex) +
             `<a href="${mapping.url}" class="text-primary hover:underline font-medium">${mapping.anchorText}</a>` +
-            processedContent.substring(index + match[0].length);
+            processedContent.substring(foundIndex + keyword.length);
 
           usedLinks.add(mapping.url);
-          // Break out of the keyword loop to move to the next mapping group
-          break;
+          break; // Weiter zur nächsten Mapping-Gruppe
         }
-      }
-
-      // If we replaced something (checked by seeing if the keyword loop was broken? 
-      // No, we need a flag or check if usedLinks has it)
-      if (usedLinks.has(mapping.url)) {
-        break; // Break the keywords loop if a link was added for this mapping
       }
     }
   }
