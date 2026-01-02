@@ -339,7 +339,7 @@ const Datenschutz = () => {
                 <div className="text-left bg-gray-50 rounded-lg p-6">
                   <p className="text-gray-600 font-semibold mb-4">Verantwortliche im Sinne des Art 4 Z 7 DSGVO ist:</p>
                   <p className="text-gray-600">Arnold Freissling</p>
-                  <p className="text-gray-600">Anschrift: Stavangergasse 5/1/6, 1220 Wien</p>
+                  <p className="text-gray-600">Anschrift: Rossatzbach 3/2, 3602 Rossatz</p>
                   <p className="text-gray-600">Telefonnummer: <a href="tel:+436642314676" className="text-primary hover:text-primary/80 transition-colors">0664/2314676</a></p>
                   <p className="text-gray-600">E-Mail: <a href="mailto:arnold@freissling-partners.com" className="text-primary hover:text-primary/80 transition-colors">arnold@freissling-partners.com</a></p>
                 </div>

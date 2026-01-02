@@ -75,7 +75,7 @@ export const Footer = () => {
               </a>
             </div>
             <p className="text-primary-foreground/80 text-sm leading-relaxed">
-              Ihr Partner für digitale Transformation. 
+              Ihr Partner für digitale Transformation.
               DSGVO-konform, schnell, zuverlässig.
             </p>
           </div>
@@ -85,8 +85,8 @@ export const Footer = () => {
             <h4 className="font-bold mb-4">Navigation</h4>
             <ul className="space-y-3 text-sm">
               <li>
-                <a 
-                  href={navLinks.probleme} 
+                <a
+                  href={navLinks.probleme}
                   onClick={(e) => handleNavClick(navLinks.probleme, e)}
                   className="text-primary-foreground/80 hover:text-primary-foreground transition-base"
                 >
@@ -94,8 +94,8 @@ export const Footer = () => {
                 </a>
               </li>
               <li>
-                <a 
-                  href={navLinks.loesungen} 
+                <a
+                  href={navLinks.loesungen}
                   onClick={(e) => handleNavClick(navLinks.loesungen, e)}
                   className="text-primary-foreground/80 hover:text-primary-foreground transition-base"
                 >
@@ -104,8 +104,8 @@ export const Footer = () => {
               </li>
               <li><a href="/blog" className="text-primary-foreground/80 hover:text-primary-foreground transition-base">Blog</a></li>
               <li>
-                <a 
-                  href={navLinks.ueberUns} 
+                <a
+                  href={navLinks.ueberUns}
                   onClick={(e) => handleNavClick(navLinks.ueberUns, e)}
                   className="text-primary-foreground/80 hover:text-primary-foreground transition-base"
                 >
@@ -113,8 +113,8 @@ export const Footer = () => {
                 </a>
               </li>
               <li>
-                <a 
-                  href={navLinks.referenzen} 
+                <a
+                  href={navLinks.referenzen}
                   onClick={(e) => handleNavClick(navLinks.referenzen, e)}
                   className="text-primary-foreground/80 hover:text-primary-foreground transition-base"
                 >
@@ -122,8 +122,8 @@ export const Footer = () => {
                 </a>
               </li>
               <li>
-                <a 
-                  href={navLinks.faq} 
+                <a
+                  href={navLinks.faq}
                   onClick={(e) => handleNavClick(navLinks.faq, e)}
                   className="text-primary-foreground/80 hover:text-primary-foreground transition-base"
                 >
@@ -160,7 +160,7 @@ export const Footer = () => {
               </li>
               <li className="flex items-start gap-2 text-primary-foreground/80">
                 <MapPin className="w-4 h-4 mt-0.5" />
-                <span>Stavangergasse 5/1/6, 1220 Wien</span>
+                <span>Rossatzbach 3/2, 3602 Rossatz</span>
               </li>
             </ul>
           </div>
