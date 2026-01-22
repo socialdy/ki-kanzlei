@@ -2,25 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ki-kanzlei.at/</loc>
-    <lastmod>2026-01-11</lastmod>
+    <lastmod>2026-01-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://ki-kanzlei.at/ki-loesungen-psychotherapeuten</loc>
-    <lastmod>2026-01-11</lastmod>
+    <lastmod>2026-01-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://ki-kanzlei.at/ki-loesungen-hotels</loc>
-    <lastmod>2026-01-11</lastmod>
+    <lastmod>2026-01-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ki-kanzlei.at/blog</loc>
-    <lastmod>2026-01-11</lastmod>
+    <lastmod>2026-01-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -120,10 +120,27 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-
   <url>
     <loc>https://ki-kanzlei.at/blog/chefsache-automatisierung-ki-agenten-fur-osterreichs-fuhrungskrafte</loc>
     <lastmod>2026-01-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ki-kanzlei.at/blog/ki-fur-steuerberater-osterreich-das-ende-der-beleg-holle</loc>
+    <lastmod>2026-01-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ki-kanzlei.at/blog/fachkraftemangel-in-osterreich-mit-ki-recruiting-zu-top-talenten</loc>
+    <lastmod>2026-01-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ki-kanzlei.at/blog/iso-zertifizierung-mit-ki-qualitatsmanagement-in-osterreich-revolutionieren</loc>
+    <lastmod>2026-01-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
