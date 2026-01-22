@@ -4,11 +4,11 @@ import { Star } from "lucide-react";
 const formatName = (name: string): string => {
   const parts = name.split(' ');
   if (parts.length === 0) return name;
-  
+
   // Check if first part is a title (Dr., etc.)
   const titlePattern = /^(Dr\.|Prof\.|Mag\.|Dipl\.|Ing\.)/i;
   const hasTitle = titlePattern.test(parts[0]);
-  
+
   if (hasTitle && parts.length >= 3) {
     // Title + First Name + Last Name
     return `${parts[0]} ${parts[1]} ${parts[2][0]}.`;
@@ -16,7 +16,7 @@ const formatName = (name: string): string => {
     // First Name + Last Name
     return `${parts[0]} ${parts[parts.length - 1][0]}.`;
   }
-  
+
   return name;
 };
 
@@ -30,16 +30,7 @@ export const TestimonialsHome = () => {
       review: "Seit der Einführung der KI-Lösung ist alles anders. Meine Klienten bekommen automatisch SMS-Erinnerungen und ich habe endlich wieder Zeit für das Wesentliche. Die Terminausfälle sind von 40% auf unter 10% gesunken - das war für mich ein Game-Changer!",
       image: "https://randomuser.me/api/portraits/women/25.jpg",
     },
-    {
-      name: "Georg Gerl",
-      position: "Geschäftsführer",
-      hotel: "Hotel Gerl",
-      location: "Österreich",
-      type: "Hotel",
-      rating: 5.0,
-      review: "Wir hatten letztes Jahr ein Problem mit verlorenen Schlüsseln – nachts um 2 Uhr klingelte das Telefon, niemand war da. Jetzt nimmt der Abendrezeptionist ab, klärt das Problem und leitet es weiter. Unsere Gäste sind zufrieden, wir können schlafen.",
-      image: "/img/testimonials/referenzen/georg-gerl.jpg",
-    },
+
     {
       name: "Dr. Michael Steiner",
       location: "Graz",
@@ -217,7 +208,7 @@ export const TestimonialsHome = () => {
                       <div>
                         <div className="font-semibold text-sm">{formatName(testimonial.name)}</div>
                         <div className="text-xs text-muted-foreground">
-                          {testimonial.hotel 
+                          {testimonial.hotel
                             ? `${testimonial.position}, ${testimonial.hotel}, ${testimonial.location}`
                             : `${testimonial.type}, ${testimonial.location}`
                           }
@@ -255,7 +246,7 @@ export const TestimonialsHome = () => {
                       <div>
                         <div className="font-semibold text-sm">{formatName(testimonial.name)}</div>
                         <div className="text-xs text-muted-foreground">
-                          {testimonial.hotel 
+                          {testimonial.hotel
                             ? `${testimonial.position}, ${testimonial.hotel}, ${testimonial.location}`
                             : `${testimonial.type}, ${testimonial.location}`
                           }

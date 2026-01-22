@@ -1,14 +1,14 @@
 import { Star } from "lucide-react";
 
-// Format name: "Georg Gerl" -> "Georg G."
+// Format name: "Max Mustermann" -> "Max M."
 const formatName = (name: string): string => {
   const parts = name.split(' ');
   if (parts.length === 0) return name;
-  
+
   // Check if first part is a title (Dr., etc.)
   const titlePattern = /^(Dr\.|Prof\.|Mag\.|Dipl\.|Ing\.)/i;
   const hasTitle = titlePattern.test(parts[0]);
-  
+
   if (hasTitle && parts.length >= 3) {
     // Title + First Name + Last Name
     return `${parts[0]} ${parts[1]} ${parts[2][0]}.`;
@@ -16,21 +16,13 @@ const formatName = (name: string): string => {
     // First Name + Last Name
     return `${parts[0]} ${parts[parts.length - 1][0]}.`;
   }
-  
+
   return name;
 };
 
 export const TestimonialsHotels = () => {
   const testimonials = [
-    {
-      name: "Georg Gerl",
-      position: "Geschäftsführer",
-      hotel: "Hotel Gerl",
-      location: "Österreich",
-      rating: 5.0,
-      review: "Wir hatten letztes Jahr ein Problem mit verlorenen Schlüsseln – nachts um 2 Uhr klingelte das Telefon, niemand war da. Jetzt nimmt der Abendrezeptionist ab, klärt das Problem und leitet es weiter. Unsere Gäste sind zufrieden, wir können schlafen.",
-      image: "/img/testimonials/referenzen/georg-gerl.jpg",
-    },
+
     {
       name: "Thomas Huber",
       position: "Geschäftsführer",
