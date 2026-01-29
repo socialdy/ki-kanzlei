@@ -1,6 +1,33 @@
+import { getAttributionData } from "@/lib/analytics";
+
 export const ContactForm = () => {
-  const calUrl = "https://cal.com/ki-kanzlei/kostenloses-analysegesprach?embed=true&embed_domain=ki-kanzlei.at&theme=light&colorPrimary=%233B82F6&colorBackground=%23f8fafc&colorText=%23374151&colorAccent=%233B82F6&colorAccentHover=%232563eb&hideBranding=true";
-  
+  const attribution = getAttributionData();
+
+  // Create URL object to safely append parameters
+  const baseUrl = "https://cal.com/ki-kanzlei/kostenloses-analysegesprach";
+  const url = new URL(baseUrl);
+
+  // Default parameters
+  url.searchParams.set("embed", "true");
+  url.searchParams.set("embed_domain", "ki-kanzlei.at");
+  url.searchParams.set("theme", "light");
+  url.searchParams.set("colorPrimary", "#3B82F6");
+  url.searchParams.set("colorBackground", "#f8fafc");
+  url.searchParams.set("colorText", "#374151");
+  url.searchParams.set("colorAccent", "#3B82F6");
+  url.searchParams.set("colorAccentHover", "#2563eb");
+  url.searchParams.set("hideBranding", "true");
+
+  // Append UTMs if available
+  const utmParams = ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "gclid", "fbclid"];
+  utmParams.forEach(param => {
+    if (attribution[param]) {
+      url.searchParams.set(param, attribution[param]);
+    }
+  });
+
+  const calUrl = url.toString();
+
   return (
     <section id="contact" className="section-spacing bg-gradient-to-br from-primary/5 via-background to-accent/5">
       <div className="container mx-auto px-4 max-w-6xl">
@@ -21,7 +48,7 @@ export const ContactForm = () => {
             frameBorder="0"
             title="Terminbuchung"
             className="w-full rounded-2xl shadow-lg h-[600px] md:h-[700px]"
-            style={{ 
+            style={{
               border: 'none',
               minHeight: '500px'
             }}

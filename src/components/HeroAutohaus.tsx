@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { trackCtaClick } from "@/lib/analytics";
 
 interface HeroAutohausProps {
     onCtaClick: () => void;
@@ -22,7 +23,12 @@ export const HeroAutohaus = ({ onCtaClick }: HeroAutohausProps) => {
                         Von der 24/7 Werkstatt-Terminbuchung bis zur automatisierten Lead-Qualifizierung: Wir bauen produktionsreife KI-Lösungen, die Ihre Service-Annahme entlasten und den Verkauf ankurbeln.
                     </p>
                     <div className="flex flex-col sm:flex-row justify-center items-center gap-4 slide-up">
-                        <Button size="lg" className="w-full sm:w-auto" asChild>
+                        <Button
+                            size="lg"
+                            className="w-full sm:w-auto"
+                            asChild
+                            onClick={() => trackCtaClick("Analysegespräch", "HeroAutohaus")}
+                        >
                             <a href="#contact">
                                 Kostenloses Analysegespräch
                                 <ArrowRight className="w-4 h-4 ml-2" />
@@ -32,7 +38,10 @@ export const HeroAutohaus = ({ onCtaClick }: HeroAutohausProps) => {
                             size="lg"
                             variant="outline"
                             className="w-full sm:w-auto px-8 h-14 text-lg font-bold border-2 border-primary/10 hover:border-primary/30 hover:bg-primary/5 text-gray-700 transition-all rounded-xl active:scale-[0.98] group relative overflow-hidden bg-white/40 backdrop-blur-sm"
-                            onClick={onCtaClick}
+                            onClick={() => {
+                                trackCtaClick("Whitepaper sichern", "HeroAutohaus");
+                                onCtaClick();
+                            }}
                         >
                             <span className="relative z-10 flex items-center justify-center gap-2">
                                 Kostenloses Whitepaper sichern

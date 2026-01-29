@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { trackCtaClick } from "@/lib/analytics";
 
 interface HeroProps {
   onCtaClick: () => void;
@@ -30,7 +31,12 @@ export const Hero = ({ onCtaClick }: HeroProps) => {
 
           {/* CTA */}
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 slide-up">
-            <Button size="lg" className="w-full sm:w-auto" asChild>
+            <Button
+              size="lg"
+              className="w-full sm:w-auto"
+              asChild
+              onClick={() => trackCtaClick("Beratungsgespräch", "Hero")}
+            >
               <a href="#contact">
                 Kostenloses Beratungsgespräch
                 <ArrowRight className="w-4 h-4 ml-2" />
@@ -40,7 +46,10 @@ export const Hero = ({ onCtaClick }: HeroProps) => {
               size="lg"
               variant="outline"
               className="w-full sm:w-auto px-8 h-14 text-lg font-bold border-2 border-primary/10 hover:border-primary/30 hover:bg-primary/5 text-gray-700 transition-all rounded-xl active:scale-[0.98] group relative overflow-hidden bg-white/40 backdrop-blur-sm"
-              onClick={onCtaClick}
+              onClick={() => {
+                trackCtaClick("Whitepaper sichern", "Hero");
+                onCtaClick();
+              }}
             >
               <span className="relative z-10 flex items-center justify-center gap-2">
                 Kostenloses Whitepaper sichern

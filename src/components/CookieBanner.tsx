@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { X, Cookie, Settings } from "lucide-react";
+import { initGA } from "@/lib/analytics";
 
 export const CookieBanner = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -41,11 +42,11 @@ export const CookieBanner = () => {
     localStorage.setItem('cookieConsent', JSON.stringify(cookies));
     setIsVisible(false);
     setShowSettings(false);
-    
+
     // Here you would typically initialize analytics/marketing scripts
     if (cookies.analytics) {
-      // Initialize Google Analytics, etc.
-      console.log('Analytics cookies enabled');
+      // Initialize Google Analytics
+      initGA();
     }
     if (cookies.marketing) {
       // Initialize marketing scripts
@@ -89,7 +90,7 @@ export const CookieBanner = () => {
             </div>
 
             <div className="flex gap-2">
-              <Button 
+              <Button
                 onClick={acceptNecessary}
                 variant="outline"
                 size="sm"
@@ -97,7 +98,7 @@ export const CookieBanner = () => {
               >
                 Ablehnen
               </Button>
-              <Button 
+              <Button
                 onClick={() => setShowSettings(true)}
                 variant="outline"
                 size="sm"
@@ -106,7 +107,7 @@ export const CookieBanner = () => {
                 <Settings className="w-3 h-3 mr-1" />
                 Einstellungen
               </Button>
-              <Button 
+              <Button
                 onClick={acceptAll}
                 size="sm"
                 className="text-xs px-3 py-1 h-7 hover:bg-primary"
@@ -159,13 +160,11 @@ export const CookieBanner = () => {
                     <h4 className="text-xs font-semibold text-gray-900">Analytics</h4>
                     <button
                       onClick={() => toggleCookie('analytics')}
-                      className={`w-8 h-4 rounded-full transition-colors ${
-                        cookies.analytics ? 'bg-primary' : 'bg-gray-300'
-                      }`}
+                      className={`w-8 h-4 rounded-full transition-colors ${cookies.analytics ? 'bg-primary' : 'bg-gray-300'
+                        }`}
                     >
-                      <div className={`w-3 h-3 bg-white rounded-full transition-transform ${
-                        cookies.analytics ? 'translate-x-4' : 'translate-x-0.5'
-                      }`} />
+                      <div className={`w-3 h-3 bg-white rounded-full transition-transform ${cookies.analytics ? 'translate-x-4' : 'translate-x-0.5'
+                        }`} />
                     </button>
                   </div>
                   <p className="text-xs text-gray-600">
@@ -184,13 +183,11 @@ export const CookieBanner = () => {
                     <h4 className="text-xs font-semibold text-gray-900">Marketing</h4>
                     <button
                       onClick={() => toggleCookie('marketing')}
-                      className={`w-8 h-4 rounded-full transition-colors ${
-                        cookies.marketing ? 'bg-primary' : 'bg-gray-300'
-                      }`}
+                      className={`w-8 h-4 rounded-full transition-colors ${cookies.marketing ? 'bg-primary' : 'bg-gray-300'
+                        }`}
                     >
-                      <div className={`w-3 h-3 bg-white rounded-full transition-transform ${
-                        cookies.marketing ? 'translate-x-4' : 'translate-x-0.5'
-                      }`} />
+                      <div className={`w-3 h-3 bg-white rounded-full transition-transform ${cookies.marketing ? 'translate-x-4' : 'translate-x-0.5'
+                        }`} />
                     </button>
                   </div>
                   <p className="text-xs text-gray-600">
@@ -201,7 +198,7 @@ export const CookieBanner = () => {
             </div>
 
             <div className="flex gap-2">
-              <Button 
+              <Button
                 onClick={acceptNecessary}
                 variant="outline"
                 size="sm"
@@ -209,7 +206,7 @@ export const CookieBanner = () => {
               >
                 Ablehnen
               </Button>
-              <Button 
+              <Button
                 onClick={savePreferences}
                 size="sm"
                 className="text-xs px-3 py-1 h-7"

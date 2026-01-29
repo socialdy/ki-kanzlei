@@ -113,9 +113,9 @@ const Datenschutz = () => {
                     </div>
 
                     <div className="bg-gray-50 rounded-lg p-4">
-                      <h3 className="font-semibold text-gray-900 mb-2">Empfänger Daten: Google LLC (Google Analytics, Google Tag Manager)</h3>
-                      <p className="text-sm text-gray-600">Zweck der Datenverarbeitung: Statistische Auswertung der Website; Analyse der Websitebesuche</p>
-                      <p className="text-sm text-gray-600">Rechtsgrundlage der Datenverarbeitung: Einwilligung (Art 6 Abs 1 lit a DSGVO)</p>
+                      <h3 className="font-semibold text-gray-900 mb-2">Empfänger Daten: Google LLC (Google Analytics 4, Google Tag Manager, Google reCAPTCHA)</h3>
+                      <p className="text-sm text-gray-600">Zweck der Datenverarbeitung: Statistische Auswertung der Website; Analyse der Websitebesuche; Schutz vor Spam und Missbrauch durch Bot-Erkennung</p>
+                      <p className="text-sm text-gray-600">Rechtsgrundlage der Datenverarbeitung: Einwilligung (Art 6 Abs 1 lit a DSGVO) für Analytics; Überwiegend berechtigtes Interesse (Art 6 Abs 1 lit f DSGVO) für reCAPTCHA zur Sicherstellung der Netz- und Informationssicherheit</p>
                       <p className="text-sm text-gray-600">Geschäftssitz: USA</p>
                       <p className="text-sm text-gray-600">Sichere Übermittlung in ein Drittland: Google LLC ist EU-US-Data Privacy Framework gelistet</p>
                     </div>
@@ -220,12 +220,37 @@ const Datenschutz = () => {
                   <p className="text-gray-600 leading-relaxed">
                     Eine Liste der Werbe-Cookies finden Sie hier:
                   </p>
+
+                  <div className="bg-primary/5 border border-primary/10 rounded-xl p-6 mt-4">
+                    <h3 className="font-bold text-gray-900 mb-3 text-lg">Google Analytics 4 (GA4)</h3>
+                    <p className="text-gray-600 mb-4 leading-relaxed">
+                      Wir nutzen Google Analytics 4, um das Nutzerverhalten auf unserer Website zu analysieren. Dabei werden Ereignisse (Events) wie Klicks auf Buttons, Formular-Starts und Seitenaufrufe erfasst. Zudem nutzen wir Attribution-Tracking, um die Herkunft unserer Besucher (z.B. über UTM-Parameter) besser zu verstehen und unsere Marketingaktivitäten zu optimieren.
+                    </p>
+                    <p className="text-gray-600 leading-relaxed">
+                      Die Daten werden anonymisiert verarbeitet. Sie können Ihre Einwilligung jederzeit über unseren Cookie-Banner widerrufen.
+                    </p>
+                  </div>
                 </div>
               </div>
 
               <div className="max-w-3xl mx-auto">
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                  II. Für welche Zwecke verarbeiten wir Ihre Daten, wenn Sie sich für unser Unternehmen interessieren?
+                  II.3. Schutz vor Missbrauch (Google reCAPTCHA)
+                </h2>
+
+                <div className="text-left space-y-4">
+                  <p className="text-gray-600 leading-relaxed">
+                    Um für ausreichend Datensicherheit bei der Übermittlung von Formularen Sorge zu tragen, verwenden wir den Service reCAPTCHA des Unternehmens Google LLC. Dies dient primär zur Unterscheidung, ob die Eingabe durch eine natürliche Person erfolgt oder missbräuchlich durch maschinelle und automatisierte Verarbeitung erfolgt.
+                  </p>
+                  <p className="text-gray-600 leading-relaxed">
+                    Der Service inkludiert den Versand der IP-Adresse und ggf. weiterer von Google für den Dienst reCAPTCHA benötigter Daten an Google. Hierfür gelten die abweichenden Datenschutzbestimmungen von Google. Weitere Informationen zu den Datenschutzrichtlinien von Google finden Sie unter: <a href="https://www.google.com/intl/de/policies/privacy/" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">https://www.google.com/intl/de/policies/privacy/</a>.
+                  </p>
+                </div>
+              </div>
+
+              <div className="max-w-3xl mx-auto">
+                <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                  III. Für welche Zwecke verarbeiten wir Ihre Daten, wenn Sie sich für unser Unternehmen interessieren?
                 </h2>
 
                 <div className="text-left space-y-4">
@@ -252,7 +277,7 @@ const Datenschutz = () => {
 
               <div className="max-w-3xl mx-auto">
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                  II.3. Datenverarbeitung im Rahmen unseres Lead-Funnels (Whitepaper & Infomaterial)
+                  IV. Datenverarbeitung im Rahmen unseres Lead-Funnels (Whitepaper & Infomaterial)
                 </h2>
 
                 <div className="text-left space-y-4">
@@ -282,7 +307,7 @@ const Datenschutz = () => {
 
               <div className="max-w-3xl mx-auto">
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                  III. Wie lange werden Ihre Daten gespeichert?
+                  V. Wie lange werden Ihre Daten gespeichert?
                 </h2>
 
                 <div className="text-left space-y-4">
@@ -298,7 +323,7 @@ const Datenschutz = () => {
 
               <div className="max-w-3xl mx-auto">
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                  V. Datenempfang aus dritten Quellen (Art 14 DSGVO)
+                  VI. Datenempfang aus dritten Quellen (Art 14 DSGVO)
                 </h2>
 
                 <div className="text-left space-y-4">
@@ -315,7 +340,7 @@ const Datenschutz = () => {
 
               <div className="max-w-3xl mx-auto">
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                  VI. Welche Rechte stehen Ihnen hinsichtlich der Datenverarbeitung zu?
+                  VII. Welche Rechte stehen Ihnen hinsichtlich der Datenverarbeitung zu?
                 </h2>
 
                 <div className="text-left space-y-4">
@@ -339,7 +364,7 @@ const Datenschutz = () => {
 
               <div className="max-w-3xl mx-auto">
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                  VII. Welche Beschwerderechte stehen Ihnen zu?
+                  VIII. Welche Beschwerderechte stehen Ihnen zu?
                 </h2>
 
                 <div className="text-left space-y-4">
@@ -360,7 +385,7 @@ const Datenschutz = () => {
 
               <div className="max-w-3xl mx-auto">
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                  VIII. Wie können Sie mit uns Kontakt aufnehmen?
+                  IX. Wie können Sie mit uns Kontakt aufnehmen?
                 </h2>
 
                 <div className="text-left">
@@ -372,7 +397,7 @@ const Datenschutz = () => {
 
               <div className="max-w-3xl mx-auto">
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                  IX. Verantwortliche
+                  X. Verantwortliche
                 </h2>
 
                 <div className="text-left bg-gray-50 rounded-lg p-6">

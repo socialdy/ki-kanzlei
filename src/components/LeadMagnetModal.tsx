@@ -16,6 +16,8 @@ import { CheckCircle2, Loader2, ArrowRight, ShieldCheck, AlertCircle } from "luc
 import { toast } from "sonner";
 import { cn } from "@/lib/utils";
 import ReCAPTCHA from "react-google-recaptcha";
+import { trackLeadEvent, getAttributionData } from "@/lib/analytics";
+import { useEffect } from "react";
 
 // Austrian and common international phone number regex
 const phoneRegex = /^([+]?[\s0-9]+)?(\d{3}|[(]?[0-9]+[)])?([-]?[\s0-9])+$/;
@@ -50,6 +52,12 @@ export const LeadMagnetModal = ({ isOpen, onOpenChange }: LeadMagnetModalProps) 
     const [captchaValue, setCaptchaValue] = useState<string | null>(null);
     const recaptchaRef = useRef<ReCAPTCHA>(null);
 
+    useEffect(() => {
+        if (isOpen) {
+            trackLeadEvent("start");
+        }
+    }, [isOpen]);
+
     const {
         register,
         handleSubmit,
@@ -72,6 +80,7 @@ export const LeadMagnetModal = ({ isOpen, onOpenChange }: LeadMagnetModalProps) 
             if (data.website) return;
             if (!captchaValue) {
                 toast.error("Bitte bestätige, dass du kein Roboter bist.");
+                trackLeadEvent("captcha_failed");
                 return;
             }
 
@@ -88,6 +97,7 @@ export const LeadMagnetModal = ({ isOpen, onOpenChange }: LeadMagnetModalProps) 
                     submittedAt: new Date().toISOString(),
                     source: "Website Lead Magnet",
                     captchaToken: captchaValue,
+                    attribution: getAttributionData(),
                 }),
             });
 
@@ -95,9 +105,11 @@ export const LeadMagnetModal = ({ isOpen, onOpenChange }: LeadMagnetModalProps) 
 
             setIsSubmitting(false);
             setIsSuccess(true);
+            trackLeadEvent("success");
         } catch (error) {
             console.error("Submission error:", error);
             setIsSubmitting(false);
+            trackLeadEvent("error", error instanceof Error ? error.message : "Unknown error");
 
             if (error instanceof TypeError && error.message === "Failed to fetch") {
                 toast.error("Verbindung zum n8n-Server blockiert (CORS oder Workflow nicht aktiv).");
@@ -149,7 +161,7 @@ export const LeadMagnetModal = ({ isOpen, onOpenChange }: LeadMagnetModalProps) 
                                             <Input
                                                 id="firstName"
                                                 {...register("firstName")}
-                                                placeholder="z.B. Arnold"
+                                                placeholder="z.B. Max"
                                                 className={cn("h-12 border-2 rounded-2xl bg-gray-50/50 focus:ring-0", errors.firstName ? "border-destructive/50" : "border-gray-100")}
                                             />
                                         </div>
@@ -158,7 +170,7 @@ export const LeadMagnetModal = ({ isOpen, onOpenChange }: LeadMagnetModalProps) 
                                             <Input
                                                 id="lastName"
                                                 {...register("lastName")}
-                                                placeholder="Freissling"
+                                                placeholder="Mustermann"
                                                 className={cn("h-12 border-2 rounded-2xl bg-gray-50/50 focus:ring-0", errors.lastName ? "border-destructive/50" : "border-gray-100")}
                                             />
                                         </div>
@@ -191,7 +203,7 @@ export const LeadMagnetModal = ({ isOpen, onOpenChange }: LeadMagnetModalProps) 
                                             id="email"
                                             {...register("email")}
                                             type="email"
-                                            placeholder="arnold@ki-kanzlei.at"
+                                            placeholder="max@beispiel.de"
                                             className={cn("h-12 border-2 rounded-2xl bg-gray-50/50 focus:ring-0", errors.email ? "border-destructive/50" : "border-gray-100")}
                                         />
                                         {errors.email && (

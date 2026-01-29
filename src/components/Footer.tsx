@@ -1,5 +1,6 @@
 import { Mail, Phone, MapPin } from "lucide-react";
 import { useLocation, useNavigate } from "react-router-dom";
+import { trackLinkClick } from "@/lib/analytics";
 
 export const Footer = () => {
   const location = useLocation();
@@ -87,7 +88,10 @@ export const Footer = () => {
               <li>
                 <a
                   href={navLinks.probleme}
-                  onClick={(e) => handleNavClick(navLinks.probleme, e)}
+                  onClick={(e) => {
+                    trackLinkClick("Probleme", "Footer");
+                    handleNavClick(navLinks.probleme, e);
+                  }}
                   className="text-primary-foreground/80 hover:text-primary-foreground transition-base"
                 >
                   Probleme
@@ -96,13 +100,16 @@ export const Footer = () => {
               <li>
                 <a
                   href={navLinks.loesungen}
-                  onClick={(e) => handleNavClick(navLinks.loesungen, e)}
+                  onClick={(e) => {
+                    trackLinkClick("Lösungen", "Footer");
+                    handleNavClick(navLinks.loesungen, e);
+                  }}
                   className="text-primary-foreground/80 hover:text-primary-foreground transition-base"
                 >
                   Lösungen
                 </a>
               </li>
-              <li><a href="/blog" className="text-primary-foreground/80 hover:text-primary-foreground transition-base">Blog</a></li>
+              <li><a href="/blog" onClick={() => trackLinkClick("Blog", "Footer")} className="text-primary-foreground/80 hover:text-primary-foreground transition-base">Blog</a></li>
               <li>
                 <a
                   href={navLinks.ueberUns}
@@ -137,18 +144,18 @@ export const Footer = () => {
           <div className="fade-in">
             <h4 className="font-bold mb-4">Branchen</h4>
             <ul className="space-y-3 text-sm">
-              <li><a href="/ki-loesungen-psychotherapeuten" className="text-primary-foreground/80 hover:text-primary-foreground transition-base">KI-Lösungen für Psychotherapeuten</a></li>
-              <li><a href="/ki-loesungen-hotels" className="text-primary-foreground/80 hover:text-primary-foreground transition-base">KI-Lösungen für Hotels</a></li>
-              <li><a href="/ki-loesungen-hausverwaltung" className="text-primary-foreground/80 hover:text-primary-foreground transition-base">KI-Lösungen für Hausverwaltungen</a></li>
-              <li><a href="/ki-loesungen-immobilienmakler" className="text-primary-foreground/80 hover:text-primary-foreground transition-base">KI-Lösungen für Immobilienmakler</a></li>
-              <li><a href="/ki-loesungen-autohaus" className="text-primary-foreground/80 hover:text-primary-foreground transition-base">KI-Lösungen für Autohäuser</a></li>
-              <li><a href="/ki-loesungen-handwerker" className="text-primary-foreground/80 hover:text-primary-foreground transition-base">KI-Lösungen für Handwerker</a></li>
-              <li><a href="/ki-loesungen-rechtsanwaelte" className="text-primary-foreground/80 hover:text-primary-foreground transition-base">KI-Lösungen für Rechtsanwälte</a></li>
-              <li><a href="/ki-loesungen-aerzte" className="text-primary-foreground/80 hover:text-primary-foreground transition-base">KI-Lösungen für Ärzte</a></li>
-              <li><a href="/ki-loesungen-recruiting" className="text-primary-foreground/80 hover:text-primary-foreground transition-base">KI-Lösungen für Recruiting</a></li>
-              <li><a href="/ki-loesungen-fitness" className="text-primary-foreground/80 hover:text-primary-foreground transition-base">KI-Lösungen für Fitnessstudios</a></li>
-              <li><a href="/ki-loesungen-steuerberater" className="text-primary-foreground/80 hover:text-primary-foreground transition-base">KI-Lösungen für Steuerberater</a></li>
-              <li><a href="/ki-loesungen-versicherungsmakler" className="text-primary-foreground/80 hover:text-primary-foreground transition-base">KI-Lösungen für Versicherungsmakler</a></li>
+              <li><a href="/ki-loesungen-psychotherapeuten" onClick={() => trackLinkClick("Industry: Psychotherapeuten", "Footer")} className="text-primary-foreground/80 hover:text-primary-foreground transition-base">KI-Lösungen für Psychotherapeuten</a></li>
+              <li><a href="/ki-loesungen-hotels" onClick={() => trackLinkClick("Industry: Hotels", "Footer")} className="text-primary-foreground/80 hover:text-primary-foreground transition-base">KI-Lösungen für Hotels</a></li>
+              <li><a href="/ki-loesungen-hausverwaltung" onClick={() => trackLinkClick("Industry: Hausverwaltung", "Footer")} className="text-primary-foreground/80 hover:text-primary-foreground transition-base">KI-Lösungen für Hausverwaltungen</a></li>
+              <li><a href="/ki-loesungen-immobilienmakler" onClick={() => trackLinkClick("Industry: Immobilienmakler", "Footer")} className="text-primary-foreground/80 hover:text-primary-foreground transition-base">KI-Lösungen für Immobilienmakler</a></li>
+              <li><a href="/ki-loesungen-autohaus" onClick={() => trackLinkClick("Industry: Autohaus", "Footer")} className="text-primary-foreground/80 hover:text-primary-foreground transition-base">KI-Lösungen für Autohäuser</a></li>
+              <li><a href="/ki-loesungen-handwerker" onClick={() => trackLinkClick("Industry: Handwerker", "Footer")} className="text-primary-foreground/80 hover:text-primary-foreground transition-base">KI-Lösungen für Handwerker</a></li>
+              <li><a href="/ki-loesungen-rechtsanwaelte" onClick={() => trackLinkClick("Industry: Rechtsanwälte", "Footer")} className="text-primary-foreground/80 hover:text-primary-foreground transition-base">KI-Lösungen für Rechtsanwälte</a></li>
+              <li><a href="/ki-loesungen-aerzte" onClick={() => trackLinkClick("Industry: Ärzte", "Footer")} className="text-primary-foreground/80 hover:text-primary-foreground transition-base">KI-Lösungen für Ärzte</a></li>
+              <li><a href="/ki-loesungen-recruiting" onClick={() => trackLinkClick("Industry: Recruiting", "Footer")} className="text-primary-foreground/80 hover:text-primary-foreground transition-base">KI-Lösungen für Recruiting</a></li>
+              <li><a href="/ki-loesungen-fitness" onClick={() => trackLinkClick("Industry: Fitness", "Footer")} className="text-primary-foreground/80 hover:text-primary-foreground transition-base">KI-Lösungen für Fitnessstudios</a></li>
+              <li><a href="/ki-loesungen-steuerberater" onClick={() => trackLinkClick("Industry: Steuerberater", "Footer")} className="text-primary-foreground/80 hover:text-primary-foreground transition-base">KI-Lösungen für Steuerberater</a></li>
+              <li><a href="/ki-loesungen-versicherungsmakler" onClick={() => trackLinkClick("Industry: Versicherungsmakler", "Footer")} className="text-primary-foreground/80 hover:text-primary-foreground transition-base">KI-Lösungen für Versicherungsmakler</a></li>
             </ul>
           </div>
 

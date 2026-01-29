@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { trackCtaClick } from "@/lib/analytics";
 
 interface HeroFitnessProps {
     onCtaClick: () => void;
@@ -22,7 +23,12 @@ export const HeroFitness = ({ onCtaClick }: HeroFitnessProps) => {
                         Vom 24/7 KI-Interessenten-Telefon bis zum automatisierten Lead-Management: Wir bauen Lösungen, die Ihre Studio-Auslastung maximieren und Ihr Personal entlasten.
                     </p>
                     <div className="flex flex-col sm:flex-row justify-center items-center gap-4 slide-up">
-                        <Button size="lg" className="w-full sm:w-auto" asChild>
+                        <Button
+                            size="lg"
+                            className="w-full sm:w-auto"
+                            asChild
+                            onClick={() => trackCtaClick("Analysegespräch", "HeroFitness")}
+                        >
                             <a href="#contact">
                                 Kostenloses Analysegespräch
                                 <ArrowRight className="w-4 h-4 ml-2" />
@@ -32,7 +38,10 @@ export const HeroFitness = ({ onCtaClick }: HeroFitnessProps) => {
                             size="lg"
                             variant="outline"
                             className="w-full sm:w-auto px-8 h-14 text-lg font-bold border-2 border-primary/10 hover:border-primary/30 hover:bg-primary/5 text-gray-700 transition-all rounded-xl active:scale-[0.98] group relative overflow-hidden bg-white/40 backdrop-blur-sm"
-                            onClick={onCtaClick}
+                            onClick={() => {
+                                trackCtaClick("Whitepaper sichern", "HeroFitness");
+                                onCtaClick();
+                            }}
                         >
                             <span className="relative z-10 flex items-center justify-center gap-2">
                                 Kostenloses Whitepaper sichern

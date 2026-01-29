@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import { trackLinkClick, trackCtaClick } from "@/lib/analytics";
 
 export const NavigationHome = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -52,7 +53,10 @@ export const NavigationHome = () => {
                 <a
                   key={item.label}
                   href={item.href}
-                  onClick={(e) => handleNavClick(item.href, e)}
+                  onClick={(e) => {
+                    trackLinkClick(item.label, "NavigationHome");
+                    handleNavClick(item.href, e);
+                  }}
                   className="flex items-center gap-1 text-base font-normal text-gray-700 hover:text-gray-900 transition-colors"
                 >
                   {item.label}
@@ -64,13 +68,14 @@ export const NavigationHome = () => {
             {/* CTA Button (show from lg up) */}
             <div className="hidden lg:flex items-center">
               {isHomePage ? (
-                <Button size="lg" asChild>
+                <Button size="lg" asChild onClick={() => trackCtaClick("Analysegespräch", "NavigationHome")}>
                   <a href="#contact">Kostenloses Analysegespräch</a>
                 </Button>
               ) : (
                 <Button
                   size="lg"
                   onClick={() => {
+                    trackCtaClick("Analysegespräch", "NavigationHome");
                     navigate("/");
                     setTimeout(() => {
                       const section = document.getElementById("contact");

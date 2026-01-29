@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { useState } from "react";
+import { trackLinkClick, trackCtaClick } from "@/lib/analytics";
 
 export const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,15 +20,15 @@ export const Navigation = () => {
         <div className="px-8 py-3">
           <div className="flex items-center justify-between gap-4 md:gap-6 lg:gap-8">
             {/* Logo */}
-                    <div className="flex items-center">
-                      <a href="/">
-                        <img
-                          src="/img/ki_kanzlei_logo_black.svg"
-                          alt="KI Kanzlei Logo"
-                          className="h-10 w-auto"
-                        />
-                      </a>
-                    </div>
+            <div className="flex items-center">
+              <a href="/">
+                <img
+                  src="/img/ki_kanzlei_logo_black.svg"
+                  alt="KI Kanzlei Logo"
+                  className="h-10 w-auto"
+                />
+              </a>
+            </div>
 
             {/* Desktop Menu (show from lg up) */}
             <div className="hidden lg:flex items-center gap-6">
@@ -35,6 +36,7 @@ export const Navigation = () => {
                 <a
                   key={item.label}
                   href={item.href}
+                  onClick={() => trackLinkClick(item.label, "Navigation")}
                   className="flex items-center gap-1 text-base font-normal text-gray-700 hover:text-gray-900 transition-colors"
                 >
                   {item.label}
@@ -45,7 +47,7 @@ export const Navigation = () => {
 
             {/* CTA Button (show from lg up) */}
             <div className="hidden lg:flex items-center">
-              <Button size="lg" asChild>
+              <Button size="lg" asChild onClick={() => trackCtaClick("Analysegespräch vereinbaren", "Navigation")}>
                 <a href="/ki-loesungen-psychotherapeuten#contact">
                   Analysegespräch vereinbaren
                 </a>

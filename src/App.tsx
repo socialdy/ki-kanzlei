@@ -27,21 +27,37 @@ import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import ReactGA from "react-ga4";
 import { useLocation } from "react-router-dom";
+import { trackEvent, GA_EVENTS, captureAttributionData, initGA, hasAnalyticsConsent } from "./lib/analytics";
 
 const queryClient = new QueryClient();
-
-// Initialize GA4
-const GA_MEASUREMENT_ID = import.meta.env.VITE_GA_MEASUREMENT_ID;
-if (GA_MEASUREMENT_ID) {
-  ReactGA.initialize(GA_MEASUREMENT_ID);
-}
 
 const AnalyticsTracker = () => {
   const location = useLocation();
 
   useEffect(() => {
-    if (GA_MEASUREMENT_ID) {
-      ReactGA.send({ hitType: "pageview", page: location.pathname + location.search });
+    // Capture attribution data (UTMs, Referrer) on initial load
+    captureAttributionData();
+
+    // Initialize GA if consent already exists
+    if (hasAnalyticsConsent()) {
+      initGA();
+    }
+  }, []);
+
+  useEffect(() => {
+    const isGInitialized = (window as any).GA_INITIALIZED;
+    if (isGInitialized) {
+      // Extract industry from path (e.g., /ki-loesungen-hotels -> hotels)
+      const industry = location.pathname.match(/\/ki-loesungen-([^/]+)/)?.[1] || "home";
+
+      trackEvent({
+        action: GA_EVENTS.PAGE_VIEW,
+        category: "navigation",
+        label: location.pathname,
+        industry: industry,
+        page_path: location.pathname,
+        page_title: document.title,
+      });
     }
   }, [location]);
 
