@@ -41,10 +41,10 @@ export const ContactForm = () => {
           </p>
         </div>
 
-        <div className="relative w-full slide-up min-h-[600px] bg-white rounded-2xl shadow-lg border border-border overflow-hidden">
+        <div className="w-full slide-up overflow-hidden">
           <iframe
             src={getCalUrl()}
-            style={{ width: "100%", height: "100%", minHeight: "700px" }}
+            style={{ width: "100%", minHeight: "750px" }}
             frameBorder="0"
             allowFullScreen
             title="Cal.com Scheduling"
