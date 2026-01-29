@@ -4,6 +4,7 @@ import { HeroHotels } from "@/components/HeroHotels";
 import { ProblemGridHotels } from "@/components/ProblemGridHotels";
 import { UseCasesHotels } from "@/components/UseCasesHotels";
 import { AboutUsHotels } from "@/components/AboutUsHotels";
+import { VoiceAgentSection } from "@/components/VoiceAgentSection";
 import { TestimonialsHotels } from "@/components/TestimonialsHotels";
 import { ContactForm } from "@/components/ContactForm";
 import { FAQHotels } from "@/components/FAQHotels";
@@ -12,7 +13,7 @@ import { Footer } from "@/components/Footer";
 const Hotels = () => {
   useEffect(() => {
     document.title = "KI Lösungen für Hotels | KI Kanzlei";
-    
+
     // Meta Description
     let metaDescription = document.querySelector('meta[name="description"]');
     if (!metaDescription) {
@@ -29,6 +30,7 @@ const Hotels = () => {
         <HeroHotels />
         <ProblemGridHotels />
         <UseCasesHotels />
+        <VoiceAgentSection />
         <AboutUsHotels />
         <TestimonialsHotels />
         <ContactForm />

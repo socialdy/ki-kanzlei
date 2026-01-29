@@ -1,19 +1,23 @@
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { NavigationHome } from "@/components/NavigationHome";
 import { HeroHome } from "@/components/HeroHome";
 import { ProblemGridHome } from "@/components/ProblemGridHome";
 import { UseCasesHome } from "@/components/UseCasesHome";
 import { IndustriesHome } from "@/components/IndustriesHome";
+import { VoiceAgentSection } from "@/components/VoiceAgentSection";
 import { AboutUs } from "@/components/AboutUs";
 import { TestimonialsHome } from "@/components/TestimonialsHome";
 import { ContactForm } from "@/components/ContactForm";
 import { FAQHome } from "@/components/FAQHome";
 import { Footer } from "@/components/Footer";
+import { LeadMagnetModal } from "@/components/LeadMagnetModal";
 
 const Home = () => {
+  const [isLeadModalOpen, setIsLeadModalOpen] = useState(false);
+
   useEffect(() => {
     document.title = "KI Kanzlei – KI-Automatisierung für Unternehmen | Österreich";
-    
+
     // Meta Description
     let metaDescription = document.querySelector('meta[name="description"]');
     if (!metaDescription) {
@@ -28,9 +32,10 @@ const Home = () => {
     <div className="min-h-screen gradient-bg">
       <NavigationHome />
       <main>
-        <HeroHome />
+        <HeroHome onCtaClick={() => setIsLeadModalOpen(true)} />
         <ProblemGridHome />
         <UseCasesHome />
+        <VoiceAgentSection />
         <IndustriesHome />
         <AboutUs />
         <TestimonialsHome />
@@ -38,6 +43,7 @@ const Home = () => {
         <FAQHome />
       </main>
       <Footer />
+      <LeadMagnetModal isOpen={isLeadModalOpen} onOpenChange={setIsLeadModalOpen} />
     </div>
   );
 };

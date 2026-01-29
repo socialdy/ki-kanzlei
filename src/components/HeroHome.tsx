@@ -1,7 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
-export const HeroHome = () => {
+interface HeroHomeProps {
+  onCtaClick: () => void;
+}
+
+export const HeroHome = ({ onCtaClick }: HeroHomeProps) => {
   return (
     <section id="home" className="gradient-hero section-spacing overflow-hidden min-h-screen">
       <div className="container mx-auto px-4 max-w-7xl w-full">
@@ -24,12 +28,23 @@ export const HeroHome = () => {
           </p>
 
           {/* CTA */}
-          <div className="flex justify-center items-center slide-up">
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 slide-up">
             <Button size="lg" className="w-full sm:w-auto" asChild>
               <a href="#contact">
-                Kostenloses Analysegespräch
+                Jetzt Analysegespräch sichern
                 <ArrowRight className="w-4 h-4 ml-2" />
               </a>
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              className="w-full sm:w-auto px-8 h-14 text-lg font-bold border-2 border-primary/10 hover:border-primary/30 hover:bg-primary/5 text-gray-700 transition-all rounded-xl active:scale-[0.98] group relative overflow-hidden bg-white/40 backdrop-blur-sm"
+              onClick={onCtaClick}
+            >
+              <span className="relative z-10 flex items-center justify-center gap-2">
+                Kostenloses Whitepaper sichern
+                <div className="w-2 h-2 rounded-full bg-primary/40 group-hover:bg-primary animate-pulse" />
+              </span>
             </Button>
           </div>
 

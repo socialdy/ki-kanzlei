@@ -139,6 +139,14 @@ export const Footer = () => {
             <ul className="space-y-3 text-sm">
               <li><a href="/ki-loesungen-psychotherapeuten" className="text-primary-foreground/80 hover:text-primary-foreground transition-base">KI-Lösungen für Psychotherapeuten</a></li>
               <li><a href="/ki-loesungen-hotels" className="text-primary-foreground/80 hover:text-primary-foreground transition-base">KI-Lösungen für Hotels</a></li>
+              <li><a href="/ki-loesungen-hausverwaltung" className="text-primary-foreground/80 hover:text-primary-foreground transition-base">KI-Lösungen für Hausverwaltungen</a></li>
+              <li><a href="/ki-loesungen-immobilienmakler" className="text-primary-foreground/80 hover:text-primary-foreground transition-base">KI-Lösungen für Immobilienmakler</a></li>
+              <li><a href="/ki-loesungen-autohaus" className="text-primary-foreground/80 hover:text-primary-foreground transition-base">KI-Lösungen für Autohäuser</a></li>
+              <li><a href="/ki-loesungen-handwerker" className="text-primary-foreground/80 hover:text-primary-foreground transition-base">KI-Lösungen für Handwerker</a></li>
+              <li><a href="/ki-loesungen-rechtsanwaelte" className="text-primary-foreground/80 hover:text-primary-foreground transition-base">KI-Lösungen für Rechtsanwälte</a></li>
+              <li><a href="/ki-loesungen-aerzte" className="text-primary-foreground/80 hover:text-primary-foreground transition-base">KI-Lösungen für Ärzte</a></li>
+              <li><a href="/ki-loesungen-recruiting" className="text-primary-foreground/80 hover:text-primary-foreground transition-base">KI-Lösungen für Recruiting</a></li>
+              <li><a href="/ki-loesungen-fitness" className="text-primary-foreground/80 hover:text-primary-foreground transition-base">KI-Lösungen für Fitnessstudios</a></li>
             </ul>
           </div>
 

@@ -1,6 +1,12 @@
-import { Building2, Heart, Hotel, Briefcase, ShoppingBag, GraduationCap } from "lucide-react";
+import { Building2, Heart, Hotel, Briefcase, ShoppingBag, GraduationCap, Home, Car, Hammer, Stethoscope, Users, Dumbbell } from "lucide-react";
 
 const industries = [
+  {
+    icon: Stethoscope,
+    title: "Ärzte & Spezialisten",
+    description: "Ordinations-Entlastung, Terminbuchung, Patienten-Triage rund um die Uhr.",
+    link: "/ki-loesungen-aerzte",
+  },
   {
     icon: Heart,
     title: "Psychotherapie",
@@ -15,8 +21,15 @@ const industries = [
   },
   {
     icon: Briefcase,
-    title: "Beratung & Dienstleistung",
+    title: "Rechtsanwälte & Notare",
     description: "Lead-Generierung, Terminplanung, Follow-up-Automatisierung.",
+    link: "/ki-loesungen-rechtsanwaelte",
+  },
+  {
+    icon: Users,
+    title: "Recruiting & HR",
+    description: "Automatisches Bewerber-Screening, Voice-Interviews & Sourcing.",
+    link: "/ki-loesungen-recruiting",
   },
   {
     icon: ShoppingBag,
@@ -24,9 +37,39 @@ const industries = [
     description: "Kundenkommunikation, Bestellabwicklung, Social-Media-Automatisierung.",
   },
   {
+    icon: Dumbbell,
+    title: "Fitness & Sport",
+    description: "Mitglieder-Wachstum, automatisierte Probetrainings & Feedback-Loops.",
+    link: "/ki-loesungen-fitness",
+  },
+  {
     icon: GraduationCap,
     title: "Bildung & Weiterbildung",
     description: "Anmeldungen, Kursverwaltung, Kommunikation mit Teilnehmern.",
+  },
+  {
+    icon: Building2,
+    title: "Hausverwaltung",
+    description: "KI-Mieter-Hotline, Liegenschafts-Wissen, automatisierte Schadensmeldungen.",
+    link: "/ki-loesungen-hausverwaltung",
+  },
+  {
+    icon: Home,
+    title: "Immobilienmakler",
+    description: "24/7 Lead-Qualifizierung, automatisierte Besichtigungstermine, Exposé-Assistenz.",
+    link: "/ki-loesungen-immobilienmakler",
+  },
+  {
+    icon: Car,
+    title: "Autohaus",
+    description: "Service-Annahme, Werkstatt-Termine, 24/7 Lead-Management im Verkauf.",
+    link: "/ki-loesungen-autohaus",
+  },
+  {
+    icon: Hammer,
+    title: "Handwerker",
+    description: "24/7 KI-Notfalltelefon, automatisierte Terminbuchung & Büro-Entlastung.",
+    link: "/ki-loesungen-handwerker",
   },
   {
     icon: Building2,
@@ -61,7 +104,7 @@ export const IndustriesHome = () => {
                 </p>
               </div>
             );
-            
+
             return industry.link ? (
               <a key={index} href={industry.link} className="block h-full">
                 {content}

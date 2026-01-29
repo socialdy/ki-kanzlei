@@ -68,7 +68,7 @@ export const NavigationHome = () => {
                   <a href="#contact">Kostenloses Analysegespräch</a>
                 </Button>
               ) : (
-                <Button 
+                <Button
                   size="lg"
                   onClick={() => {
                     navigate("/");
@@ -120,8 +120,8 @@ export const NavigationHome = () => {
                       <a href="#contact" onClick={() => setIsMenuOpen(false)}>Kostenloses Analysegespräch</a>
                     </Button>
                   ) : (
-                    <Button 
-                      size="lg" 
+                    <Button
+                      size="lg"
                       className="w-full"
                       onClick={() => {
                         navigate("/");

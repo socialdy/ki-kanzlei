@@ -49,13 +49,6 @@ const Datenschutz = () => {
                   </p>
 
                   <div className="space-y-6 mt-6">
-                    <div className="bg-gray-50 rounded-lg p-4">
-                      <h3 className="font-semibold text-gray-900 mb-2">Empfänger Daten: Webflow, Inc</h3>
-                      <p className="text-sm text-gray-600">Zweck der Datenverarbeitung: Hosting der Website und CMS (Content-Management-System für Website)</p>
-                      <p className="text-sm text-gray-600">Rechtsgrundlage der Datenverarbeitung: Überwiegend berechtigtes Interesse (Art 6 Abs 1 lit f DSGVO); Auftragsverarbeitervertrag (Art 28 DSGVO)</p>
-                      <p className="text-sm text-gray-600">Geschäftssitz: USA</p>
-                      <p className="text-sm text-gray-600">Sichere Übermittlung in ein Drittland: Webflow ist EU-US-Data Privacy Framework gelistet (Non-HR Data)</p>
-                    </div>
 
                     <div className="bg-gray-50 rounded-lg p-4">
                       <h3 className="font-semibold text-gray-900 mb-2">Empfänger Daten: Cookie-Management-System CookieScript</h3>
@@ -100,7 +93,23 @@ const Datenschutz = () => {
                       <p className="text-sm text-gray-600">Zweck der Datenverarbeitung: Telefon-Tool und Transkription eines Anrufes</p>
                       <p className="text-sm text-gray-600">Rechtsgrundlage der Datenverarbeitung: Einwilligung (Art 6 Abs 1 lit a DSGVO)</p>
                       <p className="text-sm text-gray-600">Geschäftssitz: Frankreich</p>
-                      <p className="text-sm text-gray-600">Sichere Übermittlung in ein Drittland: Microsoft, Google und Zoom sind jeweils EU-US-Data Privacy Framework gelistet</p>
+                      <p className="text-sm text-gray-600">Sichere Übermittlung in ein Drittland: Innerhalb der EU</p>
+                    </div>
+
+                    <div className="bg-gray-50 rounded-lg p-4">
+                      <h3 className="font-semibold text-gray-900 mb-2">Empfänger Daten: ElevenLabs Inc.</h3>
+                      <p className="text-sm text-gray-600">Zweck der Datenverarbeitung: Erbringung von KI-Sprachdiensten (Text-to-Speech, Speech-to-Text), Voice-Agent-Funktionalität und Datenverarbeitung gemäß Data Processing Addendum (DPA).</p>
+                      <p className="text-sm text-gray-600">Rechtsgrundlage der Datenverarbeitung: Einwilligung (Art 6 Abs 1 lit a DSGVO); Auftragsverarbeitervertrag (DPA) nach Art 28 DSGVO.</p>
+                      <p className="text-sm text-gray-600">Geschäftssitz: USA</p>
+                      <p className="text-sm text-gray-600">Sichere Übermittlung in ein Drittland: ElevenLabs nutzt Standardvertragsklauseln (SCCs) und ist Teil des EU-US Data Privacy Frameworks.</p>
+                    </div>
+
+                    <div className="bg-gray-50 rounded-lg p-4">
+                      <h3 className="font-semibold text-gray-900 mb-2">Empfänger Daten: Cal.com, Inc. (Cal.ai)</h3>
+                      <p className="text-sm text-gray-600">Zweck der Datenverarbeitung: Tool zur Terminbuchung und KI-gestützte Planung von Terminen (Cal.ai).</p>
+                      <p className="text-sm text-gray-600">Rechtsgrundlage der Datenverarbeitung: Überwiegend berechtigtes Interesse (Art 6 Abs 1 lit f DSGVO) bzw. Einwilligung (Art 6 Abs 1 lit a DSGVO).</p>
+                      <p className="text-sm text-gray-600">Geschäftssitz: USA</p>
+                      <p className="text-sm text-gray-600">Sichere Übermittlung in ein Drittland: Cal.com nutzt Standardvertragsklauseln (SCCs) zur Absicherung der Datenübertragung.</p>
                     </div>
 
                     <div className="bg-gray-50 rounded-lg p-4">

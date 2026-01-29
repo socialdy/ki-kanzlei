@@ -3,6 +3,7 @@ import { Navigation } from "@/components/Navigation";
 import { Hero } from "@/components/Hero";
 import { ProblemGrid } from "@/components/ProblemGrid";
 import { UseCases } from "@/components/UseCases";
+import { VoiceAgentSection } from "@/components/VoiceAgentSection";
 import { AboutUs } from "@/components/AboutUs";
 import { Testimonials } from "@/components/Testimonials";
 import { ContactForm } from "@/components/ContactForm";
@@ -12,7 +13,7 @@ import { Footer } from "@/components/Footer";
 const Index = () => {
   useEffect(() => {
     document.title = "KI Lösungen für Psychotherapeuten | KI Kanzlei";
-    
+
     // Meta Description
     let metaDescription = document.querySelector('meta[name="description"]');
     if (!metaDescription) {
@@ -26,15 +27,16 @@ const Index = () => {
   return (
     <div className="min-h-screen gradient-bg">
       <Navigation />
-              <main>
-                <Hero />
-                <ProblemGrid />
-                <UseCases />
-                <AboutUs />
-                <Testimonials />
-                <ContactForm />
-                <FAQ />
-              </main>
+      <main>
+        <Hero />
+        <ProblemGrid />
+        <UseCases />
+        <VoiceAgentSection />
+        <AboutUs />
+        <Testimonials />
+        <ContactForm />
+        <FAQ />
+      </main>
       <Footer />
     </div>
   );
