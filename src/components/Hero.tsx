@@ -19,7 +19,7 @@ export const Hero = ({ onCtaClick }: HeroProps) => {
           </div>
 
           {/* Headline */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight slide-up break-words">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight slide-up">
             KI Lösungen für <span className="text-primary">Psychotherapeuten</span>
           </h1>
 

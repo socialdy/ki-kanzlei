@@ -37,14 +37,14 @@ All colors MUST be HSL.
     --ring: 215 85% 58%;
 
     --radius: 0.75rem;
-    
+
     --gradient-primary: linear-gradient(135deg, hsl(215 85% 58%), hsl(205 90% 65%));
     --gradient-hero: linear-gradient(180deg, hsl(210 20% 98%), hsl(210 25% 96%));
-    
+
     --shadow-sm: 0 2px 4px hsl(215 20% 50% / 0.06);
     --shadow-md: 0 4px 6px hsl(215 20% 50% / 0.10);
     --shadow-lg: 0 8px 24px hsl(215 20% 50% / 0.12);
-    
+
     --transition-base: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-smooth: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 
@@ -106,21 +106,25 @@ All colors MUST be HSL.
   html {
     scroll-behavior: smooth;
   }
-  
+
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-satoshi);
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: var(--font-satoshi);
     font-weight: 700;
-    hyphens: auto;
-    overflow-wrap: break-word;
   }
 }
 
 @layer utilities {
+
   /* Blog Content Styling */
   .blog-content {
     @apply text-base leading-relaxed;
@@ -182,107 +186,113 @@ All colors MUST be HSL.
   .blog-content pre code {
     @apply bg-transparent text-gray-100 p-0;
   }
+
   .gradient-primary {
     background: var(--gradient-primary);
   }
-  
+
   .gradient-hero {
     background: linear-gradient(135deg, hsl(var(--primary) / 0.15) 0%, hsl(var(--background)) 50%, hsl(var(--primary) / 0.1) 100%);
   }
 
   .gradient-bg {
-    background: linear-gradient(180deg, 
-      hsl(var(--primary) / 0.08) 0%, 
-      hsl(var(--background)) 20%, 
-      hsl(var(--primary) / 0.06) 40%, 
-      hsl(var(--background)) 60%, 
-      hsl(var(--primary) / 0.08) 80%, 
-      hsl(var(--background)) 100%
-    );
+    background: linear-gradient(180deg,
+        hsl(var(--primary) / 0.08) 0%,
+        hsl(var(--background)) 20%,
+        hsl(var(--primary) / 0.06) 40%,
+        hsl(var(--background)) 60%,
+        hsl(var(--primary) / 0.08) 80%,
+        hsl(var(--background)) 100%);
   }
-  
+
   .transition-base {
     transition: var(--transition-base);
   }
-  
+
   .transition-smooth {
     transition: var(--transition-smooth);
   }
-  
+
   .hover-lift {
     @apply transition-smooth;
   }
-  
+
   .hover-lift:hover {
     transform: translateY(-4px);
     box-shadow: var(--shadow-lg);
   }
-  
+
   .section-spacing {
     @apply py-16 md:py-24 lg:py-32;
   }
-  
+
   .fade-in {
     animation: fadeIn 0.6s ease-out forwards;
   }
-  
+
   .slide-up {
     animation: slideUp 0.6s ease-out forwards;
   }
-  
+
   @keyframes fadeIn {
     from {
       opacity: 0;
     }
+
     to {
       opacity: 1;
     }
   }
-  
+
   @keyframes slideUp {
     from {
       opacity: 0;
       transform: translateY(30px);
     }
+
     to {
       opacity: 1;
       transform: translateY(0);
     }
   }
-  
+
   @keyframes float {
-    0%, 100% {
+
+    0%,
+    100% {
       transform: translateY(0);
     }
+
     50% {
       transform: translateY(-10px);
     }
   }
-  
+
   .float {
     animation: float 3s ease-in-out infinite;
   }
-  
+
   .animate-scroll-right-to-left {
     animation: scrollRightToLeft 30s linear infinite;
   }
-  
+
   /* Mobile slider optimization */
   @media (max-width: 768px) {
     .animate-scroll-right-to-left {
       animation: scrollRightToLeft 20s linear infinite;
     }
   }
-  
+
   @keyframes scrollRightToLeft {
     0% {
       transform: translateX(0);
     }
+
     100% {
       transform: translateX(-50%);
     }
   }
-  
+
   /* Cal.com Responsive Heights */
   @media (max-width: 768px) {
     iframe[title="Terminbuchung"] {
@@ -290,7 +300,7 @@ All colors MUST be HSL.
       min-height: 700px !important;
     }
   }
-  
+
   @media (min-width: 769px) {
     iframe[title="Terminbuchung"] {
       height: 700px !important;
