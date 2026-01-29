@@ -10,14 +10,15 @@ declare global {
 export const ContactForm = () => {
   const attribution = getAttributionData();
 
-  // Construct Cal.com URL with prefilled UTM data and forced light theme
+  // Construct Cal.com URL with prefilled UTM data, forced light theme and transparent background
   const getCalUrl = () => {
     const baseUrl = "https://cal.com/ki-kanzlei/kostenloses-analysegesprach";
     const utmParams = ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "gclid", "fbclid"];
     const query = new URLSearchParams();
 
-    // Force light theme
+    // Force light theme and transparency
     query.set("theme", "light");
+    query.set("transparent", "1");
 
     utmParams.forEach(param => {
       if (attribution[param]) {
@@ -30,7 +31,7 @@ export const ContactForm = () => {
   };
 
   return (
-    <section id="contact" className="section-spacing bg-gradient-to-br from-primary/5 via-background to-accent/5">
+    <section id="contact" className="section-spacing">
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 slide-up">
@@ -44,10 +45,11 @@ export const ContactForm = () => {
         <div className="w-full slide-up overflow-hidden">
           <iframe
             src={getCalUrl()}
-            style={{ width: "100%", minHeight: "750px" }}
+            style={{ width: "100%", minHeight: "850px" }}
             frameBorder="0"
             allowFullScreen
             title="Cal.com Scheduling"
+            allowTransparency={true}
           ></iframe>
         </div>
       </div>
