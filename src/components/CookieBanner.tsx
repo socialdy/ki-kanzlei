@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { X, Cookie, Settings } from "lucide-react";
-import { initGA } from "@/lib/analytics";
+import { initGA, updateGAConsent } from "@/lib/analytics";
 
 export const CookieBanner = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -47,6 +47,9 @@ export const CookieBanner = () => {
     if (cookies.analytics) {
       // Initialize Google Analytics
       initGA();
+      updateGAConsent(true);
+    } else {
+      updateGAConsent(false);
     }
     if (cookies.marketing) {
       // Initialize marketing scripts

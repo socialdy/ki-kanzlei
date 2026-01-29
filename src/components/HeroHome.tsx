@@ -19,7 +19,7 @@ export const HeroHome = ({ onCtaClick }: HeroHomeProps) => {
           </div>
 
           {/* Headline */}
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight slide-up">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight slide-up break-words">
             Wir automatisieren Ihr Unternehmen mit <span className="text-primary">KI</span>
           </h1>
 

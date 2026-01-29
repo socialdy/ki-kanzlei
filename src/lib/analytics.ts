@@ -52,12 +52,28 @@ export const initGA = () => {
     }
 };
 
-// Extend Window interface for global flag
 declare global {
     interface Window {
         GA_INITIALIZED?: boolean;
+        gtag?: (...args: any[]) => void;
     }
 }
+
+/**
+ * Updates Google Consent Mode state based on user choice
+ */
+export const updateGAConsent = (granted: boolean) => {
+    if (typeof window.gtag === 'function') {
+        const status = granted ? 'granted' : 'denied';
+        window.gtag('consent', 'update', {
+            'ad_storage': status,
+            'ad_user_data': status,
+            'ad_personalization': status,
+            'analytics_storage': status
+        });
+        console.log(`GA4 Consent updated to: ${status}`);
+    }
+};
 
 /**
  * Tracks a custom event in GA4.
