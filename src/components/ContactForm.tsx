@@ -10,11 +10,14 @@ declare global {
 export const ContactForm = () => {
   const attribution = getAttributionData();
 
-  // Construct Cal.com URL with prefilled UTM data
+  // Construct Cal.com URL with prefilled UTM data and forced light theme
   const getCalUrl = () => {
     const baseUrl = "https://cal.com/ki-kanzlei/kostenloses-analysegesprach";
     const utmParams = ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "gclid", "fbclid"];
     const query = new URLSearchParams();
+
+    // Force light theme
+    query.set("theme", "light");
 
     utmParams.forEach(param => {
       if (attribution[param]) {
