@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { useState } from "react";
+import { trackLinkClick, trackCtaClick } from "@/lib/analytics";
 
 export const NavigationHausverwaltung = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,6 +10,7 @@ export const NavigationHausverwaltung = () => {
         { label: "Probleme", href: "/ki-loesungen-hausverwaltung#probleme", hasDropdown: false },
         { label: "Lösungen", href: "/ki-loesungen-hausverwaltung#loesungen", hasDropdown: false },
         { label: "Über uns", href: "/ki-loesungen-hausverwaltung#ueber-uns", hasDropdown: false },
+        { label: "Referenzen", href: "/ki-loesungen-hausverwaltung#referenzen", hasDropdown: false },
         { label: "FAQ", href: "/ki-loesungen-hausverwaltung#faq", hasDropdown: false },
     ];
 
@@ -32,6 +34,7 @@ export const NavigationHausverwaltung = () => {
                                 <a
                                     key={item.label}
                                     href={item.href}
+                                    onClick={() => trackLinkClick(item.label, "NavigationHausverwaltung")}
                                     className="flex items-center gap-1 text-base font-normal text-gray-700 hover:text-gray-900 transition-colors"
                                 >
                                     {item.label}
@@ -41,7 +44,7 @@ export const NavigationHausverwaltung = () => {
                         </div>
 
                         <div className="hidden lg:flex items-center">
-                            <Button size="lg" asChild>
+                            <Button size="lg" asChild onClick={() => trackCtaClick("Kostenloses Analysegespräch", "NavigationHausverwaltung")}>
                                 <a href="/ki-loesungen-hausverwaltung#contact">
                                     Kostenloses Analysegespräch
                                 </a>
@@ -66,14 +69,17 @@ export const NavigationHausverwaltung = () => {
                                         key={item.label}
                                         href={item.href}
                                         className="flex items-center justify-between px-4 py-3 text-base font-normal text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-xl transition-colors"
-                                        onClick={() => setIsMenuOpen(false)}
+                                        onClick={() => {
+                                            trackLinkClick(item.label, "NavigationHausverwaltungMobile");
+                                            setIsMenuOpen(false);
+                                        }}
                                     >
                                         {item.label}
                                         {item.hasDropdown && <ChevronDown className="w-4 h-4" />}
                                     </a>
                                 ))}
                                 <div className="pt-4 mt-2 border-t border-gray-200">
-                                    <Button size="lg" className="w-full" asChild>
+                                    <Button size="lg" className="w-full" asChild onClick={() => trackCtaClick("Kostenloses Analysegespräch", "NavigationHausverwaltungMobile")}>
                                         <a href="/ki-loesungen-hausverwaltung#contact">
                                             Kostenloses Analysegespräch
                                         </a>
