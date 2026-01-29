@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { NavigationHausverwaltung } from "@/components/NavigationHausverwaltung";
 import { HeroHausverwaltung } from "@/components/HeroHausverwaltung";
 import { ProblemGridHausverwaltung } from "@/components/ProblemGridHausverwaltung";
@@ -7,12 +7,16 @@ import { TestimonialsHausverwaltung } from "@/components/TestimonialsHausverwalt
 import { VoiceAgentSection } from "@/components/VoiceAgentSection";
 import { AboutUsHausverwaltung } from "@/components/AboutUsHausverwaltung";
 import { ContactForm } from "@/components/ContactForm";
+import { BlogSectionHome } from "@/components/BlogSectionHome";
 import { FAQHausverwaltung } from "@/components/FAQHausverwaltung";
 import { Footer } from "@/components/Footer";
+import { LeadMagnetModal } from "@/components/LeadMagnetModal";
 
 const Hausverwaltung = () => {
+    const [isLeadModalOpen, setIsLeadModalOpen] = useState(false);
+
     useEffect(() => {
-        document.title = "KI Lösungen für Hausverwaltungen | KI Kanzlei";
+        document.title = "KI Lösungen für Hausverwaltungen | KI Kanzlei Österreich";
 
         // Meta Description
         let metaDescription = document.querySelector('meta[name="description"]');
@@ -21,23 +25,25 @@ const Hausverwaltung = () => {
             metaDescription.setAttribute('name', 'description');
             document.head.appendChild(metaDescription);
         }
-        metaDescription.setAttribute('content', 'Österreichs führende KI-Lösung für Hausverwaltungen. Automatisierung von Mieteranfragen, Schadensmeldungen & Besichtigungsterminen. DSGVO-konform.');
+        metaDescription.setAttribute('content', 'Professionelle KI Lösungen für Hausverwaltungen. Automatisieren Sie Mieteranfragen, Schadensmeldungen & Terminplanung DSGVO-konform und hocheffizient.');
     }, []);
 
     return (
         <div className="min-h-screen gradient-bg">
             <NavigationHausverwaltung />
             <main>
-                <HeroHausverwaltung />
+                <HeroHausverwaltung onCtaClick={() => setIsLeadModalOpen(true)} />
                 <ProblemGridHausverwaltung />
                 <UseCasesHausverwaltung />
                 <VoiceAgentSection />
                 <TestimonialsHausverwaltung />
                 <AboutUsHausverwaltung />
+                <BlogSectionHome />
                 <ContactForm />
                 <FAQHausverwaltung />
             </main>
             <Footer />
+            <LeadMagnetModal isOpen={isLeadModalOpen} onOpenChange={setIsLeadModalOpen} />
         </div>
     );
 };

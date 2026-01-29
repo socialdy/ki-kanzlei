@@ -1,18 +1,22 @@
-import { useEffect } from "react";
-import { NavigationHotels } from "@/components/NavigationHotels";
+import { useEffect, useState } from "react";
+import { NavigationHome } from "@/components/NavigationHome";
 import { HeroHotels } from "@/components/HeroHotels";
 import { ProblemGridHotels } from "@/components/ProblemGridHotels";
 import { UseCasesHotels } from "@/components/UseCasesHotels";
-import { AboutUsHotels } from "@/components/AboutUsHotels";
-import { VoiceAgentSection } from "@/components/VoiceAgentSection";
 import { TestimonialsHotels } from "@/components/TestimonialsHotels";
+import { VoiceAgentSection } from "@/components/VoiceAgentSection";
+import { AboutUsHotels } from "@/components/AboutUsHotels";
 import { ContactForm } from "@/components/ContactForm";
+import { BlogSectionHome } from "@/components/BlogSectionHome";
 import { FAQHotels } from "@/components/FAQHotels";
 import { Footer } from "@/components/Footer";
+import { LeadMagnetModal } from "@/components/LeadMagnetModal";
 
 const Hotels = () => {
+  const [isLeadModalOpen, setIsLeadModalOpen] = useState(false);
+
   useEffect(() => {
-    document.title = "KI Lösungen für Hotels | KI Kanzlei";
+    document.title = "KI Lösungen für Hotels | KI Kanzlei Österreich";
 
     // Meta Description
     let metaDescription = document.querySelector('meta[name="description"]');
@@ -21,26 +25,27 @@ const Hotels = () => {
       metaDescription.setAttribute('name', 'description');
       document.head.appendChild(metaDescription);
     }
-    metaDescription.setAttribute('content', 'Österreichs führende KI-Lösung für Hotels. Automatisierung mit KI-Abendrezeptionist, n8n & Superchat. DSGVO-konform. Kostenloses Analysegespräch!');
+    metaDescription.setAttribute('content', 'Zukunftsweisende KI Lösungen für Hotels in Österreich. Optimieren Sie Gästekommunikation, Service-Prozesse & Buchungsmanagement mit modernster Voice- & Chat-KI.');
   }, []);
+
   return (
     <div className="min-h-screen gradient-bg">
-      <NavigationHotels />
+      <NavigationHome />
       <main>
-        <HeroHotels />
+        <HeroHotels onCtaClick={() => setIsLeadModalOpen(true)} />
         <ProblemGridHotels />
         <UseCasesHotels />
         <VoiceAgentSection />
-        <AboutUsHotels />
         <TestimonialsHotels />
+        <AboutUsHotels />
+        <BlogSectionHome />
         <ContactForm />
         <FAQHotels />
       </main>
       <Footer />
+      <LeadMagnetModal isOpen={isLeadModalOpen} onOpenChange={setIsLeadModalOpen} />
     </div>
   );
 };
 
 export default Hotels;
-
-

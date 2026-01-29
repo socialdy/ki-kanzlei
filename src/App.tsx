@@ -18,6 +18,10 @@ import Rechtsanwaelte from "./pages/Rechtsanwaelte";
 import Aerzte from "./pages/Aerzte";
 import Recruiting from "./pages/Recruiting";
 import Fitness from "./pages/Fitness";
+import Ecommerce from "./pages/Ecommerce";
+import OeffentlicheEinrichtungen from "./pages/OeffentlicheEinrichtungen";
+import Steuerberater from "./pages/Steuerberater";
+import Versicherungsmakler from "./pages/Versicherungsmakler";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 
@@ -28,7 +32,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/ki-loesungen-psychotherapeuten" element={<Index />} />
@@ -41,6 +45,10 @@ const App = () => (
           <Route path="/ki-loesungen-aerzte" element={<Aerzte />} />
           <Route path="/ki-loesungen-recruiting" element={<Recruiting />} />
           <Route path="/ki-loesungen-fitness" element={<Fitness />} />
+          <Route path="/ki-loesungen-ecommerce" element={<Ecommerce />} />
+          <Route path="/ki-loesungen-oeffentliche-einrichtungen" element={<OeffentlicheEinrichtungen />} />
+          <Route path="/ki-loesungen-steuerberater" element={<Steuerberater />} />
+          <Route path="/ki-loesungen-versicherungsmakler" element={<Versicherungsmakler />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/impressum" element={<Impressum />} />

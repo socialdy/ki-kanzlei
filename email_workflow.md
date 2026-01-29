@@ -18,7 +18,7 @@ Da die Dateien in deinem `public/img` Ordner liegen, sind sie nach dem nächsten
 | Feld | Wert (Expression) |
 | :--- | :--- |
 | **To** | `{{ $json.body.email }}` |
-| **Subject** | `{{ $json.body.name }}, hier ist deine KI‑Roadmap! 🚀✨` |
+| **Subject** | `{{ $json.body.firstName }}, hier ist deine KI‑Roadmap! 🚀✨` |
 | **Message Type**| `HTML` |
 
 ---
@@ -57,7 +57,7 @@ Kopiere diesen Code in das **Message**-Feld von n8n (Modus: **Expression**):
                 <img src="https://ki-kanzlei.at/img/logo-premium.png" alt="KI Kanzlei" class="logo">
             </div>
             <div class="content">
-                <p>Hey <strong class="highlight">{{ $json.body.name }}</strong>,</p>
+                <p>Hey <strong class="highlight">{{ $json.body.firstName }}</strong>,</p>
                 
                 <p>Arnold hier von der KI Kanzlei. 🙏</p>
                 

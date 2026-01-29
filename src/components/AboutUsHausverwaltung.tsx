@@ -41,7 +41,7 @@ export const AboutUsHausverwaltung = () => {
                             <h3 className="text-xl font-bold mb-1">Arnold Freissling</h3>
                             <div className="text-primary font-semibold mb-3">Geschäftsführer & Vertrieb</div>
                             <p className="text-muted-foreground text-sm leading-relaxed">
-                                Entwickelte die Vision der KI Kanzlei, um administrative Hürden durch intelligente Automatisierung abzubauen und den Fokus wieder auf das Wesentliche zu lenken.
+                                Hat die Idee zur KI-Kanzlei entwickelt, nachdem er die Probleme seiner Freundin Katja, einer selbstständigen Psychotherapeutin, live und hautnah miterlebt hat.
                             </p>
                         </div>
 
@@ -68,7 +68,7 @@ export const AboutUsHausverwaltung = () => {
                             <h3 className="text-xl font-bold mb-1">Markus Wallner</h3>
                             <div className="text-primary font-semibold mb-3">Geschäftsführer & Automatisierungsexperte</div>
                             <p className="text-muted-foreground text-sm leading-relaxed">
-                                Experte für Workflow-Design und KI-Integration. Erweckt die technischen Lösungen zum Leben und sorgt für eine nahtlose Einbindung in Ihren Verwaltung-Alltag.
+                                Spezialist für n8n und Prozessautomatisierung. Entwickelt die technischen Lösungen und implementiert sie System für System.
                             </p>
                         </div>
                     </div>
@@ -88,57 +88,31 @@ export const AboutUsHausverwaltung = () => {
 
                             {/* Step 1 */}
                             <div id="1" className="timeline-card relative py-12 lg:py-20">
-                                <div className="w-full py-6 px-8 lg:py-8 lg:px-16 rounded-xl shadow-xl border transition-all duration-300 ease-out
-                                    bg-primary border-primary
-                                    lg:w-[calc(50%-60px)] lg:mr-auto
-                                    flex flex-col items-center text-center lg:items-start lg:text-left">
-                                    <div className="mb-4 lg:mb-6 w-10 h-10 lg:w-12 lg:h-12 rounded-full flex items-center justify-center shadow-md transition-colors duration-300 ease-out
-                                        bg-primary text-white lg:mx-auto lg:hidden">
-                                        <span className="text-lg lg:text-xl font-bold">1</span>
-                                    </div>
-                                    <h3 className="font-bold text-lg lg:text-xl xl:text-2xl mb-3 text-white">Der Impuls</h3>
-                                    <p className="text-sm lg:text-base xl:text-lg opacity-80 text-white leading-relaxed">Egal ob Psychotherapie oder Hotel: Wir sahen immer wieder, dass gerade Branchen mit hohem Kommunikationsaufkommen unter verpassten Anrufe und manuellem Papierkram leiden. Hausverwaltungen sind hier die absolute Spitze – die Mieteranfragen schlafen nie.</p>
+                                <div className="w-full py-6 px-8 lg:py-8 lg:px-16 rounded-xl shadow-xl border transition-all duration-300 ease-out bg-primary border-primary lg:w-[calc(50%-60px)] lg:mr-auto flex flex-col items-center text-center lg:items-start lg:text-left">
+                                    <h3 className="font-bold text-lg lg:text-xl xl:text-2xl mb-3 text-white">Das Problem</h3>
+                                    <p className="text-sm lg:text-base xl:text-lg opacity-80 text-white leading-relaxed">Katja, Arnolds Freundin, arbeitet als Psychotherapeutin in Kärnten. Jeden morgen: "Können wir den Termin verschieben?" Dann: Formulare ausfüllen, Rechnungen schreiben, Klienten anrufen. 8-10 Stunden pro Monat nur für Papierkram. "Ich bin doch keine Sekretärin".</p>
                                 </div>
-                                <div className="timeline-center-point hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full items-center justify-center shadow-md transition-colors duration-300 ease-out
-                                    bg-primary text-white">
+                                <div className="timeline-center-point hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full items-center justify-center shadow-md transition-colors duration-300 ease-out bg-primary text-white">
                                     <span className="text-xl font-bold">1</span>
                                 </div>
                             </div>
 
-                            {/* Step 2 */}
                             <div id="2" className="timeline-card relative py-12 lg:py-20">
-                                <div className="w-full py-6 px-8 lg:py-8 lg:px-16 rounded-xl shadow-xl border transition-all duration-300 ease-out
-                                    bg-white border-border
-                                    lg:w-[calc(50%-60px)] lg:ml-auto
-                                    flex flex-col items-center text-center lg:items-start lg:text-left">
-                                    <div className="mb-4 lg:mb-6 w-10 h-10 lg:w-12 lg:h-12 rounded-full flex items-center justify-center shadow-md transition-colors duration-300 ease-out
-                                        bg-white text-foreground border border-border lg:mx-auto lg:hidden">
-                                        <span className="text-lg lg:text-xl font-bold">2</span>
-                                    </div>
-                                    <h3 className="font-bold text-lg lg:text-xl xl:text-2xl mb-3 text-foreground">Die Erkenntnis</h3>
-                                    <p className="text-sm lg:text-base xl:text-lg opacity-80 text-foreground leading-relaxed">Nach intensiven Gesprächen mit Verwaltern in ganz Österreich wurde klar: Das Problem ist nicht der Mieter, sondern die fehlende Skalierbarkeit der analogen Kommunikation. "Wir brauchen eine Lösung, die 24/7 Schadensmeldungen aufnimmt und Besichtigungen plant," war der Tenor. Also begannen wir mit dem Bau.</p>
+                                <div className="w-full py-6 px-8 lg:py-8 lg:px-16 rounded-xl shadow-xl border transition-all duration-300 ease-out bg-white border-border lg:w-[calc(50%-60px)] lg:ml-auto flex flex-col items-center text-center lg:items-start lg:text-left">
+                                    <h3 className="font-bold text-lg lg:text-xl xl:text-2xl mb-3 text-foreground">Die Lösung</h3>
+                                    <p className="text-sm lg:text-base xl:text-lg opacity-80 text-foreground leading-relaxed">Arnold rief Markus an: "Du, Katja ist völlig fertig mit der Verwaltung. Kannst du da was machen?" Er implementierte alles Schritt für Schritt - und Katja konnte endlich wieder in Ruhe arbeiten. Das war die Geburtsstunde der KI Kanzlei.</p>
                                 </div>
-                                <div className="timeline-center-point hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full items-center justify-center shadow-md transition-colors duration-300 ease-out
-                                    bg-white text-foreground border border-border">
+                                <div className="timeline-center-point hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full items-center justify-center shadow-md transition-colors duration-300 ease-out bg-white text-foreground border border-border">
                                     <span className="text-xl font-bold">2</span>
                                 </div>
                             </div>
 
-                            {/* Step 3 */}
                             <div id="3" className="timeline-card relative py-12 lg:py-20">
-                                <div className="w-full py-6 px-8 lg:py-8 lg:px-16 rounded-xl shadow-xl border transition-all duration-300 ease-out
-                                    bg-white border-border
-                                    lg:w-[calc(50%-60px)] lg:mr-auto
-                                    flex flex-col items-center text-center lg:items-start lg:text-left">
-                                    <div className="mb-4 lg:mb-6 w-10 h-10 lg:w-12 lg:h-12 rounded-full flex items-center justify-center shadow-md transition-colors duration-300 ease-out
-                                        bg-white text-foreground border border-border lg:mx-auto lg:hidden">
-                                        <span className="text-lg lg:text-xl font-bold">3</span>
-                                    </div>
-                                    <h3 className="font-bold text-lg lg:text-xl xl:text-2xl mb-3 text-foreground">Die Vision</h3>
-                                    <p className="text-sm lg:text-base xl:text-lg opacity-80 text-foreground leading-relaxed">Heute bieten wir Hausverwaltungen ein vollständiges Ökosystem aus KI-Telefonagenten und automatisierten Workflows. Unser Ziel ist es, die Verwaltung so schlank und effizient zu machen, dass wieder Zeit für das bleibt, was wirklich zählt: Werte erhalten und Gemeinschaften stärken.</p>
+                                <div className="w-full py-6 px-8 lg:py-8 lg:px-16 rounded-xl shadow-xl border transition-all duration-300 ease-out bg-white border-border lg:w-[calc(50%-60px)] lg:mr-auto flex flex-col items-center text-center lg:items-start lg:text-left">
+                                    <h3 className="font-bold text-lg lg:text-xl xl:text-2xl mb-3 text-foreground">Fokus Hausverwaltung</h3>
+                                    <p className="text-sm lg:text-base xl:text-lg opacity-80 text-foreground leading-relaxed">Wir erkannten schnell: Hausverwaltungen sind die absolute Spitze des Admin-Aufkommens. Heute bieten wir Verwaltern ein Ökosystem aus KI-Telefonagenten und automatisierten Workflows, das Schadensmeldungen 24/7 verarbeitet – für eine drastische Entlastung.</p>
                                 </div>
-                                <div className="timeline-center-point hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full items-center justify-center shadow-md transition-colors duration-300 ease-out
-                                    bg-white text-foreground border border-border">
+                                <div className="timeline-center-point hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full items-center justify-center shadow-md transition-colors duration-300 ease-out bg-white text-foreground border border-border">
                                     <span className="text-xl font-bold">3</span>
                                 </div>
                             </div>

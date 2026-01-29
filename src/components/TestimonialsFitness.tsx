@@ -12,31 +12,31 @@ const formatName = (name: string): string => {
 export const TestimonialsFitness = () => {
     const testimonials = [
         {
-            name: "Thomas Mayer",
+            name: "Lukas Brunner",
             position: "Studioleiter",
-            studio: "FitLife Austria",
-            location: "Wien",
+            studio: "NextGen Fitness",
+            location: "Klagenfurt",
             rating: 5.0,
             review: "Unsere Conversion von Website-Besuchern zu Probetrainings ist um 40% gestiegen. Die KI bucht die Termine direkt, während der Interessent noch motiviert ist. Das Telefon am Empfang ist deutlich leiser geworden.",
-            image: "https://randomuser.me/api/portraits/men/12.jpg",
+            image: "https://randomuser.me/api/portraits/men/52.jpg",
         },
         {
-            name: "Sarah Steiner",
+            name: "Marina Stein",
             position: "Inhaberin",
-            studio: "Yoga & Soul Graz",
-            location: "Graz",
+            studio: "Stein Yoga Studio",
+            location: "Villach",
             rating: 5.0,
             review: "Besonders die automatisierten Follow-Ups nach dem Probetraining helfen uns massiv. Wir vergessen niemanden mehr und die KI erinnert die Kunden charmant an die Anmeldung. Eine enorme Entlastung für mein Team.",
-            image: "https://randomuser.me/api/portraits/women/15.jpg",
+            image: "https://randomuser.me/api/portraits/women/22.jpg",
         },
         {
-            name: "Markus Krainer",
+            name: "Gerald Kofler",
             position: "Betreiber",
-            studio: "PowerGym Linz",
-            location: "Linz",
+            studio: "Iron Gym Graz",
+            location: "Graz",
             rating: 5.0,
             review: "Die KI-Wissensdatenbank für unsere Trainer ist spitze. Sie können Übungen oder Studiocodes jederzeit abfragen. Auch unsere Social Media Kanäle werden jetzt konstant mit Profi-Content bespielt.",
-            image: "https://randomuser.me/api/portraits/men/55.jpg",
+            image: "https://randomuser.me/api/portraits/men/15.jpg",
         },
     ];
 

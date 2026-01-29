@@ -12,31 +12,31 @@ const formatName = (name: string): string => {
 export const TestimonialsAutohaus = () => {
     const testimonials = [
         {
-            name: "Markus Egger",
+            name: "Robert Müllner",
             position: "Serviceleiter",
-            dealer: "Autohaus Egger",
-            location: "Klagenfurt",
+            dealer: "BMW Müllner",
+            location: "Bregenz",
             rating: 5.0,
             review: "Seit wir den KI-Service-Assistenten nutzen, haben wir keine verpassten Anrufe mehr in der Früh. Über 40% unserer Reifenwechsel-Termine werden jetzt abends nach Feierabend vollautomatisch gebucht.",
-            image: "https://randomuser.me/api/portraits/men/44.jpg",
+            image: "https://randomuser.me/api/portraits/men/62.jpg",
         },
         {
-            name: "Thomas Wagner",
+            name: "Andreas Kofler",
             position: "Inhaber",
-            dealer: "Wagner Automobile",
-            location: "Wien",
+            dealer: "Kofler Automobile",
+            location: "Innsbruck",
             rating: 5.0,
             review: "Die KI-Qualifizierung für unsere Gebrauchtwagen-leads ist ein echter Gamechanger. Mein Verkaufsteam bekommt nur noch Leads mit echtem Kaufinteresse und vorab geklärter Finanzierung auf den Tisch.",
-            image: "https://randomuser.me/api/portraits/men/86.jpg",
+            image: "https://randomuser.me/api/portraits/men/22.jpg",
         },
         {
-            name: "Julia Bauer",
+            name: "Sandra Pichler",
             position: "Geschäftsführerin",
-            dealer: "Bauer Motor Group",
-            location: "Wels",
+            dealer: "VAG Team Pichler",
+            location: "Villach",
             rating: 5.0,
             review: "Die Integration in unser bestehendes DMS hat reibungslos funktioniert. Wir sparen uns enorm viel Verwaltungsaufwand und die Kunden loben die schnelle Erreichbarkeit rund um die Uhr.",
-            image: "https://randomuser.me/api/portraits/women/42.jpg",
+            image: "https://randomuser.me/api/portraits/women/44.jpg",
         },
     ];
 

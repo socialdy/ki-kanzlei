@@ -12,31 +12,31 @@ const formatName = (name: string): string => {
 export const TestimonialsHandwerker = () => {
     const testimonials = [
         {
-            name: "Hans Gruber",
+            name: "Karl Hinterseer",
             position: "Inhaber",
-            company: "Gruber Sanitär & Heizung",
-            location: "Linz",
+            company: "Hinterseer Haustechnik",
+            location: "Innsbruck",
             rating: 5.0,
             review: "Das KI-Notfalltelefon ist Gold wert. Wenn wir auf Montage sind, nimmt die KI alles auf und filtert echte Notfälle heraus. Früher haben wir viele lukrative Aufträge nach Feierabend verpasst, heute landen sie direkt im Postfach.",
-            image: "https://randomuser.me/api/portraits/men/32.jpg",
+            image: "https://randomuser.me/api/portraits/men/14.jpg",
         },
         {
-            name: "Sabine Müller",
+            name: "Elisabeth Wagner",
             position: "Geschäftsführerin",
-            company: "Elektro Müller",
-            location: "Wien",
+            company: "Wagner Elektro",
+            location: "St. Pölten",
             rating: 5.0,
             review: "Die Termin-Automatisierung entlastet unser Büro massiv. Kunden können Besichtigungstermine direkt buchen, ohne dass wir fünfmal hin- und hertelefonieren müssen. Wir sparen mindestens 10 Stunden Admin pro Woche.",
-            image: "https://randomuser.me/api/portraits/women/44.jpg",
+            image: "https://randomuser.me/api/portraits/women/62.jpg",
         },
         {
-            name: "Peter Wallner",
+            name: "Jürgen Wallner",
             position: "Meister",
-            company: "Wallner Holzbau",
-            location: "Salzburg",
+            company: "Wallner & Partner",
+            location: "Leoben",
             rating: 5.0,
             review: "Besonders praktisch ist das Diktieren von Aufmaßen. Ich schicke eine Sprachnachricht von der Baustelle und die KI erstellt mir einen strukturierten Entwurf für die Materialliste. Das spart mir den Papierkram am Abend.",
-            image: "https://randomuser.me/api/portraits/men/85.jpg",
+            image: "https://randomuser.me/api/portraits/men/42.jpg",
         },
     ];
 

@@ -1,18 +1,22 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { NavigationRechtsanwaelte } from "@/components/NavigationRechtsanwaelte";
 import { HeroRechtsanwaelte } from "@/components/HeroRechtsanwaelte";
 import { ProblemGridRechtsanwaelte } from "@/components/ProblemGridRechtsanwaelte";
 import { UseCasesRechtsanwaelte } from "@/components/UseCasesRechtsanwaelte";
-import { VoiceAgentSection } from "@/components/VoiceAgentSection";
 import { TestimonialsRechtsanwaelte } from "@/components/TestimonialsRechtsanwaelte";
+import { VoiceAgentSection } from "@/components/VoiceAgentSection";
 import { AboutUsRechtsanwaelte } from "@/components/AboutUsRechtsanwaelte";
 import { ContactForm } from "@/components/ContactForm";
+import { BlogSectionHome } from "@/components/BlogSectionHome";
 import { FAQRechtsanwaelte } from "@/components/FAQRechtsanwaelte";
 import { Footer } from "@/components/Footer";
+import { LeadMagnetModal } from "@/components/LeadMagnetModal";
 
 const Rechtsanwaelte = () => {
+    const [isLeadModalOpen, setIsLeadModalOpen] = useState(false);
+
     useEffect(() => {
-        document.title = "KI Lösungen für Rechtsanwälte & Notare | KI Kanzlei";
+        document.title = "KI Lösungen für Rechtsanwälte & Notare | KI Kanzlei Österreich";
 
         // Meta Description
         let metaDescription = document.querySelector('meta[name="description"]');
@@ -21,23 +25,25 @@ const Rechtsanwaelte = () => {
             metaDescription.setAttribute('name', 'description');
             document.head.appendChild(metaDescription);
         }
-        metaDescription.setAttribute('content', 'Digitale Transformation für Kanzleien. KI-Aktenanalyse (RAG), automatisierte Mandatsvorprüfung & Voice Agent. DSGVO-konform und präzise.');
+        metaDescription.setAttribute('content', 'DSGVO-konforme KI Lösungen für Rechtsanwälte & Notare. Automatisieren Sie Mandats-Vorqualifizierung, Recherche & Terminmanagement für Ihre Kanzlei.');
     }, []);
 
     return (
         <div className="min-h-screen gradient-bg">
             <NavigationRechtsanwaelte />
             <main>
-                <HeroRechtsanwaelte />
+                <HeroRechtsanwaelte onCtaClick={() => setIsLeadModalOpen(true)} />
                 <ProblemGridRechtsanwaelte />
                 <UseCasesRechtsanwaelte />
                 <VoiceAgentSection />
                 <TestimonialsRechtsanwaelte />
                 <AboutUsRechtsanwaelte />
+                <BlogSectionHome />
                 <ContactForm />
                 <FAQRechtsanwaelte />
             </main>
             <Footer />
+            <LeadMagnetModal isOpen={isLeadModalOpen} onOpenChange={setIsLeadModalOpen} />
         </div>
     );
 };

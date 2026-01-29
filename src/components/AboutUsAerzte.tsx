@@ -36,9 +36,9 @@ export const AboutUsAerzte = () => {
                                 </a>
                             </div>
                             <h3 className="text-xl font-bold mb-1">Arnold Freissling</h3>
-                            <div className="text-primary font-semibold mb-3">Gründer & Strategie</div>
+                            <div className="text-primary font-semibold mb-3">Geschäftsführer & Vertrieb</div>
                             <p className="text-muted-foreground text-sm leading-relaxed">
-                                Strategischer Berater für digitale Transformation. Er versteht die organisatorischen Hürden in Ordinationen und entwickelt Lösungen für reibungslose Abläufe.
+                                Hat die Idee zur KI-Kanzlei entwickelt, nachdem er die Probleme seiner Freundin Katja, einer selbstständigen Psychotherapeutin, live und hautnah miterlebt hat.
                             </p>
                         </div>
 
@@ -61,9 +61,9 @@ export const AboutUsAerzte = () => {
                                 </a>
                             </div>
                             <h3 className="text-xl font-bold mb-1">Markus Wallner</h3>
-                            <div className="text-primary font-semibold mb-3">CTO & KI-Entwicklung</div>
+                            <div className="text-primary font-semibold mb-3">Geschäftsführer & Automatisierungsexperte</div>
                             <p className="text-muted-foreground text-sm leading-relaxed">
-                                Verantwortlich für die technische Umsetzung und höchste Datensicherheits-Standards. Er integriert KI-Lösungen nahtlos in bestehende Praxis-Infrastrukturen.
+                                Spezialist für n8n und Prozessautomatisierung. Entwickelt die technischen Lösungen und implementiert sie System für System.
                             </p>
                         </div>
                     </div>
@@ -82,8 +82,8 @@ export const AboutUsAerzte = () => {
 
                             <div id="1" className="timeline-card relative py-12 lg:py-20">
                                 <div className="w-full py-6 px-8 lg:py-8 lg:px-16 rounded-xl shadow-xl border transition-all duration-300 ease-out bg-primary border-primary lg:w-[calc(50%-60px)] lg:mr-auto flex flex-col items-center text-center lg:items-start lg:text-left">
-                                    <h3 className="font-bold text-lg lg:text-xl xl:text-2xl mb-3 text-white">Der Bedarf</h3>
-                                    <p className="text-sm lg:text-base xl:text-lg opacity-80 text-white leading-relaxed">Wir sahen tagtäglich die Überlastung in Ordinationen. Das ständige Telefonklingeln unterbricht wichtige Behandlungen und stress Patienten wie Personal.</p>
+                                    <h3 className="font-bold text-lg lg:text-xl xl:text-2xl mb-3 text-white">Das Problem</h3>
+                                    <p className="text-sm lg:text-base xl:text-lg opacity-80 text-white leading-relaxed">Katja, Arnolds Freundin, arbeitet als Psychotherapeutin in Kärnten. Jeden morgen: "Können wir den Termin verschieben?" Dann: Formulare ausfüllen, Rechnungen schreiben, Klienten anrufen. 8-10 Stunden pro Monat nur für Papierkram. "Ich bin doch keine Sekretärin".</p>
                                 </div>
                                 <div className="timeline-center-point hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full items-center justify-center shadow-md transition-colors duration-300 ease-out bg-primary text-white">
                                     <span className="text-xl font-bold">1</span>
@@ -93,7 +93,7 @@ export const AboutUsAerzte = () => {
                             <div id="2" className="timeline-card relative py-12 lg:py-20">
                                 <div className="w-full py-6 px-8 lg:py-8 lg:px-16 rounded-xl shadow-xl border transition-all duration-300 ease-out bg-white border-border lg:w-[calc(50%-60px)] lg:ml-auto flex flex-col items-center text-center lg:items-start lg:text-left">
                                     <h3 className="font-bold text-lg lg:text-xl xl:text-2xl mb-3 text-foreground">Die Lösung</h3>
-                                    <p className="text-sm lg:text-base xl:text-lg opacity-80 text-foreground leading-relaxed">Durch die Kombination von empathischer Sprach-KI und sicherem Workflow-Management schufen wir einen digitalen Empfang, der Patienten seriös und effizient betreut.</p>
+                                    <p className="text-sm lg:text-base xl:text-lg opacity-80 text-foreground leading-relaxed">Arnold rief Markus an: "Du, Katja ist völlig fertig mit der Verwaltung. Kannst du da was machen?" Er implementierte alles Schritt für Schritt - und Katja konnte endlich wieder in Ruhe arbeiten. Das war die Geburtsstunde der KI Kanzlei.</p>
                                 </div>
                                 <div className="timeline-center-point hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full items-center justify-center shadow-md transition-colors duration-300 ease-out bg-white text-foreground border border-border">
                                     <span className="text-xl font-bold">2</span>
@@ -102,8 +102,8 @@ export const AboutUsAerzte = () => {
 
                             <div id="3" className="timeline-card relative py-12 lg:py-20">
                                 <div className="w-full py-6 px-8 lg:py-8 lg:px-16 rounded-xl shadow-xl border transition-all duration-300 ease-out bg-white border-border lg:w-[calc(50%-60px)] lg:mr-auto flex flex-col items-center text-center lg:items-start lg:text-left">
-                                    <h3 className="font-bold text-lg lg:text-xl xl:text-2xl mb-3 text-foreground">Das Ziel</h3>
-                                    <p className="text-sm lg:text-base xl:text-lg opacity-80 text-foreground leading-relaxed">Wir unterstützen Fachärzte dabei, ihre Ordination technologisch an die Spitze zu führen – für eine entspannte Arbeitsatmosphäre und beste Patientenversorgung.</p>
+                                    <h3 className="font-bold text-lg lg:text-xl xl:text-2xl mb-3 text-foreground">Die Spezialisierung</h3>
+                                    <p className="text-sm lg:text-base xl:text-lg opacity-80 text-foreground leading-relaxed">Wir erkannten schnell: Was für Katja funktioniert, ist der Schlüssel für alle Fachärzte. Heute optimieren wir Arztpraxen in ganz Österreich, indem wir Telefonassistenz und Termin-Management automatisieren – empathisch und sicher.</p>
                                 </div>
                                 <div className="timeline-center-point hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full items-center justify-center shadow-md transition-colors duration-300 ease-out bg-white text-foreground border border-border">
                                     <span className="text-xl font-bold">3</span>

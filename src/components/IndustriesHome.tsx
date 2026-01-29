@@ -1,4 +1,4 @@
-import { Building2, Heart, Hotel, Briefcase, ShoppingBag, GraduationCap, Home, Car, Hammer, Stethoscope, Users, Dumbbell } from "lucide-react";
+import { Building2, Heart, Hotel, Briefcase, ShoppingBag, GraduationCap, Home, Car, Hammer, Stethoscope, Users, Dumbbell, ShieldCheck } from "lucide-react";
 
 const industries = [
   {
@@ -35,6 +35,7 @@ const industries = [
     icon: ShoppingBag,
     title: "E-Commerce & Retail",
     description: "Kundenkommunikation, Bestellabwicklung, Social-Media-Automatisierung.",
+    link: "/ki-loesungen-ecommerce",
   },
   {
     icon: Dumbbell,
@@ -43,9 +44,10 @@ const industries = [
     link: "/ki-loesungen-fitness",
   },
   {
-    icon: GraduationCap,
-    title: "Bildung & Weiterbildung",
-    description: "Anmeldungen, Kursverwaltung, Kommunikation mit Teilnehmern.",
+    icon: Building2,
+    title: "Öffentliche Einrichtungen & Verwaltung",
+    description: "KI-Sekretariat, automatisierte Bürger-Anfragen & Prozess-Entlastung.",
+    link: "/ki-loesungen-oeffentliche-einrichtungen",
   },
   {
     icon: Building2,
@@ -70,6 +72,18 @@ const industries = [
     title: "Handwerker",
     description: "24/7 KI-Notfalltelefon, automatisierte Terminbuchung & Büro-Entlastung.",
     link: "/ki-loesungen-handwerker",
+  },
+  {
+    icon: Briefcase,
+    title: "Steuerberater",
+    description: "BMD/DATEV-Anbindung, automatisierte Belegverarbeitung & Klienten-Support.",
+    link: "/ki-loesungen-steuerberater",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Versicherungsmakler",
+    description: "24/7 Schadensmeldungen, Polizzen-Analyse & automatisierte Lead-Qualifizierung.",
+    link: "/ki-loesungen-versicherungsmakler",
   },
   {
     icon: Building2,

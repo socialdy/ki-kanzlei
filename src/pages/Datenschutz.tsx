@@ -252,6 +252,36 @@ const Datenschutz = () => {
 
               <div className="max-w-3xl mx-auto">
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                  II.3. Datenverarbeitung im Rahmen unseres Lead-Funnels (Whitepaper & Infomaterial)
+                </h2>
+
+                <div className="text-left space-y-4">
+                  <p className="text-gray-600 leading-relaxed">
+                    Wenn Sie über unsere Website Infomaterial (z.B. die KI-Roadmap oder Whitepaper) anfordern, verarbeiten wir die von Ihnen im Formular eingegebenen Daten (Vorname, Nachname, E-Mail-Adresse, Telefonnummer).
+                  </p>
+
+                  <p className="text-gray-600 leading-relaxed">
+                    Die Verarbeitung dieser Daten erfolgt zu folgenden Zwecken:
+                  </p>
+
+                  <ul className="list-disc list-inside text-gray-600 space-y-2 ml-4">
+                    <li>Zusendung des angeforderten Infomaterials per E-Mail;</li>
+                    <li>Kontaktaufnahme zur Klärung von Rückfragen zum angeforderten Material;</li>
+                    <li>Kurze telefonische oder schriftliche Nachfrage, ob das Material hilfreich war und ob Interesse an einer weiterführenden Analyse besteht.</li>
+                  </ul>
+
+                  <p className="text-gray-600 leading-relaxed">
+                    <strong>Rechtsgrundlage:</strong> Die Verarbeitung erfolgt auf Basis der Durchführung vorvertraglicher Maßnahmen (Art 6 Abs 1 lit b DSGVO) sowie unseres berechtigten Interesses an der Lead-Generierung und Kundenbetreuung (Art 6 Abs 1 lit f DSGVO).
+                  </p>
+
+                  <p className="text-gray-600 leading-relaxed">
+                    <strong>Speicherdauer:</strong> Wir speichern diese Daten für die Dauer der Bearbeitung Ihrer Anfrage bzw. bis zu einem Jahr nach dem letzten Kontakt, sofern keine weitere Geschäftsbeziehung zustande kommt oder gesetzliche Aufbewahrungspflichten entgegenstehen.
+                  </p>
+                </div>
+              </div>
+
+              <div className="max-w-3xl mx-auto">
+                <h2 className="text-2xl font-bold text-gray-900 mb-6">
                   III. Wie lange werden Ihre Daten gespeichert?
                 </h2>
 

@@ -92,57 +92,31 @@ export const AboutUsHotels = () => {
 
               {/* Step 1 */}
               <div id="1" className="timeline-card relative py-12 lg:py-20">
-                <div className="w-full py-6 px-8 lg:py-8 lg:px-16 rounded-xl shadow-xl border transition-all duration-300 ease-out
-                                    bg-primary border-primary
-                                    lg:w-[calc(50%-60px)] lg:mr-auto
-                                    flex flex-col items-center text-center lg:items-start lg:text-left">
-                  <div className="mb-4 lg:mb-6 w-10 h-10 lg:w-12 lg:h-12 rounded-full flex items-center justify-center shadow-md transition-colors duration-300 ease-out
-                                        bg-primary text-white lg:mx-auto lg:hidden">
-                    <span className="text-lg lg:text-xl font-bold">1</span>
-                  </div>
-                  <h3 className="font-bold text-lg lg:text-xl xl:text-2xl mb-3 text-white">Der Zufall</h3>
-                  <p className="text-sm lg:text-base xl:text-lg opacity-80 text-white leading-relaxed">Arnold wollte nur ein Zimmer in einem Hotel in Salzburg buchen. Doch beim Anruf wurde schnell klar: Das Hotel kämpfte mit genau den Problemen, die wir lösen. Verpasste Anrufe, manuelle Abläufe, keine Abendbesetzung. Arnold dachte: Das war kein Zufall – das war der Start für ein Automatisierungsprojekt.</p>
+                <div className="w-full py-6 px-8 lg:py-8 lg:px-16 rounded-xl shadow-xl border transition-all duration-300 ease-out bg-primary border-primary lg:w-[calc(50%-60px)] lg:mr-auto flex flex-col items-center text-center lg:items-start lg:text-left">
+                  <h3 className="font-bold text-lg lg:text-xl xl:text-2xl mb-3 text-white">Das Problem</h3>
+                  <p className="text-sm lg:text-base xl:text-lg opacity-80 text-white leading-relaxed">Katja, Arnolds Freundin, arbeitet als Psychotherapeutin in Kärnten. Jeden morgen: "Können wir den Termin verschieben?" Dann: Formulare ausfüllen, Rechnungen schreiben, Klienten anrufen. 8-10 Stunden pro Monat nur für Papierkram. "Ich bin doch keine Sekretärin".</p>
                 </div>
-                <div className="timeline-center-point hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full items-center justify-center shadow-md transition-colors duration-300 ease-out
-                                    bg-primary text-white">
+                <div className="timeline-center-point hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full items-center justify-center shadow-md transition-colors duration-300 ease-out bg-primary text-white">
                   <span className="text-xl font-bold">1</span>
                 </div>
               </div>
 
-              {/* Step 2 */}
               <div id="2" className="timeline-card relative py-12 lg:py-20">
-                <div className="w-full py-6 px-8 lg:py-8 lg:px-16 rounded-xl shadow-xl border transition-all duration-300 ease-out
-                                    bg-white border-border
-                                    lg:w-[calc(50%-60px)] lg:ml-auto
-                                    flex flex-col items-center text-center lg:items-start lg:text-left">
-                  <div className="mb-4 lg:mb-6 w-10 h-10 lg:w-12 lg:h-12 rounded-full flex items-center justify-center shadow-md transition-colors duration-300 ease-out
-                                        bg-white text-foreground border border-border lg:mx-auto lg:hidden">
-                    <span className="text-lg lg:text-xl font-bold">2</span>
-                  </div>
-                  <h3 className="font-bold text-lg lg:text-xl xl:text-2xl mb-3 text-foreground">Das Gespräch</h3>
-                  <p className="text-sm lg:text-base xl:text-lg opacity-80 text-foreground leading-relaxed">Aus dem Buchungsgespräch wurde schnell ein Strategiegespräch. Der Hotelbetreiber erzählte von seinen Herausforderungen: Abends keine Rezeption, verpasste Anrufe, manuelle Buchungsprozesse. Teilweise musste er selbst am Abend ans Rezeptionstelefon. Arnold erkannte sofort: "Das können wir automatisieren." Ein Termin wurde vereinbart und Arnold holte Markus dazu.</p>
+                <div className="w-full py-6 px-8 lg:py-8 lg:px-16 rounded-xl shadow-xl border transition-all duration-300 ease-out bg-white border-border lg:w-[calc(50%-60px)] lg:ml-auto flex flex-col items-center text-center lg:items-start lg:text-left">
+                  <h3 className="font-bold text-lg lg:text-xl xl:text-2xl mb-3 text-foreground">Die Lösung</h3>
+                  <p className="text-sm lg:text-base xl:text-lg opacity-80 text-foreground leading-relaxed">Arnold rief Markus an: "Du, Katja ist völlig fertig mit der Verwaltung. Kannst du da was machen?" Er implementierte alles Schritt für Schritt - und Katja konnte endlich wieder in Ruhe arbeiten. Das war die Geburtsstunde der KI Kanzlei.</p>
                 </div>
-                <div className="timeline-center-point hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full items-center justify-center shadow-md transition-colors duration-300 ease-out
-                                    bg-white text-foreground border border-border">
+                <div className="timeline-center-point hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full items-center justify-center shadow-md transition-colors duration-300 ease-out bg-white text-foreground border border-border">
                   <span className="text-xl font-bold">2</span>
                 </div>
               </div>
 
-              {/* Step 3 */}
               <div id="3" className="timeline-card relative py-12 lg:py-20">
-                <div className="w-full py-6 px-8 lg:py-8 lg:px-16 rounded-xl shadow-xl border transition-all duration-300 ease-out
-                                    bg-white border-border
-                                    lg:w-[calc(50%-60px)] lg:mr-auto
-                                    flex flex-col items-center text-center lg:items-start lg:text-left">
-                  <div className="mb-4 lg:mb-6 w-10 h-10 lg:w-12 lg:h-12 rounded-full flex items-center justify-center shadow-md transition-colors duration-300 ease-out
-                                        bg-white text-foreground border border-border lg:mx-auto lg:hidden">
-                    <span className="text-lg lg:text-xl font-bold">3</span>
-                  </div>
-                  <h3 className="font-bold text-lg lg:text-xl xl:text-2xl mb-3 text-foreground">Die Lösung</h3>
-                  <p className="text-sm lg:text-base xl:text-lg opacity-80 text-foreground leading-relaxed">Im gemeinsamen Gespräch mit dem Hotelbetreiber, Arnold und Markus entstand die Vision: Ein KI-Abendrezeptionist, der 24/7 Anrufe entgegennimmt, Buchungen vornimmt und Fragen beantwortet. Markus entwickelte die technische Lösung, Arnold kümmerte sich um die Strategie. So wurde dieses Hotel zum ersten Hotel-Kunden der KI Kanzlei und der Startschuss für unsere Hotel-Lösungen.</p>
+                <div className="w-full py-6 px-8 lg:py-8 lg:px-16 rounded-xl shadow-xl border transition-all duration-300 ease-out bg-white border-border lg:w-[calc(50%-60px)] lg:mr-auto flex flex-col items-center text-center lg:items-start lg:text-left">
+                  <h3 className="font-bold text-lg lg:text-xl xl:text-2xl mb-3 text-foreground">Mission Tourismus</h3>
+                  <p className="text-sm lg:text-base xl:text-lg opacity-80 text-foreground leading-relaxed">Wir sahen schnell: Hotels kämpfen mit genau den gleichen Problemen. Verpasste Anrufe, manuelle Abläufe, keine Abendbesetzung. Heute automatisieren wir für Hotels in ganz Österreich die Rezeption und Gästekommunikation – damit der Gast wieder im Mittelpunkt steht.</p>
                 </div>
-                <div className="timeline-center-point hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full items-center justify-center shadow-md transition-colors duration-300 ease-out
-                                    bg-white text-foreground border border-border">
+                <div className="timeline-center-point hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full items-center justify-center shadow-md transition-colors duration-300 ease-out bg-white text-foreground border border-border">
                   <span className="text-xl font-bold">3</span>
                 </div>
               </div>

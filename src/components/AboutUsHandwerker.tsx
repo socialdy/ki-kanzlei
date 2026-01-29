@@ -36,9 +36,9 @@ export const AboutUsHandwerker = () => {
                                 </a>
                             </div>
                             <h3 className="text-xl font-bold mb-1">Arnold Freissling</h3>
-                            <div className="text-primary font-semibold mb-3">Gründer & Strategie</div>
+                            <div className="text-primary font-semibold mb-3">Geschäftsführer & Vertrieb</div>
                             <p className="text-muted-foreground text-sm leading-relaxed">
-                                Strategischer Kopf hinter der KI Kanzlei. Er versteht die Hürden kleiner Betriebe und entwickelt Konzepte für eine stressfreie Administration.
+                                Hat die Idee zur KI-Kanzlei entwickelt, nachdem er die Probleme seiner Freundin Katja, einer selbstständigen Psychotherapeutin, live und hautnah miterlebt hat.
                             </p>
                         </div>
 
@@ -61,9 +61,9 @@ export const AboutUsHandwerker = () => {
                                 </a>
                             </div>
                             <h3 className="text-xl font-bold mb-1">Markus Wallner</h3>
-                            <div className="text-primary font-semibold mb-3">CTO & Entwicklung</div>
+                            <div className="text-primary font-semibold mb-3">Geschäftsführer & Automatisierungsexperte</div>
                             <p className="text-muted-foreground text-sm leading-relaxed">
-                                Experte für Workflow-Automatisierung. Er sorgt dafür, dass die KI Ihre Kalender und Tools nahtlos versteht und zuverlässig arbeitet.
+                                Spezialist für n8n und Prozessautomatisierung. Entwickelt die technischen Lösungen und implementiert sie System für System.
                             </p>
                         </div>
                     </div>
@@ -82,8 +82,8 @@ export const AboutUsHandwerker = () => {
 
                             <div id="1" className="timeline-card relative py-12 lg:py-20">
                                 <div className="w-full py-6 px-8 lg:py-8 lg:px-16 rounded-xl shadow-xl border transition-all duration-300 ease-out bg-primary border-primary lg:w-[calc(50%-60px)] lg:mr-auto flex flex-col items-center text-center lg:items-start lg:text-left">
-                                    <h3 className="font-bold text-lg lg:text-xl xl:text-2xl mb-3 text-white">Der Frust</h3>
-                                    <p className="text-sm lg:text-base xl:text-lg opacity-80 text-white leading-relaxed">Wir haben gesehen, wie exzellente Handwerker abends noch Stunden am PC saßen, statt Zeit mit der Familie zu verbringen. Das musste sich ändern.</p>
+                                    <h3 className="font-bold text-lg lg:text-xl xl:text-2xl mb-3 text-white">Das Problem</h3>
+                                    <p className="text-sm lg:text-base xl:text-lg opacity-80 text-white leading-relaxed">Katja, Arnolds Freundin, arbeitet als Psychotherapeutin in Kärnten. Jeden morgen: "Können wir den Termin verschieben?" Dann: Formulare ausfüllen, Rechnungen schreiben, Klienten anrufen. 8-10 Stunden pro Monat nur für Papierkram. "Ich bin doch keine Sekretärin".</p>
                                 </div>
                                 <div className="timeline-center-point hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full items-center justify-center shadow-md transition-colors duration-300 ease-out bg-primary text-white">
                                     <span className="text-xl font-bold">1</span>
@@ -93,7 +93,7 @@ export const AboutUsHandwerker = () => {
                             <div id="2" className="timeline-card relative py-12 lg:py-20">
                                 <div className="w-full py-6 px-8 lg:py-8 lg:px-16 rounded-xl shadow-xl border transition-all duration-300 ease-out bg-white border-border lg:w-[calc(50%-60px)] lg:ml-auto flex flex-col items-center text-center lg:items-start lg:text-left">
                                     <h3 className="font-bold text-lg lg:text-xl xl:text-2xl mb-3 text-foreground">Die Lösung</h3>
-                                    <p className="text-sm lg:text-base xl:text-lg opacity-80 text-foreground leading-relaxed">Durch die Kombination von modernster Sprach-KI und Workflow-Tools schufen wir einen Assistenten, der speziell auf Handwerks-Anliegen reagiert.</p>
+                                    <p className="text-sm lg:text-base xl:text-lg opacity-80 text-foreground leading-relaxed">Arnold rief Markus an: "Du, Katja ist völlig fertig mit der Verwaltung. Kannst du da was machen?" Er implementierte alles Schritt für Schritt - und Katja konnte endlich wieder in Ruhe arbeiten. Das war die Geburtsstunde der KI Kanzlei.</p>
                                 </div>
                                 <div className="timeline-center-point hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full items-center justify-center shadow-md transition-colors duration-300 ease-out bg-white text-foreground border border-border">
                                     <span className="text-xl font-bold">2</span>
@@ -102,8 +102,8 @@ export const AboutUsHandwerker = () => {
 
                             <div id="3" className="timeline-card relative py-12 lg:py-20">
                                 <div className="w-full py-6 px-8 lg:py-8 lg:px-16 rounded-xl shadow-xl border transition-all duration-300 ease-out bg-white border-border lg:w-[calc(50%-60px)] lg:mr-auto flex flex-col items-center text-center lg:items-start lg:text-left">
-                                    <h3 className="font-bold text-lg lg:text-xl xl:text-2xl mb-3 text-foreground">Die Freiheit</h3>
-                                    <p className="text-sm lg:text-base xl:text-lg opacity-80 text-foreground leading-relaxed">Heute unterstützen wir Betriebe in ganz Österreich dabei, den Büroaufwand zu halbieren und die Erreichbarkeit auf 100% zu steigern.</p>
+                                    <h3 className="font-bold text-lg lg:text-xl xl:text-2xl mb-3 text-foreground">Handwerks-Power</h3>
+                                    <p className="text-sm lg:text-base xl:text-lg opacity-80 text-foreground leading-relaxed">Wir erkannten: Handwerker leiden unter dem exakt gleichen "Büro-Frust". Heute helfen wir Betrieben in ganz Österreich dabei, den Admin-Aufwand zu halbieren und die Erreichbarkeit durch KI auf 100% zu steigern – für mehr echte Freizeit.</p>
                                 </div>
                                 <div className="timeline-center-point hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full items-center justify-center shadow-md transition-colors duration-300 ease-out bg-white text-foreground border border-border">
                                     <span className="text-xl font-bold">3</span>

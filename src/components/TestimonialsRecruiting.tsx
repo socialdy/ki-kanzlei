@@ -12,31 +12,31 @@ const formatName = (name: string): string => {
 export const TestimonialsRecruiting = () => {
     const testimonials = [
         {
-            name: "Christian Berger",
+            name: "Tobias Berger",
             position: "Head of Recruiting",
-            agency: "TalentSource Austria",
+            agency: "Talent Austria",
             location: "Wien",
             rating: 5.0,
-            review: "Durch die automatisierten Erst-Interviews per Voice haben wir unsere Time-to-Hire um fast 50% gesenkt. Die Kandidaten schätzen die sofortige Rückmeldung, auch wenn sie sich nachts bewerben. Wir bekommen nur noch top-qualifizierte Profile auf den Tisch.",
-            image: "https://randomuser.me/api/portraits/men/32.jpg",
+            review: "Durch die automatisierten Erst-Interviews per Voice haben wir unsere Time-to-Hire um fast 50% gesenkt. Die Kandidaten schätzen die sofortige Rückmeldung. Wir bekommen nur noch top-qualifizierte Profile auf den Tisch.",
+            image: "https://randomuser.me/api/portraits/men/57.jpg",
         },
         {
-            name: "Melanie Huber",
+            name: "Stefanie Huber",
             position: "Geschäftsführerin",
-            agency: "Huber Personalmanagement",
+            agency: "Huber HR World",
             location: "Linz",
             rating: 5.0,
-            review: "Die KI-basierte Sichtung unserer Bewerber-Datenbank ist ein Gamechanger. Wir finden jetzt Talente für neue Stellen, die wir früher in Excel-Listen oder alten PDFs übersehen hätten. Unsere Effizienz hat sich verdoppelt.",
-            image: "https://randomuser.me/api/portraits/women/44.jpg",
+            review: "Die KI-basierte Sichtung unserer Bewerber-Datenbank ist ein Gamechanger. Wir finden jetzt Talente für neue Stellen, die wir früher übersehen hätten. Unsere Effizienz hat sich verdoppelt.",
+            image: "https://randomuser.me/api/portraits/women/57.jpg",
         },
         {
-            name: "Markus Steiner",
+            name: "Lukas Steiner",
             position: "Inhaber",
-            agency: "Steiner IT-Recruiting",
+            agency: "Steiner Recruiting",
             location: "Salzburg",
             rating: 5.0,
-            review: "Besonders das Sourcing-Modul spart uns enorm viel Zeit. Der KI-Agent spricht passende Kandidaten auf LinkedIn personalisiert an und füllt unsere Pipeline mit passiven Talenten, während wir uns auf die Interviews konzentrieren.",
-            image: "https://randomuser.me/api/portraits/men/85.jpg",
+            review: "Besonders das Sourcing-Modul spart uns enorm viel Zeit. Der KI-Agent spricht passende Kandidaten personalisiert an und füllt unsere Pipeline, während wir uns auf die Interviews konzentrieren.",
+            image: "https://randomuser.me/api/portraits/men/58.jpg",
         },
     ];
 

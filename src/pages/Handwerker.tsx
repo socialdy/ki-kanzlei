@@ -1,18 +1,22 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { NavigationHandwerker } from "@/components/NavigationHandwerker";
 import { HeroHandwerker } from "@/components/HeroHandwerker";
 import { ProblemGridHandwerker } from "@/components/ProblemGridHandwerker";
 import { UseCasesHandwerker } from "@/components/UseCasesHandwerker";
-import { VoiceAgentSection } from "@/components/VoiceAgentSection";
 import { TestimonialsHandwerker } from "@/components/TestimonialsHandwerker";
+import { VoiceAgentSection } from "@/components/VoiceAgentSection";
 import { AboutUsHandwerker } from "@/components/AboutUsHandwerker";
 import { ContactForm } from "@/components/ContactForm";
+import { BlogSectionHome } from "@/components/BlogSectionHome";
 import { FAQHandwerker } from "@/components/FAQHandwerker";
 import { Footer } from "@/components/Footer";
+import { LeadMagnetModal } from "@/components/LeadMagnetModal";
 
 const Handwerker = () => {
+    const [isLeadModalOpen, setIsLeadModalOpen] = useState(false);
+
     useEffect(() => {
-        document.title = "KI Lösungen für Handwerksbetriebe | KI Kanzlei";
+        document.title = "KI Lösungen für Handwerker | KI Kanzlei Österreich";
 
         // Meta Description
         let metaDescription = document.querySelector('meta[name="description"]');
@@ -21,23 +25,25 @@ const Handwerker = () => {
             metaDescription.setAttribute('name', 'description');
             document.head.appendChild(metaDescription);
         }
-        metaDescription.setAttribute('content', 'Digitale Transformation für das Handwerk. 24/7 KI-Notfalltelefon, automatisierte Terminbuchung & Admin-Entlastung. DSGVO-konform und effizient.');
+        metaDescription.setAttribute('content', 'Smarte KI Lösungen für Handwerker & Meisterbetriebe in Österreich. 24/7 Notfall-Telefon, Terminbuchung & Büro-Entlastung. Gewinnen Sie mehr Zeit für die Baustelle.');
     }, []);
 
     return (
         <div className="min-h-screen gradient-bg">
             <NavigationHandwerker />
             <main>
-                <HeroHandwerker />
+                <HeroHandwerker onCtaClick={() => setIsLeadModalOpen(true)} />
                 <ProblemGridHandwerker />
                 <UseCasesHandwerker />
                 <VoiceAgentSection />
                 <TestimonialsHandwerker />
                 <AboutUsHandwerker />
+                <BlogSectionHome />
                 <ContactForm />
                 <FAQHandwerker />
             </main>
             <Footer />
+            <LeadMagnetModal isOpen={isLeadModalOpen} onOpenChange={setIsLeadModalOpen} />
         </div>
     );
 };

@@ -147,6 +147,8 @@ export const Footer = () => {
               <li><a href="/ki-loesungen-aerzte" className="text-primary-foreground/80 hover:text-primary-foreground transition-base">KI-Lösungen für Ärzte</a></li>
               <li><a href="/ki-loesungen-recruiting" className="text-primary-foreground/80 hover:text-primary-foreground transition-base">KI-Lösungen für Recruiting</a></li>
               <li><a href="/ki-loesungen-fitness" className="text-primary-foreground/80 hover:text-primary-foreground transition-base">KI-Lösungen für Fitnessstudios</a></li>
+              <li><a href="/ki-loesungen-steuerberater" className="text-primary-foreground/80 hover:text-primary-foreground transition-base">KI-Lösungen für Steuerberater</a></li>
+              <li><a href="/ki-loesungen-versicherungsmakler" className="text-primary-foreground/80 hover:text-primary-foreground transition-base">KI-Lösungen für Versicherungsmakler</a></li>
             </ul>
           </div>
 

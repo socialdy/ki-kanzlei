@@ -36,9 +36,9 @@ export const AboutUsRecruiting = () => {
                                 </a>
                             </div>
                             <h3 className="text-xl font-bold mb-1">Arnold Freissling</h3>
-                            <div className="text-primary font-semibold mb-3">Gründer & Strategie</div>
+                            <div className="text-primary font-semibold mb-3">Geschäftsführer & Vertrieb</div>
                             <p className="text-muted-foreground text-sm leading-relaxed">
-                                Strategischer Berater für HR-Automatisierung. Er hilft Agenturen dabei, skalierbare Prozesse aufzubauen, ohne die Kandidaten-Erfahrung zu vernachlässigen.
+                                Hat die Idee zur KI-Kanzlei entwickelt, nachdem er die Probleme seiner Freundin Katja, einer selbstständigen Psychotherapeutin, live und hautnah miterlebt hat.
                             </p>
                         </div>
 
@@ -61,9 +61,9 @@ export const AboutUsRecruiting = () => {
                                 </a>
                             </div>
                             <h3 className="text-xl font-bold mb-1">Markus Wallner</h3>
-                            <div className="text-primary font-semibold mb-3">CTO & KI-Sourcing</div>
+                            <div className="text-primary font-semibold mb-3">Geschäftsführer & Automatisierungsexperte</div>
                             <p className="text-muted-foreground text-sm leading-relaxed">
-                                Der technologische Architekt unserer Recruiting-Agenten. Er sorgt für präzise Screening-Logiken und eine reibungslose HR-Software-Integration.
+                                Spezialist für n8n und Prozessautomatisierung. Entwickelt die technischen Lösungen und implementiert sie System für System.
                             </p>
                         </div>
                     </div>
@@ -82,8 +82,8 @@ export const AboutUsRecruiting = () => {
 
                             <div id="1" className="timeline-card relative py-12 lg:py-20">
                                 <div className="w-full py-6 px-8 lg:py-8 lg:px-16 rounded-xl shadow-xl border transition-all duration-300 ease-out bg-primary border-primary lg:w-[calc(50%-60px)] lg:mr-auto flex flex-col items-center text-center lg:items-start lg:text-left">
-                                    <h3 className="font-bold text-lg lg:text-xl xl:text-2xl mb-3 text-white">Der Stau</h3>
-                                    <p className="text-sm lg:text-base xl:text-lg opacity-80 text-white leading-relaxed">Wir beobachteten, wie Recruiter in administrativen Aufgaben versinken und gute Kandidaten durch zu lange Reaktionszeiten verlieren. Das war der Startpunkt.</p>
+                                    <h3 className="font-bold text-lg lg:text-xl xl:text-2xl mb-3 text-white">Das Problem</h3>
+                                    <p className="text-sm lg:text-base xl:text-lg opacity-80 text-white leading-relaxed">Katja, Arnolds Freundin, arbeitet als Psychotherapeutin in Kärnten. Jeden morgen: "Können wir den Termin verschieben?" Dann: Formulare ausfüllen, Rechnungen schreiben, Klienten anrufen. 8-10 Stunden pro Monat nur für Papierkram. "Ich bin doch keine Sekretärin".</p>
                                 </div>
                                 <div className="timeline-center-point hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full items-center justify-center shadow-md transition-colors duration-300 ease-out bg-primary text-white">
                                     <span className="text-xl font-bold">1</span>
@@ -92,8 +92,8 @@ export const AboutUsRecruiting = () => {
 
                             <div id="2" className="timeline-card relative py-12 lg:py-20">
                                 <div className="w-full py-6 px-8 lg:py-8 lg:px-16 rounded-xl shadow-xl border transition-all duration-300 ease-out bg-white border-border lg:w-[calc(50%-60px)] lg:ml-auto flex flex-col items-center text-center lg:items-start lg:text-left">
-                                    <h3 className="font-bold text-lg lg:text-xl xl:text-2xl mb-3 text-foreground">Die Revolution</h3>
-                                    <p className="text-sm lg:text-base xl:text-lg opacity-80 text-foreground leading-relaxed">Wir entwickelten KI-Systeme, die Voice-Interviews führen und Profile in Echzeit scoren. Recruiting wurde plötzlich zu 24/7-Dienstleistung mit höchster Präzision.</p>
+                                    <h3 className="font-bold text-lg lg:text-xl xl:text-2xl mb-3 text-foreground">Die Lösung</h3>
+                                    <p className="text-sm lg:text-base xl:text-lg opacity-80 text-foreground leading-relaxed">Arnold rief Markus an: "Du, Katja ist völlig fertig mit der Verwaltung. Kannst du da was machen?" Er implementierte alles Schritt für Schritt - und Katja konnte endlich wieder in Ruhe arbeiten. Das war die Geburtsstunde der KI Kanzlei.</p>
                                 </div>
                                 <div className="timeline-center-point hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full items-center justify-center shadow-md transition-colors duration-300 ease-out bg-white text-foreground border border-border">
                                     <span className="text-xl font-bold">2</span>
@@ -102,8 +102,8 @@ export const AboutUsRecruiting = () => {
 
                             <div id="3" className="timeline-card relative py-12 lg:py-20">
                                 <div className="w-full py-6 px-8 lg:py-8 lg:px-16 rounded-xl shadow-xl border transition-all duration-300 ease-out bg-white border-border lg:w-[calc(50%-60px)] lg:mr-auto flex flex-col items-center text-center lg:items-start lg:text-left">
-                                    <h3 className="font-bold text-lg lg:text-xl xl:text-2xl mb-3 text-foreground">Der Erfolg</h3>
-                                    <p className="text-sm lg:text-base xl:text-lg opacity-80 text-foreground leading-relaxed">Heute begleiten wir Agenturen dabei, ihre Abschlussquoten durch Geschwindigkeit und intelligente Vorqualifizierung zu steigern. Wir bauen das Recruiting der Zukunft.</p>
+                                    <h3 className="font-bold text-lg lg:text-xl xl:text-2xl mb-3 text-foreground">Recruiting-Power</h3>
+                                    <p className="text-sm lg:text-base xl:text-lg opacity-80 text-foreground leading-relaxed">Wir erkannten: Diese Effizienz braucht auch das Recruiting. Heute unterstützen wir Agenturen in ganz Österreich mit Voice-KI für Erst-Interviews und automatisiertem Sourcing – damit Recruiter wieder Zeit für das persönliche Gespräch haben.</p>
                                 </div>
                                 <div className="timeline-center-point hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full items-center justify-center shadow-md transition-colors duration-300 ease-out bg-white text-foreground border border-border">
                                     <span className="text-xl font-bold">3</span>
