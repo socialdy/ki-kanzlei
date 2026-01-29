@@ -78,13 +78,20 @@ export const LeadMagnetModal = ({ isOpen, onOpenChange }: LeadMagnetModalProps) 
     const onSubmit = async (data: FormValues) => {
         try {
             if (data.website) return;
-            if (!captchaValue) {
-                toast.error("Bitte bestätige, dass du kein Roboter bist.");
-                trackLeadEvent("captcha_failed");
-                return;
+            setIsSubmitting(true);
+
+            // Execute reCAPTCHA invisibly
+            let token = captchaValue;
+            if (!token && recaptchaRef.current) {
+                token = await recaptchaRef.current.executeAsync();
             }
 
-            setIsSubmitting(true);
+            if (!token) {
+                toast.error("reCAPTCHA Verifizierung fehlgeschlagen.");
+                trackLeadEvent("captcha_failed");
+                setIsSubmitting(false);
+                return;
+            }
 
             const webhookUrl = "https://n8n.srv1215699.hstgr.cloud/webhook/21a27d91-48f8-45f9-a116-2c2a0dfc1144";
 
@@ -96,7 +103,7 @@ export const LeadMagnetModal = ({ isOpen, onOpenChange }: LeadMagnetModalProps) 
                     fullName: `${data.firstName} ${data.lastName}`,
                     submittedAt: new Date().toISOString(),
                     source: "Website Lead Magnet",
-                    captchaToken: captchaValue,
+                    captchaToken: token,
                     attribution: getAttributionData(),
                 }),
             });
@@ -215,13 +222,12 @@ export const LeadMagnetModal = ({ isOpen, onOpenChange }: LeadMagnetModalProps) 
                                 </div>
 
                                 <div className="pt-4 space-y-4">
-                                    <div className="flex justify-center">
-                                        <ReCAPTCHA
-                                            ref={recaptchaRef}
-                                            sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY || "YOUR_SITE_KEY_MISSING"}
-                                            onChange={(value) => setCaptchaValue(value)}
-                                        />
-                                    </div>
+                                    <ReCAPTCHA
+                                        ref={recaptchaRef}
+                                        size="invisible"
+                                        sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY || "YOUR_SITE_KEY_MISSING"}
+                                        onChange={(value) => setCaptchaValue(value)}
+                                    />
 
                                     <Button type="submit" disabled={isSubmitting} className="w-full h-14 text-lg font-bold rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all">
                                         <span className="flex items-center justify-center gap-2">
