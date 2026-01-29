@@ -32,12 +32,12 @@ const Impressum = () => {
 
                   <div className="text-center">
                     <span className="font-semibold text-gray-700">Telefonnummer:</span>
-                    <span className="text-gray-600 ml-2">0664 / 2314676</span>
+                    <span className="text-gray-600 ml-2">+43 664 2314676</span>
                   </div>
 
                   <div className="text-center">
                     <span className="font-semibold text-gray-700">E-Mail:</span>
-                    <span className="text-gray-600 ml-2">arnold@freissling-partners.com</span>
+                    <span className="text-gray-600 ml-2">info@ki-kanzlei.at</span>
                   </div>
 
                   <div className="text-center">

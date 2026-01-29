@@ -121,11 +121,11 @@ async function updateSitemap(
     sha,
     committer: {
       name: 'n8n Blog Agent',
-      email: 'n8n@ki-kanzlei.at',
+      email: 'info@ki-kanzlei.at',
     },
     author: {
       name: 'n8n Blog Agent',
-      email: 'n8n@ki-kanzlei.at',
+      email: 'info@ki-kanzlei.at',
     },
   });
 
@@ -148,8 +148,8 @@ export default async function handler(
 
     if (!expectedToken) {
       console.error('N8N_API_SECRET ist nicht gesetzt');
-      return response.status(500).json({ 
-        error: 'Server configuration error' 
+      return response.status(500).json({
+        error: 'Server configuration error'
       });
     }
 
@@ -161,7 +161,7 @@ export default async function handler(
     const data: CMSBlogResponse | CMSBlogItem = request.body;
 
     if (!data) {
-      return response.status(400).json({ 
+      return response.status(400).json({
         error: 'No data provided',
         message: 'Request body is empty or invalid'
       });
@@ -169,12 +169,12 @@ export default async function handler(
 
     // Normalisiere zu Array-Format
     const items: CMSBlogItem[] = 'items' in data && Array.isArray(data.items)
-      ? data.items 
+      ? data.items
       : [data as CMSBlogItem];
 
     if (!items || items.length === 0) {
-      return response.status(400).json({ 
-        error: 'No items provided' 
+      return response.status(400).json({
+        error: 'No items provided'
       });
     }
 
@@ -208,8 +208,8 @@ export default async function handler(
         hasOwner: !!githubOwner,
         hasRepo: !!githubRepo,
       });
-      return response.status(500).json({ 
-        error: 'GitHub configuration missing' 
+      return response.status(500).json({
+        error: 'GitHub configuration missing'
       });
     }
 
@@ -228,7 +228,7 @@ export default async function handler(
         status: error.status,
         message: error.message,
       });
-      
+
       if (error.status === 404) {
         return response.status(500).json({
           error: 'Repository not found',
@@ -240,7 +240,7 @@ export default async function handler(
           }
         });
       }
-      
+
       if (error.status === 401 || error.status === 403) {
         return response.status(500).json({
           error: 'GitHub token has no access',
@@ -252,7 +252,7 @@ export default async function handler(
           }
         });
       }
-      
+
       return response.status(500).json({
         error: 'GitHub access error',
         message: error.message || 'Unbekannter Fehler beim Zugriff auf GitHub',
@@ -270,7 +270,7 @@ export default async function handler(
         if (item.fieldData.thumbnail?.url) {
           try {
             const thumbnailUrl = item.fieldData.thumbnail.url;
-            
+
             // Prüfe ob es bereits eine lokale URL ist
             if (thumbnailUrl.includes('/img/blog/') || thumbnailUrl.includes('vercel.app/img/blog/')) {
               continue; // Bereits lokal, überspringe
@@ -300,7 +300,7 @@ export default async function handler(
 
             const imageBuffer = Buffer.from(await imageResponse.arrayBuffer());
             const contentType = imageResponse.headers.get('content-type') || 'image/jpeg';
-            
+
             // Bestimme Dateiname
             const slug = item.fieldData.slug;
             const extension = contentType.split('/')[1] || 'jpg';
@@ -345,12 +345,12 @@ export default async function handler(
             });
 
             // Ersetze URL mit lokaler URL
-            const publicUrl = process.env.VERCEL_URL 
+            const publicUrl = process.env.VERCEL_URL
               ? `https://${process.env.VERCEL_URL}/img/blog/${filename}`
               : `https://raw.githubusercontent.com/${githubOwner}/${githubRepo}/${githubBranch}/${imagePath}`;
-            
+
             item.fieldData.thumbnail.url = publicUrl;
-            
+
             console.log(`Image uploaded: ${filename} -> ${publicUrl}`);
           } catch (error: any) {
             console.error(`Error uploading image for ${item.fieldData.slug}:`, error.message);
@@ -362,7 +362,7 @@ export default async function handler(
 
     // 5. Lade aktuelle blogPosts.json
     let existingData: CMSBlogResponse = { items: [] };
-    
+
     try {
       const { data: fileData } = await octokit.repos.getContent({
         owner: githubOwner,
@@ -388,29 +388,29 @@ export default async function handler(
     // 7. Merge neue Posts mit bestehenden
     const existingItems = existingData.items || [];
     const existingSlugs = new Set(existingItems.map(item => item.fieldData.slug));
-    
+
     // Filtere nur neue oder aktualisierte Posts
     const newItems = items.filter(item => {
       if (!existingSlugs.has(item.fieldData.slug)) {
         return true; // Neuer Post
       }
-      
+
       // Prüfe ob aktualisiert
       const existingItem = existingItems.find(
         existing => existing.fieldData.slug === item.fieldData.slug
       );
-      
+
       if (existingItem) {
         const existingDate = new Date(existingItem.lastUpdated);
         const newDate = new Date(item.lastUpdated);
         return newDate > existingDate; // Nur wenn neuer
       }
-      
+
       return false;
     });
 
     if (newItems.length === 0) {
-      return response.status(200).json({ 
+      return response.status(200).json({
         success: true,
         message: 'No new or updated posts',
         skipped: items.length
@@ -422,7 +422,7 @@ export default async function handler(
       const newItem = items.find(
         item => item.fieldData.slug === existing.fieldData.slug
       );
-      
+
       if (newItem) {
         // Prüfe ob das neue Item tatsächlich neuer ist
         const existingDate = new Date(existing.lastUpdated);
@@ -431,7 +431,7 @@ export default async function handler(
           return newItem; // Nur aktualisieren wenn neuer
         }
       }
-      
+
       return existing; // Behalte bestehendes Item
     });
 
@@ -453,7 +453,7 @@ export default async function handler(
 
     // 9. Committe zu GitHub
     let sha: string | undefined;
-    
+
     try {
       const { data: fileData } = await octokit.repos.getContent({
         owner: githubOwner,
@@ -517,7 +517,7 @@ export default async function handler(
 
   } catch (error: any) {
     console.error('Error creating blog post:', error);
-    
+
     return response.status(500).json({
       error: 'Failed to create blog post',
       message: error.message,
