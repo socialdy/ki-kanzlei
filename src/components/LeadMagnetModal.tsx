@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -15,6 +15,7 @@ import { Label } from "@/components/ui/label";
 import { CheckCircle2, Loader2, ArrowRight, ShieldCheck, AlertCircle } from "lucide-react";
 import { toast } from "sonner";
 import { cn } from "@/lib/utils";
+import ReCAPTCHA from "react-google-recaptcha";
 
 // Austrian and common international phone number regex
 const phoneRegex = /^([+]?[\s0-9]+)?(\d{3}|[(]?[0-9]+[)])?([-]?[\s0-9])+$/;
@@ -46,6 +47,8 @@ interface LeadMagnetModalProps {
 export const LeadMagnetModal = ({ isOpen, onOpenChange }: LeadMagnetModalProps) => {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSuccess, setIsSuccess] = useState(false);
+    const [captchaValue, setCaptchaValue] = useState<string | null>(null);
+    const recaptchaRef = useRef<ReCAPTCHA>(null);
 
     const {
         register,
@@ -67,6 +70,10 @@ export const LeadMagnetModal = ({ isOpen, onOpenChange }: LeadMagnetModalProps) 
     const onSubmit = async (data: FormValues) => {
         try {
             if (data.website) return;
+            if (!captchaValue) {
+                toast.error("Bitte bestätige, dass du kein Roboter bist.");
+                return;
+            }
 
             setIsSubmitting(true);
 
@@ -80,6 +87,7 @@ export const LeadMagnetModal = ({ isOpen, onOpenChange }: LeadMagnetModalProps) 
                     fullName: `${data.firstName} ${data.lastName}`,
                     submittedAt: new Date().toISOString(),
                     source: "Website Lead Magnet",
+                    captchaToken: captchaValue,
                 }),
             });
 
@@ -141,7 +149,7 @@ export const LeadMagnetModal = ({ isOpen, onOpenChange }: LeadMagnetModalProps) 
                                             <Input
                                                 id="firstName"
                                                 {...register("firstName")}
-                                                placeholder="Max"
+                                                placeholder="z.B. Arnold"
                                                 className={cn("h-12 border-2 rounded-2xl bg-gray-50/50 focus:ring-0", errors.firstName ? "border-destructive/50" : "border-gray-100")}
                                             />
                                         </div>
@@ -150,7 +158,7 @@ export const LeadMagnetModal = ({ isOpen, onOpenChange }: LeadMagnetModalProps) 
                                             <Input
                                                 id="lastName"
                                                 {...register("lastName")}
-                                                placeholder="Mustermann"
+                                                placeholder="Freissling"
                                                 className={cn("h-12 border-2 rounded-2xl bg-gray-50/50 focus:ring-0", errors.lastName ? "border-destructive/50" : "border-gray-100")}
                                             />
                                         </div>
@@ -167,7 +175,7 @@ export const LeadMagnetModal = ({ isOpen, onOpenChange }: LeadMagnetModalProps) 
                                             id="phone"
                                             {...register("phone")}
                                             type="tel"
-                                            placeholder="+43 664 ..."
+                                            placeholder="+43 676 1234567"
                                             className={cn("h-12 border-2 rounded-2xl bg-gray-50/50 focus:ring-0", errors.phone ? "border-destructive/50" : "border-gray-100")}
                                         />
                                         {errors.phone && (
@@ -183,7 +191,7 @@ export const LeadMagnetModal = ({ isOpen, onOpenChange }: LeadMagnetModalProps) 
                                             id="email"
                                             {...register("email")}
                                             type="email"
-                                            placeholder="Deine beste E-Mail"
+                                            placeholder="arnold@ki-kanzlei.at"
                                             className={cn("h-12 border-2 rounded-2xl bg-gray-50/50 focus:ring-0", errors.email ? "border-destructive/50" : "border-gray-100")}
                                         />
                                         {errors.email && (
@@ -194,7 +202,15 @@ export const LeadMagnetModal = ({ isOpen, onOpenChange }: LeadMagnetModalProps) 
                                     </div>
                                 </div>
 
-                                <div className="pt-4">
+                                <div className="pt-4 space-y-4">
+                                    <div className="flex justify-center scale-90 sm:scale-100 origin-center">
+                                        <ReCAPTCHA
+                                            ref={recaptchaRef}
+                                            sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY || "YOUR_SITE_KEY_MISSING"}
+                                            onChange={(value) => setCaptchaValue(value)}
+                                        />
+                                    </div>
+
                                     <Button type="submit" disabled={isSubmitting} className="w-full h-14 text-lg font-bold rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all">
                                         <span className="flex items-center justify-center gap-2">
                                             {isSubmitting ? <><Loader2 className="h-5 w-5 animate-spin" /> Einen Moment...</> : <>PDF jetzt kostenlos anfordern <ArrowRight className="w-5 h-5" /></>}
@@ -202,9 +218,9 @@ export const LeadMagnetModal = ({ isOpen, onOpenChange }: LeadMagnetModalProps) 
                                     </Button>
                                 </div>
 
-                                <div className="flex items-center gap-2 text-[10px] text-gray-400 justify-end font-medium tracking-tight">
+                                <div className="flex items-center gap-2 text-[10px] text-gray-400 justify-center font-medium tracking-tight">
                                     <ShieldCheck className="w-3.5 h-3.5 text-green-500 flex-shrink-0" />
-                                    <span>
+                                    <span className="text-center">
                                         Mit dem Absenden akzeptieren Sie unsere{" "}
                                         <a href="/datenschutz" className="text-primary hover:underline font-bold">
                                             Datenschutzerklärung
