@@ -215,7 +215,7 @@ export const LeadMagnetModal = ({ isOpen, onOpenChange }: LeadMagnetModalProps) 
                                 </div>
 
                                 <div className="pt-4 space-y-4">
-                                    <div className="flex justify-center scale-90 sm:scale-100 origin-center">
+                                    <div className="flex justify-center">
                                         <ReCAPTCHA
                                             ref={recaptchaRef}
                                             sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY || "YOUR_SITE_KEY_MISSING"}
