@@ -100,7 +100,7 @@ const Datenschutz = () => {
                       <h3 className="font-semibold text-gray-900 mb-2">Empfänger Daten: ElevenLabs Inc.</h3>
                       <p className="text-sm text-gray-600">Zweck der Datenverarbeitung: Erbringung von KI-Sprachdiensten (Text-to-Speech, Speech-to-Text), Voice-Agent-Funktionalität und Datenverarbeitung gemäß Data Processing Addendum (DPA).</p>
                       <p className="text-sm text-gray-600">Rechtsgrundlage der Datenverarbeitung: Einwilligung (Art 6 Abs 1 lit a DSGVO); Auftragsverarbeitervertrag (DPA) nach Art 28 DSGVO.</p>
-                      <p className="text-sm text-gray-600">Geschäftssitz: USA</p>
+                      <p className="text-sm text-gray-600">Geschäftssitz: 169 Madison Ave #2484, New York, NY, 10016, USA</p>
                       <p className="text-sm text-gray-600">Sichere Übermittlung in ein Drittland: ElevenLabs nutzt Standardvertragsklauseln (SCCs) und ist Teil des EU-US Data Privacy Frameworks.</p>
                     </div>
 
@@ -406,6 +406,31 @@ const Datenschutz = () => {
                   <p className="text-gray-600">Anschrift: Rossatzbach 3/2, 3602 Rossatz</p>
                   <p className="text-gray-600">Telefonnummer: <a href="tel:+436642314676" className="text-primary hover:text-primary/80 transition-colors">+43 664 2314676</a></p>
                   <p className="text-gray-600">E-Mail: <a href="mailto:info@ki-kanzlei.at" className="text-primary hover:text-primary/80 transition-colors">info@ki-kanzlei.at</a></p>
+                </div>
+              </div>
+
+              <div id="voice-agents" className="max-w-3xl mx-auto">
+                <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                  XI. Einsatz von KI-Technologien / Voice Agents
+                </h2>
+
+                <div className="text-left space-y-4 pt-8 border-t border-gray-100">
+                  <h3 className="text-xl font-semibold text-gray-900">Einsatz von ElevenLabs (Voice Agents)</h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    Wir nutzen auf unserer Webseite die Dienste von Eleven Labs Inc. (USA), um interaktive Voice-Agenten bereitzustellen. Hierbei werden Ihre Spracheingaben verarbeitet, um eine Antwort zu generieren.
+                  </p>
+                  <p className="text-gray-600 leading-relaxed">
+                    <strong>Rechtsgrundlage:</strong> Ihre Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO, die Sie vor Beginn der Interaktion erteilen.
+                  </p>
+                  <p className="text-gray-600 leading-relaxed">
+                    <strong>Drittlandübermittlung:</strong> Die Daten werden in den USA verarbeitet. Die Absicherung erfolgt über das EU-US Data Privacy Framework sowie Standardvertragsklauseln.
+                  </p>
+                  <p className="text-gray-600 leading-relaxed">
+                    <strong>Anbieter:</strong> Eleven Labs Inc., 169 Madison Ave #2484, New York, NY, 10016, USA (Zusätzlicher EU-Standort: Eleven Labs Poland sp. z o.o., Lipska 27/22 Street, 03-908, Warschau, Polen).
+                  </p>
+                  <p className="text-gray-600 leading-relaxed">
+                    <strong>Speicherdauer:</strong> Wir nutzen die "Zero Retention"-Einstellung. Ihre Audiodaten werden nach der Verarbeitung nicht dauerhaft gespeichert und unmittelbar gelöscht. Zudem nutzen wir Funktionen zur PII-Minimierung (Zero-PII-Retention), um den Schutz Ihrer personenbezogenen Daten zu maximieren.
+                  </p>
                 </div>
               </div>
 

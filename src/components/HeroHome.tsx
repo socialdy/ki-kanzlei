@@ -60,12 +60,12 @@ export const HeroHome = ({ onCtaClick }: HeroHomeProps) => {
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8 pt-12 fade-in">
             <div>
-              <div className="text-4xl md:text-5xl font-bold text-primary">10-20h</div>
+              <div className="text-4xl md:text-5xl font-bold text-primary">10-15h</div>
               <div className="text-sm text-muted-foreground mt-2">Zeit gespart pro Woche</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold text-primary">+20</div>
-              <div className="text-sm text-muted-foreground mt-2">Projekte umgesetzt</div>
+              <div className="text-4xl md:text-5xl font-bold text-primary">350%</div>
+              <div className="text-sm text-muted-foreground mt-2">Durchschnittlicher ROI</div>
             </div>
             <div className="col-span-2 md:col-span-1">
               <div className="text-4xl md:text-5xl font-bold text-primary">100%</div>

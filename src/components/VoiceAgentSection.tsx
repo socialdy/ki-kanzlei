@@ -50,10 +50,12 @@ export const VoiceAgentSection = () => {
                     </div>
 
                     <div className="mt-16 flex flex-col sm:flex-row gap-4 items-center slide-up" style={{ animationDelay: "400ms" }}>
-                        <Button size="lg" className="rounded-full px-8 h-14 text-lg font-bold group bg-primary hover:bg-primary/90 transition-all shadow-lg hover:shadow-primary/25">
-                            <Phone className="mr-2 h-5 w-5 animate-bounce" />
-                            Jetzt anrufen
-                            <ArrowRight className="ml-2 h-5 w-5 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
+                        <Button size="lg" className="rounded-full px-8 h-14 text-lg font-bold group bg-primary hover:bg-primary/90 transition-all shadow-lg hover:shadow-primary/25" asChild>
+                            <a href="tel:+4314351606">
+                                <Phone className="mr-2 h-5 w-5 animate-bounce" />
+                                Jetzt anrufen
+                                <ArrowRight className="ml-2 h-5 w-5 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
+                            </a>
                         </Button>
 
                         <span className="text-sm text-muted-foreground italic">
@@ -63,7 +65,7 @@ export const VoiceAgentSection = () => {
 
                     <p className="mt-8 text-xs text-muted-foreground max-w-lg text-center slide-up" style={{ animationDelay: "500ms" }}>
                         Mit dem Anruf stimmen Sie der Verarbeitung Ihrer Daten gemäß unserer{" "}
-                        <a href="/datenschutz" className="underline hover:text-primary transition-colors">
+                        <a href="/datenschutz#voice-agents" className="underline hover:text-primary transition-colors">
                             Datenschutzerklärung
                         </a>{" "}
                         zu.

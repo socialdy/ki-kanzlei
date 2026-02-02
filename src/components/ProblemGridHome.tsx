@@ -3,39 +3,45 @@ import { Button } from "@/components/ui/button";
 
 const problems = [
   {
-    icon: Clock,
-    title: "Zeitfressende manuelle Aufgaben",
-    description: "Stundenlang Daten eingeben, E-Mails beantworten, Berichte erstellen – während Ihr eigentliches Unternehmen wartet.",
-    size: "large",
-  },
-  {
-    icon: MessageSquare,
-    title: "Kommunikation überfordert",
-    description: "E-Mails, Social Media, Telefon – zu viele Kanäle, zu wenig Zeit. Wichtige Anfragen gehen unter.",
-    size: "medium",
-  },
-  {
-    icon: FileText,
-    title: "Content-Erstellung kostet Zeit",
-    description: "Blogs, Social-Media-Posts, Newsletter – Content-Erstellung frisst Stunden, die Sie lieber für Kunden nutzen würden.",
-    size: "medium",
-  },
-  {
     icon: Users,
-    title: "Lead-Generierung manuell",
-    description: "LinkedIn, E-Mail-Outreach, Follow-ups – alles händisch. Akquise wird zur Nebentätigkeit statt zum Wachstumstreiber.",
+    title: "Zeitaufwendige Lead-Generierung & Recherche",
+    description: "Manuelle Suche nach Kontakten auf LinkedIn und E-Mail-Listen kostet Stunden pro Woche.",
     size: "large",
   },
   {
     icon: TrendingDown,
-    title: "Datenchaos statt Übersicht",
-    description: "Informationen verstreut in verschiedenen Systemen, keine zentrale Wissensbasis. Wichtige Daten sind schwer auffindbar.",
+    title: "Niedrige Conversion-Raten bei Outreach",
+    description: "Generische Nachrichten führen zu schlechten Antwortquoten und verschwendeten Ressourcen.",
+    size: "medium",
+  },
+  {
+    icon: FileText,
+    title: "Content-Erstellung bindet zu viele Ressourcen",
+    description: "Blogartikel, SEO-Optimierung und regelmäßige Updates erfordern spezialisierte Expertise & Zeit.",
     size: "medium",
   },
   {
     icon: Zap,
-    title: "Prozesse nicht automatisiert",
-    description: "Wiederkehrende Aufgaben, die sich automatisieren ließen, werden weiterhin manuell erledigt – Tag für Tag.",
+    title: "Informationen sind fragmentiert",
+    description: "Mitarbeiter suchen Antworten in verschiedenen Dokumenten & Wikis statt zentral.",
+    size: "large",
+  },
+  {
+    icon: Clock,
+    title: "Verpasste Anrufe und Anfragen",
+    description: "Kunden können nicht erreicht werden, wenn das Team nicht verfügbar ist – wertvolle Leads gehen verloren.",
+    size: "medium",
+  },
+  {
+    icon: MessageSquare,
+    title: "Administrative Aufgaben rauben Fokus",
+    description: "E-Mail-Management, Terminplanung und Datenpflege binden wertvolle Arbeitszeit.",
+    size: "medium",
+  },
+  {
+    icon: Zap,
+    title: "Kanal-Chaos bei Kundenanfragen",
+    description: "Anfragen über E-Mail, WhatsApp, Formulare landen überall – kein zentrales System.",
     size: "medium",
   },
 ];

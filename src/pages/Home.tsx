@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import { NavigationHome } from "@/components/NavigationHome";
 import { HeroHome } from "@/components/HeroHome";
 import { ProblemGridHome } from "@/components/ProblemGridHome";
-import { UseCasesHome } from "@/components/UseCasesHome";
+import { ProductsHome } from "@/components/ProductsHome";
+import { PressSection } from "@/components/PressSection";
 import { IndustriesHome } from "@/components/IndustriesHome";
 import { VoiceAgentSection } from "@/components/VoiceAgentSection";
 import { AboutUs } from "@/components/AboutUs";
@@ -35,7 +36,8 @@ const Home = () => {
       <main>
         <HeroHome onCtaClick={() => setIsLeadModalOpen(true)} />
         <ProblemGridHome />
-        <UseCasesHome />
+        {/* <PressSection /> */}
+        {/* <ProductsHome /> */}
         <VoiceAgentSection />
         <IndustriesHome />
         <AboutUs />
