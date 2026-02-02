@@ -136,20 +136,20 @@ export const LeadMagnetModal = ({ isOpen, onOpenChange }: LeadMagnetModalProps) 
 
     return (
         <Dialog open={isOpen} onOpenChange={handleClose}>
-            <DialogContent className="sm:max-w-[460px] overflow-hidden border-none bg-white p-0 shadow-[0_32px_64px_-24px_rgba(0,0,0,0.15)] rounded-[32px]">
+            <DialogContent className="w-[95vw] sm:max-w-[460px] overflow-hidden border-none bg-white p-0 shadow-[0_32px_64px_-24px_rgba(0,0,0,0.15)] rounded-2xl sm:rounded-[32px]">
                 {!isSuccess ? (
                     <div className="relative pt-8">
-                        <div className="p-10 md:p-12 space-y-8">
+                        <div className="p-6 sm:p-8 md:p-12 space-y-6 sm:space-y-8">
                             <div className="space-y-4 flex flex-col items-center sm:items-start text-center sm:text-left">
                                 <div className="inline-flex px-3 py-1 rounded-full bg-primary/5 text-primary text-[10px] font-bold tracking-wider uppercase">
                                     Exklusiver Einblick
                                 </div>
                                 <DialogHeader className="space-y-4">
-                                    <DialogTitle className="text-3xl font-bold tracking-tight text-gray-900 leading-tight">
+                                    <DialogTitle className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 leading-tight">
                                         Echtes Infomaterial. <br />
                                         <span className="text-primary italic">KOSTENLOS nur für dich.</span>
                                     </DialogTitle>
-                                    <DialogDescription className="text-gray-500 text-lg font-medium leading-relaxed">
+                                    <DialogDescription className="text-gray-500 text-base sm:text-lg font-medium leading-relaxed">
                                         Direkter Einblick in die Tools und Prozesse, die wir bei unseren Kunden in Österreich wirklich implementieren.
                                     </DialogDescription>
                                 </DialogHeader>
@@ -162,7 +162,7 @@ export const LeadMagnetModal = ({ isOpen, onOpenChange }: LeadMagnetModalProps) 
 
                                 <div className="space-y-4">
                                     {/* Name Fields Row */}
-                                    <div className="grid grid-cols-2 gap-3">
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                                         <div className="space-y-1.5">
                                             <Label htmlFor="firstName" className={cn("text-xs font-bold ml-1 uppercase", errors.firstName ? "text-destructive" : "text-gray-500")}>Vorname</Label>
                                             <Input
@@ -249,13 +249,13 @@ export const LeadMagnetModal = ({ isOpen, onOpenChange }: LeadMagnetModalProps) 
                         </div>
                     </div>
                 ) : (
-                    <div className="p-12 md:p-16 flex flex-col items-center justify-center text-center space-y-8 animate-in fade-in slide-in-from-bottom-8 duration-700">
-                        <div className="w-20 h-20 rounded-[28px] bg-primary/5 flex items-center justify-center text-primary rotate-3 transition-transform">
+                    <div className="p-8 sm:p-12 md:p-16 flex flex-col items-center justify-center text-center space-y-6 sm:space-y-8 animate-in fade-in slide-in-from-bottom-8 duration-700">
+                        <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl sm:rounded-[28px] bg-primary/5 flex items-center justify-center text-primary rotate-3 transition-transform">
                             <CheckCircle2 className="w-10 h-10" />
                         </div>
                         <div className="space-y-4">
-                            <h3 className="text-3xl font-bold text-gray-900 leading-tight">Post ist da! 📬</h3>
-                            <p className="text-gray-500 text-lg leading-relaxed">Das PDF ist auf dem Weg in dein Postfach. Wir wünschen dir viel Spaß mit der Roadmap.</p>
+                            <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 leading-tight">Post ist da! 📬</h3>
+                            <p className="text-gray-500 text-base sm:text-lg leading-relaxed">Das PDF ist auf dem Weg in dein Postfach. Wir wünschen dir viel Spaß mit der Roadmap.</p>
                         </div>
                         <Button onClick={handleClose} className="w-full sm:w-auto px-10 h-14 text-lg font-bold shadow-xl shadow-primary/20 rounded-2xl transition-all">Alles klar</Button>
                     </div>
