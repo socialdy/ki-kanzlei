@@ -132,49 +132,49 @@ export const LeadMagnetModal = ({ isOpen, onOpenChange }: LeadMagnetModalProps) 
 
     return (
         <Dialog open={isOpen} onOpenChange={handleClose}>
-            <DialogContent className="w-[95vw] max-w-[460px] max-h-[90vh] overflow-y-auto sm:max-h-none sm:overflow-visible border-none bg-white p-0 shadow-[0_32px_64px_-24px_rgba(0,0,0,0.15)] rounded-2xl sm:rounded-[32px]">
+            <DialogContent className="w-[92vw] max-w-[460px] max-h-[85vh] overflow-y-auto sm:max-h-none sm:overflow-visible border-none bg-white p-0 shadow-[0_32px_64px_-24px_rgba(0,0,0,0.15)] rounded-xl sm:rounded-[32px]">
                 {!isSuccess ? (
-                    <div className="relative pt-8">
-                        <div className="p-6 sm:p-8 md:p-12 space-y-6 sm:space-y-8">
-                            <div className="space-y-4 flex flex-col items-center sm:items-start text-center sm:text-left">
-                                <div className="inline-flex px-3 py-1 rounded-full bg-primary/5 text-primary text-[10px] font-bold tracking-wider uppercase">
+                    <div className="relative pt-4 sm:pt-8">
+                        <div className="p-4 sm:p-8 md:p-12 space-y-4 sm:space-y-8">
+                            <div className="space-y-2 sm:space-y-4 flex flex-col items-center sm:items-start text-center sm:text-left">
+                                <div className="inline-flex px-2 py-0.5 sm:px-3 sm:py-1 rounded-full bg-primary/5 text-primary text-[9px] sm:text-[10px] font-bold tracking-wider uppercase">
                                     Exklusiver Einblick
                                 </div>
-                                <DialogHeader className="space-y-4">
-                                    <DialogTitle className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 leading-tight">
+                                <DialogHeader className="space-y-2 sm:space-y-4">
+                                    <DialogTitle className="text-xl sm:text-3xl font-bold tracking-tight text-gray-900 leading-tight">
                                         Echtes Infomaterial. <br />
                                         <span className="text-primary italic">KOSTENLOS nur für dich.</span>
                                     </DialogTitle>
-                                    <DialogDescription className="text-gray-500 text-base sm:text-lg font-medium leading-relaxed">
+                                    <DialogDescription className="text-gray-500 text-sm sm:text-lg font-medium leading-relaxed">
                                         Direkter Einblick in die Tools und Prozesse, die wir bei unseren Kunden in Österreich wirklich implementieren.
                                     </DialogDescription>
                                 </DialogHeader>
                             </div>
 
-                            <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
+                            <form onSubmit={handleSubmit(onSubmit)} className="space-y-3 sm:space-y-5">
                                 <div className="sr-only">
                                     <Input {...register("website")} tabIndex={-1} autoComplete="off" />
                                 </div>
 
-                                <div className="space-y-4">
+                                <div className="space-y-3 sm:space-y-4">
                                     {/* Name Fields Row */}
-                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                                        <div className="space-y-1.5">
-                                            <Label htmlFor="firstName" className={cn("text-xs font-bold ml-1 uppercase", errors.firstName ? "text-destructive" : "text-gray-500")}>Vorname</Label>
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
+                                        <div className="space-y-1">
+                                            <Label htmlFor="firstName" className={cn("text-[10px] sm:text-xs font-bold ml-1 uppercase", errors.firstName ? "text-destructive" : "text-gray-500")}>Vorname</Label>
                                             <Input
                                                 id="firstName"
                                                 {...register("firstName")}
                                                 placeholder="z.B. Max"
-                                                className={cn("h-12 border-2 rounded-2xl bg-gray-50/50 focus:ring-0", errors.firstName ? "border-destructive/50" : "border-gray-100")}
+                                                className={cn("h-10 sm:h-12 text-sm border-2 rounded-xl sm:rounded-2xl bg-gray-50/50 focus:ring-0", errors.firstName ? "border-destructive/50" : "border-gray-100")}
                                             />
                                         </div>
-                                        <div className="space-y-1.5">
-                                            <Label htmlFor="lastName" className={cn("text-xs font-bold ml-1 uppercase", errors.lastName ? "text-destructive" : "text-gray-500")}>Nachname</Label>
+                                        <div className="space-y-1">
+                                            <Label htmlFor="lastName" className={cn("text-[10px] sm:text-xs font-bold ml-1 uppercase", errors.lastName ? "text-destructive" : "text-gray-500")}>Nachname</Label>
                                             <Input
                                                 id="lastName"
                                                 {...register("lastName")}
                                                 placeholder="Mustermann"
-                                                className={cn("h-12 border-2 rounded-2xl bg-gray-50/50 focus:ring-0", errors.lastName ? "border-destructive/50" : "border-gray-100")}
+                                                className={cn("h-10 sm:h-12 text-sm border-2 rounded-xl sm:rounded-2xl bg-gray-50/50 focus:ring-0", errors.lastName ? "border-destructive/50" : "border-gray-100")}
                                             />
                                         </div>
                                     </div>
@@ -184,14 +184,14 @@ export const LeadMagnetModal = ({ isOpen, onOpenChange }: LeadMagnetModalProps) 
                                         </p>
                                     )}
 
-                                    <div className="space-y-1.5">
-                                        <Label htmlFor="phone" className={cn("text-xs font-bold ml-1 uppercase", errors.phone ? "text-destructive" : "text-gray-500")}>Telefon</Label>
+                                    <div className="space-y-1">
+                                        <Label htmlFor="phone" className={cn("text-[10px] sm:text-xs font-bold ml-1 uppercase", errors.phone ? "text-destructive" : "text-gray-500")}>Telefon</Label>
                                         <Input
                                             id="phone"
                                             {...register("phone")}
                                             type="tel"
                                             placeholder="+43 676 1234567"
-                                            className={cn("h-12 border-2 rounded-2xl bg-gray-50/50 focus:ring-0", errors.phone ? "border-destructive/50" : "border-gray-100")}
+                                            className={cn("h-10 sm:h-12 text-sm border-2 rounded-xl sm:rounded-2xl bg-gray-50/50 focus:ring-0", errors.phone ? "border-destructive/50" : "border-gray-100")}
                                         />
                                         {errors.phone && (
                                             <p className="text-xs font-semibold text-destructive ml-1 flex items-center gap-1">
@@ -200,14 +200,14 @@ export const LeadMagnetModal = ({ isOpen, onOpenChange }: LeadMagnetModalProps) 
                                         )}
                                     </div>
 
-                                    <div className="space-y-1.5">
-                                        <Label htmlFor="email" className={cn("text-xs font-bold ml-1 uppercase", errors.email ? "text-destructive" : "text-gray-500")}>E-Mail Adresse</Label>
+                                    <div className="space-y-1">
+                                        <Label htmlFor="email" className={cn("text-[10px] sm:text-xs font-bold ml-1 uppercase", errors.email ? "text-destructive" : "text-gray-500")}>E-Mail Adresse</Label>
                                         <Input
                                             id="email"
                                             {...register("email")}
                                             type="email"
                                             placeholder="max@beispiel.de"
-                                            className={cn("h-12 border-2 rounded-2xl bg-gray-50/50 focus:ring-0", errors.email ? "border-destructive/50" : "border-gray-100")}
+                                            className={cn("h-10 sm:h-12 text-sm border-2 rounded-xl sm:rounded-2xl bg-gray-50/50 focus:ring-0", errors.email ? "border-destructive/50" : "border-gray-100")}
                                         />
                                         {errors.email && (
                                             <p className="text-xs font-semibold text-destructive ml-1 flex items-center gap-1">
@@ -217,9 +217,9 @@ export const LeadMagnetModal = ({ isOpen, onOpenChange }: LeadMagnetModalProps) 
                                     </div>
                                 </div>
 
-                                <div className="pt-4 space-y-4">
+                                <div className="pt-2 sm:pt-4 space-y-3 sm:space-y-4">
 
-                                    <Button type="submit" disabled={isSubmitting} className="w-full h-14 text-lg font-bold rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all">
+                                    <Button type="submit" disabled={isSubmitting} className="w-full h-11 sm:h-14 text-base sm:text-lg font-bold rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all">
                                         <span className="flex items-center justify-center gap-2">
                                             {isSubmitting ? <><Loader2 className="h-5 w-5 animate-spin" /> Einen Moment...</> : <>PDF jetzt kostenlos anfordern <ArrowRight className="w-5 h-5" /></>}
                                         </span>
