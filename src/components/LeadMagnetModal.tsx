@@ -15,7 +15,7 @@ import { Label } from "@/components/ui/label";
 import { CheckCircle2, Loader2, ArrowRight, ShieldCheck, AlertCircle } from "lucide-react";
 import { toast } from "sonner";
 import { cn } from "@/lib/utils";
-import ReCAPTCHA from "react-google-recaptcha";
+import { useCaptcha } from "./CaptchaProvider";
 import { trackLeadEvent, getAttributionData } from "@/lib/analytics";
 import { useEffect } from "react";
 
@@ -49,8 +49,7 @@ interface LeadMagnetModalProps {
 export const LeadMagnetModal = ({ isOpen, onOpenChange }: LeadMagnetModalProps) => {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSuccess, setIsSuccess] = useState(false);
-    const [captchaValue, setCaptchaValue] = useState<string | null>(null);
-    const recaptchaRef = useRef<ReCAPTCHA>(null);
+    const { executeCaptcha } = useCaptcha();
 
     useEffect(() => {
         if (isOpen) {
@@ -80,11 +79,8 @@ export const LeadMagnetModal = ({ isOpen, onOpenChange }: LeadMagnetModalProps) 
             if (data.website) return;
             setIsSubmitting(true);
 
-            // Execute reCAPTCHA invisibly
-            let token = captchaValue;
-            if (!token && recaptchaRef.current) {
-                token = await recaptchaRef.current.executeAsync();
-            }
+            // Execute global reCAPTCHA
+            const token = await executeCaptcha();
 
             if (!token) {
                 toast.error("reCAPTCHA Verifizierung fehlgeschlagen.");
@@ -136,7 +132,7 @@ export const LeadMagnetModal = ({ isOpen, onOpenChange }: LeadMagnetModalProps) 
 
     return (
         <Dialog open={isOpen} onOpenChange={handleClose}>
-            <DialogContent className="w-[95vw] max-w-[460px] max-h-[90vh] overflow-y-auto border-none bg-white p-0 shadow-[0_32px_64px_-24px_rgba(0,0,0,0.15)] rounded-2xl sm:rounded-[32px]">
+            <DialogContent className="w-[95vw] max-w-[460px] max-h-[90vh] overflow-y-auto sm:max-h-none sm:overflow-visible border-none bg-white p-0 shadow-[0_32px_64px_-24px_rgba(0,0,0,0.15)] rounded-2xl sm:rounded-[32px]">
                 {!isSuccess ? (
                     <div className="relative pt-8">
                         <div className="p-6 sm:p-8 md:p-12 space-y-6 sm:space-y-8">
@@ -222,12 +218,6 @@ export const LeadMagnetModal = ({ isOpen, onOpenChange }: LeadMagnetModalProps) 
                                 </div>
 
                                 <div className="pt-4 space-y-4">
-                                    <ReCAPTCHA
-                                        ref={recaptchaRef}
-                                        size="invisible"
-                                        sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY || "YOUR_SITE_KEY_MISSING"}
-                                        onChange={(value) => setCaptchaValue(value)}
-                                    />
 
                                     <Button type="submit" disabled={isSubmitting} className="w-full h-14 text-lg font-bold rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all">
                                         <span className="flex items-center justify-center gap-2">

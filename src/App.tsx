@@ -28,6 +28,7 @@ import BlogPost from "./pages/BlogPost";
 import ReactGA from "react-ga4";
 import { useLocation } from "react-router-dom";
 import { trackEvent, GA_EVENTS, captureAttributionData, initGA, hasAnalyticsConsent } from "./lib/analytics";
+import { CaptchaProvider } from "./components/CaptchaProvider";
 
 const queryClient = new QueryClient();
 
@@ -66,37 +67,39 @@ const AnalyticsTracker = () => {
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
-        <AnalyticsTracker />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/ki-loesungen-psychotherapeuten" element={<Index />} />
-          <Route path="/ki-loesungen-hotels" element={<Hotels />} />
-          <Route path="/ki-loesungen-hausverwaltung" element={<Hausverwaltung />} />
-          <Route path="/ki-loesungen-immobilienmakler" element={<Immobilienmakler />} />
-          <Route path="/ki-loesungen-autohaus" element={<Autohaus />} />
-          <Route path="/ki-loesungen-handwerker" element={<Handwerker />} />
-          <Route path="/ki-loesungen-rechtsanwaelte" element={<Rechtsanwaelte />} />
-          <Route path="/ki-loesungen-aerzte" element={<Aerzte />} />
-          <Route path="/ki-loesungen-recruiting" element={<Recruiting />} />
-          <Route path="/ki-loesungen-fitness" element={<Fitness />} />
-          <Route path="/ki-loesungen-ecommerce" element={<Ecommerce />} />
-          <Route path="/ki-loesungen-oeffentliche-einrichtungen" element={<OeffentlicheEinrichtungen />} />
-          <Route path="/ki-loesungen-steuerberater" element={<Steuerberater />} />
-          <Route path="/ki-loesungen-versicherungsmakler" element={<Versicherungsmakler />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/:slug" element={<BlogPost />} />
-          <Route path="/impressum" element={<Impressum />} />
-          <Route path="/datenschutz" element={<Datenschutz />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-      <CookieBanner />
-    </TooltipProvider>
+    <CaptchaProvider>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
+          <AnalyticsTracker />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/ki-loesungen-psychotherapeuten" element={<Index />} />
+            <Route path="/ki-loesungen-hotels" element={<Hotels />} />
+            <Route path="/ki-loesungen-hausverwaltung" element={<Hausverwaltung />} />
+            <Route path="/ki-loesungen-immobilienmakler" element={<Immobilienmakler />} />
+            <Route path="/ki-loesungen-autohaus" element={<Autohaus />} />
+            <Route path="/ki-loesungen-handwerker" element={<Handwerker />} />
+            <Route path="/ki-loesungen-rechtsanwaelte" element={<Rechtsanwaelte />} />
+            <Route path="/ki-loesungen-aerzte" element={<Aerzte />} />
+            <Route path="/ki-loesungen-recruiting" element={<Recruiting />} />
+            <Route path="/ki-loesungen-fitness" element={<Fitness />} />
+            <Route path="/ki-loesungen-ecommerce" element={<Ecommerce />} />
+            <Route path="/ki-loesungen-oeffentliche-einrichtungen" element={<OeffentlicheEinrichtungen />} />
+            <Route path="/ki-loesungen-steuerberater" element={<Steuerberater />} />
+            <Route path="/ki-loesungen-versicherungsmakler" element={<Versicherungsmakler />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:slug" element={<BlogPost />} />
+            <Route path="/impressum" element={<Impressum />} />
+            <Route path="/datenschutz" element={<Datenschutz />} />
+            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </BrowserRouter>
+        <CookieBanner />
+      </TooltipProvider>
+    </CaptchaProvider>
   </QueryClientProvider>
 );
 
