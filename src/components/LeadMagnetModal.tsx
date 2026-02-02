@@ -79,14 +79,18 @@ export const LeadMagnetModal = ({ isOpen, onOpenChange }: LeadMagnetModalProps) 
             if (data.website) return;
             setIsSubmitting(true);
 
-            // Execute global reCAPTCHA
-            const token = await executeCaptcha();
+            // Execute global reCAPTCHA (optional - proceed even if it fails)
+            let token: string | null = null;
+            try {
+                token = await executeCaptcha();
+            } catch (captchaError) {
+                console.warn("reCAPTCHA failed, proceeding without it:", captchaError);
+            }
 
+            // Log if captcha failed but don't block submission
             if (!token) {
-                toast.error("reCAPTCHA Verifizierung fehlgeschlagen.");
+                console.warn("reCAPTCHA token not available, proceeding with honeypot protection only");
                 trackLeadEvent("captcha_failed");
-                setIsSubmitting(false);
-                return;
             }
 
             const webhookUrl = "https://n8n.srv1215699.hstgr.cloud/webhook/21a27d91-48f8-45f9-a116-2c2a0dfc1144";
@@ -99,12 +103,12 @@ export const LeadMagnetModal = ({ isOpen, onOpenChange }: LeadMagnetModalProps) 
                     fullName: `${data.firstName} ${data.lastName}`,
                     submittedAt: new Date().toISOString(),
                     source: "Website Lead Magnet",
-                    captchaToken: token,
+                    captchaToken: token || "not_available",
                     attribution: getAttributionData(),
                 }),
             });
 
-            if (!response.ok) throw new Error("Fehler beim Senden.");
+            if (!response.ok) throw new Error(`Fehler beim Senden: ${response.status}`);
 
             setIsSubmitting(false);
             setIsSuccess(true);

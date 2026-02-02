@@ -7,6 +7,9 @@ interface CaptchaContextType {
 
 const CaptchaContext = createContext<CaptchaContextType | null>(null);
 
+// Site Key for reCAPTCHA v2 Invisible
+const RECAPTCHA_SITE_KEY = "6Lcnf1osAAAAAMpZZ4-IwfuM8Gdnf-DNnGGBKcDE";
+
 export const useCaptcha = () => {
     const context = useContext(CaptchaContext);
     if (!context) {
@@ -20,13 +23,22 @@ export const CaptchaProvider: React.FC<{ children: React.ReactNode }> = ({ child
     const [captchaValue, setCaptchaValue] = useState<string | null>(null);
 
     const executeCaptcha = useCallback(async () => {
-        if (!recaptchaRef.current) return null;
+        if (!recaptchaRef.current) {
+            console.warn("reCAPTCHA not ready");
+            return null;
+        }
 
         // If we already have a value, return it
         if (captchaValue) return captchaValue;
 
         try {
-            const token = await recaptchaRef.current.executeAsync();
+            // Add timeout to prevent hanging
+            const timeoutPromise = new Promise<null>((_, reject) =>
+                setTimeout(() => reject(new Error("reCAPTCHA timeout")), 5000)
+            );
+
+            const captchaPromise = recaptchaRef.current.executeAsync();
+            const token = await Promise.race([captchaPromise, timeoutPromise]);
             return token;
         } catch (error) {
             console.error("reCAPTCHA execution failed:", error);
@@ -41,14 +53,12 @@ export const CaptchaProvider: React.FC<{ children: React.ReactNode }> = ({ child
     return (
         <CaptchaContext.Provider value={{ executeCaptcha }}>
             {children}
-            <div className="hidden">
-                <ReCAPTCHA
-                    ref={recaptchaRef}
-                    size="invisible"
-                    sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY || "YOUR_SITE_KEY_MISSING"}
-                    onChange={handleCaptchaChange}
-                />
-            </div>
+            <ReCAPTCHA
+                ref={recaptchaRef}
+                size="invisible"
+                sitekey={RECAPTCHA_SITE_KEY}
+                onChange={handleCaptchaChange}
+            />
         </CaptchaContext.Provider>
     );
 };
