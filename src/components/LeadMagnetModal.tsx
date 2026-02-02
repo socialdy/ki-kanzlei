@@ -136,7 +136,7 @@ export const LeadMagnetModal = ({ isOpen, onOpenChange }: LeadMagnetModalProps) 
 
     return (
         <Dialog open={isOpen} onOpenChange={handleClose}>
-            <DialogContent className="w-[95vw] sm:max-w-[460px] overflow-hidden border-none bg-white p-0 shadow-[0_32px_64px_-24px_rgba(0,0,0,0.15)] rounded-2xl sm:rounded-[32px]">
+            <DialogContent className="w-[95vw] max-w-[460px] max-h-[90vh] overflow-y-auto border-none bg-white p-0 shadow-[0_32px_64px_-24px_rgba(0,0,0,0.15)] rounded-2xl sm:rounded-[32px]">
                 {!isSuccess ? (
                     <div className="relative pt-8">
                         <div className="p-6 sm:p-8 md:p-12 space-y-6 sm:space-y-8">
