@@ -8,6 +8,7 @@ import { VoiceAgentSection } from "@/components/VoiceAgentSection";
 import { AboutUsAerzte } from "@/components/AboutUsAerzte";
 import { ContactForm } from "@/components/ContactForm";
 import { BlogSectionHome } from "@/components/BlogSectionHome";
+import { JobsSectionHome } from "@/components/JobsSectionHome";
 import { FAQAerzte } from "@/components/FAQAerzte";
 import { Footer } from "@/components/Footer";
 import { LeadMagnetModal } from "@/components/LeadMagnetModal";
@@ -39,6 +40,7 @@ const Aerzte = () => {
                 <TestimonialsAerzte />
                 <AboutUsAerzte />
                 <BlogSectionHome />
+                <JobsSectionHome />
                 <ContactForm />
                 <FAQAerzte />
             </main>

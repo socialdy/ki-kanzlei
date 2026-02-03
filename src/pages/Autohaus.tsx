@@ -8,6 +8,7 @@ import { VoiceAgentSection } from "@/components/VoiceAgentSection";
 import { AboutUsAutohaus } from "@/components/AboutUsAutohaus";
 import { ContactForm } from "@/components/ContactForm";
 import { BlogSectionHome } from "@/components/BlogSectionHome";
+import { JobsSectionHome } from "@/components/JobsSectionHome";
 import { FAQAutohaus } from "@/components/FAQAutohaus";
 import { Footer } from "@/components/Footer";
 import { LeadMagnetModal } from "@/components/LeadMagnetModal";
@@ -39,6 +40,7 @@ const Autohaus = () => {
                 <TestimonialsAutohaus />
                 <AboutUsAutohaus />
                 <BlogSectionHome />
+                <JobsSectionHome />
                 <ContactForm />
                 <FAQAutohaus />
             </main>

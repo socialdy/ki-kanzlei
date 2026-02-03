@@ -1,17 +1,34 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { trackLinkClick, trackCtaClick } from "@/lib/analytics";
 
 export const NavigationRecruiting = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+    const location = useLocation();
     const menuItems = [
-        { label: "Engpässe", href: "/ki-loesungen-recruiting#probleme", hasDropdown: false },
-        { label: "Lösungen", href: "/ki-loesungen-recruiting#loesungen", hasDropdown: false },
-        { label: "Über uns", href: "/ki-loesungen-recruiting#ueber-uns", hasDropdown: false },
-        { label: "Success Stories", href: "/ki-loesungen-recruiting#referenzen", hasDropdown: false },
-        { label: "FAQ", href: "/ki-loesungen-recruiting#faq", hasDropdown: false },
+        { label: "Engpässe", href: "/ki-loesungen-recruiting#probleme" },
+        { label: "Lösungen", href: "/ki-loesungen-recruiting#loesungen" },
+        { label: "Über uns", href: "/ki-loesungen-recruiting#ueber-uns" },
+        { label: "Blog", href: "/blog" },
+        { label: "Jobs", href: "/jobs" },
     ];
+
+    const handleNavClick = (href: string, e: React.MouseEvent<HTMLAnchorElement>) => {
+        if (href.includes("#")) {
+            const [path, hash] = href.split("#");
+            if (location.pathname === path) {
+                e.preventDefault();
+                const element = document.getElementById(hash);
+                if (element) {
+                    element.scrollIntoView({ behavior: "smooth", block: "start" });
+                    setIsMenuOpen(false);
+                }
+            }
+        }
+    };
 
     return (
         <div className="fixed top-4 left-0 right-0 z-50 flex justify-center px-4">
@@ -28,23 +45,23 @@ export const NavigationRecruiting = () => {
                             </a>
                         </div>
 
-                        <div className="hidden lg:flex items-center gap-6">
+                        <div className="hidden lg:flex items-center gap-2 xl:gap-8">
                             {menuItems.map((item) => (
-                                <a
+                                <Link
                                     key={item.label}
-                                    href={item.href}
-                                    className="flex items-center gap-1 text-base font-normal text-gray-700 hover:text-gray-900 transition-colors"
+                                    to={item.href}
+                                    onClick={(e: any) => handleNavClick(item.href, e)}
+                                    className="flex items-center gap-1 text-[13px] lg:text-[15px] xl:text-base font-normal text-gray-700 hover:text-gray-900 transition-colors whitespace-nowrap px-1"
                                 >
                                     {item.label}
-                                    {item.hasDropdown && <ChevronDown className="w-4 h-4" />}
-                                </a>
+                                </Link>
                             ))}
                         </div>
 
                         <div className="hidden lg:flex items-center">
-                            <Button size="lg" asChild>
+                            <Button size="lg" asChild onClick={() => trackCtaClick("Kostenloses Analysegespräch", "NavigationRecruiting")}>
                                 <a href="/ki-loesungen-recruiting#contact">
-                                    Analysegespräch buchen
+                                    Kostenloses Analysegespräch
                                 </a>
                             </Button>
                         </div>
@@ -67,16 +84,18 @@ export const NavigationRecruiting = () => {
                                         key={item.label}
                                         href={item.href}
                                         className="flex items-center justify-between px-4 py-3 text-base font-normal text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-xl transition-colors"
-                                        onClick={() => setIsMenuOpen(false)}
+                                        onClick={(e) => {
+                                            handleNavClick(item.href, e);
+                                            setIsMenuOpen(false);
+                                        }}
                                     >
                                         {item.label}
-                                        {item.hasDropdown && <ChevronDown className="w-4 h-4" />}
                                     </a>
                                 ))}
                                 <div className="pt-4 mt-2 border-t border-gray-200">
-                                    <Button size="lg" className="w-full" asChild>
+                                    <Button size="lg" className="w-full" asChild onClick={() => trackCtaClick("Kostenloses Analysegespräch", "NavigationRecruitingMobile")}>
                                         <a href="/ki-loesungen-recruiting#contact">
-                                            Analysegespräch buchen
+                                            Kostenloses Analysegespräch
                                         </a>
                                     </Button>
                                 </div>

@@ -8,6 +8,7 @@ import { VoiceAgentSection } from "@/components/VoiceAgentSection";
 import { AboutUs } from "@/components/AboutUs";
 import { ContactForm } from "@/components/ContactForm";
 import { BlogSectionHome } from "@/components/BlogSectionHome";
+import { JobsSectionHome } from "@/components/JobsSectionHome";
 import { FAQ } from "@/components/FAQ";
 import { Footer } from "@/components/Footer";
 import { LeadMagnetModal } from "@/components/LeadMagnetModal";
@@ -39,6 +40,7 @@ const Index = () => {
         <Testimonials />
         <AboutUs />
         <BlogSectionHome />
+        <JobsSectionHome />
         <ContactForm />
         <FAQ />
       </main>

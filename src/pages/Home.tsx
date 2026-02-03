@@ -11,6 +11,7 @@ import { TestimonialsHome } from "@/components/TestimonialsHome";
 import { ContactForm } from "@/components/ContactForm";
 import { BlogSectionHome } from "@/components/BlogSectionHome";
 import { FAQHome } from "@/components/FAQHome";
+import { JobsSectionHome } from "@/components/JobsSectionHome";
 import { Footer } from "@/components/Footer";
 import { LeadMagnetModal } from "@/components/LeadMagnetModal";
 
@@ -43,6 +44,7 @@ const Home = () => {
         <AboutUs />
         <TestimonialsHome />
         <BlogSectionHome />
+        <JobsSectionHome />
         <ContactForm />
         <FAQHome />
       </main>

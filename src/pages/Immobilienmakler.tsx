@@ -8,6 +8,7 @@ import { VoiceAgentSection } from "@/components/VoiceAgentSection";
 import { AboutUsImmobilien } from "@/components/AboutUsImmobilien";
 import { ContactForm } from "@/components/ContactForm";
 import { BlogSectionHome } from "@/components/BlogSectionHome";
+import { JobsSectionHome } from "@/components/JobsSectionHome";
 import { FAQImmobilien } from "@/components/FAQImmobilien";
 import { Footer } from "@/components/Footer";
 import { LeadMagnetModal } from "@/components/LeadMagnetModal";
@@ -39,6 +40,7 @@ const Immobilienmakler = () => {
                 <TestimonialsImmobilien />
                 <AboutUsImmobilien />
                 <BlogSectionHome />
+                <JobsSectionHome />
                 <ContactForm />
                 <FAQImmobilien />
             </main>

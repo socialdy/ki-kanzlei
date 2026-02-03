@@ -8,6 +8,7 @@ import { VoiceAgentSection } from "@/components/VoiceAgentSection";
 import { AboutUsHausverwaltung } from "@/components/AboutUsHausverwaltung";
 import { ContactForm } from "@/components/ContactForm";
 import { BlogSectionHome } from "@/components/BlogSectionHome";
+import { JobsSectionHome } from "@/components/JobsSectionHome";
 import { FAQHausverwaltung } from "@/components/FAQHausverwaltung";
 import { Footer } from "@/components/Footer";
 import { LeadMagnetModal } from "@/components/LeadMagnetModal";
@@ -39,6 +40,7 @@ const Hausverwaltung = () => {
                 <TestimonialsHausverwaltung />
                 <AboutUsHausverwaltung />
                 <BlogSectionHome />
+                <JobsSectionHome />
                 <ContactForm />
                 <FAQHausverwaltung />
             </main>

@@ -8,6 +8,7 @@ import { VoiceAgentSection } from "@/components/VoiceAgentSection";
 import { AboutUsRechtsanwaelte } from "@/components/AboutUsRechtsanwaelte";
 import { ContactForm } from "@/components/ContactForm";
 import { BlogSectionHome } from "@/components/BlogSectionHome";
+import { JobsSectionHome } from "@/components/JobsSectionHome";
 import { FAQRechtsanwaelte } from "@/components/FAQRechtsanwaelte";
 import { Footer } from "@/components/Footer";
 import { LeadMagnetModal } from "@/components/LeadMagnetModal";
@@ -39,6 +40,7 @@ const Rechtsanwaelte = () => {
                 <TestimonialsRechtsanwaelte />
                 <AboutUsRechtsanwaelte />
                 <BlogSectionHome />
+                <JobsSectionHome />
                 <ContactForm />
                 <FAQRechtsanwaelte />
             </main>

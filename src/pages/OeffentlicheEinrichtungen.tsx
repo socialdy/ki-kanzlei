@@ -7,6 +7,7 @@ import { VoiceAgentSection } from "@/components/VoiceAgentSection";
 import { AboutUsOeffentlich } from "@/components/AboutUsOeffentlich";
 import { ContactForm } from "@/components/ContactForm";
 import { BlogSectionHome } from "@/components/BlogSectionHome";
+import { JobsSectionHome } from "@/components/JobsSectionHome";
 import { FAQOeffentlich } from "@/components/FAQOeffentlich";
 import { Footer } from "@/components/Footer";
 import { LeadMagnetModal } from "@/components/LeadMagnetModal";
@@ -37,6 +38,7 @@ const OeffentlicheEinrichtungen = () => {
                 <VoiceAgentSection />
                 <AboutUsOeffentlich />
                 <BlogSectionHome />
+                <JobsSectionHome />
                 <ContactForm />
                 <FAQOeffentlich />
             </main>

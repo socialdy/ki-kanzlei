@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { NavigationHome } from "@/components/NavigationHome";
 import { Footer } from "@/components/Footer";
-import { BlogPost } from "@/data/blogPosts";
+import type { BlogPost as BlogPostType } from "@/data/blogPosts";
 import { loadBlogPosts, getBlogPostsSync } from "@/data/blogPostsLoader";
 import { Calendar, Clock, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -10,7 +10,7 @@ import { Button } from "@/components/ui/button";
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
-  const [blogPosts, setBlogPosts] = useState<BlogPost[]>(getBlogPostsSync());
+  const [blogPosts, setBlogPosts] = useState<BlogPostType[]>(getBlogPostsSync());
 
   const post = blogPosts.find((p) => p.slug === slug);
 
@@ -85,14 +85,13 @@ const BlogPost = () => {
       <NavigationHome />
       <main className="pt-32 pb-20">
         <div className="container mx-auto px-4 sm:px-6 max-w-4xl">
-          {/* Back Button */}
-          <div className="mb-8 slide-up">
+          {/* Back Link - rechts ausgerichtet */}
+          <div className="flex justify-end mb-10 slide-up">
             <Link
               to="/blog"
-              className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
+              className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
             >
-              <ArrowLeft className="w-4 h-4" />
-              Zurück zum Blog
+              <ArrowLeft className="w-4 h-4" /> Zurück zur Übersicht
             </Link>
           </div>
 

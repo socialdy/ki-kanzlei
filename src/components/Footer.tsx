@@ -110,6 +110,7 @@ export const Footer = () => {
                 </a>
               </li>
               <li><a href="/blog" onClick={() => trackLinkClick("Blog", "Footer")} className="text-primary-foreground/80 hover:text-primary-foreground transition-base">Blog</a></li>
+              <li><a href="/jobs" onClick={() => trackLinkClick("Jobs", "Footer")} className="text-primary-foreground/80 hover:text-primary-foreground transition-base">Jobs</a></li>
               <li>
                 <a
                   href={navLinks.ueberUns}

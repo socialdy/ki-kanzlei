@@ -25,10 +25,14 @@ import Steuerberater from "./pages/Steuerberater";
 import Versicherungsmakler from "./pages/Versicherungsmakler";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
+import Jobs from "./pages/Jobs";
+import VertriebspartnerKI from "./pages/VertriebspartnerKI";
+import N8nExperteKI from "./pages/N8nExperteKI";
 import ReactGA from "react-ga4";
 import { useLocation } from "react-router-dom";
 import { trackEvent, GA_EVENTS, captureAttributionData, initGA, hasAnalyticsConsent } from "./lib/analytics";
 import { CaptchaProvider } from "./components/CaptchaProvider";
+import { ScrollToTop } from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -72,7 +76,9 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
+          <ScrollToTop />
           <AnalyticsTracker />
+          <LocalBusinessSchema />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/ki-loesungen-psychotherapeuten" element={<Index />} />
@@ -91,6 +97,9 @@ const App = () => (
             <Route path="/ki-loesungen-versicherungsmakler" element={<Versicherungsmakler />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
+            <Route path="/jobs" element={<Jobs />} />
+            <Route path="/jobs/vertriebspartner-ki" element={<VertriebspartnerKI />} />
+            <Route path="/jobs/n8n-experte-ki-entwickler" element={<N8nExperteKI />} />
             <Route path="/impressum" element={<Impressum />} />
             <Route path="/datenschutz" element={<Datenschutz />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
@@ -101,6 +110,54 @@ const App = () => (
       </TooltipProvider>
     </CaptchaProvider>
   </QueryClientProvider>
+);
+
+// Geo-Optimization: LocalBusiness Schema
+const LocalBusinessSchema = () => (
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "KI Kanzlei",
+      "image": "https://ki-kanzlei.at/logo.png",
+      "@id": "https://ki-kanzlei.at",
+      "url": "https://ki-kanzlei.at",
+      "telephone": "+436642314676",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rossatzbach 3/2",
+        "addressLocality": "Rossatz",
+        "postalCode": "3602",
+        "addressRegion": "Niederösterreich",
+        "addressCountry": "AT"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 48.3955,
+        "longitude": 15.5234
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      "sameAs": [
+        "https://at.linkedin.com/in/arnold-freissling-95642b256",
+        "https://at.linkedin.com/in/markuswallner-social-media-marketing"
+      ],
+      "areaServed": {
+        "@type": "Country",
+        "name": "Austria"
+      }
+    })}
+  </script>
 );
 
 export default App;

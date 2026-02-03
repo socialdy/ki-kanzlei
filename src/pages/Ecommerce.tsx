@@ -7,6 +7,7 @@ import { VoiceAgentSection } from "@/components/VoiceAgentSection";
 import { AboutUsEcommerce } from "@/components/AboutUsEcommerce";
 import { ContactForm } from "@/components/ContactForm";
 import { BlogSectionHome } from "@/components/BlogSectionHome";
+import { JobsSectionHome } from "@/components/JobsSectionHome";
 import { FAQEcommerce } from "@/components/FAQEcommerce";
 import { Footer } from "@/components/Footer";
 import { LeadMagnetModal } from "@/components/LeadMagnetModal";
@@ -37,6 +38,7 @@ const Ecommerce = () => {
                 <VoiceAgentSection />
                 <AboutUsEcommerce />
                 <BlogSectionHome />
+                <JobsSectionHome />
                 <ContactForm />
                 <FAQEcommerce />
             </main>

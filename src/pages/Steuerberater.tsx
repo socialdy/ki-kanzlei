@@ -8,6 +8,7 @@ import { VoiceAgentSection } from "@/components/VoiceAgentSection";
 import { AboutUsSteuerberater } from "@/components/AboutUsSteuerberater";
 import { ContactForm } from "@/components/ContactForm";
 import { BlogSectionHome } from "@/components/BlogSectionHome";
+import { JobsSectionHome } from "@/components/JobsSectionHome";
 import { FAQSteuerberater } from "@/components/FAQSteuerberater";
 import { Footer } from "@/components/Footer";
 import { LeadMagnetModal } from "@/components/LeadMagnetModal";
@@ -39,6 +40,7 @@ const Steuerberater = () => {
                 <TestimonialsSteuerberater />
                 <AboutUsSteuerberater />
                 <BlogSectionHome />
+                <JobsSectionHome />
                 <ContactForm />
                 <FAQSteuerberater />
             </main>

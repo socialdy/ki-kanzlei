@@ -8,6 +8,7 @@ import { VoiceAgentSection } from "@/components/VoiceAgentSection";
 import { AboutUsHandwerker } from "@/components/AboutUsHandwerker";
 import { ContactForm } from "@/components/ContactForm";
 import { BlogSectionHome } from "@/components/BlogSectionHome";
+import { JobsSectionHome } from "@/components/JobsSectionHome";
 import { FAQHandwerker } from "@/components/FAQHandwerker";
 import { Footer } from "@/components/Footer";
 import { LeadMagnetModal } from "@/components/LeadMagnetModal";
@@ -39,6 +40,7 @@ const Handwerker = () => {
                 <TestimonialsHandwerker />
                 <AboutUsHandwerker />
                 <BlogSectionHome />
+                <JobsSectionHome />
                 <ContactForm />
                 <FAQHandwerker />
             </main>

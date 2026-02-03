@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate, Link } from "react-router-dom";
 import { trackLinkClick, trackCtaClick } from "@/lib/analytics";
 
 export const NavigationHome = () => {
@@ -10,25 +10,30 @@ export const NavigationHome = () => {
   const navigate = useNavigate();
   const isHomePage = location.pathname === "/";
 
-  const handleNavClick = (hash: string, e: React.MouseEvent<HTMLAnchorElement>) => {
-    if (!isHomePage) {
-      e.preventDefault();
-      navigate("/");
-      setTimeout(() => {
-        const section = document.getElementById(hash.replace("#", ""));
+  const handleNavClick = (href: string, e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (href.includes("#")) {
+      const [path, hash] = href.split("#");
+      const cleanHash = hash || path.replace("#", "");
+      const isAnchorOnly = href.startsWith("#");
+      const targetPath = isAnchorOnly ? "/" : path;
+
+      if (location.pathname === targetPath || (location.pathname === "/" && targetPath === "/")) {
+        e.preventDefault();
+        const section = document.getElementById(cleanHash);
         if (section) {
           section.scrollIntoView({ behavior: "smooth", block: "start" });
+          setIsMenuOpen(false);
         }
-      }, 100);
+      }
     }
   };
 
   const menuItems = [
-    { label: "Probleme", href: "#probleme", hasDropdown: false },
-    { label: "Lösungen", href: "#loesungen", hasDropdown: false },
-    { label: "Über uns", href: "#ueber-uns", hasDropdown: false },
-    { label: "Referenzen", href: "#referenzen", hasDropdown: false },
-    { label: "FAQ", href: "#faq", hasDropdown: false },
+    { label: "Probleme", href: "#probleme" },
+    { label: "Lösungen", href: "#loesungen" },
+    { label: "Über uns", href: "#ueber-uns" },
+    { label: "Blog", href: "/blog" },
+    { label: "Jobs", href: "/jobs" },
   ];
 
   return (
@@ -48,34 +53,33 @@ export const NavigationHome = () => {
             </div>
 
             {/* Desktop Menu (show from lg up) */}
-            <div className="hidden lg:flex items-center gap-6">
+            <div className="hidden lg:flex items-center gap-4 xl:gap-6">
               {menuItems.map((item) => (
-                <a
+                <Link
                   key={item.label}
-                  href={item.href}
-                  onClick={(e) => {
+                  to={item.href}
+                  onClick={(e: any) => {
                     trackLinkClick(item.label, "NavigationHome");
                     handleNavClick(item.href, e);
                   }}
-                  className="flex items-center gap-1 text-base font-normal text-gray-700 hover:text-gray-900 transition-colors"
+                  className="flex items-center gap-1 text-[13px] lg:text-[15px] xl:text-base font-normal text-gray-700 hover:text-gray-900 transition-colors whitespace-nowrap px-1"
                 >
                   {item.label}
-                  {item.hasDropdown && <ChevronDown className="w-4 h-4" />}
-                </a>
+                </Link>
               ))}
             </div>
 
             {/* CTA Button (show from lg up) */}
             <div className="hidden lg:flex items-center">
               {isHomePage ? (
-                <Button size="lg" asChild onClick={() => trackCtaClick("Analysegespräch", "NavigationHome")}>
+                <Button size="lg" asChild onClick={() => trackCtaClick("Kostenloses Analysegespräch", "NavigationHome")}>
                   <a href="#contact">Kostenloses Analysegespräch</a>
                 </Button>
               ) : (
                 <Button
                   size="lg"
                   onClick={() => {
-                    trackCtaClick("Analysegespräch", "NavigationHome");
+                    trackCtaClick("Kostenloses Analysegespräch", "NavigationHome");
                     navigate("/");
                     setTimeout(() => {
                       const section = document.getElementById("contact");
@@ -116,19 +120,24 @@ export const NavigationHome = () => {
                     className="flex items-center justify-between px-4 py-3 text-base font-normal text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-xl transition-colors"
                   >
                     {item.label}
-                    {item.hasDropdown && <ChevronDown className="w-4 h-4" />}
                   </a>
                 ))}
                 <div className="pt-4 mt-2 border-t border-gray-200">
                   {isHomePage ? (
                     <Button size="lg" className="w-full" asChild>
-                      <a href="#contact" onClick={() => setIsMenuOpen(false)}>Kostenloses Analysegespräch</a>
+                      <a href="#contact" onClick={() => {
+                        trackCtaClick("Kostenloses Analysegespräch", "NavigationHomeMobile");
+                        setIsMenuOpen(false);
+                      }}>
+                        Kostenloses Analysegespräch
+                      </a>
                     </Button>
                   ) : (
                     <Button
                       size="lg"
                       className="w-full"
                       onClick={() => {
+                        trackCtaClick("Kostenloses Analysegespräch", "NavigationHomeMobile");
                         navigate("/");
                         setTimeout(() => {
                           const section = document.getElementById("contact");

@@ -49,7 +49,6 @@ export const ContactForm = () => {
             frameBorder="0"
             allowFullScreen
             title="Cal.com Scheduling"
-            allowTransparency={true}
           ></iframe>
         </div>
       </div>
