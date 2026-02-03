@@ -10,25 +10,53 @@ declare global {
 export const ContactForm = () => {
   const attribution = getAttributionData();
 
-  // Construct Cal.com URL with prefilled UTM data, forced light theme and transparent background
-  const getCalUrl = () => {
-    const baseUrl = "https://cal.com/ki-kanzlei/kostenloses-analysegesprach";
+  useEffect(() => {
+    (function (C, A, L) {
+      let p = function (a, ar) { a.q.push(ar); };
+      let d = C.document;
+      C.Cal = C.Cal || function () {
+        let cal = C.Cal;
+        let ar = arguments;
+        if (!cal.loaded) {
+          cal.q = cal.q || [];
+          cal.t = +new Date();
+          cal.loaded = true;
+          let s = d.createElement("script");
+          s.src = A;
+          d.head.appendChild(s);
+        }
+        p(cal, ar);
+      };
+    })(window, "https://app.cal.com/embed/embed.js", "Cal");
+
+    window.Cal("init", "kostenloses-analysegesprach", { origin: "https://cal.com" });
+
+    // Prepare UTM and attribution parameters
+    const queryConfig: Record<string, string> = {
+      theme: "light",
+      transparent: "1",
+    };
+
     const utmParams = ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "gclid", "fbclid"];
-    const query = new URLSearchParams();
-
-    // Force light theme and transparency
-    query.set("theme", "light");
-    query.set("transparent", "1");
-
     utmParams.forEach(param => {
       if (attribution[param]) {
-        query.set(param, attribution[param]);
+        queryConfig[param] = attribution[param] as string;
       }
     });
 
-    const queryString = query.toString();
-    return queryString ? `${baseUrl}?${queryString}` : baseUrl;
-  };
+    window.Cal("inline", {
+      elementOrSelector: "#my-cal-inline",
+      config: queryConfig,
+      calLink: "ki-kanzlei/kostenloses-analysegesprach",
+    });
+
+    window.Cal("ui", {
+      theme: "light",
+      styles: { branding: { brandColor: "#3B82F6" } },
+      hideEventTypeDetails: false,
+      layout: "month_view"
+    });
+  }, [attribution]);
 
   return (
     <section id="contact" className="section-spacing">
@@ -42,14 +70,8 @@ export const ContactForm = () => {
           </p>
         </div>
 
-        <div className="w-full slide-up">
-          <iframe
-            src={getCalUrl()}
-            className="cal-iframe"
-            frameBorder="0"
-            allowFullScreen
-            title="Terminbuchung"
-          ></iframe>
+        <div className="w-full slide-up min-h-[600px]">
+          <div id="my-cal-inline" style={{ width: "100%", height: "auto" }}></div>
         </div>
       </div>
     </section>

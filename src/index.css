@@ -293,21 +293,4 @@ All colors MUST be HSL.
     }
   }
 
-  @media (max-width: 768px) {
-    .cal-iframe {
-      width: 100%;
-      min-height: 1200px;
-      height: 1200px;
-      border: none;
-    }
-  }
-
-  @media (min-width: 769px) {
-    .cal-iframe {
-      width: 100%;
-      min-height: 850px;
-      height: 850px;
-      border: none;
-    }
-  }
 }
