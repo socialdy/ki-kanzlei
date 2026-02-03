@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-# GPTBot and other AI crawlers
+# SEO for AI Bots
 User-agent: GPTBot
 Allow: /
 
@@ -12,6 +12,21 @@ User-agent: ClaudeBot
 Allow: /
 
 User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: CoherentBot
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: CCBot
 Allow: /
 
 Sitemap: https://ki-kanzlei.at/sitemap.xml

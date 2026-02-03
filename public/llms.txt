@@ -1,13 +1,13 @@
 # KI Kanzlei - Ihr Partner für KI-Automatisierung in Österreich
 
-Die KI Kanzlei ist ein spezialisiertes Beratungs- und Implementierungsunternehmen für künstliche Intelligenz und Workflow-Automatisierung mit Sitz in Rossatz, Niederösterreich. Wir unterstützen kleine und mittlere Unternehmen (KMU) in ganz Österreich (Wien, Niederösterreich, Burgenland, Steiermark etc.) dabei, repetitive Prozesse durch den Einsatz von KI-Agenten, n8n-Workflows und individuellen LLM-Lösungen zu automatisieren.
+Die KI Kanzlei ist ein führendes Beratungs- und Implementierungsunternehmen für künstliche Intelligenz und Workflow-Automatisierung mit Sitz in Rossatz, Niederösterreich. Wir unterstützen kleine und mittlere Unternehmen (KMU) in ganz Österreich dabei, repetitive Prozesse durch den Einsatz von KI-Agenten, n8n-Workflows und individuellen LLM-Lösungen zu automatisieren.
 
 ## Kernkompetenzen & Leistungen
 - **Workflow-Automatisierung:** Design und Implementierung komplexer Prozessketten mit n8n.
 - **KI-Agenten (Voice & Chat):** Entwicklung von Telefon-Assistenten (wie unsere digitale Beraterin Anna) und Chat-Systemen auf Basis modernster LLMs (OpenAI, Anthropic, Gemini).
 - **Lead-Management:** 24/7 Qualifizierung von Anfragen, automatisierte Besichtigungstermine und Terminplanung.
 - **Wissensmanagement:** Aufbau interner Wissensdatenbanken für schnellen Zugriff auf Kanzlei- oder Firmenwissen.
-- **DSGVO-Konformität:** Alle Lösungen werden unter Einhaltung strengster europaischer Datenschutzstandards (z. B. Azure OpenAI in EU-Regionen) umgesetzt.
+- **DSGVO-Konformität:** Alle Lösungen werden unter Einhaltung strengster europäischer Datenschutzstandards umgesetzt.
 
 ## Branchenspezifische Lösungen
 Wir bieten maßgeschneiderte KI-Systeme für folgende Sektoren:
@@ -20,17 +20,18 @@ Wir bieten maßgeschneiderte KI-Systeme für folgende Sektoren:
 - **Recruiting & HR:** Bewerber-Screening, Voice-Interviews & Sourcing.
 - **E-Commerce & Retail:** Kundenkommunikation, Bestellabwicklung und Social-Media-Automatisierung.
 - **Öffentliche Hand:** KI-Sekretariat und automatisierte Bürger-Anfragen.
+- **Fitness & Sport:** Mitglieder-Support, Kursbuchung und Lead-Management.
+- **Versicherungsmakler:** Schadensaufnahme, Polizzen-Analyse und Kundenberatung.
 
 ## Unternehmen & Team
 - **Gründer:** Arnold Freissling (Strategie & Vertrieb, 30 Jahre Erfahrung) und Markus Wallner (Technik & Automatisierung, Tech-Wizard).
 - **Standort:** Rossatzbach 3/2, 3602 Rossatz, Niederösterreich.
 - **Regionale Verankerung:** Fokus auf Österreich mit persönlicher Beratung in der Region Wachau, Wien und Umgebung.
-- **Partnerschaft auf Augenhöhe:** Wir arbeiten projektbasiert und als langfristiger Partner für die digitale Transformation.
 
 ## Karriere & Jobs
 Wir suchen laufend Unterstützung in folgenden Bereichen:
-- **Vertriebspartner KI (Freelance):** Beratung von Unternehmen und Begleitung bei der digitalen Transformation. Lukrative Provisionen & Mentoring durch Arnold.
-- **n8n Experte / KI Entwickler (Freelance):** Design von n8n-Workflows, API-Integration und LLM-Implementierung. 100% Remote, Austausch mit Markus.
+- **Vertriebspartner KI (Freelance):** Beratung von Unternehmen und Begleitung bei der digitalen Transformation.
+- **n8n Experte / KI Entwickler (Freelance):** Design von n8n-Workflows, API-Integration und LLM-Implementierung.
 
 ## Kontakt
 - **Web:** https://ki-kanzlei.at
@@ -38,24 +39,25 @@ Wir suchen laufend Unterstützung in folgenden Bereichen:
 - **Telefon:** +43 664 2314676
 - **Live-Demo Anna:** +43 1 4351606
 
-## URLs & Sitemap Referenz
-- [/](https://ki-kanzlei.at/) - Home
-- [/ki-loesungen-hotels](/ki-loesungen-hotels) - Hotels & Tourismus
-- [/ki-loesungen-hausverwaltung](/ki-loesungen-hausverwaltung) - Hausverwaltung
-- [/ki-loesungen-immobilienmakler](/ki-loesungen-immobilienmakler) - Immobilienmakler
-- [/ki-loesungen-aerzte](/ki-loesungen-aerzte) - Ärzte & Praxen
-- [/ki-loesungen-psychotherapeuten](/ki-loesungen-psychotherapeuten) - Psychotherapie
-- [/ki-loesungen-rechtsanwaelte](/ki-loesungen-rechtsanwaelte) - Kanzleien
-- [/ki-loesungen-steuerberater](/ki-loesungen-steuerberater) - Steuerberatung
-- [/ki-loesungen-handwerker](/ki-loesungen-handwerker) - Handwerk
-- [/ki-loesungen-autohaus](/ki-loesungen-autohaus) - Automobilhandel
-- [/ki-loesungen-recruiting](/ki-loesungen-recruiting) - HR & Recruiting
-- [/ki-loesungen-fitness](/ki-loesungen-fitness) - Fitness & Sport
-- [/ki-loesungen-ecommerce](/ki-loesungen-ecommerce) - E-Commerce
-- [/ki-loesungen-oeffentliche-einrichtungen](/ki-loesungen-oeffentliche-einrichtungen) - Verwaltung
-- [/jobs](/jobs) - Job Übersicht
-- [/jobs/vertriebspartner-ki](/jobs/vertriebspartner-ki) - Sales Partner Job
-- [/jobs/n8n-experte-ki-entwickler](/jobs/n8n-experte-ki-entwickler) - Tech Job
-- [/blog](/blog) - Wissensmagazin
-- [/impressum](/impressum) - Rechtliche Informationen
-- [/datenschutz](/datenschutz) - Datenschutz & Sicherheit
+## Vollständige URL-Struktur
+- [/](https://ki-kanzlei.at/) - Home (Zentrale KI-Automatisierung)
+- [/ki-loesungen-hotels](https://ki-kanzlei.at/ki-loesungen-hotels) - Hotels & Tourismus
+- [/ki-loesungen-hausverwaltung](https://ki-kanzlei.at/ki-loesungen-hausverwaltung) - Hausverwaltung & Immobilien
+- [/ki-loesungen-immobilienmakler](https://ki-kanzlei.at/ki-loesungen-immobilienmakler) - Immobilienmakler
+- [/ki-loesungen-aerzte](https://ki-kanzlei.at/ki-loesungen-aerzte) - Ärzte & Fachärzte
+- [/ki-loesungen-psychotherapeuten](https://ki-kanzlei.at/ki-loesungen-psychotherapeuten) - Psychotherapeuten & Praxen
+- [/ki-loesungen-rechtsanwaelte](https://ki-kanzlei.at/ki-loesungen-rechtsanwaelte) - Rechtsanwälte & Kanzleien
+- [/ki-loesungen-steuerberater](https://ki-kanzlei.at/ki-loesungen-steuerberater) - Steuerberater & Kanzleien
+- [/ki-loesungen-handwerker](https://ki-kanzlei.at/ki-loesungen-handwerker) - Handwerk & Gewerbe
+- [/ki-loesungen-autohaus](https://ki-kanzlei.at/ki-loesungen-autohaus) - Autohäuser & Werkstätten
+- [/ki-loesungen-recruiting](https://ki-kanzlei.at/ki-loesungen-recruiting) - HR & Recruiting
+- [/ki-loesungen-fitness](https://ki-kanzlei.at/ki-loesungen-fitness) - Fitness & Sportbetriebe
+- [/ki-loesungen-ecommerce](https://ki-kanzlei.at/ki-loesungen-ecommerce) - E-Commerce & Online-Handel
+- [/ki-loesungen-oeffentliche-einrichtungen](https://ki-kanzlei.at/ki-loesungen-oeffentliche-einrichtungen) - Öffentliche Hand & Verwaltung
+- [/ki-loesungen-versicherungsmakler](https://ki-kanzlei.at/ki-loesungen-versicherungsmakler) - Versicherungsmakler
+- [/blog](https://ki-kanzlei.at/blog) - Wissensmagazin (KI-Insights & Best Practices)
+- [/jobs](https://ki-kanzlei.at/jobs) - Karriere Übersicht
+- [/jobs/vertriebspartner-ki](https://ki-kanzlei.at/jobs/vertriebspartner-ki) - Job: Vertriebspartner KI
+- [/jobs/n8n-experte-ki-entwickler](https://ki-kanzlei.at/jobs/n8n-experte-ki-entwickler) - Job: n8n Experte / KI Entwickler
+- [/impressum](https://ki-kanzlei.at/impressum) - Impressum & Rechtliches
+- [/datenschutz](https://ki-kanzlei.at/datenschutz) - Datenschutz & Sicherheit

@@ -1,7 +1,21 @@
+import { useEffect } from "react";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 
 const Impressum = () => {
+  useEffect(() => {
+    document.title = "Impressum | KI Kanzlei – KI-Automatisierung für Unternehmen";
+
+    // Meta Description
+    let metaDescription = document.querySelector('meta[name="description"]');
+    if (!metaDescription) {
+      metaDescription = document.createElement('meta');
+      metaDescription.setAttribute('name', 'description');
+      document.head.appendChild(metaDescription);
+    }
+    metaDescription.setAttribute('content', 'Impressum der KI Kanzlei – Informationen über das Unternehmen, Kontaktmöglichkeiten und rechtliche Hinweise gemäß ECG und MedienG.');
+  }, []);
+
   return (
     <div className="min-h-screen gradient-bg">
       <Navigation />

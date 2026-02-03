@@ -10,6 +10,16 @@ import { Link } from "react-router-dom";
 const Jobs = () => {
     useEffect(() => {
         document.title = "Karriere bei der KI Kanzlei – Jobs in Österreich & Remote";
+
+        // Meta Description
+        let metaDescription = document.querySelector('meta[name="description"]');
+        if (!metaDescription) {
+            metaDescription = document.createElement('meta');
+            metaDescription.setAttribute('name', 'description');
+            document.head.appendChild(metaDescription);
+        }
+        metaDescription.setAttribute('content', 'Karriere bei der KI Kanzlei. Entdecken Sie spannende Freelance-Möglichkeiten im Bereich KI-Vertrieb und n8n-Entwicklung. Arbeiten Sie an der Zukunft der Automatisierung.');
+
         window.scrollTo(0, 0);
     }, []);
 

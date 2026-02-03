@@ -10,7 +10,24 @@ const NotFound = () => {
 
   useEffect(() => {
     document.title = "404 - Seite nicht gefunden | KI Kanzlei";
+
+    // Prevent indexing of 404 page
+    let robotsMeta = document.querySelector('meta[name="robots"]');
+    if (!robotsMeta) {
+      robotsMeta = document.createElement('meta');
+      robotsMeta.setAttribute('name', 'robots');
+      document.head.appendChild(robotsMeta);
+    }
+    robotsMeta.setAttribute('content', 'noindex');
+
     console.error("404 Error: User attempted to access non-existent route:", location.pathname);
+
+    return () => {
+      // Clean up robots meta on unmount to avoid affecting other pages
+      if (robotsMeta) {
+        robotsMeta.setAttribute('content', 'index, follow');
+      }
+    };
   }, [location.pathname]);
 
   return (
@@ -43,7 +60,7 @@ const NotFound = () => {
             {/* Description */}
             <div className="slide-up">
               <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
-                Die Seite, die Sie suchen, existiert leider nicht. 
+                Die Seite, die Sie suchen, existiert leider nicht.
                 Möglicherweise wurde sie verschoben oder die URL ist falsch eingegeben.
               </p>
             </div>
@@ -56,8 +73,8 @@ const NotFound = () => {
                   Zur Startseite
                 </a>
               </Button>
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 variant="outline"
                 onClick={() => window.history.back()}
               >
@@ -72,22 +89,22 @@ const NotFound = () => {
                 Vielleicht suchen Sie nach:
               </p>
               <div className="flex flex-wrap justify-center gap-4">
-                <a 
-                  href="/ki-loesungen-psychotherapeuten" 
+                <a
+                  href="/ki-loesungen-psychotherapeuten"
                   className="text-primary hover:text-primary/80 transition-colors text-sm font-medium"
                 >
                   KI-Lösungen für Psychotherapeuten
                 </a>
                 <span className="text-muted-foreground">•</span>
-                <a 
-                  href="/ki-loesungen-hotels" 
+                <a
+                  href="/ki-loesungen-hotels"
                   className="text-primary hover:text-primary/80 transition-colors text-sm font-medium"
                 >
                   KI-Lösungen für Hotels
                 </a>
                 <span className="text-muted-foreground">•</span>
-                <a 
-                  href="/#contact" 
+                <a
+                  href="/#contact"
                   className="text-primary hover:text-primary/80 transition-colors text-sm font-medium"
                 >
                   Kontakt

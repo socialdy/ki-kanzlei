@@ -1,7 +1,21 @@
+import { useEffect } from "react";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 
 const Datenschutz = () => {
+  useEffect(() => {
+    document.title = "Datenschutz | KI Kanzlei – KI-Automatisierung für Unternehmen";
+
+    // Meta Description
+    let metaDescription = document.querySelector('meta[name="description"]');
+    if (!metaDescription) {
+      metaDescription = document.createElement('meta');
+      metaDescription.setAttribute('name', 'description');
+      document.head.appendChild(metaDescription);
+    }
+    metaDescription.setAttribute('content', 'Datenschutzerklärung der KI Kanzlei. Erfahren Sie, wie wir Ihre Daten schützen und welche Rechte Sie gemäß DSGVO haben, insbesondere beim Einsatz von KI-Technologien.');
+  }, []);
+
   return (
     <div className="min-h-screen gradient-bg">
       <Navigation />
