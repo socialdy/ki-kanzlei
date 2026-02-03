@@ -2,25 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ki-kanzlei.at/</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-02-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://ki-kanzlei.at/ki-loesungen-psychotherapeuten</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-02-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://ki-kanzlei.at/ki-loesungen-hotels</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-02-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ki-kanzlei.at/blog</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-02-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -159,6 +159,12 @@
   <url>
     <loc>https://ki-kanzlei.at/blog/24-7-erreichbarkeit-ki-telefonassistenten-fur-osterreichs-kmu</loc>
     <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ki-kanzlei.at/blog/ki-im-forderungsmanagement-liquiditat-fur-osterreichs-kmu-sichern</loc>
+    <lastmod>2026-02-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
