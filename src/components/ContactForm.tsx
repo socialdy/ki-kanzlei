@@ -10,56 +10,25 @@ declare global {
 export const ContactForm = () => {
   const attribution = getAttributionData();
 
-  useEffect(() => {
-    // Cal.com initialization snippet
-    (function (C, A, L) {
-      let p = function (a, ar) { a.q.push(ar); };
-      let d = C.document;
-      C.Cal = C.Cal || function () {
-        let cal = C.Cal;
-        let ar = arguments;
-        if (!cal.loaded) {
-          cal.q = cal.q || [];
-          cal.t = +new Date();
-          cal.loaded = true;
-          let s = d.createElement("script");
-          s.src = A;
-          d.head.appendChild(s);
-        }
-        p(cal, ar);
-      };
-    })(window, "https://app.cal.com/embed/embed.js", "Cal");
-
-    // Initialize Cal with default namespace
-    window.Cal("init", { origin: "https://cal.com" });
-
-    // Prepare UTM and attribution parameters
-    const queryConfig: Record<string, string> = {
-      theme: "light",
-      transparent: "1",
-    };
-
+  // Construct Cal.com URL with prefilled UTM data, forced light theme and transparent background
+  const getCalUrl = () => {
+    const baseUrl = "https://cal.com/ki-kanzlei/kostenloses-analysegesprach";
     const utmParams = ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "gclid", "fbclid"];
+    const query = new URLSearchParams();
+
+    // Force light theme and transparency
+    query.set("theme", "light");
+    query.set("transparent", "1");
+
     utmParams.forEach(param => {
       if (attribution[param]) {
-        queryConfig[param] = attribution[param] as string;
+        query.set(param, attribution[param]);
       }
     });
 
-    // Inline embed configuration
-    window.Cal("inline", {
-      elementOrSelector: "#my-cal-inline",
-      config: queryConfig,
-      calLink: "ki-kanzlei/kostenloses-analysegesprach",
-    });
-
-    window.Cal("ui", {
-      theme: "light",
-      styles: { branding: { brandColor: "#3B82F6" } },
-      hideEventTypeDetails: false,
-      layout: "month_view"
-    });
-  }, [attribution]);
+    const queryString = query.toString();
+    return queryString ? `${baseUrl}?${queryString}` : baseUrl;
+  };
 
   return (
     <section id="contact" className="section-spacing">
@@ -74,7 +43,13 @@ export const ContactForm = () => {
         </div>
 
         <div className="w-full slide-up">
-          <div id="my-cal-inline" style={{ width: "100%", height: "auto" }}></div>
+          <iframe
+            src={getCalUrl()}
+            className="cal-iframe"
+            frameBorder="0"
+            allowFullScreen
+            title="Terminbuchung"
+          ></iframe>
         </div>
       </div>
     </section>

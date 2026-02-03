@@ -293,4 +293,24 @@ All colors MUST be HSL.
     }
   }
 
+  /* Cal.com Iframe Styling */
+  .cal-iframe {
+    width: 100%;
+    border: none;
+    overflow: hidden;
+  }
+
+  @media (max-width: 768px) {
+    .cal-iframe {
+      min-height: 1800px;
+      height: 1800px;
+    }
+  }
+
+  @media (min-width: 769px) {
+    .cal-iframe {
+      min-height: 850px;
+      height: 850px;
+    }
+  }
 }
