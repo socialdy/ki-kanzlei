@@ -11,6 +11,7 @@ const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
   const [blogPosts, setBlogPosts] = useState<BlogPostType[]>(getBlogPostsSync());
+  const [isLoading, setIsLoading] = useState(true);
 
   const post = blogPosts.find((p) => p.slug === slug);
 
@@ -29,6 +30,7 @@ const BlogPost = () => {
       });
 
       setBlogPosts(mergedPosts);
+      setIsLoading(false);
     });
   }, []);
 
@@ -59,6 +61,23 @@ const BlogPost = () => {
   };
 
   const currentPost = blogPosts.find((p) => p.slug === slug);
+
+  if (isLoading && !currentPost) {
+    return (
+      <div className="min-h-screen gradient-bg">
+        <NavigationHome />
+        <main className="pt-32 pb-20">
+          <div className="container mx-auto px-4 max-w-4xl text-center">
+            <div className="animate-pulse flex flex-col items-center space-y-4">
+              <div className="h-8 bg-primary/10 w-64 rounded-xl"></div>
+              <div className="h-4 bg-primary/5 w-48 rounded-lg"></div>
+            </div>
+          </div>
+        </main>
+        <Footer />
+      </div>
+    );
+  }
 
   if (!currentPost) {
     return (
