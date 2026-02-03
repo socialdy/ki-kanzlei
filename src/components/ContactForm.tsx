@@ -11,6 +11,7 @@ export const ContactForm = () => {
   const attribution = getAttributionData();
 
   useEffect(() => {
+    // Cal.com initialization snippet
     (function (C, A, L) {
       let p = function (a, ar) { a.q.push(ar); };
       let d = C.document;
@@ -29,7 +30,8 @@ export const ContactForm = () => {
       };
     })(window, "https://app.cal.com/embed/embed.js", "Cal");
 
-    window.Cal("init", "kostenloses-analysegesprach", { origin: "https://cal.com" });
+    // Initialize Cal with default namespace
+    window.Cal("init", { origin: "https://cal.com" });
 
     // Prepare UTM and attribution parameters
     const queryConfig: Record<string, string> = {
@@ -44,6 +46,7 @@ export const ContactForm = () => {
       }
     });
 
+    // Inline embed configuration
     window.Cal("inline", {
       elementOrSelector: "#my-cal-inline",
       config: queryConfig,
@@ -70,7 +73,7 @@ export const ContactForm = () => {
           </p>
         </div>
 
-        <div className="w-full slide-up min-h-[600px]">
+        <div className="w-full slide-up">
           <div id="my-cal-inline" style={{ width: "100%", height: "auto" }}></div>
         </div>
       </div>
