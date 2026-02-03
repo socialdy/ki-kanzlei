@@ -293,18 +293,21 @@ All colors MUST be HSL.
     }
   }
 
-  /* Cal.com Responsive Heights */
   @media (max-width: 768px) {
-    iframe[title="Terminbuchung"] {
-      height: 800px !important;
-      min-height: 700px !important;
+    .cal-iframe {
+      width: 100%;
+      min-height: 1200px;
+      height: 1200px;
+      border: none;
     }
   }
 
   @media (min-width: 769px) {
-    iframe[title="Terminbuchung"] {
-      height: 700px !important;
-      min-height: 600px !important;
+    .cal-iframe {
+      width: 100%;
+      min-height: 850px;
+      height: 850px;
+      border: none;
     }
   }
 }

@@ -42,13 +42,13 @@ export const ContactForm = () => {
           </p>
         </div>
 
-        <div className="w-full slide-up overflow-hidden">
+        <div className="w-full slide-up">
           <iframe
             src={getCalUrl()}
-            style={{ width: "100%", minHeight: "850px" }}
+            className="cal-iframe"
             frameBorder="0"
             allowFullScreen
-            title="Cal.com Scheduling"
+            title="Terminbuchung"
           ></iframe>
         </div>
       </div>
