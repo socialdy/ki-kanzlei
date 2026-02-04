@@ -56,6 +56,7 @@ export const CaptchaProvider: React.FC<{ children: React.ReactNode }> = ({ child
             <ReCAPTCHA
                 ref={recaptchaRef}
                 size="invisible"
+                badge="bottomleft"
                 sitekey={RECAPTCHA_SITE_KEY}
                 onChange={handleCaptchaChange}
             />

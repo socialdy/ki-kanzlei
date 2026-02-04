@@ -52,6 +52,7 @@ const Datenschutz = () => {
                     <li>Kontaktseite auf Website,</li>
                     <li>Daten im Zuge der Vorbereitung des Erstgespräches</li>
                     <li>Newsletter</li>
+                    <li>Live-Chat (Chatwoot)</li>
                   </ul>
 
                   <p className="text-gray-600 leading-relaxed">
@@ -188,6 +189,14 @@ const Datenschutz = () => {
                       <p className="text-sm text-gray-600">Rechtsgrundlage der Datenverarbeitung: Vertragliche Notwendigkeit (Art 6 Abs 1 lit b DSGVO)</p>
                       <p className="text-sm text-gray-600">Geschäftssitz: Österreich</p>
                       <p className="text-sm text-gray-600">Sichere Übermittlung in ein Drittland: Innerhalb der EU</p>
+                    </div>
+
+                    <div className="bg-gray-50 rounded-lg p-4">
+                      <h3 className="font-semibold text-gray-900 mb-2">Empfänger Daten: Chatwoot Inc.</h3>
+                      <p className="text-sm text-gray-600">Zweck der Datenverarbeitung: Bereitstellung einer Live-Chat-Funktionalität zur Kundenbetreuung</p>
+                      <p className="text-sm text-gray-600">Rechtsgrundlage der Datenverarbeitung: Einwilligung (Art 6 Abs 1 lit a DSGVO) oder Überwiegend berechtigtes Interesse (Art 6 Abs 1 lit f DSGVO)</p>
+                      <p className="text-sm text-gray-600">Geschäftssitz: USA</p>
+                      <p className="text-sm text-gray-600">Sichere Übermittlung in ein Drittland: Chatwoot nutzt Standardvertragsklauseln (SCCs) und ist Teil des EU-US Data Privacy Frameworks.</p>
                     </div>
                   </div>
                 </div>
@@ -444,6 +453,30 @@ const Datenschutz = () => {
                   </p>
                   <p className="text-gray-600 leading-relaxed">
                     <strong>Speicherdauer:</strong> Wir nutzen die "Zero Retention"-Einstellung. Ihre Audiodaten werden nach der Verarbeitung nicht dauerhaft gespeichert und unmittelbar gelöscht. Zudem nutzen wir Funktionen zur PII-Minimierung (Zero-PII-Retention), um den Schutz Ihrer personenbezogenen Daten zu maximieren.
+                  </p>
+                </div>
+              </div>
+
+              <div id="chatwoot" className="max-w-3xl mx-auto">
+                <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                  XII. Einsatz von Chatwoot (Live-Chat)
+                </h2>
+
+                <div className="text-left space-y-4 pt-8 border-t border-gray-100">
+                  <p className="text-gray-600 leading-relaxed">
+                    Wir nutzen auf unserer Webseite den Live-Chat-Dienst von Chatwoot Inc. (USA), um Ihnen eine direkte Kommunikation mit uns zu ermöglichen. Wenn Sie den Chat nutzen, werden die von Ihnen eingegebenen Daten (Name, E-Mail-Adresse, Chat-Inhalt) sowie technische Daten (IP-Adresse, Browsertyp) verarbeitet.
+                  </p>
+                  <p className="text-gray-600 leading-relaxed">
+                    <strong>Rechtsgrundlage:</strong> Die Verarbeitung erfolgt auf Basis Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) oder unseres berechtigten Interesses an einer effizienten Kundenbetreuung (Art. 6 Abs. 1 lit. f DSGVO).
+                  </p>
+                  <p className="text-gray-600 leading-relaxed">
+                    <strong>Drittlandübermittlung:</strong> Die Daten werden in den USA verarbeitet. Die Absicherung erfolgt über Standardvertragsklauseln sowie die Zertifizierung unter dem EU-US Data Privacy Framework.
+                  </p>
+                  <p className="text-gray-600 leading-relaxed">
+                    <strong>Anbieter:</strong> Chatwoot Inc., USA.
+                  </p>
+                  <p className="text-gray-600 leading-relaxed">
+                    <strong>Speicherdauer:</strong> Wir speichern diese Daten für die Dauer der Bearbeitung Ihrer Anfrage bzw. gemäß den gesetzlichen Aufbewahrungspflichten.
                   </p>
                 </div>
               </div>
