@@ -12,6 +12,7 @@ export const GA_EVENTS = {
     CTA_CLICK: "cta_click",
     EXTERNAL_LINK_CLICK: "external_link_click",
     PAGE_VIEW: "page_view",
+    LINK_CLICK: "link_click",
 } as const;
 
 const GA_MEASUREMENT_ID = import.meta.env.VITE_GA_MEASUREMENT_ID;
@@ -80,9 +81,8 @@ export const updateGAConsent = (granted: boolean) => {
  */
 export const trackEvent = ({ action, category, label, value, ...rest }: TrackEventProps) => {
     try {
-        ReactGA.event({
+        ReactGA.event(action, {
             category: category || "engagement",
-            action,
             label,
             value,
             ...rest,
@@ -122,7 +122,7 @@ export const trackCtaClick = (buttonName: string, location: string) => {
  */
 export const trackLinkClick = (label: string, location: string) => {
     trackEvent({
-        action: "link_click",
+        action: GA_EVENTS.LINK_CLICK,
         category: "navigation",
         label,
         location,

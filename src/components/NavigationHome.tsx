@@ -11,26 +11,30 @@ export const NavigationHome = () => {
   const isHomePage = location.pathname === "/";
 
   const handleNavClick = (href: string, e: React.MouseEvent<HTMLAnchorElement>) => {
-    if (href.includes("#")) {
-      const [path, hash] = href.split("#");
-      const cleanHash = hash || path.replace("#", "");
-      const isAnchorOnly = href.startsWith("#");
-      const targetPath = isAnchorOnly ? "/" : path;
+    if (href.startsWith("#")) {
+      // Anchor-only link (e.g., #probleme)
+      const hash = href.substring(1);
 
-      if (location.pathname === targetPath || (location.pathname === "/" && targetPath === "/")) {
+      if (location.pathname === "/") {
+        // Already on home page, scroll to section
         e.preventDefault();
-        const section = document.getElementById(cleanHash);
+        const section = document.getElementById(hash);
         if (section) {
           section.scrollIntoView({ behavior: "smooth", block: "start" });
           setIsMenuOpen(false);
         }
+      } else {
+        // Not on home page, navigate to home with anchor
+        e.preventDefault();
+        navigate("/" + href);
+        setIsMenuOpen(false);
       }
     }
   };
 
   const menuItems = [
     { label: "Probleme", href: "#probleme" },
-    { label: "Lösungen", href: "#loesungen" },
+    { label: "Branchen", href: "#branchen" },
     { label: "Über uns", href: "#ueber-uns" },
     { label: "Blog", href: "/blog" },
     { label: "Jobs", href: "/jobs" },

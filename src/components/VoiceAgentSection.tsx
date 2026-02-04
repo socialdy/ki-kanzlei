@@ -3,7 +3,7 @@ import { Phone, ArrowRight } from "lucide-react";
 
 export const VoiceAgentSection = () => {
     return (
-        <section className="section-spacing overflow-hidden bg-white/50 backdrop-blur-sm relative">
+        <section id="loesungen" className="section-spacing overflow-hidden bg-white/50 backdrop-blur-sm relative">
             <div className="container px-4 mx-auto relative z-10">
                 <div className="flex flex-col items-center text-center mb-12 lg:mb-16">
                     <div className="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-6 slide-up">
