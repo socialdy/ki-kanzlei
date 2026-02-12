@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Instagram, Facebook } from "lucide-react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { trackLinkClick } from "@/lib/analytics";
 
@@ -181,6 +181,42 @@ export const Footer = () => {
                 <span>Rossatzbach 3/2, 3602 Rossatz</span>
               </li>
             </ul>
+
+            {/* Social Media */}
+            <div className="mt-6">
+              <div className="flex gap-4">
+                <a
+                  href="https://at.linkedin.com/company/ki-kanzlei-at"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => trackLinkClick("LinkedIn", "Footer")}
+                  className="text-primary-foreground/80 hover:text-primary-foreground transition-base"
+                  aria-label="LinkedIn"
+                >
+                  <Linkedin className="w-5 h-5" />
+                </a>
+                <a
+                  href="https://www.instagram.com/kikanzlei"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => trackLinkClick("Instagram", "Footer")}
+                  className="text-primary-foreground/80 hover:text-primary-foreground transition-base"
+                  aria-label="Instagram"
+                >
+                  <Instagram className="w-5 h-5" />
+                </a>
+                <a
+                  href="https://www.facebook.com/people/KI-Kanzlei-KI-Automatisierung-f%C3%BCr-Unternehmen/61587854979745/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => trackLinkClick("Facebook", "Footer")}
+                  className="text-primary-foreground/80 hover:text-primary-foreground transition-base"
+                  aria-label="Facebook"
+                >
+                  <Facebook className="w-5 h-5" />
+                </a>
+              </div>
+            </div>
           </div>
         </div>
 
