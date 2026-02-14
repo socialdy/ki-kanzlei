@@ -6,7 +6,7 @@ const useCases = [
         title: "KI-Serviceannahme (24/7 Voice)",
         description: "Vollautomatisierte Annahme für Ihre Werkstatt. Erfasst Kundenwünsche für Service, Pickerl oder Reifenwechsel und bucht diese direkt in Ihr Planungssystem – menschlich, kompetent und ohne Warteschleife.",
         tools: [
-            { name: "ElevenLabs", logo: "/img/techstack/eleven_labs.png" },
+            { name: "Fonio.ai", logo: "/img/techstack/fonio.png" },
             { name: "Gemini Live", logo: "/img/techstack/gemini.png" },
             { name: "Twilio", logo: "/img/techstack/twilio.png" },
         ],

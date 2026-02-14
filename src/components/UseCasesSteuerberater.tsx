@@ -15,7 +15,7 @@ const useCases = [
         title: "24/7 KI-Klienten-Sekretariat",
         description: "Ihr digitaler Mitarbeiter für Anfragen zu Fristen, Belegen oder Terminvereinbarungen. Der Voice-Agent beantwortet Standardfragen sofort und entlastet Ihr Team massiv.",
         tools: [
-            { name: "ElevenLabs", logo: "/img/techstack/eleven_labs.png" },
+            { name: "Fonio.ai", logo: "/img/techstack/fonio.png" },
             { name: "Gemini Live", logo: "/img/techstack/gemini.png" },
             { name: "Twilio", logo: "/img/techstack/twilio.png" },
         ],

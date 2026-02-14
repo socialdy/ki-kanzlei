@@ -6,7 +6,7 @@ const useCases = [
         title: "KI-Bewerber-Interview (Voice)",
         description: "Führt automatisierte Erstgespräche mit Bewerbern direkt nach der Bewerbung. Fragt Verfügbarkeit, Gehaltsvorstellung und Kündigungsfrist ab – 24/7 und absolut professionell.",
         tools: [
-            { name: "ElevenLabs", logo: "/img/techstack/eleven_labs.png" },
+            { name: "Fonio.ai", logo: "/img/techstack/fonio.png" },
             { name: "Gemini Live", logo: "/img/techstack/gemini.png" },
             { name: "Twilio", logo: "/img/techstack/twilio.png" },
         ],

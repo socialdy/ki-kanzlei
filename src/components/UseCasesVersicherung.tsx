@@ -15,7 +15,7 @@ const useCases = [
         title: "KI-Notfall-Hotline (24/7)",
         description: "Lassen Sie Ihre Kunden im Schadensfall nie allein. Der Voice-Agent nimmt Schadensmeldungen rund um die Uhr auf, fragt Details ab und beruhigt Kunden in Stresssituationen.",
         tools: [
-            { name: "ElevenLabs", logo: "/img/techstack/eleven_labs.png" },
+            { name: "Fonio.ai", logo: "/img/techstack/fonio.png" },
             { name: "Gemini Live", logo: "/img/techstack/gemini.png" },
             { name: "Twilio", logo: "/img/techstack/twilio.png" },
         ],

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { NavigationHome } from "@/components/NavigationHome";
 import { Footer } from "@/components/Footer";
-import { BlogPost, blogCategories } from "@/data/blogPosts";
+import { BlogPost, blogCategories, blogPosts as staticBlogPosts } from "@/data/blogPosts";
 import { loadBlogPosts, getBlogPostsSync } from "@/data/blogPostsLoader";
 import { Calendar, Clock, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -13,7 +13,7 @@ const Blog = () => {
 
   useEffect(() => {
     document.title = "Blog | KI Kanzlei";
-    
+
     let metaDescription = document.querySelector('meta[name="description"]');
     if (!metaDescription) {
       metaDescription = document.createElement('meta');
@@ -23,15 +23,21 @@ const Blog = () => {
     metaDescription.setAttribute('content', 'KI-Insights, Best Practices und Case Studies rund um KI-Automatisierung für Unternehmen. Bleiben Sie auf dem Laufenden mit KI Kanzlei.');
 
     // Lade CMS-Daten asynchron
-    loadBlogPosts().then(setBlogPosts);
+    loadBlogPosts().then((posts) => {
+      // Sort by date (newest first)
+      const sortedPosts = [...posts].sort((a, b) =>
+        new Date(b.date).getTime() - new Date(a.date).getTime()
+      );
+      setBlogPosts(sortedPosts);
+    });
   }, []);
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
-    return date.toLocaleDateString('de-DE', { 
-      year: 'numeric', 
-      month: 'long', 
-      day: 'numeric' 
+    return date.toLocaleDateString('de-DE', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
     });
   };
 
@@ -65,11 +71,10 @@ const Blog = () => {
             <div className="flex flex-wrap gap-3 justify-center">
               <button
                 onClick={() => setSelectedCategory(null)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-base ${
-                  selectedCategory === null
-                    ? 'bg-primary text-primary-foreground'
-                    : 'bg-card border border-border text-muted-foreground hover:bg-primary/10 hover:text-primary'
-                }`}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-base ${selectedCategory === null
+                  ? 'bg-primary text-primary-foreground'
+                  : 'bg-card border border-border text-muted-foreground hover:bg-primary/10 hover:text-primary'
+                  }`}
               >
                 Alle Kategorien
               </button>
@@ -77,11 +82,10 @@ const Blog = () => {
                 <button
                   key={category}
                   onClick={() => setSelectedCategory(category)}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-base ${
-                    selectedCategory === category
-                      ? 'bg-primary text-primary-foreground'
-                      : 'bg-card border border-border text-muted-foreground hover:bg-primary/10 hover:text-primary'
-                  }`}
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-base ${selectedCategory === category
+                    ? 'bg-primary text-primary-foreground'
+                    : 'bg-card border border-border text-muted-foreground hover:bg-primary/10 hover:text-primary'
+                    }`}
                 >
                   {category}
                 </button>
@@ -109,7 +113,7 @@ const Blog = () => {
                         />
                       </div>
                     )}
-                    
+
                     {/* Content */}
                     <div className="p-6">
                       {/* Category */}

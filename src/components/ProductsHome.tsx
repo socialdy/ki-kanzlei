@@ -60,7 +60,7 @@ const generalProducts = [
         setup: "€3.180 inkl. USt.",
         monthly: "Variabel",
         icon: Phone,
-        tech: ["Elevenlabs", "Gemini Live API", "Twilio", "Calendar"],
+        tech: ["Fonio.ai", "Gemini Live API", "Twilio", "Calendar"],
     },
     {
         title: "KI Multi-Channel Automatisierung",

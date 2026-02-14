@@ -6,7 +6,7 @@ const useCases = [
         title: "KI-Empfangs-Assistent (24/7)",
         description: "Nimmt alle Anrufe entgegen, auch wenn alle Leitungen besetzt sind. Bucht Termine direkt in Ihr Praxissystem, gibt Infos zu Öffnungszeiten und entlastet Ihre Assistenten – menschlich und kompetent.",
         tools: [
-            { name: "ElevenLabs", logo: "/img/techstack/eleven_labs.png" },
+            { name: "Fonio.ai", logo: "/img/techstack/fonio.png" },
             { name: "Gemini Live", logo: "/img/techstack/gemini.png" },
             { name: "Twilio", logo: "/img/techstack/twilio.png" },
         ],

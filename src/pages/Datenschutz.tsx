@@ -112,11 +112,11 @@ const Datenschutz = () => {
                     </div>
 
                     <div className="bg-gray-50 rounded-lg p-4">
-                      <h3 className="font-semibold text-gray-900 mb-2">Empfänger Daten: ElevenLabs Inc.</h3>
+                      <h3 className="font-semibold text-gray-900 mb-2">Empfänger Daten: fonio.ai GmbH</h3>
                       <p className="text-sm text-gray-600">Zweck der Datenverarbeitung: Erbringung von KI-Sprachdiensten (Text-to-Speech, Speech-to-Text), Voice-Agent-Funktionalität und Datenverarbeitung gemäß Data Processing Addendum (DPA).</p>
                       <p className="text-sm text-gray-600">Rechtsgrundlage der Datenverarbeitung: Einwilligung (Art 6 Abs 1 lit a DSGVO); Auftragsverarbeitervertrag (DPA) nach Art 28 DSGVO.</p>
-                      <p className="text-sm text-gray-600">Geschäftssitz: 169 Madison Ave #2484, New York, NY, 10016, USA</p>
-                      <p className="text-sm text-gray-600">Sichere Übermittlung in ein Drittland: ElevenLabs nutzt Standardvertragsklauseln (SCCs) und ist Teil des EU-US Data Privacy Frameworks.</p>
+                      <p className="text-sm text-gray-600">Geschäftssitz: Österreich</p>
+                      <p className="text-sm text-gray-600">Serverstandort: Hetzner, Nürnberg (DE) – Innerhalb der EU, DSGVO-konform.</p>
                     </div>
 
                     <div className="bg-gray-50 rounded-lg p-4">
@@ -438,21 +438,24 @@ const Datenschutz = () => {
                 </h2>
 
                 <div className="text-left space-y-4 pt-8 border-t border-gray-100">
-                  <h3 className="text-xl font-semibold text-gray-900">Einsatz von ElevenLabs (Voice Agents)</h3>
+                  <h3 className="text-xl font-semibold text-gray-900">Einsatz von fonio.ai (Voice Agents)</h3>
                   <p className="text-gray-600 leading-relaxed">
-                    Wir nutzen auf unserer Webseite die Dienste von Eleven Labs Inc. (USA), um interaktive Voice-Agenten bereitzustellen. Hierbei werden Ihre Spracheingaben verarbeitet, um eine Antwort zu generieren.
+                    Wir nutzen auf unserer Webseite die Dienste der fonio.ai GmbH (Österreich), um interaktive KI-Telefonassistenten bereitzustellen. Hierbei werden Ihre Spracheingaben verarbeitet, um eine Antwort zu generieren.
                   </p>
                   <p className="text-gray-600 leading-relaxed">
                     <strong>Rechtsgrundlage:</strong> Ihre Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO, die Sie vor Beginn der Interaktion erteilen.
                   </p>
                   <p className="text-gray-600 leading-relaxed">
-                    <strong>Drittlandübermittlung:</strong> Die Daten werden in den USA verarbeitet. Die Absicherung erfolgt über das EU-US Data Privacy Framework sowie Standardvertragsklauseln.
+                    <strong>Serverstandort:</strong> Die Infrastruktur wird bei Hetzner in Nürnberg (DE) gehostet. Sämtliche Datenverarbeitung findet innerhalb der EU statt – eine Drittlandübermittlung ist nicht erforderlich.
                   </p>
                   <p className="text-gray-600 leading-relaxed">
-                    <strong>Anbieter:</strong> Eleven Labs Inc., 169 Madison Ave #2484, New York, NY, 10016, USA (Zusätzlicher EU-Standort: Eleven Labs Poland sp. z o.o., Lipska 27/22 Street, 03-908, Warschau, Polen).
+                    <strong>LLM-Partner:</strong> Die KI-Sprachdienste basieren auf Large Language Models (LLMs), insbesondere OpenAI. Um die DSGVO- und EU AI Act-Konformität sicherzustellen, werden diese über Microsoft Azure-Server in Europa betrieben.
                   </p>
                   <p className="text-gray-600 leading-relaxed">
-                    <strong>Speicherdauer:</strong> Wir nutzen die "Zero Retention"-Einstellung. Ihre Audiodaten werden nach der Verarbeitung nicht dauerhaft gespeichert und unmittelbar gelöscht. Zudem nutzen wir Funktionen zur PII-Minimierung (Zero-PII-Retention), um den Schutz Ihrer personenbezogenen Daten zu maximieren.
+                    <strong>Anbieter:</strong> fonio.ai GmbH, Österreich.
+                  </p>
+                  <p className="text-gray-600 leading-relaxed">
+                    <strong>Speicherdauer:</strong> fonio.ai speichert ausschließlich die absolut notwendigen Daten und kann auf Wunsch alle Daten in Echtzeit löschen.
                   </p>
                 </div>
               </div>

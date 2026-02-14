@@ -15,7 +15,7 @@ const useCases = [
         title: "KI-Mandats-Sekretariat (24/7)",
         description: "Verpassen Sie keinen Klienten mehr. Der Voice-Agent nimmt Anrufe entgegen, qualifiziert den Rechtsfall vor und bucht Erstberatungstermine DSGVO-konform direkt in Ihren Kalender.",
         tools: [
-            { name: "ElevenLabs", logo: "/img/techstack/eleven_labs.png" },
+            { name: "Fonio.ai", logo: "/img/techstack/fonio.png" },
             { name: "Gemini Live", logo: "/img/techstack/gemini.png" },
             { name: "Twilio", logo: "/img/techstack/twilio.png" },
         ],

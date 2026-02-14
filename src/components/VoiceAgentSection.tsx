@@ -21,7 +21,7 @@ export const VoiceAgentSection = () => {
                 </div>
 
                 <div className="relative flex flex-col items-center justify-center py-10">
-                    {/* ElevenLabs Style Animation */}
+                    {/* Fonio.ai Style Animation */}
                     <div className="relative w-48 h-48 md:w-64 md:h-64 flex items-center justify-center">
                         {/* Outer Waves */}
                         <div className="absolute inset-0 rounded-full bg-primary/5 animate-ping opacity-20"></div>

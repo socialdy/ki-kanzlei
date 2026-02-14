@@ -145,7 +145,7 @@ const BlogPost = () => {
                   <img
                     src={currentPost.image}
                     alt={currentPost.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain"
                   />
                 </div>
               )}

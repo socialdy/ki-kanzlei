@@ -25,14 +25,19 @@ export async function loadBlogPosts(): Promise<typeof staticBlogPosts> {
   try {
     // Versuche CMS-Daten zu laden (von n8n generiert)
     const response = await fetch('/data/blogPosts.json');
-    
+
     if (response.ok) {
       const cmsData: CMSBlogResponse = await response.json();
       const mappedPosts = mapCMSResponseToBlogPosts(cmsData);
-      
+
       if (mappedPosts.length > 0) {
-        cachedBlogPosts = mappedPosts;
-        return mappedPosts;
+        // Merge: CMS-Posts + statische Posts (ohne Duplikate nach slug)
+        const cmsSlugs = new Set(mappedPosts.map(p => p.slug));
+        const uniqueStaticPosts = staticBlogPosts.filter(p => !cmsSlugs.has(p.slug));
+        const mergedPosts = [...mappedPosts, ...uniqueStaticPosts]
+          .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+        cachedBlogPosts = mergedPosts;
+        return mergedPosts;
       }
     }
   } catch (error) {

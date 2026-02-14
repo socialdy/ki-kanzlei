@@ -6,7 +6,7 @@ const useCases = [
         title: "KI-Büroassistent (24/7 Voice)",
         description: "Nimmt alle Anrufe entgegen, während Sie auf der Baustelle sind. Erkennt Notfälle, prüft Verfügbarkeiten und bucht Besichtigungstermine direkt in Ihren Kalender.",
         tools: [
-            { name: "ElevenLabs", logo: "/img/techstack/eleven_labs.png" },
+            { name: "Fonio.ai", logo: "/img/techstack/fonio.png" },
             { name: "Gemini Live", logo: "/img/techstack/gemini.png" },
             { name: "Twilio", logo: "/img/techstack/twilio.png" },
         ],

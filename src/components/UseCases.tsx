@@ -7,7 +7,7 @@ const useCases = [
     description: "Beantwortet Anrufe 24/7 auf Deutsch oder Englisch, qualifiziert Klienten und bucht Termine automatisch in Freudio über n8n.",
     tools: [
       { name: "LiveKit", logo: "/img/techstack/livekit.png" },
-      { name: "ElevenLabs", logo: "/img/techstack/eleven_labs.png" },
+      { name: "Fonio.ai", logo: "/img/techstack/fonio.png" },
       { name: "n8n", logo: "/img/techstack/n8n.webp" },
       { name: "Freudio", logo: "/img/techstack/freudio.svg" }
     ],
@@ -93,23 +93,23 @@ export const UseCases = () => {
                 <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-base">
                   <Icon className="w-6 h-6 text-primary" />
                 </div>
-                
+
                 <h3 className="text-lg font-bold mb-3">{useCase.title}</h3>
                 <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
                   {useCase.description}
                 </p>
-                
-                        <div className="flex flex-wrap gap-3 mb-3">
-                          {useCase.tools.map((tool) => (
-                            <div key={tool.name} className="flex items-center gap-2 px-2 py-2 bg-white/50 rounded-lg border border-gray-200/50">
-                              <img
-                                src={tool.logo}
-                                alt={tool.name}
-                                className="h-8 w-8 object-contain [image-rendering:crisp-edges]"
-                              />
-                            </div>
-                          ))}
-                        </div>
+
+                <div className="flex flex-wrap gap-3 mb-3">
+                  {useCase.tools.map((tool) => (
+                    <div key={tool.name} className="flex items-center gap-2 px-2 py-2 bg-white/50 rounded-lg border border-gray-200/50">
+                      <img
+                        src={tool.logo}
+                        alt={tool.name}
+                        className="h-8 w-8 object-contain [image-rendering:crisp-edges]"
+                      />
+                    </div>
+                  ))}
+                </div>
               </div>
             );
           })}

@@ -16,7 +16,7 @@ const useCases = [
         title: "KI-Anrufassistent zur Vorqualifizierung",
         description: "Schluss mit Besichtigungstourismus. Der KI-Voice-Agent qualifiziert Interessenten am Telefon vor: Finanzierungscheck, Suchprofil und Dringlichkeit. Nur 'echte' Käufer erhalten einen Besichtigungstermin.",
         tools: [
-            { name: "ElevenLabs", logo: "/img/techstack/eleven_labs.png" },
+            { name: "Fonio.ai", logo: "/img/techstack/fonio.png" },
             { name: "Gemini Live", logo: "/img/techstack/gemini.png" },
             { name: "Twilio", logo: "/img/techstack/twilio.png" },
         ],

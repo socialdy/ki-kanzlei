@@ -6,7 +6,7 @@ const useCases = [
         title: "KI-Studioassistent (24/7 Voice)",
         description: "Nimmt alle Anrufe entgegen, qualifiziert Interessenten vor und bucht Probetrainings direkt in Ihren Kursplaner oder Trainer-Kalender – rund um die Uhr, ohne Warteschleife.",
         tools: [
-            { name: "ElevenLabs", logo: "/img/techstack/eleven_labs.png" },
+            { name: "Fonio.ai", logo: "/img/techstack/fonio.png" },
             { name: "Gemini Live", logo: "/img/techstack/gemini.png" },
             { name: "Twilio", logo: "/img/techstack/twilio.png" },
         ],

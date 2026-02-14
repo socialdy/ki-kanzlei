@@ -9,7 +9,7 @@ const useCases = [
       { name: "Twilio", logo: "/img/techstack/twilio.png" },
       { name: "n8n", logo: "/img/techstack/n8n.webp" },
       { name: "LiveKit", logo: "/img/techstack/livekit.png" },
-      { name: "ElevenLabs", logo: "/img/techstack/eleven_labs.png" },
+      { name: "Fonio.ai", logo: "/img/techstack/fonio.png" },
       { name: "Azure AI", logo: "/img/techstack/azureai.png" },
     ],
   },

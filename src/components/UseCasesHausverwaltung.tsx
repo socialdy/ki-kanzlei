@@ -6,7 +6,7 @@ const useCases = [
         title: "KI-Anrufassistent",
         description: "DSGVO-konforme 24/7-Anrufannahme speziell für Hausverwaltungen. Beantwortet Fragen zu Hausordnungen, nimmt Schadensmeldungen auf und koordiniert Besichtigungstermine vollautomatisch.",
         tools: [
-            { name: "ElevenLabs", logo: "/img/techstack/eleven_labs.png" },
+            { name: "Fonio.ai", logo: "/img/techstack/fonio.png" },
             { name: "Gemini", logo: "/img/techstack/gemini.png" },
             { name: "Twilio", logo: "/img/techstack/twilio.png" },
         ],
