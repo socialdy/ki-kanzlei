@@ -17,7 +17,7 @@ const Handwerker = () => {
     const [isLeadModalOpen, setIsLeadModalOpen] = useState(false);
 
     useEffect(() => {
-        document.title = "KI Lösungen für Handwerker | KI Kanzlei Österreich";
+        document.title = "KI im Handwerk – Lösungen für Betriebe | KI Kanzlei";
 
         // Meta Description
         let metaDescription = document.querySelector('meta[name="description"]');
@@ -26,7 +26,7 @@ const Handwerker = () => {
             metaDescription.setAttribute('name', 'description');
             document.head.appendChild(metaDescription);
         }
-        metaDescription.setAttribute('content', 'Smarte KI Lösungen für Handwerker & Meisterbetriebe in Österreich. 24/7 Notfall-Telefon, Terminbuchung & Büro-Entlastung. Gewinnen Sie mehr Zeit für die Baustelle.');
+        metaDescription.setAttribute('content', 'KI für Handwerksbetriebe: Automatisierte Angebotserstellung, Terminplanung & Kundenkommunikation. Weniger Büro, mehr Handwerk. Jetzt kostenlos beraten lassen!');
     }, []);
 
     return (

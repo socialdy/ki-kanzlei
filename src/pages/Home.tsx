@@ -28,7 +28,7 @@ const Home = () => {
       metaDescription.setAttribute('name', 'description');
       document.head.appendChild(metaDescription);
     }
-    metaDescription.setAttribute('content', 'KI Kanzlei: Ihr österreichischer Partner für KI-Automatisierung. Wir implementieren KI-Lösungen für Unternehmen – von Wissensdatenbanken über Workflow-Automatisierung bis hin zu KI-Agenten. DSGVO-konform, in 30 Tagen einsatzbereit. Kostenloses Analysegespräch!');
+    metaDescription.setAttribute('content', 'KI Kanzlei: Ihr österreichischer Partner für KI-Automatisierung. Von Wissensdatenbanken bis KI-Agenten – DSGVO-konform & einsatzbereit in 30 Tagen. Jetzt beraten lassen!');
   }, []);
 
   return (

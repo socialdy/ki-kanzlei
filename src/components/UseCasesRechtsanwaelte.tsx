@@ -3,8 +3,8 @@ import { PhoneCall, Database, MessageSquare, UserCheck, Share2, Search } from "l
 const useCases = [
     {
         icon: Database,
-        title: "Digitales Akten-Gehirn (RAG)",
-        description: "Analysieren Sie tausende Seiten in Sekunden. Stellen Sie komplexe Fragen an Ihre Akten und erhalten Sie präzise Antworten inklusive Quellenbelegen aus Ihren Dokumenten – 100% lokal & sicher.",
+        title: "Akten durchsuchen mit KI",
+        description: "Stellen Sie Fragen an Ihre Akten und bekommen Sie in Sekunden die richtige Stelle – mit Quellenangabe. Egal ob 50 oder 5.000 Seiten. Läuft komplett lokal und sicher.",
         tools: [
             { name: "Private RAG", logo: "/img/techstack/supabase.jpg" },
             { name: "Smart Query", logo: "/img/techstack/gemini.png" },
@@ -12,8 +12,8 @@ const useCases = [
     },
     {
         icon: PhoneCall,
-        title: "KI-Mandats-Sekretariat (24/7)",
-        description: "Verpassen Sie keinen Klienten mehr. Der Voice-Agent nimmt Anrufe entgegen, qualifiziert den Rechtsfall vor und bucht Erstberatungstermine DSGVO-konform direkt in Ihren Kalender.",
+        title: "KI-Sekretariat – rund um die Uhr",
+        description: "Kein Anruf geht mehr verloren. Der KI-Assistent nimmt Anrufe entgegen, stellt die richtigen Fragen und bucht Erstberatungstermine direkt in Ihren Kalender.",
         tools: [
             { name: "Fonio.ai", logo: "/img/techstack/fonio.png" },
             { name: "Gemini Live", logo: "/img/techstack/gemini.png" },
@@ -22,8 +22,8 @@ const useCases = [
     },
     {
         icon: UserCheck,
-        title: "Mandats-Vorqualifizierung",
-        description: "Automatisierte Erstprüfung von Anfragen. Die KI filtert nach Fachgebiet, Streitwert und Erfolgsaussichten vor, damit Sie nur die Mandate bearbeiten, die für Ihre Kanzlei relevant sind.",
+        title: "Anfragen automatisch vorfiltern",
+        description: "Die KI prüft neue Anfragen nach Fachgebiet und Relevanz, bevor Sie sich damit befassen. So bearbeiten Sie nur die Fälle, die wirklich zu Ihrer Kanzlei passen.",
         tools: [
             { name: "Voice UI", logo: "/img/techstack/livekit.png" },
             { name: "n8n Workflow", logo: "/img/techstack/n8n.webp" },
@@ -31,8 +31,8 @@ const useCases = [
     },
     {
         icon: Search,
-        title: "Smart Archive Search",
-        description: "Finden Sie Präzedenzfälle und interne Schriftsätze in Sekunden. Die KI versteht juristische Zusammenhänge und findet nicht nur Wörter, sondern Konzepte in Ihrem Kanzlei-Archiv.",
+        title: "Archiv-Suche, die mitdenkt",
+        description: "Präzedenzfälle und alte Schriftsätze in Sekunden finden. Die KI versteht Zusammenhänge und findet nicht nur Wörter, sondern was Sie wirklich suchen.",
         tools: [
             { name: "Vector Search", logo: "/img/techstack/supabase.jpg" },
             { name: "Azure AI", logo: "/img/techstack/azureai.png" },
@@ -40,8 +40,8 @@ const useCases = [
     },
     {
         icon: MessageSquare,
-        title: "Multi-Channel Response Agent",
-        description: "Sofortreaktion auf Anfragen via Mail oder Kontaktformular. Die KI versendet Erstinfos, Vollmachtsformulare und Terminvorschläge automatisch – Tag und Nacht.",
+        title: "Anfragen automatisch beantworten",
+        description: "Auf E-Mails und Kontaktformulare sofort reagieren – mit Erstinfos, Vollmachtsformularen und Terminvorschlägen. Automatisch, aber persönlich.",
         tools: [
             { name: "n8n", logo: "/img/techstack/n8n.webp" },
             { name: "Azure AI", logo: "/img/techstack/azureai.png" },
@@ -49,8 +49,8 @@ const useCases = [
     },
     {
         icon: Share2,
-        title: "Dokumenten-Assistenz",
-        description: "Diktieren Sie kurze Aktenvermerke oder Schriftsatz-Entwürfe per Sprachnachricht. Die KI erstellt daraus strukturierte Texte in Ihrem Kanzlei-Stil zur finalen Durchsicht.",
+        title: "Diktieren statt tippen",
+        description: "Sprechen Sie Aktenvermerke oder Entwürfe einfach ein. Die KI macht daraus fertige Texte in Ihrem Kanzlei-Stil – Sie schauen nur noch drüber.",
         tools: [
             { name: "Voice Entry", logo: "/img/techstack/n8n.webp" },
             { name: "Custom GPT", logo: "/img/techstack/gemini.png" },
@@ -64,10 +64,10 @@ export const UseCasesRechtsanwaelte = () => {
             <div className="container mx-auto px-4 max-w-7xl">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-                        Intelligenz für Ihre Kanzlei
+                        Das bauen wir für Ihre Kanzlei
                     </h2>
                     <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                        Wir transformieren Ihre juristische Arbeit mit KI-Systemen, die Recherchezeit halbieren und die Mandantenbetreuung professionalisieren.
+                        Weniger Verwaltung, mehr Zeit für die eigentliche Arbeit. Hier sind die Lösungen, die im Kanzleialltag wirklich etwas bringen.
                     </p>
                 </div>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

@@ -67,7 +67,7 @@ export const UseCasesFitness = () => {
                         Moderne Systeme für Ihr Studio
                     </h2>
                     <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                        Wir transformieren Ihr Fitnessmanagement mit intelligenter KI, die das Wachstum beschleunigt und Ihre Mitglieder begeistert.
+                        Weniger Verwaltung, mehr Zeit für Ihre Mitglieder. Hier sind die Lösungen, die im Studioalltag wirklich etwas bringen.
                     </p>
                 </div>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

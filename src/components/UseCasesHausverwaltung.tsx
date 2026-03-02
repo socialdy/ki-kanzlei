@@ -70,7 +70,7 @@ export const UseCasesHausverwaltung = () => {
                         Wo wir ansetzten
                     </h2>
                     <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                        Wir transformieren Ihre Verwaltungsprozesse mit produktionsreifen KI-Agenten, die Zeit sparen und Ihre Servicequalität für Mieter und Eigentümer nachhaltig steigern.
+                        Weniger Verwaltungsaufwand, schnellere Reaktionszeiten. Hier sind die Lösungen, die Ihren Alltag spürbar entlasten.
                     </p>
                 </div>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

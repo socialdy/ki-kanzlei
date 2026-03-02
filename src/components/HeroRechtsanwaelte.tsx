@@ -20,7 +20,7 @@ export const HeroRechtsanwaelte = ({ onCtaClick }: HeroRechtsanwaelteProps) => {
                         KI Lösungen für <span className="text-primary">Rechtsanwälte</span>
                     </h1>
                     <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto slide-up">
-                        Vom digitalen Akten-Gehirn bis zur automatisierten Mandats-Vorqualifizierung: Wir bauen DSGVO-konforme KI-Lösungen, die Ihre Kanzlei effizienter machen.
+                        Akten durchsuchen, Anfragen vorqualifizieren, Termine buchen – das kann auch eine KI. Wir bauen Ihnen Lösungen, die den Kanzleialltag spürbar entlasten. DSGVO-konform und praxistauglich.
                     </p>
                     <div className="flex flex-col sm:flex-row justify-center items-center gap-4 slide-up">
                         <Button

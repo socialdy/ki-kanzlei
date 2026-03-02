@@ -16,7 +16,7 @@ const Ecommerce = () => {
     const [isLeadModalOpen, setIsLeadModalOpen] = useState(false);
 
     useEffect(() => {
-        document.title = "KI Lösungen für E-Commerce & Retail | KI Kanzlei Österreich";
+        document.title = "KI im E-Commerce & Online-Handel | KI Kanzlei Österreich";
 
         // Meta Description
         let metaDescription = document.querySelector('meta[name="description"]');
@@ -25,7 +25,7 @@ const Ecommerce = () => {
             metaDescription.setAttribute('name', 'description');
             document.head.appendChild(metaDescription);
         }
-        metaDescription.setAttribute('content', 'Profitablere KI Lösungen für E-Commerce & Retail. Automatisieren Sie Kundensupport, Bestellabwicklung & Content-Erstellung hocheffizient und DSGVO-konform.');
+        metaDescription.setAttribute('content', 'KI für E-Commerce: Produktempfehlungen, Kundenservice-Chatbots & Lagerverwaltung automatisieren. Mehr Umsatz, weniger Retouren. Jetzt anfragen!');
     }, []);
 
     return (

@@ -11,9 +11,12 @@ const JobSales = () => {
         document.title = "Vertriebspartner KI (Freelance) – Karriere bei KI Kanzlei Österreich";
 
         let metaDescription = document.querySelector('meta[name="description"]');
-        if (metaDescription) {
-            metaDescription.setAttribute('content', 'Werden Sie Vertriebspartner für KI-Lösungen in Österreich. Begleiten Sie Unternehmen in Niederösterreich & Wien bei der digitalen Transformation. Lukrative Provisionen & Mentoring durch Arnold Freissling.');
+        if (!metaDescription) {
+            metaDescription = document.createElement('meta');
+            metaDescription.setAttribute('name', 'description');
+            document.head.appendChild(metaDescription);
         }
+        metaDescription.setAttribute('content', 'Werden Sie Vertriebspartner für KI-Lösungen in Österreich. 100% Remote, lukrative Provisionen & Mentoring. Begleiten Sie Unternehmen bei der KI-Automatisierung.');
         window.scrollTo(0, 0);
     }, []);
 

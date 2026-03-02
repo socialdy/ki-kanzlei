@@ -132,7 +132,7 @@ const Jobs = () => {
                             </p>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+                        <div className="grid md:grid-cols-3 gap-12 max-w-5xl mx-auto">
                             {/* Arnold */}
                             <div className="group text-center">
                                 <div className="relative mb-8 inline-block">
@@ -184,6 +184,33 @@ const Jobs = () => {
                                 <div className="text-primary font-semibold mb-3">Technik & Automatisierung</div>
                                 <p className="text-muted-foreground text-sm leading-relaxed max-w-sm mx-auto">
                                     Markus ist für die technische Umsetzung zuständig. Er unterstützt dich bei allen Fragen rund um n8n und hilft dir, komplexe Prozesse stabil zu bauen.
+                                </p>
+                            </div>
+
+                            {/* Yasmin */}
+                            <div className="group text-center">
+                                <div className="relative mb-8 inline-block">
+                                    <div className="w-48 h-48 md:w-56 md:h-56 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center mx-auto border-4 border-card shadow-lg group-hover:shadow-xl transition-all overflow-hidden">
+                                        <img
+                                            src="/img/team/yasmin_berndorfer.png"
+                                            alt="Yasmin Berndorfer"
+                                            className="w-full h-full object-cover object-top rounded-full"
+                                        />
+                                    </div>
+                                    <a
+                                        href="https://www.linkedin.com/in/yasmin-berndorfer-984084281/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="absolute bottom-2 right-6 w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all hover:scale-110 shadow-lg"
+                                        aria-label="LinkedIn"
+                                    >
+                                        <Linkedin className="w-5 h-5" />
+                                    </a>
+                                </div>
+                                <h3 className="text-xl font-bold mb-1">Yasmin Berndorfer</h3>
+                                <div className="text-primary font-semibold mb-3">Head of Sales</div>
+                                <p className="text-muted-foreground text-sm leading-relaxed max-w-sm mx-auto">
+                                    Bringt jahrelange Vertriebserfahrung mit und sorgt dafür, dass unsere Lösungen bei den richtigen Unternehmen ankommen – überzeugend, strukturiert und mit echtem Gespür für Menschen.
                                 </p>
                             </div>
                         </div>

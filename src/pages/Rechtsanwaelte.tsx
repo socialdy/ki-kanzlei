@@ -17,7 +17,7 @@ const Rechtsanwaelte = () => {
     const [isLeadModalOpen, setIsLeadModalOpen] = useState(false);
 
     useEffect(() => {
-        document.title = "KI Lösungen für Rechtsanwälte & Notare | KI Kanzlei Österreich";
+        document.title = "KI für Rechtsanwälte & Notare | KI Kanzlei";
 
         // Meta Description
         let metaDescription = document.querySelector('meta[name="description"]');
@@ -26,7 +26,7 @@ const Rechtsanwaelte = () => {
             metaDescription.setAttribute('name', 'description');
             document.head.appendChild(metaDescription);
         }
-        metaDescription.setAttribute('content', 'DSGVO-konforme KI Lösungen für Rechtsanwälte & Notare. Automatisieren Sie Mandats-Vorqualifizierung, Recherche & Terminmanagement für Ihre Kanzlei.');
+        metaDescription.setAttribute('content', 'DSGVO-konforme KI für Anwaltskanzleien: Rechtsrecherche, Dokumentenanalyse & Mandatsverwaltung automatisieren. 40% weniger Routineaufgaben. Jetzt anfragen!');
     }, []);
 
     return (

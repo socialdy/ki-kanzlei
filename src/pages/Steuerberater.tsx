@@ -26,7 +26,7 @@ const Steuerberater = () => {
             metaDescription.setAttribute('name', 'description');
             document.head.appendChild(metaDescription);
         }
-        metaDescription.setAttribute('content', 'Revolutionieren Sie Ihre Steuerberatungskanzlei mit KI. Automatisierte BMD/DATEV-Vorerfassung, 24/7 Klienten-Support & DSGVO-konforme Workflows.');
+        metaDescription.setAttribute('content', 'KI für Steuerberater: Mandantenanfragen, Belegverarbeitung & Routineprozesse automatisieren. Mehr Zeit für Beratung statt Verwaltung. Jetzt Demo anfordern!');
     }, []);
 
     return (

@@ -16,7 +16,7 @@ export const AboutUsFitness = () => {
                 </div>
 
                 <div className="mb-20">
-                    <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                    <div className="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto">
                         <div className="group text-center slide-up">
                             <div className="relative mb-8 inline-block">
                                 <div className="w-56 h-56 md:w-64 md:h-64 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center mx-auto border-4 border-card shadow-lg group-hover:shadow-xl transition-base overflow-hidden">
@@ -66,7 +66,33 @@ export const AboutUsFitness = () => {
                                 Spezialist für n8n und Prozessautomatisierung. Entwickelt die technischen Lösungen und implementiert sie System für System.
                             </p>
                         </div>
-                    </div>
+                    
+            {/* Yasmin */}
+            <div className="group text-center slide-up">
+              <div className="relative mb-8 inline-block">
+                <div className="w-56 h-56 md:w-64 md:h-64 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center mx-auto border-4 border-card shadow-lg group-hover:shadow-xl transition-base overflow-hidden">
+                  <img
+                    src="/img/team/yasmin_berndorfer.png"
+                    alt="Yasmin Berndorfer"
+                    className="w-full h-full object-cover object-top rounded-full"
+                  />
+                </div>
+                <a
+                  href="https://www.linkedin.com/in/yasmin-berndorfer-984084281/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="absolute bottom-3 right-10 w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-base hover:scale-110"
+                >
+                  <Linkedin className="w-6 h-6" />
+                </a>
+              </div>
+              <h3 className="text-xl font-bold mb-1">Yasmin Berndorfer</h3>
+              <div className="text-primary font-semibold mb-3">Head of Sales</div>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Bringt jahrelange Vertriebserfahrung mit und sorgt dafür, dass unsere Lösungen bei den richtigen Unternehmen ankommen – überzeugend, strukturiert und mit echtem Gespür für Menschen.
+              </p>
+            </div>
+            </div>
                 </div>
 
                 <section id="timeline-section" className="section-spacing">

@@ -76,7 +76,7 @@ export const Footer = () => {
               </a>
             </div>
             <p className="text-primary-foreground/80 text-sm leading-relaxed">
-              Ihr Partner für digitale Transformation.
+              Ihr österreichischer Partner für KI-Automatisierung.
               DSGVO-konform, schnell, zuverlässig.
             </p>
           </div>

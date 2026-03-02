@@ -26,7 +26,7 @@ const Fitness = () => {
             metaDescription.setAttribute('name', 'description');
             document.head.appendChild(metaDescription);
         }
-        metaDescription.setAttribute('content', 'Innovative KI Lösungen für Fitnessstudios & Sportzentren. Automatisieren Sie Mitglieder-Support, Lead-Management & Sales-Prozesse für nachhaltiges Wachstum.');
+        metaDescription.setAttribute('content', 'KI für Fitnessstudios: Mitgliederverwaltung, Marketing & Kursplanung automatisieren. Mehr Neumitglieder durch KI-Chatbots. Jetzt kostenlos beraten lassen!');
     }, []);
 
     return (

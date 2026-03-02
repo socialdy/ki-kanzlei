@@ -67,7 +67,7 @@ export const UseCasesSteuerberater = () => {
                         KI-Power für Ihre Kanzlei
                     </h2>
                     <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                        Wir transformieren die Steuerberatung mit Systemen, die repetitive Arbeit eliminieren und die Beratungsqualität durch intelligente Datenanalyse steigern.
+                        Weniger Routinearbeit, mehr Zeit für echte Beratung. Hier sind die Lösungen, die in der Kanzlei wirklich etwas bringen.
                     </p>
                 </div>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

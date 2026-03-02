@@ -26,7 +26,7 @@ const Versicherungsmakler = () => {
             metaDescription.setAttribute('name', 'description');
             document.head.appendChild(metaDescription);
         }
-        metaDescription.setAttribute('content', 'KI-gestützte Versicherungslösungen für Makler. Automatisierte Schadensaufnahme, Polizzen-Analyse und proaktives Lead-Management – rund um die Uhr.');
+        metaDescription.setAttribute('content', 'KI für Versicherungsmakler: E-Mails automatisch verarbeiten, Cross-Selling erkennen & Schadenmeldungen beschleunigen. Weniger Admin. Jetzt starten!');
     }, []);
 
     return (

@@ -37,7 +37,7 @@ export const FAQSteuerberater = () => {
                         Häufig gestellte Fragen
                     </h2>
                     <p className="text-lg text-muted-foreground slide-up">
-                        Klarheit für Ihre digitale Kanzlei-Transformation
+                        Die häufigsten Fragen, die wir von Kanzleien hören
                     </p>
                 </div>
 

@@ -26,7 +26,7 @@ const Index = () => {
       metaDescription.setAttribute('name', 'description');
       document.head.appendChild(metaDescription);
     }
-    metaDescription.setAttribute('content', 'Individuelle KI Lösungen für Psychotherapeuten in Österreich. Automatisieren Sie Terminbuchungen, Dokumentation & Patientenanfragen DSGVO-konform in 30 Tagen.');
+    metaDescription.setAttribute('content', 'KI für Psychotherapeuten: Dokumentation, Terminverwaltung & Abrechnung automatisieren. DSGVO-konform. Sparen Sie bis zu 10h/Woche. Jetzt kostenlos beraten lassen!');
   }, []);
 
   return (

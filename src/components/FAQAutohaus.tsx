@@ -38,7 +38,7 @@ export const FAQAutohaus = () => {
                         Häufig gestellte Fragen
                     </h2>
                     <p className="text-lg text-muted-foreground slide-up">
-                        Ihre Transformation zum digitalen Autohaus
+                        Die häufigsten Fragen, die wir von Autohäusern hören
                     </p>
                 </div>
 

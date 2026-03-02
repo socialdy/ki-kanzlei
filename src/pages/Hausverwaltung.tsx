@@ -26,7 +26,7 @@ const Hausverwaltung = () => {
             metaDescription.setAttribute('name', 'description');
             document.head.appendChild(metaDescription);
         }
-        metaDescription.setAttribute('content', 'Professionelle KI Lösungen für Hausverwaltungen. Automatisieren Sie Mieteranfragen, Schadensmeldungen & Terminplanung DSGVO-konform und hocheffizient.');
+        metaDescription.setAttribute('content', 'KI für Hausverwaltungen: Mieteranfragen, Buchhaltung & Dokumentenverarbeitung automatisieren. Bis zu 95% automatische Bankbuchungen. Jetzt Demo anfordern!');
     }, []);
 
     return (

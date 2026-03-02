@@ -17,7 +17,7 @@ const Aerzte = () => {
     const [isLeadModalOpen, setIsLeadModalOpen] = useState(false);
 
     useEffect(() => {
-        document.title = "KI Lösungen für Ärzte & Fachärzte | KI Kanzlei Österreich";
+        document.title = "KI in der Arztpraxis – Lösungen | KI Kanzlei Österreich";
 
         // Meta Description
         let metaDescription = document.querySelector('meta[name="description"]');
@@ -26,7 +26,7 @@ const Aerzte = () => {
             metaDescription.setAttribute('name', 'description');
             document.head.appendChild(metaDescription);
         }
-        metaDescription.setAttribute('content', 'Maßgeschneiderte KI Lösungen für Ärzte & Fachärzte. Wir automatisieren Telefonassistenz, Terminvergabe & Patienten-Triage – sicher, effizient und DSGVO-konform.');
+        metaDescription.setAttribute('content', 'KI für Arztpraxen: Spracherkennung, automatisierte Dokumentation & intelligente Terminverwaltung. Bis zu 10h/Woche sparen. DSGVO-konform. Jetzt Demo anfragen!');
     }, []);
 
     return (

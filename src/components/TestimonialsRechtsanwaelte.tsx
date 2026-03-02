@@ -24,7 +24,7 @@ export const TestimonialsRechtsanwaelte = () => {
             firm: "Maier & Partner Rechtsanwälte",
             location: "Wien",
             rating: 5.0,
-            review: "Die Einführung des digitalen Akten-Gehirns hat unsere Arbeitsweise revolutioniert. Wir können hunderte Seiten an Beweismaterial in Rekordzeit sichten und finden punktgenau die relevanten Stellen. Ein massiver Zeitvorteil bei komplexen Fällen.",
+            review: "Wir können jetzt hunderte Seiten in Minuten durchsuchen und finden genau die Stelle, die wir brauchen. Bei komplexen Fällen spart uns das enorm viel Zeit.",
             image: "https://randomuser.me/api/portraits/men/22.jpg",
         },
         {
@@ -33,7 +33,7 @@ export const TestimonialsRechtsanwaelte = () => {
             firm: "Kanzlei Steiner",
             location: "Salzburg",
             rating: 5.0,
-            review: "Besonders das KI-Sekretariat entlastet mein Team enorm. Über 60% der Erstgespräche werden jetzt vorab qualifiziert und Termine direkt gebucht. Das spart uns die mühsame Koordination am Telefon und wir können uns auf die Mandanten konzentrieren.",
+            review: "Das KI-Sekretariat hat uns am meisten gebracht. Über 60% der Erstgespräche werden jetzt vorqualifiziert und Termine direkt gebucht. Mein Team kann sich endlich auf die Mandanten konzentrieren.",
             image: "https://randomuser.me/api/portraits/women/25.jpg",
         },
         {
@@ -42,7 +42,7 @@ export const TestimonialsRechtsanwaelte = () => {
             firm: "Notariat Huber",
             location: "Linz",
             rating: 5.0,
-            review: "Als Notar ist Datensicherheit oberstes Gebot. Die lokale Implementierung der KI-Lösung durch die KI Kanzlei hat mich überzeugt. Wir nutzen die Systeme zur Recherche im Archiv und zur Vorbereitung von Standardverträgen.",
+            review: "Als Notar ist mir Datensicherheit extrem wichtig. Dass die KI-Lösung komplett lokal läuft, hat mich überzeugt. Wir nutzen sie für die Archiv-Recherche und Vertragsvorbereitung.",
             image: "https://randomuser.me/api/portraits/men/33.jpg",
         },
     ];
@@ -55,7 +55,7 @@ export const TestimonialsRechtsanwaelte = () => {
                         Stimmen aus der Praxis
                     </h2>
                     <p className="text-lg text-muted-foreground slide-up">
-                        Warum führende Kanzleien auf unsere KI-Lösungen vertrauen
+                        Was Kanzleien über die Zusammenarbeit mit uns sagen
                     </p>
                 </div>
 

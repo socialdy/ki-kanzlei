@@ -55,7 +55,7 @@ export const TestimonialsVersicherung = () => {
                         Erfolge unserer Kunden
                     </h2>
                     <p className="text-lg text-muted-foreground slide-up">
-                        Wie Makler durch KI ihren Vertrieb und Service transformieren
+                        Was Makler über die Zusammenarbeit mit uns sagen
                     </p>
                 </div>
 

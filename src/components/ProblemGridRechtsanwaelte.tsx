@@ -4,38 +4,38 @@ import { Button } from "@/components/ui/button";
 const problems = [
     {
         icon: FileText,
-        title: "Informationsflut in Akten",
-        description: "Hunderte Seiten pro Fall mühsam manuell zu sichten, kostet wertvolle Zeit. Wichtige Details können in der Masse an Dokumenten übersehen werden.",
+        title: "Hunderte Seiten pro Fall – und kaum Zeit",
+        description: "Akten durcharbeiten, relevante Stellen finden, nichts übersehen. Das kostet Stunden, die eigentlich für die juristische Arbeit fehlen.",
         size: "large",
     },
     {
         icon: Clock,
-        title: "Mühsame Termin-Koordination",
-        description: "Das Hin- und Hertelefonieren für Erstberatungen blockiert Ihre Kanzlei-Mitarbeiter und verzögert die Mandatsaufnahme.",
+        title: "Termine koordinieren statt arbeiten",
+        description: "Hin- und Hertelefonieren für Erstberatungen blockiert Ihr Team und verzögert die Mandatsaufnahme unnötig.",
         size: "medium",
     },
     {
         icon: MessageSquare,
-        title: "Unqualifizierte Erstkontakte",
-        description: "Viele Anfragen passen nicht zu Ihrem Fachgebiet oder sind rechtlich nicht aussichtsreich. Manuelle Vorprüfung raubt Kapazitäten.",
+        title: "Anfragen, die nicht passen",
+        description: "Viele Erstkontakte passen nicht zum Fachgebiet oder sind rechtlich nicht aussichtsreich. Die Vorprüfung frisst trotzdem Zeit.",
         size: "medium",
     },
     {
         icon: Search,
-        title: "Zeitfressende Recherche",
-        description: "Die Suche nach spezifischen Urteilen oder Klauseln in internen Archiven dauert oft Stunden, die nicht immer voll fakturiert werden können.",
+        title: "Urteile suchen, Stunden verlieren",
+        description: "In alten Akten und internen Archiven nach Präzedenzfällen suchen – das dauert oft Stunden und lässt sich kaum fakturieren.",
         size: "large",
     },
     {
         icon: ShieldAlert,
-        title: "DSGVO-Bedenken bei KI",
-        description: "Der Wunsch nach Effizienz scheitert oft an der Angst vor Datenlecks. Viele Standard-KI-Tools sind für sensible Mandantendaten ungeeignet.",
+        title: "KI klingt gut – aber was ist mit DSGVO?",
+        description: "Viele KI-Tools sind für sensible Mandantendaten schlicht ungeeignet. Ohne sichere Lösung bleibt alles beim Alten.",
         size: "medium",
     },
     {
         icon: Scale,
-        title: "Hoher administrativer Druck",
-        description: "Standard-Korrespondenz und Fristenkontrolle binden juristisches Fachpersonal in rein administrativen Tätigkeiten.",
+        title: "Verwaltung statt Jura",
+        description: "Standard-Korrespondenz, Fristenkontrolle, E-Mails beantworten – Routineaufgaben, die eigentlich kein Jurist machen sollte.",
         size: "medium",
     },
 ];
@@ -46,10 +46,10 @@ export const ProblemGridRechtsanwaelte = () => {
             <div className="container mx-auto px-4 max-w-7xl">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 slide-up">
-                        Hürden moderner Kanzleien
+                        Diese Probleme kennen Sie aus dem Kanzleialltag
                     </h2>
                     <p className="text-lg text-muted-foreground max-w-2xl mx-auto slide-up">
-                        Juristische Exzellenz braucht Zeit. Wir automatisieren die Vorarbeit, damit Sie sich voll auf die rechtliche Strategie konzentrieren können.
+                        Jeden Tag dieselben administrativen Aufgaben. Zeit, die Sie lieber für Ihre Mandanten nutzen würden.
                     </p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">

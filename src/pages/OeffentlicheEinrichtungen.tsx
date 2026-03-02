@@ -16,7 +16,7 @@ const OeffentlicheEinrichtungen = () => {
     const [isLeadModalOpen, setIsLeadModalOpen] = useState(false);
 
     useEffect(() => {
-        document.title = "KI Lösungen für öffentliche Einrichtungen & Verwaltung | KI Kanzlei Österreich";
+        document.title = "KI für öffentliche Verwaltung | KI Kanzlei Österreich";
 
         // Meta Description
         let metaDescription = document.querySelector('meta[name="description"]');
@@ -25,7 +25,7 @@ const OeffentlicheEinrichtungen = () => {
             metaDescription.setAttribute('name', 'description');
             document.head.appendChild(metaDescription);
         }
-        metaDescription.setAttribute('content', 'Digitale KI Lösungen für öffentliche Einrichtungen & Verwaltung. Automatisieren Sie Verwaltungsabläufe, Bürgerservice & Kommunikation DSGVO-konform.');
+        metaDescription.setAttribute('content', 'KI-Lösungen für die öffentliche Verwaltung: Bürgeranfragen automatisieren, Dokumentenverarbeitung beschleunigen & Fachkräftemangel ausgleichen. Jetzt informieren!');
     }, []);
 
     return (

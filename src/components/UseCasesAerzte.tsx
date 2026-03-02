@@ -67,7 +67,7 @@ export const UseCasesAerzte = () => {
                         Moderne Lösungen für Ihre Praxis
                     </h2>
                     <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                        Wir transformieren Ihre Ordination mit intelligenter KI, die administrative Lasten abnimmt und die Patientenbetreuung professionalisiert.
+                        Weniger Papierkram, mehr Zeit für Patienten. Hier sind die Lösungen, die im Praxisalltag wirklich etwas bringen.
                     </p>
                 </div>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

@@ -26,7 +26,7 @@ const Recruiting = () => {
             metaDescription.setAttribute('name', 'description');
             document.head.appendChild(metaDescription);
         }
-        metaDescription.setAttribute('content', 'Effiziente KI Lösungen für Recruiting & HR-Agenturen. Automatisieren Sie Bewerber-Screening, Erstgespräche & Sourcing für drastisch verkürzte Time-to-Hire.');
+        metaDescription.setAttribute('content', 'KI im Recruiting: Bewerbungen automatisch screenen, Kandidaten qualifizieren & Prozesse beschleunigen. Für HR-Teams & Personalagenturen. Jetzt beraten lassen!');
     }, []);
 
     return (

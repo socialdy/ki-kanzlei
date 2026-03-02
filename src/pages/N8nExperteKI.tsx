@@ -11,9 +11,12 @@ const JobAutomation = () => {
         document.title = "n8n Experte / KI Entwickler (m/w/d) – Jobs KI Kanzlei";
 
         let metaDescription = document.querySelector('meta[name="description"]');
-        if (metaDescription) {
-            metaDescription.setAttribute('content', 'Job als n8n Experte & KI Entwickler in Österreich. Baue Workflow-Automatisierungen und KI-Agenten. 100% Remote, spannende Projekte in der Region Wachau/Niederösterreich.');
+        if (!metaDescription) {
+            metaDescription = document.createElement('meta');
+            metaDescription.setAttribute('name', 'description');
+            document.head.appendChild(metaDescription);
         }
+        metaDescription.setAttribute('content', 'Job als n8n Experte & KI Entwickler. Baue Workflow-Automatisierungen und KI-Agenten für österreichische Unternehmen. 100% Remote, Freelance, spannende Projekte.');
         window.scrollTo(0, 0);
     }, []);
 

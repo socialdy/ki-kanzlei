@@ -26,7 +26,7 @@ const Immobilienmakler = () => {
             metaDescription.setAttribute('name', 'description');
             document.head.appendChild(metaDescription);
         }
-        metaDescription.setAttribute('content', 'Führende KI Lösungen für Immobilienmakler. Automatisieren Sie Lead-Qualifizierung, Besichtigungstermine & Exposé-Versand für maximale Abschlusseffizienz.');
+        metaDescription.setAttribute('content', 'KI für Immobilienmakler: Exposés automatisch erstellen, Leads qualifizieren & Immobilienbewertung mit KI. Mehr Abschlüsse, weniger Aufwand. Jetzt beraten lassen!');
     }, []);
 
     return (

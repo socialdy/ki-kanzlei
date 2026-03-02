@@ -17,7 +17,7 @@ const Hotels = () => {
   const [isLeadModalOpen, setIsLeadModalOpen] = useState(false);
 
   useEffect(() => {
-    document.title = "KI Lösungen für Hotels | KI Kanzlei Österreich";
+    document.title = "KI für Hotels & Hotellerie | KI Kanzlei Österreich";
 
     // Meta Description
     let metaDescription = document.querySelector('meta[name="description"]');
@@ -26,7 +26,7 @@ const Hotels = () => {
       metaDescription.setAttribute('name', 'description');
       document.head.appendChild(metaDescription);
     }
-    metaDescription.setAttribute('content', 'Zukunftsweisende KI Lösungen für Hotels in Österreich. Optimieren Sie Gästekommunikation, Service-Prozesse & Buchungsmanagement mit modernster Voice- & Chat-KI.');
+    metaDescription.setAttribute('content', 'KI-Lösungen für Hotels: Gästeservice-Chatbots, automatisiertes Revenue Management & Personalplanung. Mehr Effizienz trotz Fachkräftemangel. Jetzt anfragen!');
   }, []);
 
   return (

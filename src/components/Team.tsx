@@ -15,6 +15,13 @@ const team = [
     bio: "Spezialist für n8n und Prozessautomatisierung. Entwickelt die technischen Lösungen und implementiert sie System für System.",
     image: "/img/team/markus_wallner.png",
     linkedin: "https://at.linkedin.com/in/markuswallner-social-media-marketing"
+  },
+  {
+    name: "Yasmin Berndorfer",
+    title: "Head of Sales",
+    bio: "Bringt jahrelange Vertriebserfahrung mit und sorgt dafür, dass unsere Lösungen bei den richtigen Unternehmen ankommen – überzeugend, strukturiert und mit echtem Gespür für Menschen.",
+    image: "/img/team/yasmin_berndorfer.png",
+    linkedin: "https://www.linkedin.com/in/yasmin-berndorfer-984084281/"
   }
 ];
 
@@ -31,7 +38,7 @@ export const Team = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {team.map((member, index) => (
             <div
               key={index}

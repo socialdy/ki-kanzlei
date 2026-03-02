@@ -48,7 +48,7 @@ export const TestimonialsAutohaus = () => {
                         Das sagen Autohäuser
                     </h2>
                     <p className="text-lg text-muted-foreground slide-up">
-                        Zufriedene Kunden durch digitale Exzellenz im Autohaus
+                        Was Autohäuser über die Zusammenarbeit mit uns sagen
                     </p>
                 </div>
 

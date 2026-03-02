@@ -67,7 +67,7 @@ export const UseCasesHandwerker = () => {
                         Moderne Lösungen für das Handwerk
                     </h2>
                     <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                        Wir transformieren Ihren Betrieb mit KI-Agenten, die Ihre Administration übernehmen, während Ihr Team das Handwerk am Laufen hält.
+                        Weniger Büro, mehr Handwerk. Hier sind die Lösungen, die Ihren Betrieb spürbar entlasten.
                     </p>
                 </div>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

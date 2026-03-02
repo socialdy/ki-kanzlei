@@ -36,6 +36,19 @@ import { ScrollToTop } from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
+const CanonicalURL = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    const canonical = document.getElementById('canonical-link') as HTMLLinkElement;
+    if (canonical) {
+      canonical.href = `https://ki-kanzlei.at${location.pathname}`;
+    }
+  }, [location]);
+
+  return null;
+};
+
 const AnalyticsTracker = () => {
   const location = useLocation();
 
@@ -77,6 +90,7 @@ const App = () => (
         <Sonner />
         <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
           <ScrollToTop />
+          <CanonicalURL />
           <AnalyticsTracker />
           <LocalBusinessSchema />
           <Routes>

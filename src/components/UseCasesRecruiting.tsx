@@ -64,10 +64,10 @@ export const UseCasesRecruiting = () => {
             <div className="container mx-auto px-4 max-w-7xl">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-                        Intelligenz für Ihr Recruiting
+                        Das bauen wir für Ihr Recruiting
                     </h2>
                     <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                        Wir transformieren Ihren Personalprozess mit KI-Systemen, die Geschwindigkeit und Qualität der Einstellungen massiv steigern.
+                        Weniger manuelle Arbeit, schneller die richtigen Leute finden. Hier sind die Lösungen, die im Recruiting wirklich etwas bringen.
                     </p>
                 </div>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

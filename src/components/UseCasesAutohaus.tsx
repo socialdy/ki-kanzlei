@@ -68,7 +68,7 @@ export const UseCasesAutohaus = () => {
                         Wo wir ansetzen
                     </h2>
                     <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                        Wir transformieren Ihr Autohaus mit KI-Agenten, die administrative Lasten abnehmen und Ihre Abschlussquote im Service und Verkauf nachhaltig steigern.
+                        Weniger Verwaltung, mehr Abschlüsse. Hier sind die Lösungen, die im Autohaus-Alltag wirklich etwas bringen.
                     </p>
                 </div>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

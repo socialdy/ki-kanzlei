@@ -7,24 +7,24 @@ import {
 
 const faqs = [
     {
-        question: "Wie wird die DSGVO und das Anwaltsgeheimnis gewahrt?",
-        answer: "Sicherheit steht an erster Stelle. Wir nutzen ausschließlich DSGVO-konforme Infrastrukturen. Auf Wunsch können unsere Wissensdatenbanken (RAG) komplett lokal oder in einer privaten Cloud betrieben werden, sodass keine sensiblen Mandantendaten Ihr Kanzlei-Ökosystem verlassen."
+        question: "Wie schaut's mit DSGVO und Anwaltsgeheimnis aus?",
+        answer: "Das hat bei uns oberste Priorität. Wir arbeiten ausschließlich mit DSGVO-konformen Systemen. Auf Wunsch laufen die Wissensdatenbanken komplett lokal oder in einer privaten Cloud – Ihre Mandantendaten verlassen die Kanzlei nicht."
     },
     {
-        question: "Kann die KI auch komplexe österreichische Gesetzestexte verstehen?",
-        answer: "Ja. Die verwendeten Sprachmodelle sind auf juristische Fachsprache trainiert. Durch unsere RAG-Technologie 'füttern' wir die KI zudem gezielt mit Ihren eigenen Dokumenten und spezifischen Fachquellen, um höchste Präzision im österreichischen Kontext zu garantieren."
+        question: "Versteht die KI auch österreichische Gesetzestexte?",
+        answer: "Ja. Die Sprachmodelle können mit juristischer Fachsprache umgehen. Zusätzlich füttern wir die KI gezielt mit Ihren eigenen Dokumenten und Quellen, damit die Ergebnisse zum österreichischen Recht passen."
     },
     {
-        question: "Ersetzt die KI die juristische Vorarbeit von Rechtsanwaltsanwärtern?",
-        answer: "Nein, sie dient als mächtiges Werkzeug zur Unterstützung. Die KI übernimmt die mühsame Informations-Extrahierung und Recherche, die finale rechtliche Prüfung und Würdigung bleibt immer beim Experten. Sie gewinnen jedoch enorm an Geschwindigkeit."
+        question: "Ersetzt die KI die Arbeit von Anwälten?",
+        answer: "Nein. Die KI nimmt Ihnen die zeitfressende Recherche und das Durchsuchen von Akten ab. Die rechtliche Bewertung und Entscheidung bleibt immer bei Ihnen. Sie arbeiten einfach schneller."
     },
     {
-        question: "Wie zeitaufwendig ist die Implementierung in der Kanzlei?",
-        answer: "Wir haben den Prozess so optimiert, dass die ersten Systeme (wie das KI-Sekretariat) innerhalb von 30 Tagen einsatzbereit sind. Die Wissensdatenbanken werden sukzessive aufgebaut, ohne Ihren laufenden Kanzleibetrieb zu stören."
+        question: "Wie lange dauert die Einrichtung?",
+        answer: "Die ersten Systeme wie das KI-Sekretariat sind innerhalb von 30 Tagen einsatzbereit. Die Wissensdatenbanken bauen wir Schritt für Schritt auf, ohne den laufenden Betrieb zu stören."
     },
     {
-        question: "Ist die Lösung mit Standard-Kanzleisoftware kompatibel?",
-        answer: "Ja, wir integrieren unsere Agenten über moderne Schnittstellen so, dass Daten und Ergebnisse einfach in Ihre bestehenden Systeme übernommen werden können."
+        question: "Funktioniert das mit unserer bestehenden Kanzleisoftware?",
+        answer: "Ja. Wir binden unsere Lösungen über Schnittstellen an Ihre bestehenden Systeme an, sodass alles zusammenspielt."
     },
 ];
 
@@ -37,7 +37,7 @@ export const FAQRechtsanwaelte = () => {
                         Häufig gestellte Fragen
                     </h2>
                     <p className="text-lg text-muted-foreground slide-up">
-                        Klarheit für Ihre digitale Kanzlei-Transformation
+                        Die häufigsten Fragen, die wir von Kanzleien hören
                     </p>
                 </div>
 

@@ -1,4 +1,13 @@
 {
+    "trailingSlash": false,
+    "redirects": [
+      {
+        "source": "/(.*)",
+        "has": [{ "type": "host", "value": "www.ki-kanzlei.at" }],
+        "destination": "https://ki-kanzlei.at/$1",
+        "permanent": true
+      }
+    ],
     "rewrites": [
       { "source": "/api/(.*)", "destination": "/api/$1" },
       { "source": "/(.*)", "destination": "/index.html" }

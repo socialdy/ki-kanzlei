@@ -17,7 +17,7 @@ const Autohaus = () => {
     const [isLeadModalOpen, setIsLeadModalOpen] = useState(false);
 
     useEffect(() => {
-        document.title = "KI Lösungen für Autohäuser | KI Kanzlei Österreich";
+        document.title = "KI im Autohaus – Automatisierung | KI Kanzlei Österreich";
 
         // Meta Description
         let metaDescription = document.querySelector('meta[name="description"]');
@@ -26,7 +26,7 @@ const Autohaus = () => {
             metaDescription.setAttribute('name', 'description');
             document.head.appendChild(metaDescription);
         }
-        metaDescription.setAttribute('content', 'Hocheffiziente KI Lösungen für Autohäuser. Automatisieren Sie Werkstatt-Termine & Lead-Qualifizierung im Verkauf rund um die Uhr. Steigern Sie Ihren ROI messbar.');
+        metaDescription.setAttribute('content', 'KI-Lösungen für Autohäuser: Intelligente Telefonassistenten, automatisierte Lead-Qualifizierung & Werkstattdokumentation. Für KMU im Autohandel. Jetzt starten!');
     }, []);
 
     return (
