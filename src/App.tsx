@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import Home from "./pages/Home";
 import Impressum from "./pages/Impressum";
 import Datenschutz from "./pages/Datenschutz";
+import AGB from "./pages/AGB";
 import NotFound from "./pages/NotFound";
 import { CookieBanner } from "./components/CookieBanner";
 import Hotels from "./pages/Hotels";
@@ -116,6 +117,7 @@ const App = () => (
             <Route path="/jobs/n8n-experte-ki-entwickler" element={<N8nExperteKI />} />
             <Route path="/impressum" element={<Impressum />} />
             <Route path="/datenschutz" element={<Datenschutz />} />
+            <Route path="/agb" element={<AGB />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
@@ -133,7 +135,7 @@ const LocalBusinessSchema = () => (
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "KI Kanzlei",
-      "image": "https://ki-kanzlei.at/logo.png",
+      "image": "https://ki-kanzlei.at/img/ki_kanzlei_logo_black.svg",
       "@id": "https://ki-kanzlei.at",
       "url": "https://ki-kanzlei.at",
       "telephone": "+436642314676",

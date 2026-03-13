@@ -53,7 +53,7 @@ export const CookieBanner = () => {
     }
     if (cookies.marketing) {
       // Initialize marketing scripts
-      console.log('Marketing cookies enabled');
+      // Marketing cookies enabled
     }
   };
 

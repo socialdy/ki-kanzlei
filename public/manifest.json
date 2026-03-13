@@ -1,0 +1,22 @@
+{
+  "name": "KI Kanzlei – KI-Automatisierung für Unternehmen",
+  "short_name": "KI Kanzlei",
+  "description": "Ihr österreichischer Partner für KI-Automatisierung. DSGVO-konform, schnell, zuverlässig.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#3B82F6",
+  "lang": "de-AT",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/img/logo-premium.png",
+      "sizes": "400x400",
+      "type": "image/png"
+    }
+  ]
+}

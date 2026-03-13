@@ -49,7 +49,7 @@ export const initGA = () => {
     if (GA_MEASUREMENT_ID && !window.GA_INITIALIZED) {
         ReactGA.initialize(GA_MEASUREMENT_ID);
         window.GA_INITIALIZED = true;
-        console.log("GA4 Initialized");
+        // GA4 initialized
     }
 };
 
@@ -72,7 +72,7 @@ export const updateGAConsent = (granted: boolean) => {
             'ad_personalization': status,
             'analytics_storage': status
         });
-        console.log(`GA4 Consent updated to: ${status}`);
+        // Consent updated
     }
 };
 

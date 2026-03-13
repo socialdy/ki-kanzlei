@@ -157,6 +157,8 @@ export const Footer = () => {
               <li><a href="/ki-loesungen-fitness" onClick={() => trackLinkClick("Industry: Fitness", "Footer")} className="text-primary-foreground/80 hover:text-primary-foreground transition-base">KI-Lösungen für Fitnessstudios</a></li>
               <li><a href="/ki-loesungen-steuerberater" onClick={() => trackLinkClick("Industry: Steuerberater", "Footer")} className="text-primary-foreground/80 hover:text-primary-foreground transition-base">KI-Lösungen für Steuerberater</a></li>
               <li><a href="/ki-loesungen-versicherungsmakler" onClick={() => trackLinkClick("Industry: Versicherungsmakler", "Footer")} className="text-primary-foreground/80 hover:text-primary-foreground transition-base">KI-Lösungen für Versicherungsmakler</a></li>
+              <li><a href="/ki-loesungen-ecommerce" onClick={() => trackLinkClick("Industry: E-Commerce", "Footer")} className="text-primary-foreground/80 hover:text-primary-foreground transition-base">KI-Lösungen für E-Commerce</a></li>
+              <li><a href="/ki-loesungen-oeffentliche-einrichtungen" onClick={() => trackLinkClick("Industry: Öffentliche Einrichtungen", "Footer")} className="text-primary-foreground/80 hover:text-primary-foreground transition-base">KI-Lösungen für öffentliche Verwaltung</a></li>
             </ul>
           </div>
 
@@ -222,10 +224,11 @@ export const Footer = () => {
 
         <div className="pt-8 border-t border-primary-foreground/20 fade-in">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-primary-foreground/60">
-            <p>© 2025 KI Kanzlei. Alle Rechte vorbehalten.</p>
+            <p>© 2026 KI Kanzlei. Alle Rechte vorbehalten.</p>
             <div className="flex gap-6">
               <a href="/impressum" className="hover:text-primary-foreground transition-base">Impressum</a>
               <a href="/datenschutz" className="hover:text-primary-foreground transition-base">Datenschutz</a>
+              <a href="/agb" className="hover:text-primary-foreground transition-base">AGB</a>
             </div>
           </div>
         </div>
