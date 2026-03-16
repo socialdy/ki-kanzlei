@@ -3,7 +3,6 @@ import { NavigationHausverwaltung } from "@/components/NavigationHausverwaltung"
 import { HeroHausverwaltung } from "@/components/HeroHausverwaltung";
 import { ProblemGridHausverwaltung } from "@/components/ProblemGridHausverwaltung";
 import { UseCasesHausverwaltung } from "@/components/UseCasesHausverwaltung";
-import { TestimonialsHausverwaltung } from "@/components/TestimonialsHausverwaltung";
 import { VoiceAgentSection } from "@/components/VoiceAgentSection";
 import { AboutUsHausverwaltung } from "@/components/AboutUsHausverwaltung";
 import { ContactForm } from "@/components/ContactForm";
@@ -37,8 +36,7 @@ const Hausverwaltung = () => {
                 <ProblemGridHausverwaltung />
                 <UseCasesHausverwaltung />
                 <VoiceAgentSection />
-                <TestimonialsHausverwaltung />
-                <AboutUsHausverwaltung />
+<AboutUsHausverwaltung />
                 <BlogSectionHome />
                 <JobsSectionHome />
                 <ContactForm />

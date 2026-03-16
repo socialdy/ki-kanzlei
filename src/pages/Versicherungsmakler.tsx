@@ -3,7 +3,6 @@ import { NavigationVersicherung } from "@/components/NavigationVersicherung";
 import { HeroVersicherung } from "@/components/HeroVersicherung";
 import { ProblemGridVersicherung } from "@/components/ProblemGridVersicherung";
 import { UseCasesVersicherung } from "@/components/UseCasesVersicherung";
-import { TestimonialsVersicherung } from "@/components/TestimonialsVersicherung";
 import { VoiceAgentSection } from "@/components/VoiceAgentSection";
 import { AboutUsVersicherung } from "@/components/AboutUsVersicherung";
 import { ContactForm } from "@/components/ContactForm";
@@ -37,8 +36,7 @@ const Versicherungsmakler = () => {
                 <ProblemGridVersicherung />
                 <UseCasesVersicherung />
                 <VoiceAgentSection />
-                <TestimonialsVersicherung />
-                <AboutUsVersicherung />
+<AboutUsVersicherung />
                 <BlogSectionHome />
                 <JobsSectionHome />
                 <ContactForm />

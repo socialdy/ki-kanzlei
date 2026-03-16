@@ -3,7 +3,6 @@ import { NavigationImmobilien } from "@/components/NavigationImmobilien";
 import { HeroImmobilien } from "@/components/HeroImmobilien";
 import { ProblemGridImmobilien } from "@/components/ProblemGridImmobilien";
 import { UseCasesImmobilien } from "@/components/UseCasesImmobilien";
-import { TestimonialsImmobilien } from "@/components/TestimonialsImmobilien";
 import { VoiceAgentSection } from "@/components/VoiceAgentSection";
 import { AboutUsImmobilien } from "@/components/AboutUsImmobilien";
 import { ContactForm } from "@/components/ContactForm";
@@ -37,8 +36,7 @@ const Immobilienmakler = () => {
                 <ProblemGridImmobilien />
                 <UseCasesImmobilien />
                 <VoiceAgentSection />
-                <TestimonialsImmobilien />
-                <AboutUsImmobilien />
+<AboutUsImmobilien />
                 <BlogSectionHome />
                 <JobsSectionHome />
                 <ContactForm />

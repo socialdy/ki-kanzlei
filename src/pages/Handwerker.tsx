@@ -3,7 +3,6 @@ import { NavigationHandwerker } from "@/components/NavigationHandwerker";
 import { HeroHandwerker } from "@/components/HeroHandwerker";
 import { ProblemGridHandwerker } from "@/components/ProblemGridHandwerker";
 import { UseCasesHandwerker } from "@/components/UseCasesHandwerker";
-import { TestimonialsHandwerker } from "@/components/TestimonialsHandwerker";
 import { VoiceAgentSection } from "@/components/VoiceAgentSection";
 import { AboutUsHandwerker } from "@/components/AboutUsHandwerker";
 import { ContactForm } from "@/components/ContactForm";
@@ -37,8 +36,7 @@ const Handwerker = () => {
                 <ProblemGridHandwerker />
                 <UseCasesHandwerker />
                 <VoiceAgentSection />
-                <TestimonialsHandwerker />
-                <AboutUsHandwerker />
+<AboutUsHandwerker />
                 <BlogSectionHome />
                 <JobsSectionHome />
                 <ContactForm />

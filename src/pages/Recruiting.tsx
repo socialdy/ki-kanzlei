@@ -3,7 +3,6 @@ import { NavigationRecruiting } from "@/components/NavigationRecruiting";
 import { HeroRecruiting } from "@/components/HeroRecruiting";
 import { ProblemGridRecruiting } from "@/components/ProblemGridRecruiting";
 import { UseCasesRecruiting } from "@/components/UseCasesRecruiting";
-import { TestimonialsRecruiting } from "@/components/TestimonialsRecruiting";
 import { VoiceAgentSection } from "@/components/VoiceAgentSection";
 import { AboutUsRecruiting } from "@/components/AboutUsRecruiting";
 import { ContactForm } from "@/components/ContactForm";
@@ -37,8 +36,7 @@ const Recruiting = () => {
                 <ProblemGridRecruiting />
                 <UseCasesRecruiting />
                 <VoiceAgentSection />
-                <TestimonialsRecruiting />
-                <AboutUsRecruiting />
+<AboutUsRecruiting />
                 <BlogSectionHome />
                 <JobsSectionHome />
                 <ContactForm />

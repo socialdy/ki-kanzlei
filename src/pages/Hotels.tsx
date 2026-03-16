@@ -3,7 +3,6 @@ import { NavigationHome } from "@/components/NavigationHome";
 import { HeroHotels } from "@/components/HeroHotels";
 import { ProblemGridHotels } from "@/components/ProblemGridHotels";
 import { UseCasesHotels } from "@/components/UseCasesHotels";
-import { TestimonialsHotels } from "@/components/TestimonialsHotels";
 import { VoiceAgentSection } from "@/components/VoiceAgentSection";
 import { AboutUsHotels } from "@/components/AboutUsHotels";
 import { ContactForm } from "@/components/ContactForm";
@@ -37,8 +36,7 @@ const Hotels = () => {
         <ProblemGridHotels />
         <UseCasesHotels />
         <VoiceAgentSection />
-        <TestimonialsHotels />
-        <AboutUsHotels />
+<AboutUsHotels />
         <BlogSectionHome />
         <JobsSectionHome />
         <ContactForm />

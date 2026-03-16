@@ -3,7 +3,6 @@ import { NavigationSteuerberater } from "@/components/NavigationSteuerberater";
 import { HeroSteuerberater } from "@/components/HeroSteuerberater";
 import { ProblemGridSteuerberater } from "@/components/ProblemGridSteuerberater";
 import { UseCasesSteuerberater } from "@/components/UseCasesSteuerberater";
-import { TestimonialsSteuerberater } from "@/components/TestimonialsSteuerberater";
 import { VoiceAgentSection } from "@/components/VoiceAgentSection";
 import { AboutUsSteuerberater } from "@/components/AboutUsSteuerberater";
 import { ContactForm } from "@/components/ContactForm";
@@ -37,8 +36,7 @@ const Steuerberater = () => {
                 <ProblemGridSteuerberater />
                 <UseCasesSteuerberater />
                 <VoiceAgentSection />
-                <TestimonialsSteuerberater />
-                <AboutUsSteuerberater />
+<AboutUsSteuerberater />
                 <BlogSectionHome />
                 <JobsSectionHome />
                 <ContactForm />

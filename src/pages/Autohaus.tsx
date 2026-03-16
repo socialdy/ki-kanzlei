@@ -3,7 +3,6 @@ import { NavigationAutohaus } from "@/components/NavigationAutohaus";
 import { HeroAutohaus } from "@/components/HeroAutohaus";
 import { ProblemGridAutohaus } from "@/components/ProblemGridAutohaus";
 import { UseCasesAutohaus } from "@/components/UseCasesAutohaus";
-import { TestimonialsAutohaus } from "@/components/TestimonialsAutohaus";
 import { VoiceAgentSection } from "@/components/VoiceAgentSection";
 import { AboutUsAutohaus } from "@/components/AboutUsAutohaus";
 import { ContactForm } from "@/components/ContactForm";
@@ -37,8 +36,7 @@ const Autohaus = () => {
                 <ProblemGridAutohaus />
                 <UseCasesAutohaus />
                 <VoiceAgentSection />
-                <TestimonialsAutohaus />
-                <AboutUsAutohaus />
+<AboutUsAutohaus />
                 <BlogSectionHome />
                 <JobsSectionHome />
                 <ContactForm />

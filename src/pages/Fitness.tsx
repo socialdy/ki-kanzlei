@@ -3,7 +3,6 @@ import { NavigationFitness } from "@/components/NavigationFitness";
 import { HeroFitness } from "@/components/HeroFitness";
 import { ProblemGridFitness } from "@/components/ProblemGridFitness";
 import { UseCasesFitness } from "@/components/UseCasesFitness";
-import { TestimonialsFitness } from "@/components/TestimonialsFitness";
 import { VoiceAgentSection } from "@/components/VoiceAgentSection";
 import { AboutUsFitness } from "@/components/AboutUsFitness";
 import { ContactForm } from "@/components/ContactForm";
@@ -37,8 +36,7 @@ const Fitness = () => {
                 <ProblemGridFitness />
                 <UseCasesFitness />
                 <VoiceAgentSection />
-                <TestimonialsFitness />
-                <AboutUsFitness />
+<AboutUsFitness />
                 <BlogSectionHome />
                 <JobsSectionHome />
                 <ContactForm />

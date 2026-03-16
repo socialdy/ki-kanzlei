@@ -3,7 +3,6 @@ import { NavigationAerzte } from "@/components/NavigationAerzte";
 import { HeroAerzte } from "@/components/HeroAerzte";
 import { ProblemGridAerzte } from "@/components/ProblemGridAerzte";
 import { UseCasesAerzte } from "@/components/UseCasesAerzte";
-import { TestimonialsAerzte } from "@/components/TestimonialsAerzte";
 import { VoiceAgentSection } from "@/components/VoiceAgentSection";
 import { AboutUsAerzte } from "@/components/AboutUsAerzte";
 import { ContactForm } from "@/components/ContactForm";
@@ -37,8 +36,7 @@ const Aerzte = () => {
                 <ProblemGridAerzte />
                 <UseCasesAerzte />
                 <VoiceAgentSection />
-                <TestimonialsAerzte />
-                <AboutUsAerzte />
+<AboutUsAerzte />
                 <BlogSectionHome />
                 <JobsSectionHome />
                 <ContactForm />

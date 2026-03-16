@@ -3,7 +3,6 @@ import { NavigationRechtsanwaelte } from "@/components/NavigationRechtsanwaelte"
 import { HeroRechtsanwaelte } from "@/components/HeroRechtsanwaelte";
 import { ProblemGridRechtsanwaelte } from "@/components/ProblemGridRechtsanwaelte";
 import { UseCasesRechtsanwaelte } from "@/components/UseCasesRechtsanwaelte";
-import { TestimonialsRechtsanwaelte } from "@/components/TestimonialsRechtsanwaelte";
 import { VoiceAgentSection } from "@/components/VoiceAgentSection";
 import { AboutUsRechtsanwaelte } from "@/components/AboutUsRechtsanwaelte";
 import { ContactForm } from "@/components/ContactForm";
@@ -37,8 +36,7 @@ const Rechtsanwaelte = () => {
                 <ProblemGridRechtsanwaelte />
                 <UseCasesRechtsanwaelte />
                 <VoiceAgentSection />
-                <TestimonialsRechtsanwaelte />
-                <AboutUsRechtsanwaelte />
+<AboutUsRechtsanwaelte />
                 <BlogSectionHome />
                 <JobsSectionHome />
                 <ContactForm />

@@ -7,7 +7,6 @@ import { PressSection } from "@/components/PressSection";
 import { IndustriesHome } from "@/components/IndustriesHome";
 import { VoiceAgentSection } from "@/components/VoiceAgentSection";
 import { AboutUs } from "@/components/AboutUs";
-import { TestimonialsHome } from "@/components/TestimonialsHome";
 import { ContactForm } from "@/components/ContactForm";
 import { BlogSectionHome } from "@/components/BlogSectionHome";
 import { FAQHome } from "@/components/FAQHome";
@@ -42,8 +41,7 @@ const Home = () => {
         <VoiceAgentSection />
         <IndustriesHome />
         <AboutUs />
-        <TestimonialsHome />
-        <BlogSectionHome />
+<BlogSectionHome />
         <JobsSectionHome />
         <ContactForm />
         <FAQHome />
