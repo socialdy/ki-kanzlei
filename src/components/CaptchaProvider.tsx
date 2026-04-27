@@ -1,3 +1,5 @@
+'use client';
+
 import React, { createContext, useContext, useRef, useState, useCallback } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 

@@ -15,7 +15,7 @@ export const GA_EVENTS = {
     LINK_CLICK: "link_click",
 } as const;
 
-const GA_MEASUREMENT_ID = import.meta.env.VITE_GA_MEASUREMENT_ID;
+const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 
 export type GAEventName = typeof GA_EVENTS[keyof typeof GA_EVENTS];
 

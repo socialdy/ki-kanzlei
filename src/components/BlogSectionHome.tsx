@@ -1,5 +1,7 @@
+'use client';
+
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import Link from 'next/link';
 import { loadBlogPosts } from "@/data/blogPostsLoader";
 import { BlogPost } from "@/data/blogPosts";
 import { ArrowRight, Calendar, Clock } from "lucide-react";
@@ -47,7 +49,7 @@ export const BlogSectionHome = () => {
                         </p>
                     </div>
                     <Button asChild variant="outline" className="hidden md:flex rounded-xl hover:bg-primary/5 hover:text-primary border-border font-bold transition-all">
-                        <Link to="/blog" className="flex items-center gap-2">
+                        <Link href="/blog" className="flex items-center gap-2">
                             Alle Beiträge lesen
                             <ArrowRight className="w-4 h-4" />
                         </Link>
@@ -62,7 +64,7 @@ export const BlogSectionHome = () => {
                             className="group bg-card rounded-2xl border border-border hover-lift cursor-pointer overflow-hidden slide-up"
                             style={{ animationDelay: `${index * 0.1}s` }}
                         >
-                            <Link to={`/blog/${post.slug}`} className="block">
+                            <Link href={`/blog/${post.slug}`} className="block">
                                 {/* Image - 1:1 layout from Blog.tsx */}
                                 {post.image && (
                                     <div className="relative h-48 overflow-hidden bg-gradient-to-br from-primary/10 to-primary/5">
@@ -118,7 +120,7 @@ export const BlogSectionHome = () => {
                 {/* Mobile Button */}
                 <div className="mt-10 md:hidden">
                     <Button asChild variant="outline" className="w-full h-14 rounded-2xl border-border font-bold">
-                        <Link to="/blog" className="flex items-center justify-center gap-2">
+                        <Link href="/blog" className="flex items-center justify-center gap-2">
                             Alle Beiträge lesen
                             <ArrowRight className="w-5 h-5" />
                         </Link>

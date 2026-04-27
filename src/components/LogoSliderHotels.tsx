@@ -1,3 +1,5 @@
+'use client';
+
 export const LogoSliderHotels = () => {
   const logos = [
     { name: "Hotel Gerl", src: "/img/testimonials/hotels/logo-gerl.svg" },

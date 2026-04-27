@@ -1,3 +1,5 @@
+'use client';
+
 export const LogoSlider = () => {
   const logos = [
     { name: "Logo 1", src: "/img/testimonials/testimonial-1.png" },

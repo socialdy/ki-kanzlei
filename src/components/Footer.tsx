@@ -1,15 +1,16 @@
+'use client';
+
 import { Mail, Phone, MapPin, Linkedin, Instagram, Facebook } from "lucide-react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { usePathname, useRouter } from 'next/navigation';
 import { trackLinkClick } from "@/lib/analytics";
 
 export const Footer = () => {
-  const location = useLocation();
-  const navigate = useNavigate();
-  const currentPath = location.pathname;
+  const pathname = usePathname();
+  const router = useRouter();
 
   // Determine base path and navigation links based on current page
   const getNavigationLinks = () => {
-    if (currentPath === "/") {
+    if (pathname === "/") {
       return {
         probleme: "/#probleme",
         loesungen: "/#loesungen",
@@ -17,7 +18,7 @@ export const Footer = () => {
         referenzen: "/#referenzen",
         faq: "/#faq",
       };
-    } else if (currentPath === "/ki-loesungen-psychotherapeuten") {
+    } else if (pathname === "/ki-loesungen-psychotherapeuten") {
       return {
         probleme: "/ki-loesungen-psychotherapeuten#probleme",
         loesungen: "/ki-loesungen-psychotherapeuten#loesungen",
@@ -25,7 +26,7 @@ export const Footer = () => {
         referenzen: "/ki-loesungen-psychotherapeuten#referenzen",
         faq: "/ki-loesungen-psychotherapeuten#faq",
       };
-    } else if (currentPath === "/ki-loesungen-hotels") {
+    } else if (pathname === "/ki-loesungen-hotels") {
       return {
         probleme: "/ki-loesungen-hotels#probleme",
         loesungen: "/ki-loesungen-hotels#loesungen",
@@ -48,9 +49,9 @@ export const Footer = () => {
   const navLinks = getNavigationLinks();
 
   const handleNavClick = (hash: string, e: React.MouseEvent<HTMLAnchorElement>) => {
-    if (currentPath !== "/" && !currentPath.startsWith("/ki-loesungen-")) {
+    if (pathname !== "/" && !pathname.startsWith("/ki-loesungen-")) {
       e.preventDefault();
-      navigate("/");
+      router.push("/");
       setTimeout(() => {
         const section = document.getElementById(hash.replace("/#", "").replace("#", ""));
         if (section) {

@@ -1,3 +1,5 @@
+'use client';
+
 export const LogoSliderPsychotherapeuten = () => {
   const logos = [
     { name: "Logo 1", src: "/img/testimonials/psychotherapeuten/testimonial-1.png" },

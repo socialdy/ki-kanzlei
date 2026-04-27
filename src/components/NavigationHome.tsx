@@ -1,21 +1,24 @@
+'use client';
+
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { useState } from "react";
-import { useLocation, useNavigate, Link } from "react-router-dom";
+import { usePathname, useRouter } from 'next/navigation';
+import Link from 'next/link';
 import { trackLinkClick, trackCtaClick } from "@/lib/analytics";
 
 export const NavigationHome = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const location = useLocation();
-  const navigate = useNavigate();
-  const isHomePage = location.pathname === "/";
+  const pathname = usePathname();
+  const router = useRouter();
+  const isHomePage = pathname === "/";
 
   const handleNavClick = (href: string, e: React.MouseEvent<HTMLAnchorElement>) => {
     if (href.startsWith("#")) {
       // Anchor-only link (e.g., #probleme)
       const hash = href.substring(1);
 
-      if (location.pathname === "/") {
+      if (pathname === "/") {
         // Already on home page, scroll to section
         e.preventDefault();
         const section = document.getElementById(hash);
@@ -26,7 +29,7 @@ export const NavigationHome = () => {
       } else {
         // Not on home page, navigate to home with anchor
         e.preventDefault();
-        navigate("/" + href);
+        router.push("/" + href);
         setIsMenuOpen(false);
       }
     }
@@ -61,7 +64,7 @@ export const NavigationHome = () => {
               {menuItems.map((item) => (
                 <Link
                   key={item.label}
-                  to={item.href}
+                  href={item.href}
                   onClick={(e: any) => {
                     trackLinkClick(item.label, "NavigationHome");
                     handleNavClick(item.href, e);
@@ -84,7 +87,7 @@ export const NavigationHome = () => {
                   size="lg"
                   onClick={() => {
                     trackCtaClick("Kostenloses Analysegespräch", "NavigationHome");
-                    navigate("/");
+                    router.push("/");
                     setTimeout(() => {
                       const section = document.getElementById("contact");
                       if (section) {
@@ -142,7 +145,7 @@ export const NavigationHome = () => {
                       className="w-full"
                       onClick={() => {
                         trackCtaClick("Kostenloses Analysegespräch", "NavigationHomeMobile");
-                        navigate("/");
+                        router.push("/");
                         setTimeout(() => {
                           const section = document.getElementById("contact");
                           if (section) {

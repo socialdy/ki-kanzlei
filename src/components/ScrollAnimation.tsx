@@ -1,3 +1,5 @@
+'use client';
+
 import { useEffect, useRef } from 'react';
 
 export const useScrollAnimation = () => {
@@ -44,7 +46,7 @@ export const useScrollAnimation = () => {
       }
       
       // Update timeline line height
-      const timelineLine = document.querySelector('.timeline-line-progress');
+      const timelineLine = document.querySelector<HTMLElement>('.timeline-line-progress');
       if (timelineLine) {
         timelineLine.style.height = `${progress * 100}%`;
       }

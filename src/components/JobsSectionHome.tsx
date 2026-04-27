@@ -1,7 +1,9 @@
+'use client';
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Users, Code, ArrowRight, Sparkles } from "lucide-react";
-import { Link } from "react-router-dom";
+import Link from 'next/link';
 
 export const JobsSectionHome = () => {
     const featuredJobs = [
@@ -36,7 +38,7 @@ export const JobsSectionHome = () => {
                     </div>
                     <div className="slide-up">
                         <Button variant="outline" size="lg" className="rounded-2xl group" asChild>
-                            <Link to="/jobs">
+                            <Link href="/jobs">
                                 Alle Jobs ansehen
                                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                             </Link>
@@ -46,7 +48,7 @@ export const JobsSectionHome = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 slide-up">
                     {featuredJobs.map((job, index) => (
-                        <Link to={job.link} key={index} className="group">
+                        <Link href={job.link} key={index} className="group">
                             <Card className="h-full border border-border/50 bg-white/50 backdrop-blur-sm rounded-3xl overflow-hidden hover:border-primary/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
                                 <CardContent className="p-8 flex items-start gap-6">
                                     <div className="w-14 h-14 bg-primary/10 text-primary rounded-2xl flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-white transition-colors duration-300">

@@ -1,13 +1,17 @@
+'use client';
+
+import { usePathname } from 'next/navigation';
+import Link from 'next/link';
+
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
 import { trackLinkClick, trackCtaClick } from "@/lib/analytics";
 
 export const NavigationHotels = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const location = useLocation();
+  const pathname = usePathname();
   const menuItems = [
     { label: "Probleme", href: "/ki-loesungen-hotels#probleme" },
     { label: "Lösungen", href: "/ki-loesungen-hotels#loesungen" },
@@ -19,7 +23,7 @@ export const NavigationHotels = () => {
   const handleNavClick = (href: string, e: React.MouseEvent<HTMLAnchorElement>) => {
     if (href.includes("#")) {
       const [path, hash] = href.split("#");
-      if (location.pathname === path) {
+      if (pathname === path) {
         e.preventDefault();
         const element = document.getElementById(hash);
         if (element) {
@@ -51,7 +55,7 @@ export const NavigationHotels = () => {
               {menuItems.map((item) => (
                 <Link
                   key={item.label}
-                  to={item.href}
+                  href={item.href}
                   onClick={(e: any) => handleNavClick(item.href, e)}
                   className="flex items-center gap-1 text-[13px] lg:text-[15px] xl:text-base font-normal text-gray-700 hover:text-gray-900 transition-colors whitespace-nowrap px-1"
                 >

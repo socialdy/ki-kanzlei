@@ -1,13 +1,17 @@
+'use client';
+
+import { usePathname } from 'next/navigation';
+import Link from 'next/link';
+
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
 import { trackLinkClick, trackCtaClick } from "@/lib/analytics";
 
 export const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const location = useLocation();
+  const pathname = usePathname();
   const menuItems = [
     { label: "Probleme", href: "/ki-loesungen-psychotherapeuten#probleme" },
     { label: "Lösungen", href: "/ki-loesungen-psychotherapeuten#loesungen" },
@@ -19,7 +23,7 @@ export const Navigation = () => {
   const handleNavClick = (href: string, e: React.MouseEvent<HTMLAnchorElement>) => {
     if (href.includes("#")) {
       const [path, hash] = href.split("#");
-      if (location.pathname === path) {
+      if (pathname === path) {
         e.preventDefault();
         const element = document.getElementById(hash);
         if (element) {
@@ -51,7 +55,7 @@ export const Navigation = () => {
               {menuItems.map((item) => (
                 <Link
                   key={item.label}
-                  to={item.href}
+                  href={item.href}
                   onClick={(e: any) => {
                     trackLinkClick(item.label, "Navigation");
                     handleNavClick(item.href, e);

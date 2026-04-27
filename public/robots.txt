@@ -4,7 +4,6 @@
 User-agent: *
 Allow: /
 Disallow: /api/
-Disallow: /assets/
 
 # SEO for AI Bots - Explizit erlaubt
 User-agent: Googlebot
