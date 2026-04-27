@@ -1,0 +1,3 @@
+module.exports=[48593,(a,b,c)=>{let{createClientModuleProxy:d}=a.r(22677);a.n(d("[project]/Desktop/KI Kanzlei Website/ki-kanzlei/node_modules/next/dist/client/components/builtin/global-error.js <module evaluation>"))},87223,(a,b,c)=>{let{createClientModuleProxy:d}=a.r(22677);a.n(d("[project]/Desktop/KI Kanzlei Website/ki-kanzlei/node_modules/next/dist/client/components/builtin/global-error.js"))},601,a=>{"use strict";a.i(48593);var b=a.i(87223);a.n(b)},89576,a=>{a.n(a.i(601))}];
+
+//# sourceMappingURL=0-uk_next_dist_client_components_builtin_global-error_0wadhc3.js.map

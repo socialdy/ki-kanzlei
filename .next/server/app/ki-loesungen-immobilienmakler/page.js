@@ -1,0 +1,13 @@
+var R=require("../../chunks/ssr/[turbopack]_runtime.js")("server/app/ki-loesungen-immobilienmakler/page.js")
+R.c("server/chunks/ssr/[root-of-the-server]__0rx0zso._.js")
+R.c("server/chunks/ssr/0-uk_next_dist_esm_build_templates_app-page_0f-lw-e.js")
+R.c("server/chunks/ssr/[root-of-the-server]__06x.0zr._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__0r6duct._.js")
+R.c("server/chunks/ssr/Desktop_KI Kanzlei Website_ki-kanzlei_054d4hn._.js")
+R.c("server/chunks/ssr/Desktop_KI Kanzlei Website_ki-kanzlei_0iw8e-b._.js")
+R.c("server/chunks/ssr/0-uk_next_dist_client_components_036287l._.js")
+R.c("server/chunks/ssr/0-uk_next_dist_client_components_builtin_unauthorized_0rwnpne.js")
+R.c("server/chunks/ssr/0-uk_next_dist_client_components_builtin_global-error_0wadhc3.js")
+R.c("server/chunks/ssr/10oe__next-internal_server_app_ki-loesungen-immobilienmakler_page_actions_0wysy86.js")
+R.m(16934)
+module.exports=R.m(16934).exports

@@ -1,0 +1,204 @@
+{
+  "version": 3,
+  "pages404": true,
+  "appType": "app",
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "priority": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [],
+  "onMatchHeaders": [],
+  "rewrites": {
+    "beforeFiles": [],
+    "afterFiles": [],
+    "fallback": []
+  },
+  "dynamicRoutes": [
+    {
+      "page": "/blog/[slug]",
+      "regex": "^/blog/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPslug": "nxtPslug"
+      },
+      "namedRegex": "^/blog/(?<nxtPslug>[^/]+?)(?:/)?$"
+    }
+  ],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_global-error",
+      "regex": "^/_global\\-error(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_global\\-error(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/agb",
+      "regex": "^/agb(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/agb(?:/)?$"
+    },
+    {
+      "page": "/api/blog/create",
+      "regex": "^/api/blog/create(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/blog/create(?:/)?$"
+    },
+    {
+      "page": "/blog",
+      "regex": "^/blog(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/blog(?:/)?$"
+    },
+    {
+      "page": "/datenschutz",
+      "regex": "^/datenschutz(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/datenschutz(?:/)?$"
+    },
+    {
+      "page": "/impressum",
+      "regex": "^/impressum(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/impressum(?:/)?$"
+    },
+    {
+      "page": "/jobs",
+      "regex": "^/jobs(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/jobs(?:/)?$"
+    },
+    {
+      "page": "/jobs/n8n-experte-ki-entwickler",
+      "regex": "^/jobs/n8n\\-experte\\-ki\\-entwickler(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/jobs/n8n\\-experte\\-ki\\-entwickler(?:/)?$"
+    },
+    {
+      "page": "/jobs/vertriebspartner-ki",
+      "regex": "^/jobs/vertriebspartner\\-ki(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/jobs/vertriebspartner\\-ki(?:/)?$"
+    },
+    {
+      "page": "/ki-loesungen-aerzte",
+      "regex": "^/ki\\-loesungen\\-aerzte(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/ki\\-loesungen\\-aerzte(?:/)?$"
+    },
+    {
+      "page": "/ki-loesungen-autohaus",
+      "regex": "^/ki\\-loesungen\\-autohaus(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/ki\\-loesungen\\-autohaus(?:/)?$"
+    },
+    {
+      "page": "/ki-loesungen-ecommerce",
+      "regex": "^/ki\\-loesungen\\-ecommerce(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/ki\\-loesungen\\-ecommerce(?:/)?$"
+    },
+    {
+      "page": "/ki-loesungen-fitness",
+      "regex": "^/ki\\-loesungen\\-fitness(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/ki\\-loesungen\\-fitness(?:/)?$"
+    },
+    {
+      "page": "/ki-loesungen-handwerker",
+      "regex": "^/ki\\-loesungen\\-handwerker(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/ki\\-loesungen\\-handwerker(?:/)?$"
+    },
+    {
+      "page": "/ki-loesungen-hausverwaltung",
+      "regex": "^/ki\\-loesungen\\-hausverwaltung(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/ki\\-loesungen\\-hausverwaltung(?:/)?$"
+    },
+    {
+      "page": "/ki-loesungen-hotels",
+      "regex": "^/ki\\-loesungen\\-hotels(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/ki\\-loesungen\\-hotels(?:/)?$"
+    },
+    {
+      "page": "/ki-loesungen-immobilienmakler",
+      "regex": "^/ki\\-loesungen\\-immobilienmakler(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/ki\\-loesungen\\-immobilienmakler(?:/)?$"
+    },
+    {
+      "page": "/ki-loesungen-oeffentliche-einrichtungen",
+      "regex": "^/ki\\-loesungen\\-oeffentliche\\-einrichtungen(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/ki\\-loesungen\\-oeffentliche\\-einrichtungen(?:/)?$"
+    },
+    {
+      "page": "/ki-loesungen-psychotherapeuten",
+      "regex": "^/ki\\-loesungen\\-psychotherapeuten(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/ki\\-loesungen\\-psychotherapeuten(?:/)?$"
+    },
+    {
+      "page": "/ki-loesungen-rechtsanwaelte",
+      "regex": "^/ki\\-loesungen\\-rechtsanwaelte(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/ki\\-loesungen\\-rechtsanwaelte(?:/)?$"
+    },
+    {
+      "page": "/ki-loesungen-recruiting",
+      "regex": "^/ki\\-loesungen\\-recruiting(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/ki\\-loesungen\\-recruiting(?:/)?$"
+    },
+    {
+      "page": "/ki-loesungen-steuerberater",
+      "regex": "^/ki\\-loesungen\\-steuerberater(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/ki\\-loesungen\\-steuerberater(?:/)?$"
+    },
+    {
+      "page": "/ki-loesungen-versicherungsmakler",
+      "regex": "^/ki\\-loesungen\\-versicherungsmakler(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/ki\\-loesungen\\-versicherungsmakler(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "rsc",
+    "varyHeader": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "prefetchHeader": "next-router-prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSegmentHeader": "next-router-segment-prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments",
+    "clientParamParsing": false,
+    "dynamicRSCPrerender": false
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  }
+}

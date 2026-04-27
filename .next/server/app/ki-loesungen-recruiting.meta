@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/ki-loesungen-recruiting/layout,_N_T_/ki-loesungen-recruiting/page,_N_T_/ki-loesungen-recruiting"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/ki-loesungen-recruiting/__PAGE__",
+    "/ki-loesungen-recruiting",
+    "/_index",
+    "/_head"
+  ]
+}

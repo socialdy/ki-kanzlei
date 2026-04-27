@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/ki-loesungen-immobilienmakler/layout,_N_T_/ki-loesungen-immobilienmakler/page,_N_T_/ki-loesungen-immobilienmakler"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/ki-loesungen-immobilienmakler/__PAGE__",
+    "/ki-loesungen-immobilienmakler",
+    "/_index",
+    "/_head"
+  ]
+}

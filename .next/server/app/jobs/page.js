@@ -1,0 +1,13 @@
+var R=require("../../chunks/ssr/[turbopack]_runtime.js")("server/app/jobs/page.js")
+R.c("server/chunks/ssr/[root-of-the-server]__0dwliq~._.js")
+R.c("server/chunks/ssr/0-uk_next_dist_esm_build_templates_app-page_01iftz7.js")
+R.c("server/chunks/ssr/[root-of-the-server]__06x.0zr._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__0r6duct._.js")
+R.c("server/chunks/ssr/Desktop_KI Kanzlei Website_ki-kanzlei_054d4hn._.js")
+R.c("server/chunks/ssr/Desktop_KI Kanzlei Website_ki-kanzlei_0iw8e-b._.js")
+R.c("server/chunks/ssr/0-uk_next_dist_client_components_036287l._.js")
+R.c("server/chunks/ssr/0-uk_next_dist_client_components_builtin_unauthorized_0rwnpne.js")
+R.c("server/chunks/ssr/0-uk_next_dist_client_components_builtin_global-error_0wadhc3.js")
+R.c("server/chunks/ssr/0bja_ki-kanzlei__next-internal_server_app_jobs_page_actions_0ajhw99.js")
+R.m(49188)
+module.exports=R.m(49188).exports

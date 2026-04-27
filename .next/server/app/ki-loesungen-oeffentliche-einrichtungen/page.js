@@ -1,0 +1,13 @@
+var R=require("../../chunks/ssr/[turbopack]_runtime.js")("server/app/ki-loesungen-oeffentliche-einrichtungen/page.js")
+R.c("server/chunks/ssr/[root-of-the-server]__0bvdhdv._.js")
+R.c("server/chunks/ssr/0-uk_next_dist_esm_build_templates_app-page_0o5w0s4.js")
+R.c("server/chunks/ssr/[root-of-the-server]__06x.0zr._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__0r6duct._.js")
+R.c("server/chunks/ssr/Desktop_KI Kanzlei Website_ki-kanzlei_054d4hn._.js")
+R.c("server/chunks/ssr/Desktop_KI Kanzlei Website_ki-kanzlei_0iw8e-b._.js")
+R.c("server/chunks/ssr/0-uk_next_dist_client_components_036287l._.js")
+R.c("server/chunks/ssr/0-uk_next_dist_client_components_builtin_unauthorized_0rwnpne.js")
+R.c("server/chunks/ssr/0-uk_next_dist_client_components_builtin_global-error_0wadhc3.js")
+R.c("server/chunks/ssr/0o.-_server_app_ki-loesungen-oeffentliche-einrichtungen_page_actions_0dm9wk0.js")
+R.m(58595)
+module.exports=R.m(58595).exports

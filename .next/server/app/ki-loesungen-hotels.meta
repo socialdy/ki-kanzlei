@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/ki-loesungen-hotels/layout,_N_T_/ki-loesungen-hotels/page,_N_T_/ki-loesungen-hotels"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/ki-loesungen-hotels/__PAGE__",
+    "/ki-loesungen-hotels",
+    "/_index",
+    "/_head"
+  ]
+}
